@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Aptitude Assessment</title>
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+
+    /* =========================================
+       PROFESSIONAL LANDING PAGE
+       ========================================= */
+
+    body {
+      min-height: 100vh;
+      margin: 0;
+
+      background:
+        radial-gradient(
+          circle at 10% 10%,
+          rgba(131, 56, 236, 0.12),
+          transparent 35%
+        ),
+        radial-gradient(
+          circle at 90% 90%,
+          rgba(99, 102, 241, 0.12),
+          transparent 35%
+        ),
+        #f7f7fb;
+
+      font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+
+    .assessment-page {
+      min-height: 100vh;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      padding: 40px 20px;
+      box-sizing: border-box;
+    }
+
+
+    .assessment-container {
+      width: 100%;
+      max-width: 1050px;
+
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+      background: #ffffff;
+
+      border-radius: 24px;
+
+      overflow: hidden;
+
+      box-shadow:
+        0 25px 70px rgba(30, 20, 60, 0.12);
+    }
+
+
+    /* =========================================
+       LEFT SIDE
+       ========================================= */
+
+    .assessment-intro {
+      position: relative;
+
+      padding: 55px;
+
+      color: white;
+
+      background:
+        linear-gradient(
+          145deg,
+          #6d28d9,
+          #8338ec 45%,
+          #4f46e5
+        );
+
+      overflow: hidden;
+    }
+
+
+    .assessment-intro::before {
+      content: "";
+
+      position: absolute;
+
+      width: 280px;
+      height: 280px;
+
+      border-radius: 50%;
+
+      background: rgba(255, 255, 255, 0.08);
+
+      top: -100px;
+      right: -100px;
+    }
+
+
+    .assessment-intro::after {
+      content: "";
+
+      position: absolute;
+
+      width: 220px;
+      height: 220px;
+
+      border-radius: 50%;
+
+      background: rgba(255, 255, 255, 0.06);
+
+      bottom: -100px;
+      left: -80px;
+    }
+
+
+    .brand {
+      position: relative;
+      z-index: 1;
+
+      display: flex;
+      align-items: center;
+      gap: 12px;
+
+      margin-bottom: 55px;
+    }
+
+
+    .brand-icon {
+      width: 42px;
+      height: 42px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 12px;
+
+      background: rgba(255, 255, 255, 0.16);
+
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+
+    .brand-name {
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: -0.3px;
+    }
+
+
+    .intro-content {
+      position: relative;
+      z-index: 1;
+    }
+
+
+    .intro-badge {
+      display: inline-flex;
+
+      align-items: center;
+      gap: 7px;
+
+      padding: 7px 12px;
+
+      border-radius: 30px;
+
+      background: rgba(255, 255, 255, 0.12);
+
+      font-size: 12px;
+      font-weight: 600;
+
+      margin-bottom: 22px;
+    }
+
+
+    .intro-content h1 {
+      margin: 0 0 18px;
+
+      font-size: 42px;
+      line-height: 1.1;
+
+      letter-spacing: -1.5px;
+    }
+
+
+    .intro-content > p {
+      margin: 0;
+
+      max-width: 420px;
+
+      font-size: 16px;
+      line-height: 1.7;
+
+      color: rgba(255, 255, 255, 0.82);
+    }
+
+
+    .features {
+      position: relative;
+      z-index: 1;
+
+      display: grid;
+      gap: 16px;
+
+      margin-top: 42px;
+    }
+
+
+    .feature {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+
+      font-size: 14px;
+
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+
+    .feature-icon {
+      width: 32px;
+      height: 32px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 9px;
+
+      background: rgba(255, 255, 255, 0.12);
+
+      font-size: 14px;
+    }
+
+
+    /* =========================================
+       RIGHT SIDE / FORM
+       ========================================= */
+
+    .assessment-form-section {
+      padding: 55px;
+    }
+
+
+    .form-header {
+      margin-bottom: 32px;
+    }
+
+
+    .form-header h2 {
+      margin: 0 0 8px;
+
+      font-size: 28px;
+
+      color: #111827;
+
+      letter-spacing: -0.6px;
+    }
+
+
+    .form-header p {
+      margin: 0;
+
+      color: #6b7280;
+
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+
+    #studentForm {
+      display: grid;
+      gap: 20px;
+    }
+
+
+    #studentForm label {
+      display: flex;
+      flex-direction: column;
+
+      gap: 8px;
+
+      font-size: 13px;
+      font-weight: 600;
+
+      color: #374151;
+    }
+
+
+    #studentForm input,
+    #studentForm select {
+      width: 100%;
+
+      box-sizing: border-box;
+
+      height: 50px;
+
+      padding: 0 15px;
+
+      border: 1px solid #e5e7eb;
+
+      border-radius: 10px;
+
+      background: #fafafa;
+
+      color: #111827;
+
+      font-size: 14px;
+
+      outline: none;
+
+      transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+    }
+
+
+    #studentForm input::placeholder {
+      color: #9ca3af;
+    }
+
+
+    #studentForm input:hover,
+    #studentForm select:hover {
+      background: #ffffff;
+
+      border-color: #d1d5db;
+    }
+
+
+    #studentForm input:focus,
+    #studentForm select:focus {
+      background: #ffffff;
+
+      border-color: #8338ec;
+
+      box-shadow:
+        0 0 0 4px rgba(131, 56, 236, 0.10);
+    }
+
+
+    #studentForm select {
+      cursor: pointer;
+
+      appearance: auto;
+    }
+
+
+    .btn.primary {
+      width: 100%;
+
+      height: 52px;
+
+      margin-top: 6px;
+
+      border: none;
+
+      border-radius: 10px;
+
+      background:
+        linear-gradient(
+          135deg,
+          #8338ec,
+          #6d28d9
+        );
+
+      color: white;
+
+      font-size: 14px;
+      font-weight: 700;
+
+      cursor: pointer;
+
+      box-shadow:
+        0 8px 20px rgba(131, 56, 236, 0.22);
+
+      transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+    }
+
+
+    .btn.primary:hover {
+      transform: translateY(-1px);
+
+      box-shadow:
+        0 12px 25px rgba(131, 56, 236, 0.30);
+    }
+
+
+    .btn.primary:active {
+      transform: translateY(0);
+    }
+
+
+    .assessment-note {
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+
+      gap: 7px;
+
+      margin-top: 18px;
+
+      color: #9ca3af;
+
+      font-size: 11px;
+    }
+
+
+    .message {
+      margin-top: 15px;
+    }
+
+
+    /* =========================================
+       RESPONSIVE
+       ========================================= */
+
+    @media (max-width: 800px) {
+
+      .assessment-container {
+        grid-template-columns: 1fr;
+
+        max-width: 550px;
+      }
+
+
+      .assessment-intro {
+        padding: 40px;
+      }
+
+
+      .brand {
+        margin-bottom: 35px;
+      }
+
+
+      .intro-content h1 {
+        font-size: 34px;
+      }
+
+
+      .features {
+        margin-top: 30px;
+      }
+
+
+      .assessment-form-section {
+        padding: 40px;
+      }
+
+    }
+
+
+    @media (max-width: 480px) {
+
+      .assessment-page {
+        padding: 15px;
+      }
+
+
+      .assessment-container {
+        border-radius: 18px;
+      }
+
+
+      .assessment-intro {
+        padding: 30px 25px;
+      }
+
+
+      .assessment-form-section {
+        padding: 30px 25px;
+      }
+
+
+      .intro-content h1 {
+        font-size: 30px;
+      }
+
+
+      .form-header h2 {
+        font-size: 24px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+  <main class="assessment-page">
+
+    <div class="assessment-container">
+
+
+      <!-- LEFT PANEL -->
+
+      <section class="assessment-intro">
+
+        <div class="brand">
+
+          <div class="brand-icon">
+            ✓
+          </div>
+
+          <div class="brand-name">
+            PUMO Assessment
+          </div>
+
+        </div>
+
+
+        <div class="intro-content">
+
+          <div class="intro-badge">
+            ● Online Assessment
+          </div>
+
+
+          <h1>
+            Test your skills.<br>
+            Start your journey.
+          </h1>
+
+
+          <p>
+            Complete the aptitude assessment to evaluate
+            your knowledge and skills. Make sure you have
+            enough time and a stable internet connection
+            before starting.
+          </p>
+
+
+          <div class="features">
+
+            <div class="feature">
+
+              <div class="feature-icon">
+                ⏱
+              </div>
+
+              <span>
+                Timed assessment
+              </span>
+
+            </div>
+
+
+            <div class="feature">
+
+              <div class="feature-icon">
+                ✓
+              </div>
+
+              <span>
+                Instant result after submission
+              </span>
+
+            </div>
+
+
+            <div class="feature">
+
+              <div class="feature-icon">
+                🔒
+              </div>
+
+              <span>
+                Your assessment is securely recorded
+              </span>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- RIGHT PANEL -->
+
+      <section class="assessment-form-section">
+
+
+        <div class="form-header">
+
+          <h2>
+            Welcome 👋
+          </h2>
+
+          <p>
+            Enter your details below to begin your
+            aptitude assessment.
+          </p>
+
+        </div>
+
+
+        <form id="studentForm">
+
+
+          <label>
+
+            Student Name
+
+            <input
+              id="studentName"
+              type="text"
+              required
+              maxlength="100"
+              placeholder="Enter your full name"
+            >
+
+          </label>
+
+
+          <label>
+
+            Mobile Number
+
+            <input
+              id="studentId"
+              type="tel"
+              required
+              maxlength="15"
+              placeholder="Enter your mobile number"
+            >
+
+          </label>
+
+
+          <label>
+
+            Department
+
+            <select
+              id="department"
+              required
+            >
+
+              <option value="">
+                Select your department
+              </option>
+
+              <option value="SAP">
+                SAP
+              </option>
+
+              <option value="Python Full Stack">
+                Python Full Stack
+              </option>
+
+              <option value="Java Full Stack">
+                Java Full Stack
+              </option>
+
+              <option value="DA/DS/BA">
+                DA/DS/BA
+              </option>
+
+              <option value="Embedded">
+                Embedded
+              </option>
+
+              <option value="MECH">
+                MECH
+              </option>
+
+              <option value="General">
+                General
+              </option>
+
+            </select>
+
+          </label>
+
+
+          <label>
+
+            Email Address
+
+            <input
+              id="studentEmail"
+              type="email"
+              required
+              maxlength="150"
+              placeholder="student@example.com"
+            >
+
+          </label>
+
+
+          <button
+            class="btn primary"
+            type="submit"
+          >
+            Start Assessment →
+          </button>
+
+
+        </form>
+
+
+        <div class="assessment-note">
+          🔒 Your information is used only for this assessment.
+        </div>
+
+
+        <p
+          id="message"
+          class="message"
+        ></p>
+
+
+      </section>
+
+    </div>
+
+  </main>
+
+
+  <script
+    type="module"
+    src="js/index.js">
+  </script>
+
+</body>
+
+</html>

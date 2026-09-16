@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="container">
+    <section id="loginCard" class="card small-card">
+      <h1>Admin Login</h1>
+      <input id="adminPassword" type="password" placeholder="Admin password">
+      <button id="loginBtn" class="btn primary">Login</button>
+      <p id="adminMessage" class="message"></p>
+    </section>
+
+    <section id="dashboard" class="hidden">
+      <div class="test-header">
+        <div>
+          <h1>Results Dashboard</h1>
+          <p class="muted">Aptitude Test 1</p>
+        </div>
+        <button id="exportBtn" class="btn secondary">Export CSV</button>
+      </div>
+
+      <section class="card table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Student ID</th>
+              <th>Email</th>
+              <th>Score</th>
+              <th>Percentage</th>
+              <th>Submitted</th>
+            </tr>
+          </thead>
+          <tbody id="resultsBody"></tbody>
+        </table>
+      </section>
+    </section>
+  </main>
+  <script type="module" src="js/admin.js"></script>
+</body>
+</html>

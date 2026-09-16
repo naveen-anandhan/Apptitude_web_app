@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Assessment Result</title>
+
+  <link
+    rel="stylesheet"
+    href="css/style.css"
+  >
+
+  <style>
+
+    /* =========================================
+       PROFESSIONAL RESULT PAGE
+       ========================================= */
+
+    body {
+      min-height: 100vh;
+      margin: 0;
+
+      background:
+        radial-gradient(
+          circle at 10% 10%,
+          rgba(131, 56, 236, 0.12),
+          transparent 35%
+        ),
+        radial-gradient(
+          circle at 90% 90%,
+          rgba(99, 102, 241, 0.12),
+          transparent 35%
+        ),
+        #f7f7fb;
+
+      font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+
+    .result-page {
+      min-height: 100vh;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      padding: 30px 20px;
+
+      box-sizing: border-box;
+    }
+
+
+    .result-container {
+      width: 100%;
+      max-width: 700px;
+
+      background: #ffffff;
+
+      border-radius: 24px;
+
+      padding: 48px;
+
+      box-sizing: border-box;
+
+      text-align: center;
+
+      box-shadow:
+        0 25px 70px rgba(30, 20, 60, 0.12);
+    }
+
+
+    /* =========================================
+       SUCCESS ICON
+       ========================================= */
+
+    .success-icon {
+      width: 72px;
+      height: 72px;
+
+      margin: 0 auto 22px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 50%;
+
+      background:
+        rgba(131, 56, 236, 0.10);
+
+      color: #8338ec;
+
+      font-size: 32px;
+      font-weight: 700;
+    }
+
+
+    /* =========================================
+       HEADER
+       ========================================= */
+
+    .result-header h1 {
+      margin: 0 0 10px;
+
+      color: #111827;
+
+      font-size: 34px;
+
+      letter-spacing: -1px;
+    }
+
+
+    .result-header p {
+      margin: 5px 0;
+
+      color: #6b7280;
+
+      font-size: 14px;
+
+      line-height: 1.6;
+    }
+
+
+    .recorded-badge {
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 7px;
+
+      margin-top: 16px;
+
+      padding: 7px 12px;
+
+      border-radius: 30px;
+
+      background: #f3f0ff;
+
+      color: #6d28d9;
+
+      font-size: 12px;
+
+      font-weight: 600;
+    }
+
+
+    /* =========================================
+       SCORE SECTION
+       ========================================= */
+
+    .score-box {
+      display: grid;
+
+      grid-template-columns: 1fr 1fr;
+
+      gap: 15px;
+
+      margin-top: 35px;
+    }
+
+
+    .score-item {
+      padding: 24px 15px;
+
+      border: 1px solid #eeeef2;
+
+      border-radius: 16px;
+
+      background: #fafafa;
+    }
+
+
+    .score-item span {
+      display: block;
+
+      margin-bottom: 8px;
+
+      color: #6b7280;
+
+      font-size: 13px;
+
+      font-weight: 500;
+    }
+
+
+    .score-item strong {
+      display: block;
+
+      color: #111827;
+
+      font-size: 30px;
+
+      letter-spacing: -1px;
+    }
+
+
+    /* =========================================
+       PASS / FAIL
+       ========================================= */
+
+    .status-box {
+      margin-top: 20px;
+
+      padding: 16px;
+
+      border-radius: 12px;
+
+      background: #f8f7fb;
+    }
+
+
+    #passStatus {
+      margin: 0;
+
+      color: #8338ec;
+
+      font-size: 16px;
+
+      font-weight: 800;
+
+      letter-spacing: 0.5px;
+    }
+
+
+    /* =========================================
+       DONE BUTTON
+       ========================================= */
+
+    #doneBtn {
+      width: 100%;
+
+      height: 52px;
+
+      margin-top: 25px;
+
+      border: none;
+
+      border-radius: 10px;
+
+      background:
+        linear-gradient(
+          135deg,
+          #8338ec,
+          #6d28d9
+        );
+
+      color: white;
+
+      font-size: 14px;
+
+      font-weight: 700;
+
+      cursor: pointer;
+
+      box-shadow:
+        0 8px 20px rgba(131, 56, 236, 0.22);
+
+      transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+    }
+
+
+    #doneBtn:hover {
+      transform: translateY(-1px);
+
+      box-shadow:
+        0 12px 25px rgba(131, 56, 236, 0.30);
+    }
+
+
+    .close-message {
+      margin-top: 18px;
+
+      color: #6b7280;
+
+      font-size: 13px;
+    }
+
+
+    /* =========================================
+       FOOTER
+       ========================================= */
+
+    .result-footer {
+      margin-top: 28px;
+
+      color: #9ca3af;
+
+      font-size: 11px;
+    }
+
+
+    /* =========================================
+       MOBILE
+       ========================================= */
+
+    @media (max-width: 520px) {
+
+      .result-page {
+        padding: 15px;
+      }
+
+
+      .result-container {
+        padding: 35px 25px;
+
+        border-radius: 18px;
+      }
+
+
+      .result-header h1 {
+        font-size: 28px;
+      }
+
+
+      .score-box {
+        grid-template-columns: 1fr;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+  <main class="result-page">
+
+    <section class="result-container">
+
+
+      <!-- SUCCESS ICON -->
+
+      <div class="success-icon">
+        ✓
+      </div>
+
+
+      <!-- HEADER -->
+
+      <div class="result-header">
+
+        <h1>
+          Thank You!
+        </h1>
+
+        <p>
+          Your assessment has been successfully submitted.
+        </p>
+
+        <p>
+          Your result has been recorded.
+        </p>
+
+        <div class="recorded-badge">
+          ✓ Assessment Completed
+        </div>
+
+      </div>
+
+
+      <!-- SCORE -->
+
+      <div class="score-box">
+
+
+        <div class="score-item">
+
+          <span>
+            Your Score
+          </span>
+
+          <strong id="score">
+            --
+          </strong>
+
+        </div>
+
+
+        <div class="score-item">
+
+          <span>
+            Percentage
+          </span>
+
+          <strong id="percentage">
+            --
+          </strong>
+
+        </div>
+
+
+      </div>
+
+
+      <!-- PASS / FAIL -->
+
+      <div class="status-box">
+
+        <p
+          id="passStatus"
+          class="message"
+        ></p>
+
+      </div>
+
+
+      <!-- DONE -->
+
+      <button
+        id="doneBtn"
+        class="btn primary"
+      >
+        Done
+      </button>
+
+
+      <p
+        id="closeMessage"
+        class="close-message hidden"
+      >
+        You may now close this page.
+      </p>
+
+
+      <div class="result-footer">
+        Thank you for completing the assessment.
+      </div>
+
+
+    </section>
+
+  </main>
+
+
+  <script
+    type="module"
+    src="js/result.js">
+  </script>
+
+</body>
+
+</html>

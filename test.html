@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Aptitude Assessment</title>
+
+  <link
+    rel="stylesheet"
+    href="css/style.css"
+  >
+
+  <style>
+
+    /* =========================================
+       PROFESSIONAL TEST PAGE
+       ========================================= */
+
+    body {
+      min-height: 100vh;
+      margin: 0;
+
+      background:
+        radial-gradient(
+          circle at 5% 5%,
+          rgba(131, 56, 236, 0.08),
+          transparent 30%
+        ),
+        radial-gradient(
+          circle at 95% 95%,
+          rgba(99, 102, 241, 0.08),
+          transparent 30%
+        ),
+        #f7f7fb;
+
+      font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+
+    .test-page {
+      min-height: 100vh;
+
+      padding: 25px 20px 45px;
+
+      box-sizing: border-box;
+    }
+
+
+    .test-wrapper {
+      width: 100%;
+      max-width: 1050px;
+
+      margin: 0 auto;
+    }
+
+
+    /* =========================================
+       TOP HEADER
+       ========================================= */
+
+    .test-header {
+      display: flex;
+
+      align-items: center;
+
+      justify-content: space-between;
+
+      gap: 25px;
+
+      margin-bottom: 20px;
+
+      padding: 0 5px;
+    }
+
+
+    .test-brand {
+      display: flex;
+
+      align-items: center;
+
+      gap: 12px;
+
+      margin-bottom: 10px;
+    }
+
+
+    .brand-icon {
+      width: 38px;
+      height: 38px;
+
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 10px;
+
+      background:
+        linear-gradient(
+          135deg,
+          #8338ec,
+          #6d28d9
+        );
+
+      color: white;
+
+      font-size: 17px;
+      font-weight: 800;
+
+      box-shadow:
+        0 5px 15px rgba(131, 56, 236, 0.20);
+    }
+
+
+    .brand-name {
+      color: #6b7280;
+
+      font-size: 12px;
+
+      font-weight: 700;
+
+      letter-spacing: 0.4px;
+
+      text-transform: uppercase;
+    }
+
+
+    #testTitle {
+      margin: 0;
+
+      color: #111827;
+
+      font-size: 30px;
+
+      line-height: 1.2;
+
+      letter-spacing: -0.8px;
+    }
+
+
+    #studentInfo {
+      display: block;
+
+      margin-top: 7px;
+
+      color: #6b7280;
+
+      font-size: 13px;
+    }
+
+
+    /* =========================================
+       TIMER
+       ========================================= */
+
+    .timer-container {
+      min-width: 125px;
+
+      padding: 12px 18px;
+
+      border: 1px solid #e9e5f4;
+
+      border-radius: 14px;
+
+      background: white;
+
+      text-align: center;
+
+      box-shadow:
+        0 6px 20px rgba(30, 20, 60, 0.06);
+    }
+
+
+    .timer-label {
+      display: block;
+
+      margin-bottom: 3px;
+
+      color: #9ca3af;
+
+      font-size: 10px;
+
+      font-weight: 700;
+
+      letter-spacing: 0.8px;
+
+      text-transform: uppercase;
+    }
+
+
+    #timer {
+      color: #8338ec;
+
+      font-size: 25px;
+
+      font-weight: 800;
+
+      font-variant-numeric: tabular-nums;
+    }
+
+
+    /* =========================================
+       QUESTION CARD
+       ========================================= */
+
+    .test-card {
+      background: white;
+
+      border: 1px solid #eeeef2;
+
+      border-radius: 20px;
+
+      padding: 32px;
+
+      box-sizing: border-box;
+
+      box-shadow:
+        0 18px 50px rgba(30, 20, 60, 0.08);
+    }
+
+
+    /* =========================================
+       PROGRESS
+       ========================================= */
+
+    .progress-row {
+      display: flex;
+
+      justify-content: space-between;
+
+      align-items: center;
+
+      margin-bottom: 10px;
+
+      color: #6b7280;
+
+      font-size: 13px;
+
+      font-weight: 600;
+    }
+
+
+    #progressText {
+      color: #8338ec;
+
+      font-weight: 700;
+    }
+
+
+    .progress {
+      width: 100%;
+
+      height: 7px;
+
+      margin-bottom: 38px;
+
+      overflow: hidden;
+
+      border-radius: 20px;
+
+      background: #eeeef3;
+    }
+
+
+    #progressBar {
+      height: 100%;
+
+      width: 0;
+
+      border-radius: inherit;
+
+      background:
+        linear-gradient(
+          90deg,
+          #8338ec,
+          #6d28d9
+        );
+
+      transition: width 0.3s ease;
+    }
+
+
+    /* =========================================
+       QUESTION
+       ========================================= */
+
+    #questionText {
+      margin: 0 0 25px;
+
+      color: #111827;
+
+      font-size: 22px;
+
+      line-height: 1.5;
+
+      letter-spacing: -0.3px;
+    }
+
+
+    /* =========================================
+       OPTIONS
+       ========================================= */
+
+    .options {
+      display: grid;
+
+      gap: 13px;
+    }
+
+
+    .option {
+      position: relative;
+
+      padding: 17px 20px;
+
+      border: 1px solid #e5e7eb;
+
+      border-radius: 12px;
+
+      background: #ffffff;
+
+      color: #374151;
+
+      font-size: 15px;
+
+      line-height: 1.5;
+
+      cursor: pointer;
+
+      transition:
+        border-color 0.2s ease,
+        background 0.2s ease,
+        transform 0.15s ease,
+        box-shadow 0.2s ease;
+    }
+
+
+    .option:hover {
+      border-color: #c4b5fd;
+
+      background: #faf8ff;
+
+      transform: translateY(-1px);
+
+      box-shadow:
+        0 5px 15px rgba(131, 56, 236, 0.07);
+    }
+
+
+    .option.selected {
+      border-color: #8338ec;
+
+      background: #f5f0ff;
+
+      color: #5b21b6;
+
+      box-shadow:
+        0 0 0 3px rgba(131, 56, 236, 0.08);
+    }
+
+
+    /* =========================================
+       ACTION BUTTONS
+       ========================================= */
+
+    .actions {
+      display: flex;
+
+      justify-content: flex-end;
+
+      align-items: center;
+
+      gap: 10px;
+
+      margin-top: 32px;
+
+      padding-top: 25px;
+
+      border-top: 1px solid #f0f0f3;
+    }
+
+
+    .btn {
+      min-width: 105px;
+
+      height: 45px;
+
+      padding: 0 18px;
+
+      border-radius: 9px;
+
+      font-size: 13px;
+
+      font-weight: 700;
+
+      cursor: pointer;
+
+      transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        opacity 0.2s ease;
+    }
+
+
+    .btn.primary {
+      border: none;
+
+      background:
+        linear-gradient(
+          135deg,
+          #8338ec,
+          #6d28d9
+        );
+
+      color: white;
+
+      box-shadow:
+        0 6px 16px rgba(131, 56, 236, 0.20);
+    }
+
+
+    .btn.primary:hover {
+      transform: translateY(-1px);
+
+      box-shadow:
+        0 9px 20px rgba(131, 56, 236, 0.28);
+    }
+
+
+    .btn.secondary {
+      border: 1px solid #e5e7eb;
+
+      background: white;
+
+      color: #4b5563;
+    }
+
+
+    .btn.secondary:hover {
+      border-color: #d1d5db;
+
+      background: #f9fafb;
+    }
+
+
+    .btn.danger {
+      border: none;
+
+      background: #dc2626;
+
+      color: white;
+
+      box-shadow:
+        0 6px 16px rgba(220, 38, 38, 0.15);
+    }
+
+
+    .btn.danger:hover {
+      background: #b91c1c;
+
+      transform: translateY(-1px);
+    }
+
+
+    .btn:disabled {
+      opacity: 0.5;
+
+      cursor: not-allowed;
+
+      transform: none !important;
+
+      box-shadow: none !important;
+    }
+
+
+    /* =========================================
+       MESSAGE
+       ========================================= */
+
+    #testMessage {
+      margin: 15px 0 0;
+
+      text-align: center;
+
+      color: #dc2626;
+
+      font-size: 13px;
+    }
+
+
+    /* =========================================
+       SECURITY / FOOTER
+       ========================================= */
+
+    .test-footer {
+      display: flex;
+
+      justify-content: center;
+
+      align-items: center;
+
+      gap: 7px;
+
+      margin-top: 18px;
+
+      color: #9ca3af;
+
+      font-size: 11px;
+    }
+
+
+    /* =========================================
+       MOBILE
+       ========================================= */
+
+    @media (max-width: 650px) {
+
+      .test-page {
+        padding: 15px 12px 30px;
+      }
+
+
+      .test-header {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 15px;
+      }
+
+
+      .timer-container {
+        width: 100%;
+
+        box-sizing: border-box;
+      }
+
+
+      .test-card {
+        padding: 22px 18px;
+
+        border-radius: 16px;
+      }
+
+
+      #testTitle {
+        font-size: 25px;
+      }
+
+
+      #questionText {
+        font-size: 19px;
+      }
+
+
+      .actions {
+        justify-content: stretch;
+      }
+
+
+      .actions .btn {
+        flex: 1;
+      }
+
+    }
+
+
+    @media (max-width: 400px) {
+
+      .actions {
+        flex-wrap: wrap;
+      }
+
+
+      .actions .btn {
+        width: 100%;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+  <main class="test-page">
+
+    <div class="test-wrapper">
+
+
+      <!-- =====================================
+           HEADER
+           ===================================== -->
+
+      <header class="test-header">
+
+
+        <div>
+
+          <div class="test-brand">
+
+            <div class="brand-icon">
+              ✓
+            </div>
+
+            <span class="brand-name">
+              PUMO Assessment
+            </span>
+
+          </div>
+
+
+          <h1 id="testTitle">
+            Aptitude Test
+          </h1>
+
+
+          <span
+            id="studentInfo"
+            class="muted">
+          </span>
+
+        </div>
+
+
+        <div class="timer-container">
+
+          <span class="timer-label">
+            Time Remaining
+          </span>
+
+          <div
+            id="timer"
+            class="timer">
+            --:--
+          </div>
+
+        </div>
+
+
+      </header>
+
+
+      <!-- =====================================
+           QUESTION CARD
+           ===================================== -->
+
+      <section class="test-card">
+
+
+        <!-- Progress -->
+
+        <div class="progress-row">
+
+          <span id="questionNumber">
+            Question
+          </span>
+
+          <span id="progressText">
+            0%
+          </span>
+
+        </div>
+
+
+        <div class="progress">
+
+          <div id="progressBar"></div>
+
+        </div>
+
+
+        <!-- Question -->
+
+        <h2 id="questionText">
+          Loading...
+        </h2>
+
+
+        <!-- Options -->
+
+        <div
+          id="options"
+          class="options">
+        </div>
+
+
+        <!-- Buttons -->
+
+        <div class="actions">
+
+          <button
+            id="prevBtn"
+            class="btn secondary">
+            ← Previous
+          </button>
+
+
+          <button
+            id="nextBtn"
+            class="btn primary">
+            Next →
+          </button>
+
+
+          <button
+            id="submitBtn"
+            class="btn danger hidden">
+            Submit Test
+          </button>
+
+        </div>
+
+
+        <p
+          id="testMessage"
+          class="message">
+        </p>
+
+
+      </section>
+
+
+      <div class="test-footer">
+        🔒 Your answers are securely recorded
+      </div>
+
+
+    </div>
+
+  </main>
+
+
+  <script
+    type="module"
+    src="js/test.js">
+  </script>
+
+</body>
+
+</html>

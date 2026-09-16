@@ -1,0 +1,37 @@
+[
+  {
+    "order": 1,
+    "question": "What is 15% of 200?",
+    "options": ["15", "20", "30", "40"],
+    "correctIndex": 2,
+    "marks": 1
+  },
+  {
+    "order": 2,
+    "question": "If a train travels 60 km in 1 hour, how far will it travel in 3 hours?",
+    "options": ["120 km", "180 km", "200 km", "240 km"],
+    "correctIndex": 1,
+    "marks": 1
+  },
+  {
+    "order": 3,
+    "question": "Find the next number: 2, 4, 8, 16, ?",
+    "options": ["20", "24", "30", "32"],
+    "correctIndex": 3,
+    "marks": 1
+  },
+  {
+    "order": 4,
+    "question": "If CAT is coded as DBU, how is DOG coded?",
+    "options": ["EPH", "EOG", "FPH", "DPG"],
+    "correctIndex": 0,
+    "marks": 1
+  },
+  {
+    "order": 5,
+    "question": "A product costs ₹500 and is sold at a 10% discount. What is the selling price?",
+    "options": ["₹450", "₹460", "₹475", "₹490"],
+    "correctIndex": 0,
+    "marks": 1
+  }
+]
