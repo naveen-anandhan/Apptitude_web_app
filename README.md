@@ -1,162 +1,510 @@
+````markdown
 # Free Aptitude Test Website
 
-A simple MCQ aptitude-test website with:
-- Student name, ID and email
-- 4-option multiple-choice questions
-- Countdown timer
-- Previous/Next navigation
-- Automatic score calculation
-- Firebase Firestore result storage
-- Optional email result through Google Apps Script
-- Simple admin dashboard
-- CSV export
+A free, web-based aptitude testing platform built for student assessments.
 
-## Architecture
+Students can select their department, enter their details, answer multiple-choice questions, and receive their score immediately after submitting the test.
 
-Student Browser
-  -> Firebase Authentication (anonymous)
-  -> Firestore (questions + results)
-  -> Google Apps Script (optional email sending)
-
-The frontend can be hosted on GitHub Pages.
-
-## Important security note
-
-This starter project is intended for an internal/student assessment and uses Firebase anonymous authentication plus Firestore rules. Before production use, review the rules and add stronger admin authentication.
-
-Never put a Gmail password or service-account private key in frontend JavaScript.
+The application uses Firebase for authentication and data storage, Google Sheets for storing student results, and can be hosted using Firebase Hosting or GitHub Pages.
 
 ---
 
-# 1. Create Firebase
+## 🚀 Live Website
 
-1. Open Firebase Console: https://console.firebase.google.com/
-2. Create a project.
-3. Add a Web App.
-4. Copy the Firebase configuration.
-5. Enable Authentication -> Sign-in method -> Anonymous.
-6. Create Firestore Database.
-7. Put the values from your Firebase config into `js/firebase-config.js`.
+**Firebase Hosting:**  
+https://pumo-aptitude-test.web.app
+
+**GitHub Repository:**  
+https://github.com/naveen-anandhan/Apptitude_web_app
+
+---
+
+## ✨ Features
+
+### Student Features
+
+- Student name registration
+- Mobile number registration
+- Email registration
+- Department selection
+- Department-specific questions
+- Multiple-choice questions
+- Four options per question
+- Countdown timer
+- Previous / Next question navigation
+- Question progress indicator
+- Automatic score calculation
+- Automatic PASS / FAIL calculation
+- Result page after submission
+- Responsive desktop and mobile design
+
+### Admin Features
+
+- Admin dashboard
+- View student results
+- View scores
+- Department-wise results
+- CSV export
+
+### Question Management
+
+- Python-based question uploader
+- Automatic question ordering
+- Automatic marks assignment
+- Duplicate question detection
+- Questions can be assigned to multiple departments
+
+---
+
+## 🏢 Supported Departments
+
+The aptitude test currently supports:
+
+1. SAP
+2. Python Full Stack
+3. Java Full Stack
+4. DA/DS/BA
+5. Embedded
+6. MECH
+7. General
+
+A question can belong to one or multiple departments.
+
+For example:
+
+```python
+"departments": [
+    "Python Full Stack",
+    "DA/DS/BA"
+]
+````
+
+This allows the same question to be used for both departments without duplicating the question.
+
+---
+
+## ⏱️ Test Duration
+
+The test duration is controlled directly from Firestore.
 
 Example:
 
-```js
-const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "YOUR_PROJECT.firebaseapp.com",
-  projectId: "YOUR_PROJECT_ID",
-  storageBucket: "YOUR_PROJECT.firebasestorage.app",
-  messagingSenderId: "YOUR_SENDER_ID",
-  appId: "YOUR_APP_ID"
-};
+```text
+durationMinutes: 30
 ```
 
-## 2. Firestore data
+If changed to:
 
-Create a collection named `tests`.
+```text
+durationMinutes: 60
+```
 
-Create document:
+the test duration becomes 60 minutes.
 
-`aptitude-test-01`
+No JavaScript code needs to be changed when changing the test duration.
 
-Fields:
+---
+
+## 🔥 Firebase
+
+Firebase is used for:
+
+* Anonymous Authentication
+* Cloud Firestore
+* Question storage
+* Student result storage
+
+### Firestore Structure
+
+```text
+tests
+└── aptitude-test-01
+    ├── title
+    ├── durationMinutes
+    ├── active
+    │
+    ├── questions
+    │   ├── question documents
+    │   └── ...
+    │
+    └── results
+        ├── result documents
+        └── ...
+```
+
+Example test document:
 
 ```text
 title: "Aptitude Test 1"
-durationMinutes: 20
+durationMinutes: 30
 active: true
 ```
 
-Create a subcollection:
+---
 
-`tests/aptitude-test-01/questions`
+## 📝 Question Structure
 
-Add question documents with:
+Questions contain the following fields:
 
 ```text
-question: "What is 15% of 200?"
-options: ["15", "20", "30", "40"]
-correctIndex: 2
-marks: 1
+question
+options
+correctIndex
+marks
+order
+departments
 ```
 
-Add more questions in the same format.
+Example:
 
-## 3. Firestore rules
+```python
+{
+    "question": "What is self in Python?",
+    "options": [
+        "Class name",
+        "Reference to the current object",
+        "Parent class",
+        "Constructor"
+    ],
+    "correctIndex": 1,
+    "marks": 1,
+    "order": 1,
+    "departments": [
+        "Python Full Stack",
+        "DA/DS/BA"
+    ]
+}
+```
 
-Copy `firestore.rules` into Firebase Console -> Firestore -> Rules.
+---
 
-This starter rule lets authenticated students read tests/questions and create result documents, but does not let students update/delete results.
+## 🐍 Automatic Question Upload System
 
-## 4. Email results (optional)
+Questions can be uploaded to Firestore using Python instead of manually entering every question.
 
-The easiest free-ish setup for an internal project is Google Apps Script.
+### Question uploader structure
 
-1. Go to https://script.google.com/
-2. Create a new project.
-3. Copy the contents of `email-service/Code.gs`.
-4. Deploy -> New deployment -> Web app.
-5. Execute as: Me.
-6. Who has access: Anyone.
-7. Copy the Web App URL.
-8. Put it into `js/config.js` as `EMAIL_SERVICE_URL`.
+```text
+upload_questions/
+├── da_ds_ba_questions.py
+├── python_full_stack_questions.py
+├── java_full_stack_questions.py
+├── sap_questions.py
+├── embedded_questions.py
+├── mech_questions.py
+├── general_questions.py
+└── upload.py
+```
 
-The script sends the student's score using the Gmail account that owns the Apps Script.
+Each question can specify its own department.
 
-Google/Gmail quotas apply, so this is suitable for modest internal test volumes, not bulk marketing.
+For example, a Python question can be assigned to both:
 
-## 5. Run locally
+```python
+"departments": [
+    "Python Full Stack",
+    "DA/DS/BA"
+]
+```
 
-Because browsers can block modules when opening `index.html` directly, use a local server.
+A department-specific question can be assigned to only one department:
 
-If Python is installed:
+```python
+"departments": [
+    "Python Full Stack"
+]
+```
+
+---
+
+## 📤 Uploading Questions
+
+Install the Firebase Admin SDK:
 
 ```bash
-python -m http.server 5500
+python -m pip install --upgrade firebase-admin
 ```
 
-Then open:
+The Firebase service account key is required for uploading questions.
 
-http://localhost:5500
+Place the key in the project root:
 
-VS Code users can also use the Live Server extension.
+```text
+serviceAccountKey.json
+```
 
-## 6. GitHub Pages
+### Upload a question file
 
-1. Create a GitHub repository.
-2. Upload all files.
-3. Enable Settings -> Pages.
-4. Select the branch/folder.
-5. Open the generated GitHub Pages URL.
+For example:
 
-Add the GitHub Pages domain to Firebase Authentication -> Settings -> Authorized domains.
+```bash
+python upload_questions/python_full_stack_questions.py
+```
 
-## 7. Admin dashboard
+Other examples:
 
-Open:
+```bash
+python upload_questions/java_full_stack_questions.py
+python upload_questions/da_ds_ba_questions.py
+python upload_questions/sap_questions.py
+python upload_questions/embedded_questions.py
+python upload_questions/mech_questions.py
+python upload_questions/general_questions.py
+```
 
-`admin.html`
+The uploader automatically:
 
-Change the admin password in `js/config.js` before using it.
+* Connects to Firebase
+* Detects existing questions
+* Prevents duplicate questions
+* Assigns question order
+* Assigns default marks
+* Reads departments from each question
+* Uploads questions to Firestore
 
-Important: this is a simple UI gate, NOT secure authentication. For a real production system, replace it with Firebase Authentication + custom claims or another proper admin-authentication mechanism.
+---
 
-## 8. Customizing questions
+## 🔢 Automatic Question Ordering
 
-Edit `seed-questions.json`, or add questions directly in Firestore.
+Question order is automatically generated by `upload.py`.
 
-Do not put correct answers in the browser's HTML. The correct answer is fetched from Firestore in this starter. For a high-stakes exam, a more secure server-side grading architecture is recommended because any client-side application can be inspected.
+For example:
 
-## 9. Project structure
+```text
+Question 1
+Question 2
+Question 3
+Question 4
+Question 5
+```
+
+The uploader maintains question ordering based on the departments assigned to each question.
+
+---
+
+## 🛡️ Duplicate Question Protection
+
+The uploader checks whether a question already exists for its assigned department.
+
+If the question already exists, it is skipped.
+
+Example:
+
+```text
+⏭ Skipped duplicate:
+Which keyword is used to define a function in Python?
+```
+
+This prevents duplicate questions when an upload script is accidentally run multiple times.
+
+---
+
+## 📊 Student Results
+
+After submitting the test, the result contains:
+
+```text
+Student Name
+Mobile Number
+Department
+Email
+Score
+Total Marks
+Percentage
+PASS / FAIL
+Submission Time
+```
+
+Results are stored in Firestore.
+
+### Passing Criteria
+
+```text
+50% or above = PASS
+Below 50% = FAIL
+```
+
+---
+
+## 📋 Google Sheets Integration
+
+Student results are sent to Google Sheets using Google Apps Script.
+
+The Google Sheet contains department-specific tabs:
+
+```text
+SAP
+Python Full Stack
+Java Full Stack
+DA-DS-BA
+Embedded
+MECH
+General
+```
+
+Expected columns:
+
+```text
+Date & Time
+Student Name
+Mobile Number
+Email
+Score
+Pass
+```
+
+The Firebase result is saved first, followed by sending the result to Google Sheets.
+
+---
+
+## 📱 Responsive Design
+
+The website is designed to work on:
+
+* Desktop
+* Laptop
+* Tablet
+* Mobile phones
+
+The interface automatically adjusts to different screen sizes.
+
+---
+
+## 🔐 Authentication
+
+The application uses Firebase Anonymous Authentication.
+
+Students do not need to create a Firebase account.
+
+The application automatically signs students in anonymously before loading the test.
+
+---
+
+## 🔒 Firestore Security
+
+Firestore rules allow authenticated users to:
+
+* Read test information
+* Read questions
+* Create result documents
+
+Students cannot update or delete submitted results.
+
+For a production or high-stakes examination system, stronger security and server-side grading should be implemented.
+
+---
+
+## 🖥️ Admin Dashboard
+
+The project includes:
+
+```text
+admin.html
+```
+
+The dashboard can be used to:
+
+* View student results
+* View scores
+* Export results as CSV
+
+The current admin password system is a simple UI-level protection and should not be considered production-grade authentication.
+
+For production use, Firebase Authentication with proper admin authorization should be implemented.
+
+---
+
+## 🌐 Hosting
+
+The application is a static HTML, CSS, and JavaScript application.
+
+It can be hosted using:
+
+* Firebase Hosting
+* GitHub Pages
+
+### Firebase Hosting
+
+Current Firebase Hosting URL:
+
+[https://pumo-aptitude-test.web.app](https://pumo-aptitude-test.web.app)
+
+Deploy using:
+
+```bash
+firebase deploy
+```
+
+### GitHub Pages
+
+GitHub Repository:
+
+[https://github.com/naveen-anandhan/Apptitude_web_app](https://github.com/naveen-anandhan/Apptitude_web_app)
+
+Expected GitHub Pages URL:
+
+```text
+https://naveen-anandhan.github.io/Apptitude_web_app/
+```
+
+GitHub Pages hosts the frontend, while Firebase continues to handle:
+
+```text
+Authentication
+Firestore
+Questions
+Results
+```
+
+---
+
+## 🧩 Project Architecture
+
+```text
+                    Student
+                       │
+                       ▼
+              ┌─────────────────┐
+              │  Web Application │
+              │   HTML/CSS/JS    │
+              └────────┬────────┘
+                       │
+                       ▼
+            Firebase Anonymous Auth
+                       │
+                       ▼
+                Cloud Firestore
+                 │            │
+                 │            │
+                 ▼            ▼
+             Questions      Results
+                 │            │
+                 │            ▼
+                 │      Google Apps Script
+                 │            │
+                 │            ▼
+                 │      Google Sheets
+                 │
+                 ▼
+          Department-specific
+              Questions
+```
+
+---
+
+## 📁 Project Structure
 
 ```text
 aptitude-test-website/
+│
 ├── index.html
 ├── test.html
 ├── result.html
 ├── admin.html
+│
 ├── css/
 │   └── style.css
+│
 ├── js/
 │   ├── config.js
 │   ├── firebase-config.js
@@ -166,9 +514,173 @@ aptitude-test-website/
 │   ├── test.js
 │   ├── result.js
 │   └── admin.js
+│
+├── upload_questions/
+│   ├── upload.py
+│   ├── da_ds_ba_questions.py
+│   ├── python_full_stack_questions.py
+│   ├── java_full_stack_questions.py
+│   ├── sap_questions.py
+│   ├── embedded_questions.py
+│   ├── mech_questions.py
+│   └── general_questions.py
+│
 ├── email-service/
 │   └── Code.gs
+│
 ├── firestore.rules
+├── firebase.json
 ├── seed-questions.json
+├── .gitignore
 └── README.md
+```
+
+> `serviceAccountKey.json` should exist only locally and must never be committed to GitHub.
+
+---
+
+## ⚙️ Configuration
+
+Firebase configuration is stored in:
+
+```text
+js/firebase-config.js
+```
+
+Application configuration is stored in:
+
+```text
+js/config.js
+```
+
+Example:
+
+```javascript
+export const APP_CONFIG = {
+    TEST_ID: "aptitude-test-01",
+    EMAIL_SERVICE_URL: "YOUR_GOOGLE_APPS_SCRIPT_URL"
+};
+```
+
+---
+
+## 🔑 Security
+
+Never commit the Firebase service account key.
+
+The following file contains private credentials:
+
+```text
+serviceAccountKey.json
+```
+
+Make sure it is included in `.gitignore`:
+
+```text
+serviceAccountKey.json
+```
+
+Never upload the service account private key to GitHub.
+
+Also avoid putting Gmail passwords, API secrets, or other private credentials in frontend JavaScript.
+
+---
+
+## 🛠️ Running Locally
+
+Because the application uses JavaScript modules, do not simply open `index.html` directly.
+
+Start a local web server.
+
+Using Python:
+
+```bash
+python -m http.server 5500
+```
+
+Then open:
+
+```text
+http://localhost:5500
+```
+
+You can also use the VS Code Live Server extension.
+
+---
+
+## 📦 Technologies Used
+
+### Frontend
+
+* HTML5
+* CSS3
+* JavaScript
+* ES Modules
+
+### Backend / Database
+
+* Firebase Authentication
+* Firebase Cloud Firestore
+
+### Question Management
+
+* Python
+* Firebase Admin SDK
+
+### Results
+
+* Google Apps Script
+* Google Sheets
+
+### Hosting
+
+* Firebase Hosting
+* GitHub Pages
+
+---
+
+## 🎯 Purpose
+
+This project was created to provide a simple and free aptitude testing platform for students in different technical training programs.
+
+The system allows different departments to have their own questions while also allowing common questions to be shared across multiple departments without duplicating question data.
+
+---
+
+## 🚧 Future Improvements
+
+Possible future improvements include:
+
+* Secure admin authentication
+* Randomized questions
+* Randomized answer options
+* Question categories
+* Multiple tests
+* Test scheduling
+* Student attempt history
+* Better result analytics
+* PDF result certificates
+* Server-side score calculation
+* Role-based access control
+* Improved anti-cheating features
+
+---
+
+## 👨‍💻 Author
+
+**Naveen Anandhan**
+
+GitHub:
+
+[https://github.com/naveen-anandhan](https://github.com/naveen-anandhan)
+
+---
+
+## 📄 License
+
+This project is intended for educational and internal assessment purposes.
+
+```
+
+After pasting, click **`Commit changes...`** in the top-right.
 ```
