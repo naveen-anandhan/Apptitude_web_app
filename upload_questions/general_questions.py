@@ -8,10 +8,7 @@ ALL_DEPARTMENTS = [
     "Python Full Stack",
     "Java Full Stack",
     "DA/DS/BA",
-    "Embedded",
-    "MECH",
-    "MECH - Creo",
-    "MECH - CATIA"
+    "Embedded"
 ]
 
 questions = [

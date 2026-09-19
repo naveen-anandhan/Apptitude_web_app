@@ -147,7 +147,7 @@ Q20. In a flowchart, which geometric symbol is used to represent a decision/cond
      >> CORRECT ANSWER: B) Diamond
 
 ================================================================================
-SECTION 2: EMBEDDED SYSTEMS & MICROCONTROLLERS SPECIALIZATION (QUESTIONS 21 - 30)
+SECTION 2: TECHNICAL SPECIALIZATION (QUESTIONS 21 - 30)
 --------------------------------------------------------------------------------
 Q21. What is the primary architectural difference between a Microcontroller (MCU) and a Microprocessor (MPU)?
      A) An MCU integrates CPU, RAM, ROM, and I/O peripherals onto a single chip
