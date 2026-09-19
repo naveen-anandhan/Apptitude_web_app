@@ -1,0 +1,231 @@
+================================================================================
+PUMO APTITUDE ASSESSMENT - OFFICIAL ANSWER KEY
+DEPARTMENT: Python Full Stack Development
+TOTAL QUESTIONS: 30 (20 General Aptitude + 10 Technical Specialization)
+================================================================================
+
+SECTION 1: GENERAL APTITUDE (QUESTIONS 01 - 20)
+--------------------------------------------------------------------------------
+Q01. What is 15% of 200?
+     A) 20
+     B) 25
+     C) 30
+     D) 35
+     >> CORRECT ANSWER: C) 30
+
+Q02. If a train travels at 60 km/h, how far will it travel in 2.5 hours?
+     A) 120 km
+     B) 140 km
+     C) 150 km
+     D) 160 km
+     >> CORRECT ANSWER: C) 150 km
+
+Q03. If A can complete a work in 10 days and B in 15 days, how many days will they take working together?
+     A) 5 days
+     B) 6 days
+     C) 7.5 days
+     D) 8 days
+     >> CORRECT ANSWER: B) 6 days
+
+Q04. A shopkeeper buys an item for ₹400 and sells it for ₹500. What is the profit percentage?
+     A) 20%
+     B) 25%
+     C) 30%
+     D) 15%
+     >> CORRECT ANSWER: B) 25%
+
+Q05. The ratio of two numbers is 3:5 and their sum is 80. What is the smaller number?
+     A) 24
+     B) 30
+     C) 32
+     D) 36
+     >> CORRECT ANSWER: B) 30
+
+Q06. Find the simple interest on ₹5,000 at 6% per annum for 2 years.
+     A) ₹500
+     B) ₹550
+     C) ₹600
+     D) ₹650
+     >> CORRECT ANSWER: C) ₹600
+
+Q07. The average of five numbers is 20. If one number is removed, the average becomes 18. What was the removed number?
+     A) 24
+     B) 26
+     C) 28
+     D) 30
+     >> CORRECT ANSWER: C) 28
+
+Q08. Find the next number in the sequence: 3, 6, 12, 24, 48, ?
+     A) 72
+     B) 84
+     C) 96
+     D) 108
+     >> CORRECT ANSWER: C) 96
+
+Q09. Find the next number in the sequence: 2, 5, 10, 17, 26, ?
+     A) 35
+     B) 37
+     C) 39
+     D) 41
+     >> CORRECT ANSWER: B) 37
+
+Q10. If 'LIGHT' is coded as 'MTHIU', how is 'PLANT' coded following the same pattern?
+     A) QMBOU
+     B) QMBNU
+     C) QNCPO
+     D) QMANS
+     >> CORRECT ANSWER: A) QMBOU
+
+Q11. Pointing to a photograph, a man said: 'She is the daughter of my father's only son.' How is the girl related to the man?
+     A) Sister
+     B) Mother
+     C) Daughter
+     D) Niece
+     >> CORRECT ANSWER: C) Daughter
+
+Q12. A person walks 10 meters North, turns right and walks 10 meters, then turns right and walks 10 meters. In which direction is he from the starting point?
+     A) North
+     B) East
+     C) West
+     D) South
+     >> CORRECT ANSWER: B) East
+
+Q13. Which word does NOT belong with the others?
+     A) Inch
+     B) Ounce
+     C) Centimeter
+     D) Yard
+     >> CORRECT ANSWER: B) Ounce
+
+Q14. Choose the correct synonym for 'CANDID':
+     A) Secretive
+     B) Frank and honest
+     C) Dishonest
+     D) Fearful
+     >> CORRECT ANSWER: B) Frank and honest
+
+Q15. Choose the correctly spelled word:
+     A) Occurence
+     B) Occurrence
+     C) Occurrance
+     D) Ocurrence
+     >> CORRECT ANSWER: B) Occurrence
+
+Q16. What is the primary function of RAM in a computer?
+     A) Permanent data storage
+     B) Temporary volatile storage for active processes
+     C) Cooling the motherboard
+     D) Power regulation
+     >> CORRECT ANSWER: B) Temporary volatile storage for active processes
+
+Q17. Which of the following is an Operating System?
+     A) Linux
+     B) Google Chrome
+     C) Adobe Acrobat
+     D) Oracle SQL
+     >> CORRECT ANSWER: A) Linux
+
+Q18. What does HTTP stand for?
+     A) HyperText Transfer Protocol
+     B) HighText Transmission Program
+     C) HyperTransfer Terminal Protocol
+     D) HomeText Translation Process
+     >> CORRECT ANSWER: A) HyperText Transfer Protocol
+
+Q19. How many bits are there in 1 Byte?
+     A) 4
+     B) 8
+     C) 16
+     D) 32
+     >> CORRECT ANSWER: B) 8
+
+Q20. In a flowchart, which geometric symbol is used to represent a decision/condition?
+     A) Rectangle
+     B) Diamond
+     C) Oval
+     D) Parallelogram
+     >> CORRECT ANSWER: B) Diamond
+
+================================================================================
+SECTION 2: TECHNICAL SPECIALIZATION (QUESTIONS 21 - 30)
+--------------------------------------------------------------------------------
+Q21. Which keyword is used to define a function in Python?
+     A) function
+     B) def
+     C) fun
+     D) define
+     >> CORRECT ANSWER: B) def
+
+Q22. Which of the following data structures in Python is immutable?
+     A) List
+     B) Dictionary
+     C) Tuple
+     D) Set
+     >> CORRECT ANSWER: C) Tuple
+
+Q23. What will be the output of `[x * 2 for x in [1, 2, 3]]`?
+     A) [1, 2, 3, 1, 2, 3]
+     B) [2, 4, 6]
+     C) [1, 4, 9]
+     D) Error
+     >> CORRECT ANSWER: B) [2, 4, 6]
+
+Q24. What is the primary role of the `self` parameter in a Python class method?
+     A) Refers to the current instance of the class
+     B) Refers to the parent class
+     C) Creates a static method variable
+     D) Import global variables
+     >> CORRECT ANSWER: A) Refers to the current instance of the class
+
+Q25. Which keywords are used in Python for structured exception handling?
+     A) try / catch
+     B) try / except
+     C) do / rescue
+     D) test / fail
+     >> CORRECT ANSWER: B) try / except
+
+Q26. Which widely used Python web framework follows the 'Batteries Included' philosophy with built-in ORM and Admin UI?
+     A) Flask
+     B) Django
+     C) FastAPI
+     D) Bottle
+     >> CORRECT ANSWER: B) Django
+
+Q27. What is the average time complexity for key lookup in a standard Python dictionary?
+     A) O(1)
+     B) O(n)
+     C) O(log n)
+     D) O(n^2)
+     >> CORRECT ANSWER: A) O(1)
+
+Q28. In a Full Stack web application, which HTTP method is typically used to update an existing resource idempotently?
+     A) GET
+     B) POST
+     C) PUT
+     D) DELETE
+     >> CORRECT ANSWER: C) PUT
+
+Q29. What is the purpose of Python's `virtualenv` / `venv` module?
+     A) To run virtual machines for Windows inside Linux
+     B) To isolate project-specific Python dependencies and packages
+     C) To compile Python into WebAssembly
+     D) To encrypt source code files
+     >> CORRECT ANSWER: B) To isolate project-specific Python dependencies and packages
+
+Q30. In JavaScript frontend development, which method allows selecting a DOM element using a CSS selector?
+     A) document.getElementByIdOnly()
+     B) document.querySelector()
+     C) window.findSelector()
+     D) browser.getDOM()
+     >> CORRECT ANSWER: B) document.querySelector()
+
+================================================================================
+QUICK ANSWER KEY SUMMARY (01 - 30)
+================================================================================
+Q01: C | Q02: C | Q03: B | Q04: B | Q05: B
+Q06: C | Q07: C | Q08: C | Q09: B | Q10: A
+Q11: C | Q12: B | Q13: B | Q14: B | Q15: B
+Q16: B | Q17: A | Q18: A | Q19: B | Q20: B
+Q21: B | Q22: C | Q23: B | Q24: A | Q25: B
+Q26: B | Q27: A | Q28: C | Q29: B | Q30: B
+================================================================================

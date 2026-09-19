@@ -11,7 +11,9 @@
       "email-service/**",
       "seed-questions.json",
       "firestore.rules",
-      "README.md"
+      "README.md",
+      "answers/**",
+      "answer/**"
     ]
   }
 }
