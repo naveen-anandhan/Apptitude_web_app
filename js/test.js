@@ -382,30 +382,36 @@ async function submitTest(autoSubmitted) {
 
 
   let score = 0;
-
   let total = 0;
 
-
-  for (const q of questions) {
-
-    const marks =
-      Number(q.marks ?? 1);
-
-
+  const questionsReview = questions.map((q, index) => {
+    const marks = Number(q.marks ?? 1);
     total += marks;
 
+    const selectedIdx = answers[q.id];
+    const correctIdx = Number(q.correctIndex);
+    const isAnswered = selectedIdx !== undefined && selectedIdx !== null;
+    const isCorrect = isAnswered && selectedIdx === correctIdx;
 
-    if (
-      answers[q.id] ===
-      Number(q.correctIndex)
-    ) {
-
+    if (isCorrect) {
       score += marks;
-
     }
 
-  }
+    return {
+      order: Number(q.order ?? (index + 1)),
+      question: q.question,
+      options: q.options,
+      selectedIdx: isAnswered ? selectedIdx : null,
+      selectedText: isAnswered ? q.options[selectedIdx] : null,
+      correctIdx: correctIdx,
+      correctText: q.options[correctIdx],
+      isCorrect: isCorrect,
+      marks: marks
+    };
+  });
 
+  const correctCount = questionsReview.filter(r => r.isCorrect).length;
+  const wrongCount = questionsReview.length - correctCount;
 
   const percentage =
     total
@@ -414,41 +420,31 @@ async function submitTest(autoSubmitted) {
         ) / 100
       : 0;
 
-
   // 50% or above = PASS
   const pass =
     percentage >= 50
       ? "PASS"
       : "FAIL";
 
-
   const result = {
-
     studentName:
       student.name,
-
     studentId:
       student.studentId,
-
     department:
       student.department,
-
     studentEmail:
       student.email,
-
     score,
-
     total,
-
     percentage,
-
     pass,
-
+    correctCount,
+    wrongCount,
+    questionsReview,
     autoSubmitted,
-
     submittedAt:
       new Date().toISOString()
-
   };
 
 
