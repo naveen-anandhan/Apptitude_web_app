@@ -2,36 +2,81 @@
   {
     "order": 1,
     "question": "What is 15% of 200?",
-    "options": ["15", "20", "30", "40"],
+    "options": ["20", "25", "30", "35"],
     "correctIndex": 2,
-    "marks": 1
+    "marks": 1,
+    "departments": [
+      "General",
+      "SAP",
+      "Python Full Stack",
+      "Java Full Stack",
+      "DA/DS/BA",
+      "Embedded",
+      "MECH"
+    ]
   },
   {
     "order": 2,
-    "question": "If a train travels 60 km in 1 hour, how far will it travel in 3 hours?",
-    "options": ["120 km", "180 km", "200 km", "240 km"],
-    "correctIndex": 1,
-    "marks": 1
+    "question": "If a train travels at 60 km/h, how far will it travel in 2.5 hours?",
+    "options": ["120 km", "140 km", "150 km", "160 km"],
+    "correctIndex": 2,
+    "marks": 1,
+    "departments": [
+      "General",
+      "SAP",
+      "Python Full Stack",
+      "Java Full Stack",
+      "DA/DS/BA",
+      "Embedded",
+      "MECH"
+    ]
   },
   {
     "order": 3,
-    "question": "Find the next number: 2, 4, 8, 16, ?",
-    "options": ["20", "24", "30", "32"],
-    "correctIndex": 3,
-    "marks": 1
+    "question": "If A can complete a work in 10 days and B in 15 days, how many days will they take working together?",
+    "options": ["5 days", "6 days", "7.5 days", "8 days"],
+    "correctIndex": 1,
+    "marks": 1,
+    "departments": [
+      "General",
+      "SAP",
+      "Python Full Stack",
+      "Java Full Stack",
+      "DA/DS/BA",
+      "Embedded",
+      "MECH"
+    ]
   },
   {
     "order": 4,
-    "question": "If CAT is coded as DBU, how is DOG coded?",
-    "options": ["EPH", "EOG", "FPH", "DPG"],
-    "correctIndex": 0,
-    "marks": 1
+    "question": "A shopkeeper buys an item for ₹400 and sells it for ₹500. What is the profit percentage?",
+    "options": ["20%", "25%", "30%", "15%"],
+    "correctIndex": 1,
+    "marks": 1,
+    "departments": [
+      "General",
+      "SAP",
+      "Python Full Stack",
+      "Java Full Stack",
+      "DA/DS/BA",
+      "Embedded",
+      "MECH"
+    ]
   },
   {
     "order": 5,
-    "question": "A product costs ₹500 and is sold at a 10% discount. What is the selling price?",
-    "options": ["₹450", "₹460", "₹475", "₹490"],
-    "correctIndex": 0,
-    "marks": 1
+    "question": "The ratio of two numbers is 3:5 and their sum is 80. What is the smaller number?",
+    "options": ["24", "30", "32", "36"],
+    "correctIndex": 1,
+    "marks": 1,
+    "departments": [
+      "General",
+      "SAP",
+      "Python Full Stack",
+      "Java Full Stack",
+      "DA/DS/BA",
+      "Embedded",
+      "MECH"
+    ]
   }
 ]

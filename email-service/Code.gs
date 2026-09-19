@@ -1,40 +1,86 @@
 /**
- * Google Apps Script email service.
+ * Google Apps Script - Result Handler (Email & Google Sheets)
  *
  * Deploy as:
+ *   Deploy -> New deployment -> Web app
  *   Execute as: Me
  *   Who has access: Anyone
  *
- * The script receives JSON:
+ * This script accepts the payload sent by test.js:
  * {
- *   name, email, studentId, score, total, percentage
+ *   studentName, phoneNumber, department, email, score, pass
  * }
- *
- * It sends an email from the Google account that owns the script.
  */
 
 function doPost(e) {
   try {
-    var data = JSON.parse(e.postData.contents);
+    var contents = e.postData ? e.postData.contents : "{}";
+    var data = JSON.parse(contents);
 
-    if (!data.email || !data.name) {
-      return jsonResponse({ ok: false, error: "Missing email/name" });
+    var studentName = data.studentName || data.name || "Student";
+    var studentEmail = data.email || data.studentEmail || "";
+    var studentPhone = data.phoneNumber || data.studentId || "";
+    var department = data.department || "General";
+    var score = data.score || "";
+    var pass = data.pass || "";
+    var timestamp = new Date().toLocaleString();
+
+    // Optional: If this script is attached to a Google Sheet, record the submission
+    try {
+      var sheet = SpreadsheetApp.getActiveSpreadsheet();
+      if (sheet) {
+        var tab = sheet.getActiveSheet();
+        if (tab.getLastRow() === 0) {
+          tab.appendRow([
+            "Timestamp",
+            "Student Name",
+            "Mobile / ID",
+            "Department",
+            "Email",
+            "Score",
+            "Status"
+          ]);
+        }
+        tab.appendRow([
+          timestamp,
+          studentName,
+          studentPhone,
+          department,
+          studentEmail,
+          score,
+          pass
+        ]);
+      }
+    } catch (sheetErr) {
+      Logger.log("Sheet logging note: " + sheetErr);
     }
 
-    var subject = "Aptitude Test Result";
-    var body =
-      "Hi " + data.name + ",\n\n" +
-      "Your aptitude test has been evaluated.\n\n" +
-      "Student ID: " + data.studentId + "\n" +
-      "Score: " + data.score + " / " + data.total + "\n" +
-      "Percentage: " + data.percentage + "%\n\n" +
-      "Thank you for attending the test.\n";
+    // Send confirmation email to student if email is provided
+    if (studentEmail) {
+      try {
+        var subject = "PUMO Aptitude Assessment Result - " + studentName;
+        var body =
+          "Hi " + studentName + ",\n\n" +
+          "Thank you for completing the PUMO Aptitude Assessment.\n\n" +
+          "Assessment Summary:\n" +
+          "------------------------------------\n" +
+          "Department : " + department + "\n" +
+          "Mobile / ID: " + studentPhone + "\n" +
+          "Score      : " + score + "\n" +
+          "Result     : " + pass + "\n" +
+          "Submitted  : " + timestamp + "\n" +
+          "------------------------------------\n\n" +
+          "Best regards,\nPUMO Tech Systems Team";
 
-    MailApp.sendEmail({
-      to: data.email,
-      subject: subject,
-      body: body
-    });
+        MailApp.sendEmail({
+          to: studentEmail,
+          subject: subject,
+          body: body
+        });
+      } catch (mailErr) {
+        Logger.log("Email sending note: " + mailErr);
+      }
+    }
 
     return jsonResponse({ ok: true });
   } catch (err) {
