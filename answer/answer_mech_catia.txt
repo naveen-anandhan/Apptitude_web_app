@@ -14,108 +14,108 @@ Q01. Which aerospace and engineering corporation is the original developer and p
      >> CORRECT ANSWER: A) Dassault Systèmes
 
 Q02. In CATIA V5, what is the specialized working environment tailored for a specific engineering task (e.g., Part Design, Drafting) called?
-     A) Workbench
-     B) Dashboard
+     A) Dashboard
+     B) Workbench
      C) Viewport
      D) Canvas
-     >> CORRECT ANSWER: A) Workbench
+     >> CORRECT ANSWER: B) Workbench
 
 Q03. Which workbench in CATIA V5 is primarily utilized for creating 3D parametric mechanical solid parts?
-     A) Part Design
-     B) Generative Shape Design
-     C) DMU Kinematics
-     D) Drafting
-     >> CORRECT ANSWER: A) Part Design
+     A) DMU Kinematics
+     B) Drafting
+     C) Generative Shape Design
+     D) Part Design
+     >> CORRECT ANSWER: D) Part Design
 
 Q04. In CATIA Sketcher, what does a GREEN color on a 2D profile indicate during geometry diagnostics?
-     A) The geometry is fully constrained (iso-constrained)
-     B) The geometry is under-constrained
+     A) The geometry is under-constrained
+     B) The geometry is disconnected or unclosed
      C) The geometry is over-constrained with conflicting dimensions
-     D) The geometry is disconnected or unclosed
-     >> CORRECT ANSWER: A) The geometry is fully constrained (iso-constrained)
+     D) The geometry is fully constrained (iso-constrained)
+     >> CORRECT ANSWER: D) The geometry is fully constrained (iso-constrained)
 
 Q05. In CATIA Sketcher, what does a WHITE color on a line or arc indicate?
-     A) The element is under-constrained (has remaining degrees of freedom)
-     B) The element is fully fixed in space
-     C) The element is in error and cannot be extruded
+     A) The element is in error and cannot be extruded
+     B) The element is under-constrained (has remaining degrees of freedom)
+     C) The element is fully fixed in space
      D) The element is a construction reference line
-     >> CORRECT ANSWER: A) The element is under-constrained (has remaining degrees of freedom)
+     >> CORRECT ANSWER: B) The element is under-constrained (has remaining degrees of freedom)
 
 Q06. In CATIA Sketcher, what does a PURPLE / MAGENTA or RED color on a sketch indicate?
      A) Over-constrained geometry (too many conflicting dimensions/constraints)
      B) Active construction geometry
-     C) A profile ready for immediate Pad creation
-     D) A mirrored profile
+     C) A mirrored profile
+     D) A profile ready for immediate Pad creation
      >> CORRECT ANSWER: A) Over-constrained geometry (too many conflicting dimensions/constraints)
 
 Q07. In CATIA Part Design, which command is used to linearly extrude a 2D closed sketch into a 3D solid body?
-     A) Pad
-     B) Shaft
-     C) Pocket
-     D) Rib
-     >> CORRECT ANSWER: A) Pad
+     A) Shaft
+     B) Rib
+     C) Pad
+     D) Pocket
+     >> CORRECT ANSWER: C) Pad
 
 Q08. In CATIA Part Design, which command creates a solid of revolution by revolving a 2D profile around a specified axis?
      A) Shaft
-     B) Pad
-     C) Groove
+     B) Groove
+     C) Pad
      D) Slot
      >> CORRECT ANSWER: A) Shaft
 
 Q09. In CATIA Part Design, which command removes material by extruding a 2D profile into an existing solid feature?
-     A) Pocket
-     B) Pad
-     C) Hole
-     D) Multi-sections Solid
-     >> CORRECT ANSWER: A) Pocket
+     A) Multi-sections Solid
+     B) Hole
+     C) Pocket
+     D) Pad
+     >> CORRECT ANSWER: C) Pocket
 
 Q10. In CATIA Part Design, which command is the material-removal counterpart to the Shaft tool (revolving cut)?
-     A) Groove
-     B) Pocket
+     A) Fillet
+     B) Groove
      C) Draft
-     D) Fillet
-     >> CORRECT ANSWER: A) Groove
+     D) Pocket
+     >> CORRECT ANSWER: B) Groove
 
 Q11. What is the key advantage of using a 'Positioned Sketch' over a standard 'Sketch' in CATIA?
-     A) Allows precise definition of the sketch origin point and orientation axes (H and V)
-     B) Automatically converts lines into 3D solids without padding
-     C) Reduces the file size of the 3D model by 50%
-     D) Locks the sketch so no dimensions are required
-     >> CORRECT ANSWER: A) Allows precise definition of the sketch origin point and orientation axes (H and V)
+     A) Reduces the file size of the 3D model by 50%
+     B) Locks the sketch so no dimensions are required
+     C) Automatically converts lines into 3D solids without padding
+     D) Allows precise definition of the sketch origin point and orientation axes (H and V)
+     >> CORRECT ANSWER: D) Allows precise definition of the sketch origin point and orientation axes (H and V)
 
 Q12. In CATIA Part Design, which command is used to sweep a planar profile along an open or closed center curve trajectory?
-     A) Rib
-     B) Slot
-     C) Pad
-     D) Pocket
-     >> CORRECT ANSWER: A) Rib
+     A) Slot
+     B) Pad
+     C) Pocket
+     D) Rib
+     >> CORRECT ANSWER: D) Rib
 
 Q13. Which CATIA Part Design command removes material by sweeping a profile along a center guide curve?
-     A) Slot
-     B) Rib
-     C) Shaft
-     D) Chamfer
-     >> CORRECT ANSWER: A) Slot
+     A) Chamfer
+     B) Slot
+     C) Rib
+     D) Shaft
+     >> CORRECT ANSWER: B) Slot
 
 Q14. In CATIA Part Design, which feature creates a complex transitional solid connecting multiple cross-sectional planar sketches (similar to a Loft)?
-     A) Multi-sections Solid
-     B) Pad
-     C) Shaft
-     D) Stiffener
-     >> CORRECT ANSWER: A) Multi-sections Solid
+     A) Shaft
+     B) Stiffener
+     C) Pad
+     D) Multi-sections Solid
+     >> CORRECT ANSWER: D) Multi-sections Solid
 
 Q15. Which dress-up feature in CATIA Part Design is used to smooth sharp edges with a uniform circular radius?
-     A) Edge Fillet
-     B) Chamfer
+     A) Chamfer
+     B) Shell
      C) Draft
-     D) Shell
-     >> CORRECT ANSWER: A) Edge Fillet
+     D) Edge Fillet
+     >> CORRECT ANSWER: D) Edge Fillet
 
 Q16. In CATIA Part Design, what parameters are required when applying a 'Draft Angle' feature?
      A) Faces to draft, Angle, Neutral Element, and Pulling Direction
      B) Tool spindle speed and feed rate
-     C) Material density and Young's modulus
-     D) Coordinate origin and bounding box limits
+     C) Coordinate origin and bounding box limits
+     D) Material density and Young's modulus
      >> CORRECT ANSWER: A) Faces to draft, Angle, Neutral Element, and Pulling Direction
 
 Q17. Which feature in CATIA Part Design hollows out a solid component, leaving a specified default wall thickness?
@@ -126,103 +126,103 @@ Q17. Which feature in CATIA Part Design hollows out a solid component, leaving a
      >> CORRECT ANSWER: A) Shell
 
 Q18. Which feature in CATIA Part Design is specifically designed to create web stiffening ribs from an open 2D sketch profile?
-     A) Stiffener
-     B) Pad
-     C) Shaft
-     D) Rib
-     >> CORRECT ANSWER: A) Stiffener
+     A) Rib
+     B) Stiffener
+     C) Pad
+     D) Shaft
+     >> CORRECT ANSWER: B) Stiffener
 
 Q19. What operations are available under Boolean Operations in CATIA Part Design when combining multiple solid bodies?
-     A) Assemble, Add, Remove, and Intersect
-     B) Copy, Cut, Paste, and Delete
-     C) Extrude, Revolve, Sweep, and Blend
-     D) Compile, Link, Debug, and Run
-     >> CORRECT ANSWER: A) Assemble, Add, Remove, and Intersect
+     A) Compile, Link, Debug, and Run
+     B) Extrude, Revolve, Sweep, and Blend
+     C) Assemble, Add, Remove, and Intersect
+     D) Copy, Cut, Paste, and Delete
+     >> CORRECT ANSWER: C) Assemble, Add, Remove, and Intersect
 
 Q20. Which workbench in CATIA V5 is universally recognized for advanced Class-A aesthetic and aerodynamic wireframe and surface modeling?
-     A) Generative Shape Design (GSD)
+     A) Prismatic Machining
      B) Part Design
-     C) Sheet Metal Design
-     D) Prismatic Machining
-     >> CORRECT ANSWER: A) Generative Shape Design (GSD)
+     C) Generative Shape Design (GSD)
+     D) Sheet Metal Design
+     >> CORRECT ANSWER: C) Generative Shape Design (GSD)
 
 Q21. In CATIA Generative Shape Design (GSD), which command connects two or more adjacent surface patches into a single continuous quilt?
-     A) Join
-     B) Trim
-     C) Split
+     A) Split
+     B) Join
+     C) Trim
      D) Extrapolate
-     >> CORRECT ANSWER: A) Join
+     >> CORRECT ANSWER: B) Join
 
 Q22. What is the 3D on-screen visual manipulation widget in CATIA used for dragging, rotating, and snapping components called?
-     A) The Compass
+     A) The Coordinate Navigator
      B) The Protractor
-     C) The Triad Cursor
-     D) The Coordinate Navigator
-     >> CORRECT ANSWER: A) The Compass
+     C) The Compass
+     D) The Triad Cursor
+     >> CORRECT ANSWER: C) The Compass
 
 Q23. In the CATIA Specification Tree, what does selecting 'Define in Work Object' on a feature do?
      A) Sets that feature as the active insertion point for subsequent operations in historical sequence
-     B) Exports the feature as an STL file
-     C) Permanently locks the feature against any future modifications
-     D) Converts the feature from a solid into a surface
+     B) Converts the feature from a solid into a surface
+     C) Exports the feature as an STL file
+     D) Permanently locks the feature against any future modifications
      >> CORRECT ANSWER: A) Sets that feature as the active insertion point for subsequent operations in historical sequence
 
 Q24. In CATIA Assembly Design, which constraint aligns the centerlines of two cylindrical holes or pins?
-     A) Coincidence Constraint
+     A) Angle Constraint
      B) Contact Constraint
-     C) Offset Constraint
-     D) Angle Constraint
-     >> CORRECT ANSWER: A) Coincidence Constraint
+     C) Coincidence Constraint
+     D) Offset Constraint
+     >> CORRECT ANSWER: C) Coincidence Constraint
 
 Q25. In CATIA Assembly Design, which command anchors a reference base component firmly in 3D space with zero remaining degrees of freedom?
      A) Fix Component
      B) Coincidence
-     C) Contact
-     D) Flexible Sub-Assembly
+     C) Flexible Sub-Assembly
+     D) Contact
      >> CORRECT ANSWER: A) Fix Component
 
 Q26. In CATIA Assembly Design, what analysis tool verifies whether components in the product model intersect or collide?
-     A) Clash / Clearance / Interference Analysis
-     B) Sectioning and Measure Inertia
-     C) Finite Element Mesher
-     D) Bill of Materials generator
-     >> CORRECT ANSWER: A) Clash / Clearance / Interference Analysis
+     A) Finite Element Mesher
+     B) Clash / Clearance / Interference Analysis
+     C) Bill of Materials generator
+     D) Sectioning and Measure Inertia
+     >> CORRECT ANSWER: B) Clash / Clearance / Interference Analysis
 
 Q27. What is the native file format extension for a single 3D Part document in CATIA V5?
-     A) .CATPart
-     B) .CATProduct
+     A) .CATProduct
+     B) .CATProcess
      C) .CATDrawing
-     D) .CATProcess
-     >> CORRECT ANSWER: A) .CATPart
+     D) .CATPart
+     >> CORRECT ANSWER: D) .CATPart
 
 Q28. What is the native file format extension for a 3D Assembly Product document in CATIA V5?
-     A) .CATProduct
+     A) .CATDrawing
      B) .CATPart
-     C) .CATDrawing
+     C) .CATProduct
      D) .CATMaterial
-     >> CORRECT ANSWER: A) .CATProduct
+     >> CORRECT ANSWER: C) .CATProduct
 
 Q29. In the CATIA Drafting workbench, which view creation tool projects adjacent orthographic views from an already established base view?
-     A) Projection View
-     B) Front View
+     A) Front View
+     B) Projection View
      C) Auxiliary View
      D) Detail View
-     >> CORRECT ANSWER: A) Projection View
+     >> CORRECT ANSWER: B) Projection View
 
 Q30. Which international neutral CAD exchange standard is supported by CATIA for transmitting 3D models with assembly structure and geometric PMI?
      A) STEP (AP203 / AP214 / AP242)
      B) BMP
-     C) TXT
-     D) MP4
+     C) MP4
+     D) TXT
      >> CORRECT ANSWER: A) STEP (AP203 / AP214 / AP242)
 
 ================================================================================
 QUICK ANSWER KEY SUMMARY (01 - 30)
 ================================================================================
-Q01: A | Q02: A | Q03: A | Q04: A | Q05: A
-Q06: A | Q07: A | Q08: A | Q09: A | Q10: A
-Q11: A | Q12: A | Q13: A | Q14: A | Q15: A
-Q16: A | Q17: A | Q18: A | Q19: A | Q20: A
-Q21: A | Q22: A | Q23: A | Q24: A | Q25: A
-Q26: A | Q27: A | Q28: A | Q29: A | Q30: A
+Q01: A | Q02: B | Q03: D | Q04: D | Q05: B
+Q06: A | Q07: C | Q08: A | Q09: C | Q10: B
+Q11: D | Q12: D | Q13: B | Q14: D | Q15: D
+Q16: A | Q17: A | Q18: B | Q19: C | Q20: C
+Q21: B | Q22: C | Q23: A | Q24: C | Q25: A
+Q26: B | Q27: D | Q28: C | Q29: B | Q30: A
 ================================================================================

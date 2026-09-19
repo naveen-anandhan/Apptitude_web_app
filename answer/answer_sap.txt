@@ -7,87 +7,87 @@ TOTAL QUESTIONS: 30 (20 General Aptitude + 10 Technical Specialization)
 SECTION 1: GENERAL APTITUDE (QUESTIONS 01 - 20)
 --------------------------------------------------------------------------------
 Q01. What is 15% of 200?
-     A) 20
-     B) 25
-     C) 30
-     D) 35
-     >> CORRECT ANSWER: C) 30
+     A) 30
+     B) 20
+     C) 35
+     D) 25
+     >> CORRECT ANSWER: A) 30
 
 Q02. If a train travels at 60 km/h, how far will it travel in 2.5 hours?
-     A) 120 km
-     B) 140 km
-     C) 150 km
-     D) 160 km
-     >> CORRECT ANSWER: C) 150 km
+     A) 150 km
+     B) 120 km
+     C) 160 km
+     D) 140 km
+     >> CORRECT ANSWER: A) 150 km
 
 Q03. If A can complete a work in 10 days and B in 15 days, how many days will they take working together?
-     A) 5 days
-     B) 6 days
-     C) 7.5 days
+     A) 7.5 days
+     B) 5 days
+     C) 6 days
      D) 8 days
-     >> CORRECT ANSWER: B) 6 days
+     >> CORRECT ANSWER: C) 6 days
 
 Q04. A shopkeeper buys an item for ₹400 and sells it for ₹500. What is the profit percentage?
      A) 20%
-     B) 25%
-     C) 30%
+     B) 30%
+     C) 25%
      D) 15%
-     >> CORRECT ANSWER: B) 25%
+     >> CORRECT ANSWER: C) 25%
 
 Q05. The ratio of two numbers is 3:5 and their sum is 80. What is the smaller number?
-     A) 24
+     A) 36
      B) 30
      C) 32
-     D) 36
+     D) 24
      >> CORRECT ANSWER: B) 30
 
 Q06. Find the simple interest on ₹5,000 at 6% per annum for 2 years.
      A) ₹500
-     B) ₹550
+     B) ₹650
      C) ₹600
-     D) ₹650
+     D) ₹550
      >> CORRECT ANSWER: C) ₹600
 
 Q07. The average of five numbers is 20. If one number is removed, the average becomes 18. What was the removed number?
-     A) 24
-     B) 26
-     C) 28
-     D) 30
-     >> CORRECT ANSWER: C) 28
+     A) 30
+     B) 28
+     C) 26
+     D) 24
+     >> CORRECT ANSWER: B) 28
 
 Q08. Find the next number in the sequence: 3, 6, 12, 24, 48, ?
-     A) 72
+     A) 108
      B) 84
-     C) 96
-     D) 108
-     >> CORRECT ANSWER: C) 96
+     C) 72
+     D) 96
+     >> CORRECT ANSWER: D) 96
 
 Q09. Find the next number in the sequence: 2, 5, 10, 17, 26, ?
-     A) 35
-     B) 37
-     C) 39
-     D) 41
-     >> CORRECT ANSWER: B) 37
+     A) 37
+     B) 35
+     C) 41
+     D) 39
+     >> CORRECT ANSWER: A) 37
 
 Q10. If 'LIGHT' is coded as 'MTHIU', how is 'PLANT' coded following the same pattern?
      A) QMBOU
-     B) QMBNU
-     C) QNCPO
-     D) QMANS
+     B) QMANS
+     C) QMBNU
+     D) QNCPO
      >> CORRECT ANSWER: A) QMBOU
 
 Q11. Pointing to a photograph, a man said: 'She is the daughter of my father's only son.' How is the girl related to the man?
      A) Sister
-     B) Mother
-     C) Daughter
-     D) Niece
-     >> CORRECT ANSWER: C) Daughter
+     B) Niece
+     C) Mother
+     D) Daughter
+     >> CORRECT ANSWER: D) Daughter
 
 Q12. A person walks 10 meters North, turns right and walks 10 meters, then turns right and walks 10 meters. In which direction is he from the starting point?
-     A) North
+     A) South
      B) East
      C) West
-     D) South
+     D) North
      >> CORRECT ANSWER: B) East
 
 Q13. Which word does NOT belong with the others?
@@ -98,46 +98,46 @@ Q13. Which word does NOT belong with the others?
      >> CORRECT ANSWER: B) Ounce
 
 Q14. Choose the correct synonym for 'CANDID':
-     A) Secretive
-     B) Frank and honest
-     C) Dishonest
-     D) Fearful
-     >> CORRECT ANSWER: B) Frank and honest
+     A) Frank and honest
+     B) Secretive
+     C) Fearful
+     D) Dishonest
+     >> CORRECT ANSWER: A) Frank and honest
 
 Q15. Choose the correctly spelled word:
-     A) Occurence
-     B) Occurrence
-     C) Occurrance
-     D) Ocurrence
-     >> CORRECT ANSWER: B) Occurrence
+     A) Occurrence
+     B) Occurence
+     C) Ocurrence
+     D) Occurrance
+     >> CORRECT ANSWER: A) Occurrence
 
 Q16. What is the primary function of RAM in a computer?
-     A) Permanent data storage
-     B) Temporary volatile storage for active processes
-     C) Cooling the motherboard
+     A) Cooling the motherboard
+     B) Permanent data storage
+     C) Temporary volatile storage for active processes
      D) Power regulation
-     >> CORRECT ANSWER: B) Temporary volatile storage for active processes
+     >> CORRECT ANSWER: C) Temporary volatile storage for active processes
 
 Q17. Which of the following is an Operating System?
-     A) Linux
+     A) Adobe Acrobat
      B) Google Chrome
-     C) Adobe Acrobat
-     D) Oracle SQL
-     >> CORRECT ANSWER: A) Linux
+     C) Oracle SQL
+     D) Linux
+     >> CORRECT ANSWER: D) Linux
 
 Q18. What does HTTP stand for?
-     A) HyperText Transfer Protocol
-     B) HighText Transmission Program
-     C) HyperTransfer Terminal Protocol
-     D) HomeText Translation Process
-     >> CORRECT ANSWER: A) HyperText Transfer Protocol
+     A) HyperTransfer Terminal Protocol
+     B) HyperText Transfer Protocol
+     C) HomeText Translation Process
+     D) HighText Transmission Program
+     >> CORRECT ANSWER: B) HyperText Transfer Protocol
 
 Q19. How many bits are there in 1 Byte?
-     A) 4
-     B) 8
-     C) 16
+     A) 16
+     B) 4
+     C) 8
      D) 32
-     >> CORRECT ANSWER: B) 8
+     >> CORRECT ANSWER: C) 8
 
 Q20. In a flowchart, which geometric symbol is used to represent a decision/condition?
      A) Rectangle
@@ -150,82 +150,82 @@ Q20. In a flowchart, which geometric symbol is used to represent a decision/cond
 SECTION 2: TECHNICAL SPECIALIZATION (QUESTIONS 21 - 30)
 --------------------------------------------------------------------------------
 Q21. What does SAP stand for?
-     A) System Application and Products
-     B) Systems, Applications and Products in Data Processing
-     C) Software Application Program
-     D) System Analysis Program
-     >> CORRECT ANSWER: B) Systems, Applications and Products in Data Processing
+     A) Systems, Applications and Products in Data Processing
+     B) System Analysis Program
+     C) System Application and Products
+     D) Software Application Program
+     >> CORRECT ANSWER: A) Systems, Applications and Products in Data Processing
 
 Q22. Which SAP module is primarily responsible for Financial Accounting?
      A) FI
-     B) MM
+     B) PP
      C) SD
-     D) PP
+     D) MM
      >> CORRECT ANSWER: A) FI
 
 Q23. Which SAP module manages purchasing, inventory management, and invoice verification?
      A) SD
-     B) MM
-     C) CO
-     D) QM
-     >> CORRECT ANSWER: B) MM
+     B) CO
+     C) QM
+     D) MM
+     >> CORRECT ANSWER: D) MM
 
 Q24. Which SAP module covers customer order processing, shipping, and billing?
-     A) SD
-     B) MM
-     C) PM
-     D) PS
-     >> CORRECT ANSWER: A) SD
+     A) PM
+     B) PS
+     C) MM
+     D) SD
+     >> CORRECT ANSWER: D) SD
 
 Q25. What is SAP HANA primarily characterized as?
      A) An operating system for mainframes
      B) An in-memory, column-oriented relational database management system
-     C) A web design framework
-     D) An email client application
+     C) An email client application
+     D) A web design framework
      >> CORRECT ANSWER: B) An in-memory, column-oriented relational database management system
 
 Q26. What is the primary purpose of a Transaction Code (T-Code) in SAP GUI?
      A) A keyboard shortcut to navigate directly to an application screen or task
      B) A password reset code for users
-     C) An encrypted database license key
-     D) A barcode scanner setting
+     C) A barcode scanner setting
+     D) An encrypted database license key
      >> CORRECT ANSWER: A) A keyboard shortcut to navigate directly to an application screen or task
 
 Q27. What programming language is predominantly used to develop business applications within the SAP environment?
      A) Python
-     B) ABAP
-     C) C#
+     B) C#
+     C) ABAP
      D) Swift
-     >> CORRECT ANSWER: B) ABAP
+     >> CORRECT ANSWER: C) ABAP
 
 Q28. In SAP, what does the ERP acronym represent?
-     A) Electronic Record Processing
+     A) Extensible Reporting Platform
      B) Enterprise Resource Planning
-     C) Entity Relationship Protocol
-     D) Extensible Reporting Platform
+     C) Electronic Record Processing
+     D) Entity Relationship Protocol
      >> CORRECT ANSWER: B) Enterprise Resource Planning
 
 Q29. Which SAP module is designed for controlling internal cost and managerial reporting?
-     A) FI
+     A) SD
      B) CO
-     C) HR
-     D) SD
+     C) FI
+     D) HR
      >> CORRECT ANSWER: B) CO
 
 Q30. What is the organizational level in SAP representing an independent legal accounting entity?
      A) Plant
-     B) Company Code
-     C) Sales Organization
-     D) Storage Location
-     >> CORRECT ANSWER: B) Company Code
+     B) Storage Location
+     C) Company Code
+     D) Sales Organization
+     >> CORRECT ANSWER: C) Company Code
 
 ================================================================================
 QUICK ANSWER KEY SUMMARY (01 - 30)
 ================================================================================
-Q01: C | Q02: C | Q03: B | Q04: B | Q05: B
-Q06: C | Q07: C | Q08: C | Q09: B | Q10: A
-Q11: C | Q12: B | Q13: B | Q14: B | Q15: B
-Q16: B | Q17: A | Q18: A | Q19: B | Q20: B
-Q21: B | Q22: A | Q23: B | Q24: A | Q25: B
-Q26: A | Q27: B | Q28: B | Q29: B | Q30: B
+Q01: A | Q02: A | Q03: C | Q04: C | Q05: B
+Q06: C | Q07: B | Q08: D | Q09: A | Q10: A
+Q11: D | Q12: B | Q13: B | Q14: A | Q15: A
+Q16: C | Q17: D | Q18: B | Q19: C | Q20: B
+Q21: A | Q22: A | Q23: D | Q24: D | Q25: B
+Q26: A | Q27: C | Q28: B | Q29: B | Q30: C
 ================================================================================
