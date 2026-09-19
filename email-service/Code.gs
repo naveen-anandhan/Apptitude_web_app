@@ -1,95 +1,107 @@
-/**
- * Google Apps Script - Result Handler (Email & Google Sheets)
- *
- * Deploy as:
- *   Deploy -> New deployment -> Web app
- *   Execute as: Me
- *   Who has access: Anyone
- *
- * This script accepts the payload sent by test.js:
- * {
- *   studentName, phoneNumber, department, email, score, pass
- * }
- */
-
 function doPost(e) {
   try {
-    var contents = e.postData ? e.postData.contents : "{}";
-    var data = JSON.parse(contents);
 
-    var studentName = data.studentName || data.name || "Student";
-    var studentEmail = data.email || data.studentEmail || "";
-    var studentPhone = data.phoneNumber || data.studentId || "";
-    var department = data.department || "General";
-    var score = data.score || "";
-    var pass = data.pass || "";
-    var timestamp = new Date().toLocaleString();
+    // Get the spreadsheet
+    const spreadsheet =
+      SpreadsheetApp.getActiveSpreadsheet();
 
-    // Optional: If this script is attached to a Google Sheet, record the submission
-    try {
-      var sheet = SpreadsheetApp.getActiveSpreadsheet();
-      if (sheet) {
-        var tab = sheet.getActiveSheet();
-        if (tab.getLastRow() === 0) {
-          tab.appendRow([
-            "Timestamp",
-            "Student Name",
-            "Mobile / ID",
-            "Department",
-            "Email",
-            "Score",
-            "Status"
-          ]);
-        }
-        tab.appendRow([
-          timestamp,
-          studentName,
-          studentPhone,
-          department,
-          studentEmail,
-          score,
-          pass
-        ]);
-      }
-    } catch (sheetErr) {
-      Logger.log("Sheet logging note: " + sheetErr);
+    // Get data from website
+    const data =
+      JSON.parse(e.postData.contents);
+
+    // Get department
+    let department =
+      data.department;
+
+    // Make sure department was provided
+    if (!department) {
+      throw new Error("Department is missing.");
     }
 
-    // Send confirmation email to student if email is provided
-    if (studentEmail) {
-      try {
-        var subject = "PUMO Aptitude Assessment Result - " + studentName;
-        var body =
-          "Hi " + studentName + ",\n\n" +
-          "Thank you for completing the PUMO Aptitude Assessment.\n\n" +
-          "Assessment Summary:\n" +
-          "------------------------------------\n" +
-          "Department : " + department + "\n" +
-          "Mobile / ID: " + studentPhone + "\n" +
-          "Score      : " + score + "\n" +
-          "Result     : " + pass + "\n" +
-          "Submitted  : " + timestamp + "\n" +
-          "------------------------------------\n\n" +
-          "Best regards,\nPUMO Tech Systems Team";
-
-        MailApp.sendEmail({
-          to: studentEmail,
-          subject: subject,
-          body: body
-        });
-      } catch (mailErr) {
-        Logger.log("Email sending note: " + mailErr);
+    // Handle MECH sub-categories (Creo / CATIA) -> map to MECH tab
+    let specialization = data.specialization || "";
+    if (department.startsWith("MECH")) {
+      if (department.includes(" - ")) {
+        specialization = department.split(" - ")[1];
       }
+      department = "MECH";
     }
 
-    return jsonResponse({ ok: true });
-  } catch (err) {
-    return jsonResponse({ ok: false, error: String(err) });
+    // Allowed departments matching the website
+    const allowedDepartments = [
+      "SAP",
+      "Python Full Stack",
+      "Java Full Stack",
+      "DA/DS/BA",
+      "Embedded",
+      "MECH",
+      "General",
+      "Others"
+    ];
+
+    // Check department
+    if (!allowedDepartments.includes(department)) {
+      throw new Error(
+        "Invalid department: " + department
+      );
+    }
+
+    // Get the department sheet tab
+    let sheet =
+      spreadsheet.getSheetByName(department);
+
+    // If sheet doesn't exist, create it automatically
+    if (!sheet) {
+      sheet =
+        spreadsheet.insertSheet(department);
+    }
+
+    // Add headings if sheet is empty
+    if (sheet.getLastRow() === 0) {
+      sheet.appendRow([
+        "Date & Time",
+        "Student Name",
+        "Mobile Number",
+        "Specialization",
+        "Email",
+        "Score",
+        "Pass"
+      ]);
+    }
+
+    // Add student result
+    sheet.appendRow([
+      new Date(),
+      data.studentName,
+      data.phoneNumber,
+      specialization || "-",
+      data.email,
+      data.score,
+      data.pass
+    ]);
+
+    // Send success response
+    return ContentService
+      .createTextOutput(
+        JSON.stringify({
+          success: true
+        })
+      )
+      .setMimeType(
+        ContentService.MimeType.JSON
+      );
+
+  } catch (error) {
+
+    return ContentService
+      .createTextOutput(
+        JSON.stringify({
+          success: false,
+          error: error.toString()
+        })
+      )
+      .setMimeType(
+        ContentService.MimeType.JSON
+      );
   }
-}
-
-function jsonResponse(obj) {
-  return ContentService
-    .createTextOutput(JSON.stringify(obj))
-    .setMimeType(ContentService.MimeType.JSON);
 }
