@@ -1,6 +1,6 @@
 ================================================================================
 PUMO APTITUDE ASSESSMENT - OFFICIAL ANSWER KEY
-DEPARTMENT: SAP ERP & Modules
+DEPARTMENT: Mechanical Engineering - CATIA (V5)
 TOTAL QUESTIONS: 30 (20 General Aptitude + 10 Technical Specialization)
 ================================================================================
 
@@ -147,77 +147,77 @@ Q20. In a flowchart, which geometric symbol is used to represent a decision/cond
      >> CORRECT ANSWER: B) Diamond
 
 ================================================================================
-SECTION 2: SAP ERP & MODULES SPECIALIZATION (QUESTIONS 21 - 30)
+SECTION 2: MECHANICAL ENGINEERING - CATIA (V5) SPECIALIZATION (QUESTIONS 21 - 30)
 --------------------------------------------------------------------------------
-Q21. What does SAP stand for?
-     A) System Application and Products
-     B) Systems, Applications and Products in Data Processing
-     C) Software Application Program
-     D) System Analysis Program
-     >> CORRECT ANSWER: B) Systems, Applications and Products in Data Processing
+Q21. Which company is the original developer and publisher of the CATIA software suite?
+     A) Dassault Systèmes
+     B) Autodesk
+     C) Siemens Digital Industries
+     D) PTC
+     >> CORRECT ANSWER: A) Dassault Systèmes
 
-Q22. Which SAP module is primarily responsible for Financial Accounting?
-     A) FI
-     B) MM
-     C) SD
-     D) PP
-     >> CORRECT ANSWER: A) FI
+Q22. Which workbench in CATIA V5 is primarily used for creating 3D parametric solid features?
+     A) Part Design
+     B) Generative Shape Design
+     C) Drafting
+     D) DMU Kinematics
+     >> CORRECT ANSWER: A) Part Design
 
-Q23. Which SAP module manages purchasing, inventory management, and invoice verification?
-     A) SD
-     B) MM
-     C) CO
-     D) QM
-     >> CORRECT ANSWER: B) MM
+Q23. In CATIA Part Design, which command is used to extrude a 2D closed profile linearly into a 3D solid?
+     A) Pad
+     B) Shaft
+     C) Pocket
+     D) Rib
+     >> CORRECT ANSWER: A) Pad
 
-Q24. Which SAP module covers customer order processing, shipping, and billing?
-     A) SD
-     B) MM
-     C) PM
-     D) PS
-     >> CORRECT ANSWER: A) SD
+Q24. In CATIA Part Design, which command creates a solid of revolution by revolving a profile around a center axis?
+     A) Shaft
+     B) Pad
+     C) Groove
+     D) Slot
+     >> CORRECT ANSWER: A) Shaft
 
-Q25. What is SAP HANA primarily characterized as?
-     A) An operating system for mainframes
-     B) An in-memory, column-oriented relational database management system
-     C) A web design framework
-     D) An email client application
-     >> CORRECT ANSWER: B) An in-memory, column-oriented relational database management system
+Q25. Which command in CATIA Part Design removes material by cutting into an existing solid with a 2D sketch profile?
+     A) Pocket
+     B) Pad
+     C) Hole
+     D) Multi-sections Solid
+     >> CORRECT ANSWER: A) Pocket
 
-Q26. What is the primary purpose of a Transaction Code (T-Code) in SAP GUI?
-     A) A keyboard shortcut to navigate directly to an application screen or task
-     B) A password reset code for users
-     C) An encrypted database license key
-     D) A barcode scanner setting
-     >> CORRECT ANSWER: A) A keyboard shortcut to navigate directly to an application screen or task
+Q26. Which CATIA workbench is widely utilized for complex automotive and aerospace class-A surface modeling?
+     A) Generative Shape Design (GSD)
+     B) Assembly Design
+     C) Structure Design
+     D) Weld Design
+     >> CORRECT ANSWER: A) Generative Shape Design (GSD)
 
-Q27. What programming language is predominantly used to develop business applications within the SAP environment?
-     A) Python
-     B) ABAP
-     C) C#
-     D) Swift
-     >> CORRECT ANSWER: B) ABAP
+Q27. What is the 3D on-screen manipulation instrument in CATIA used for dragging, orienting, and positioning parts called?
+     A) Compass
+     B) Protractor
+     C) Cursor Axis
+     D) Orbit Wheel
+     >> CORRECT ANSWER: A) Compass
 
-Q28. In SAP, what does the ERP acronym represent?
-     A) Electronic Record Processing
-     B) Enterprise Resource Planning
-     C) Entity Relationship Protocol
-     D) Extensible Reporting Platform
-     >> CORRECT ANSWER: B) Enterprise Resource Planning
+Q28. What is the standard native file extension for a single 3D solid part model in CATIA V5?
+     A) .CATPart
+     B) .CATProduct
+     C) .CATDrawing
+     D) .prt
+     >> CORRECT ANSWER: A) .CATPart
 
-Q29. Which SAP module is designed for controlling internal cost and managerial reporting?
-     A) FI
-     B) CO
-     C) HR
-     D) SD
-     >> CORRECT ANSWER: B) CO
+Q29. What is the standard native file extension for an assembly of multiple components in CATIA V5?
+     A) .CATProduct
+     B) .CATPart
+     C) .CATProcess
+     D) .asm
+     >> CORRECT ANSWER: A) .CATProduct
 
-Q30. What is the organizational level in SAP representing an independent legal accounting entity?
-     A) Plant
-     B) Company Code
-     C) Sales Organization
-     D) Storage Location
-     >> CORRECT ANSWER: B) Company Code
+Q30. In CATIA Part Design, which dress-up feature is used to slant faces at a specified angle for mold release?
+     A) Draft Angle
+     B) Chamfer
+     C) Edge Fillet
+     D) Shell
+     >> CORRECT ANSWER: A) Draft Angle
 
 ================================================================================
 QUICK ANSWER KEY SUMMARY (01 - 30)
@@ -226,6 +226,6 @@ Q01: C | Q02: C | Q03: B | Q04: B | Q05: B
 Q06: C | Q07: C | Q08: C | Q09: B | Q10: A
 Q11: C | Q12: B | Q13: B | Q14: B | Q15: B
 Q16: B | Q17: A | Q18: A | Q19: B | Q20: B
-Q21: B | Q22: A | Q23: B | Q24: A | Q25: B
-Q26: A | Q27: B | Q28: B | Q29: B | Q30: B
+Q21: A | Q22: A | Q23: A | Q24: A | Q25: A
+Q26: A | Q27: A | Q28: A | Q29: A | Q30: A
 ================================================================================

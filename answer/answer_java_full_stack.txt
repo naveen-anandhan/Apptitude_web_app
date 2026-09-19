@@ -147,7 +147,7 @@ Q20. In a flowchart, which geometric symbol is used to represent a decision/cond
      >> CORRECT ANSWER: B) Diamond
 
 ================================================================================
-SECTION 2: TECHNICAL SPECIALIZATION (QUESTIONS 21 - 30)
+SECTION 2: JAVA FULL STACK DEVELOPMENT SPECIALIZATION (QUESTIONS 21 - 30)
 --------------------------------------------------------------------------------
 Q21. Which method serves as the standard entry point for running any Java standalone application?
      A) public void main()

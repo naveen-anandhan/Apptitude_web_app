@@ -9,7 +9,9 @@ ALL_DEPARTMENTS = [
     "Java Full Stack",
     "DA/DS/BA",
     "Embedded",
-    "MECH"
+    "MECH",
+    "MECH - Creo",
+    "MECH - CATIA"
 ]
 
 questions = [

@@ -1,6 +1,6 @@
 ================================================================================
 PUMO APTITUDE ASSESSMENT - OFFICIAL ANSWER KEY
-DEPARTMENT: Mechanical Engineering (MECH / Creo / CAD)
+DEPARTMENT: Mechanical Engineering - Creo
 TOTAL QUESTIONS: 30 (20 General Aptitude + 10 Technical Specialization)
 ================================================================================
 
@@ -147,7 +147,7 @@ Q20. In a flowchart, which geometric symbol is used to represent a decision/cond
      >> CORRECT ANSWER: B) Diamond
 
 ================================================================================
-SECTION 2: TECHNICAL SPECIALIZATION (QUESTIONS 21 - 30)
+SECTION 2: MECHANICAL ENGINEERING - CREO SPECIALIZATION (QUESTIONS 21 - 30)
 --------------------------------------------------------------------------------
 Q21. What is PTC Creo primarily used for in engineering industries?
      A) 3D CAD parametric modeling, simulation, and design

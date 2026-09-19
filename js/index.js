@@ -14,6 +14,30 @@ const form =
 const messageEl =
   document.getElementById("message");
 
+const deptSelect =
+  document.getElementById("department");
+
+const mechGroup =
+  document.getElementById("mechSubCategoryGroup");
+
+const mechSubSelect =
+  document.getElementById("mechSubCategory");
+
+
+// Toggle Mechanical Specialization dropdown
+if (deptSelect && mechGroup && mechSubSelect) {
+  deptSelect.addEventListener("change", () => {
+    if (deptSelect.value === "MECH") {
+      mechGroup.style.display = "block";
+      mechSubSelect.required = true;
+    } else {
+      mechGroup.style.display = "none";
+      mechSubSelect.required = false;
+      mechSubSelect.value = "";
+    }
+  });
+}
+
 
 form.addEventListener(
   "submit",
@@ -37,8 +61,7 @@ form.addEventListener(
 
 
     const department =
-      document
-        .getElementById("department")
+      deptSelect
         .value;
 
 
@@ -61,6 +84,19 @@ form.addEventListener(
         "Please fill in all the details.";
 
       return;
+    }
+
+
+    let finalDepartment = department;
+
+    if (department === "MECH") {
+      const sub = mechSubSelect ? mechSubSelect.value : "";
+      if (!sub) {
+        messageEl.textContent =
+          "Please select your Mechanical Specialization (Creo or CATIA).";
+        return;
+      }
+      finalDepartment = `MECH - ${sub}`;
     }
 
 
@@ -103,7 +139,7 @@ form.addEventListener(
           phone,
 
         department:
-          department,
+          finalDepartment,
 
         email:
           email

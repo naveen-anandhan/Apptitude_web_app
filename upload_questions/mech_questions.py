@@ -14,7 +14,7 @@ questions = [
         ],
         "correctIndex": 0,
         "marks": 1,
-        "departments": ["MECH"]
+        "departments": ["MECH - Creo", "MECH"]
     },
     {
         "order": 22,
@@ -22,7 +22,7 @@ questions = [
         "options": ["Extrude", "Revolve", "Sweep", "Blend"],
         "correctIndex": 0,
         "marks": 1,
-        "departments": ["MECH"]
+        "departments": ["MECH - Creo", "MECH"]
     },
     {
         "order": 23,
@@ -30,7 +30,7 @@ questions = [
         "options": ["Revolve", "Chamfer", "Shell", "Pattern"],
         "correctIndex": 0,
         "marks": 1,
-        "departments": ["MECH"]
+        "departments": ["MECH - Creo", "MECH"]
     },
     {
         "order": 24,
@@ -43,7 +43,7 @@ questions = [
         ],
         "correctIndex": 0,
         "marks": 1,
-        "departments": ["MECH"]
+        "departments": ["MECH - Creo", "MECH"]
     },
     {
         "order": 25,
@@ -56,7 +56,7 @@ questions = [
         ],
         "correctIndex": 0,
         "marks": 1,
-        "departments": ["MECH"]
+        "departments": ["MECH - Creo", "MECH"]
     },
     {
         "order": 26,
@@ -64,7 +64,7 @@ questions = [
         "options": ["Yield Point", "Proportional Limit", "Breaking Point", "Ultimate Tensile Strength"],
         "correctIndex": 0,
         "marks": 1,
-        "departments": ["MECH"]
+        "departments": ["MECH - Creo", "MECH"]
     },
     {
         "order": 27,
@@ -77,7 +77,7 @@ questions = [
         ],
         "correctIndex": 0,
         "marks": 1,
-        "departments": ["MECH"]
+        "departments": ["MECH - Creo", "MECH"]
     },
     {
         "order": 28,
@@ -90,7 +90,7 @@ questions = [
         ],
         "correctIndex": 0,
         "marks": 1,
-        "departments": ["MECH"]
+        "departments": ["MECH - Creo", "MECH"]
     },
     {
         "order": 29,
@@ -98,7 +98,7 @@ questions = [
         "options": ["Shell", "Draft", "Rib", "Hole"],
         "correctIndex": 0,
         "marks": 1,
-        "departments": ["MECH"]
+        "departments": ["MECH - Creo", "MECH"]
     },
     {
         "order": 30,
@@ -106,7 +106,7 @@ questions = [
         "options": ["Blowhole / Porosity", "Hot Tear", "Cold Shut", "Mismatch"],
         "correctIndex": 0,
         "marks": 1,
-        "departments": ["MECH"]
+        "departments": ["MECH - Creo", "MECH"]
     }
 ]
 

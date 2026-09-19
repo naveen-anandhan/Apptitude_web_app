@@ -1,6 +1,6 @@
 ================================================================================
 PUMO APTITUDE ASSESSMENT - OFFICIAL ANSWER KEY
-DEPARTMENT: SAP ERP & Modules
+DEPARTMENT: Mechanical Engineering - Creo (3D CAD)
 TOTAL QUESTIONS: 30 (20 General Aptitude + 10 Technical Specialization)
 ================================================================================
 
@@ -147,77 +147,77 @@ Q20. In a flowchart, which geometric symbol is used to represent a decision/cond
      >> CORRECT ANSWER: B) Diamond
 
 ================================================================================
-SECTION 2: SAP ERP & MODULES SPECIALIZATION (QUESTIONS 21 - 30)
+SECTION 2: MECHANICAL ENGINEERING - CREO (3D CAD) SPECIALIZATION (QUESTIONS 21 - 30)
 --------------------------------------------------------------------------------
-Q21. What does SAP stand for?
-     A) System Application and Products
-     B) Systems, Applications and Products in Data Processing
-     C) Software Application Program
-     D) System Analysis Program
-     >> CORRECT ANSWER: B) Systems, Applications and Products in Data Processing
+Q21. What is PTC Creo primarily used for in engineering industries?
+     A) 3D CAD parametric modeling, simulation, and design
+     B) Relational database management
+     C) Website frontend coding
+     D) Sound editing and audio mastering
+     >> CORRECT ANSWER: A) 3D CAD parametric modeling, simulation, and design
 
-Q22. Which SAP module is primarily responsible for Financial Accounting?
-     A) FI
-     B) MM
-     C) SD
-     D) PP
-     >> CORRECT ANSWER: A) FI
+Q22. In 3D CAD modeling, which tool is used to create a 3D solid by projecting a 2D sketch perpendicular to the sketch plane?
+     A) Extrude
+     B) Revolve
+     C) Sweep
+     D) Blend
+     >> CORRECT ANSWER: A) Extrude
 
-Q23. Which SAP module manages purchasing, inventory management, and invoice verification?
-     A) SD
-     B) MM
-     C) CO
-     D) QM
-     >> CORRECT ANSWER: B) MM
+Q23. Which CAD feature creates a rotational symmetrical solid by rotating a 2D cross-section around a center axis?
+     A) Revolve
+     B) Chamfer
+     C) Shell
+     D) Pattern
+     >> CORRECT ANSWER: A) Revolve
 
-Q24. Which SAP module covers customer order processing, shipping, and billing?
-     A) SD
-     B) MM
-     C) PM
-     D) PS
-     >> CORRECT ANSWER: A) SD
+Q24. What is a 'Datum' in Creo (such as a Datum Plane, Datum Axis, or Datum Point)?
+     A) A reference geometry used to construct sketches, features, and assemblies
+     B) A measurement of material cost
+     C) A file compression format
+     D) The physical weight of the finished part
+     >> CORRECT ANSWER: A) A reference geometry used to construct sketches, features, and assemblies
 
-Q25. What is SAP HANA primarily characterized as?
-     A) An operating system for mainframes
-     B) An in-memory, column-oriented relational database management system
-     C) A web design framework
-     D) An email client application
-     >> CORRECT ANSWER: B) An in-memory, column-oriented relational database management system
+Q25. What is the primary engineering purpose of adding a 'Fillet' (Round) to internal corners of a mechanical part?
+     A) Reduce stress concentration and eliminate sharp corners
+     B) Increase the overall weight of the part
+     C) Make the part easier to paint
+     D) Speed up 3D file saving
+     >> CORRECT ANSWER: A) Reduce stress concentration and eliminate sharp corners
 
-Q26. What is the primary purpose of a Transaction Code (T-Code) in SAP GUI?
-     A) A keyboard shortcut to navigate directly to an application screen or task
-     B) A password reset code for users
-     C) An encrypted database license key
-     D) A barcode scanner setting
-     >> CORRECT ANSWER: A) A keyboard shortcut to navigate directly to an application screen or task
+Q26. In a tensile test of mild steel, what is the point on the stress-strain curve beyond which permanent plastic deformation occurs?
+     A) Yield Point
+     B) Proportional Limit
+     C) Breaking Point
+     D) Ultimate Tensile Strength
+     >> CORRECT ANSWER: A) Yield Point
 
-Q27. What programming language is predominantly used to develop business applications within the SAP environment?
-     A) Python
-     B) ABAP
-     C) C#
-     D) Swift
-     >> CORRECT ANSWER: B) ABAP
+Q27. What does GD&T stand for in mechanical engineering drafting and manufacturing?
+     A) Geometric Dimensioning and Tolerancing
+     B) General Drafting and Testing
+     C) Global Design and Tooling
+     D) Graphical Dimensioning Technique
+     >> CORRECT ANSWER: A) Geometric Dimensioning and Tolerancing
 
-Q28. In SAP, what does the ERP acronym represent?
-     A) Electronic Record Processing
-     B) Enterprise Resource Planning
-     C) Entity Relationship Protocol
-     D) Extensible Reporting Platform
-     >> CORRECT ANSWER: B) Enterprise Resource Planning
+Q28. What is the primary function of Finite Element Analysis (FEA) software in mechanical design?
+     A) Simulating structural stresses, deformations, and thermal behaviors under load
+     B) Generating barcodes for inventory boxes
+     C) Writing CNC machine operator pay slips
+     D) Checking spelling in drafting notes
+     >> CORRECT ANSWER: A) Simulating structural stresses, deformations, and thermal behaviors under load
 
-Q29. Which SAP module is designed for controlling internal cost and managerial reporting?
-     A) FI
-     B) CO
-     C) HR
-     D) SD
-     >> CORRECT ANSWER: B) CO
+Q29. Which CAD feature is used to hollow out a solid model leaving walls of specified uniform thickness?
+     A) Shell
+     B) Draft
+     C) Rib
+     D) Hole
+     >> CORRECT ANSWER: A) Shell
 
-Q30. What is the organizational level in SAP representing an independent legal accounting entity?
-     A) Plant
-     B) Company Code
-     C) Sales Organization
-     D) Storage Location
-     >> CORRECT ANSWER: B) Company Code
+Q30. Which casting defect is caused by trapped gas bubbles inside the molten metal during solidification?
+     A) Blowhole / Porosity
+     B) Hot Tear
+     C) Cold Shut
+     D) Mismatch
+     >> CORRECT ANSWER: A) Blowhole / Porosity
 
 ================================================================================
 QUICK ANSWER KEY SUMMARY (01 - 30)
@@ -226,6 +226,6 @@ Q01: C | Q02: C | Q03: B | Q04: B | Q05: B
 Q06: C | Q07: C | Q08: C | Q09: B | Q10: A
 Q11: C | Q12: B | Q13: B | Q14: B | Q15: B
 Q16: B | Q17: A | Q18: A | Q19: B | Q20: B
-Q21: B | Q22: A | Q23: B | Q24: A | Q25: B
-Q26: A | Q27: B | Q28: B | Q29: B | Q30: B
+Q21: A | Q22: A | Q23: A | Q24: A | Q25: A
+Q26: A | Q27: A | Q28: A | Q29: A | Q30: A
 ================================================================================

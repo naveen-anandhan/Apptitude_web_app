@@ -147,7 +147,7 @@ Q20. In a flowchart, which geometric symbol is used to represent a decision/cond
      >> CORRECT ANSWER: B) Diamond
 
 ================================================================================
-SECTION 2: TECHNICAL SPECIALIZATION (QUESTIONS 21 - 30)
+SECTION 2: DATA ANALYTICS, DATA SCIENCE & BUSINESS ANALYTICS SPECIALIZATION (QUESTIONS 21 - 30)
 --------------------------------------------------------------------------------
 Q21. Which SQL clause is used to aggregate data and summarize groups of rows?
      A) ORDER BY
