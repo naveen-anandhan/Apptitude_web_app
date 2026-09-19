@@ -464,7 +464,16 @@ async function submitTest(autoSubmitted) {
 
     // Send result to Google Sheets in the background.
     // We do NOT wait for this, so the result page opens faster.
+    // Send result to Google Sheets
     if (APP_CONFIG.EMAIL_SERVICE_URL) {
+
+      // Map MECH specializations (Creo / CATIA) to 'MECH' for Google Sheet tab compatibility
+      let sheetDept = student.department || "";
+      let specialization = "";
+      if (sheetDept.includes("MECH")) {
+        sheetDept = "MECH";
+        specialization = student.department.replace("MECH - ", "").trim();
+      }
 
       const sheetData =
         JSON.stringify({
@@ -476,7 +485,10 @@ async function submitTest(autoSubmitted) {
             student.studentId,
 
           department:
-            student.department,
+            sheetDept,
+
+          specialization:
+            specialization,
 
           email:
             student.email,
@@ -492,56 +504,23 @@ async function submitTest(autoSubmitted) {
 
       try {
 
-        if (
-          navigator.sendBeacon
-        ) {
+        // Use await fetch to ensure the Google Sheet request finishes before leaving the page
+        await fetch(
+          APP_CONFIG.EMAIL_SERVICE_URL,
+          {
+            method: "POST",
 
-          const blob =
-            new Blob(
-              [sheetData],
-              {
-                type:
-                  "text/plain;charset=utf-8"
-              }
-            );
+            mode: "no-cors",
 
+            headers: {
+              "Content-Type":
+                "text/plain;charset=utf-8"
+            },
 
-          navigator.sendBeacon(
-            APP_CONFIG.EMAIL_SERVICE_URL,
-            blob
-          );
-
-        } else {
-
-          fetch(
-            APP_CONFIG.EMAIL_SERVICE_URL,
-            {
-              method: "POST",
-
-              mode: "no-cors",
-
-              keepalive: true,
-
-              headers: {
-                "Content-Type":
-                  "text/plain;charset=utf-8"
-              },
-
-              body:
-                sheetData
-            }
-          ).catch(
-            (sheetError) => {
-
-              console.error(
-                "Google Sheet error:",
-                sheetError
-              );
-
-            }
-          );
-
-        }
+            body:
+              sheetData
+          }
+        );
 
       } catch (sheetError) {
 
