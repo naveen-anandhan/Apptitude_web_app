@@ -8,50 +8,50 @@ SECTION 1: GENERAL APTITUDE (QUESTIONS 01 - 20)
 --------------------------------------------------------------------------------
 Q01. What is 15% of 200?
      A) 30
-     B) 20
-     C) 35
+     B) 35
+     C) 20
      D) 25
      >> CORRECT ANSWER: A) 30
 
 Q02. If a train travels at 60 km/h, how far will it travel in 2.5 hours?
-     A) 150 km
-     B) 120 km
-     C) 160 km
-     D) 140 km
-     >> CORRECT ANSWER: A) 150 km
+     A) 140 km
+     B) 160 km
+     C) 150 km
+     D) 120 km
+     >> CORRECT ANSWER: C) 150 km
 
 Q03. If A can complete a work in 10 days and B in 15 days, how many days will they take working together?
-     A) 7.5 days
+     A) 8 days
      B) 5 days
-     C) 6 days
-     D) 8 days
-     >> CORRECT ANSWER: C) 6 days
+     C) 7.5 days
+     D) 6 days
+     >> CORRECT ANSWER: D) 6 days
 
 Q04. A shopkeeper buys an item for ₹400 and sells it for ₹500. What is the profit percentage?
-     A) 20%
-     B) 30%
+     A) 30%
+     B) 15%
      C) 25%
-     D) 15%
+     D) 20%
      >> CORRECT ANSWER: C) 25%
 
 Q05. The ratio of two numbers is 3:5 and their sum is 80. What is the smaller number?
-     A) 36
-     B) 30
-     C) 32
-     D) 24
-     >> CORRECT ANSWER: B) 30
+     A) 32
+     B) 36
+     C) 24
+     D) 30
+     >> CORRECT ANSWER: D) 30
 
 Q06. Find the simple interest on ₹5,000 at 6% per annum for 2 years.
-     A) ₹500
-     B) ₹650
-     C) ₹600
-     D) ₹550
-     >> CORRECT ANSWER: C) ₹600
+     A) ₹600
+     B) ₹550
+     C) ₹500
+     D) ₹650
+     >> CORRECT ANSWER: A) ₹600
 
 Q07. The average of five numbers is 20. If one number is removed, the average becomes 18. What was the removed number?
-     A) 30
+     A) 26
      B) 28
-     C) 26
+     C) 30
      D) 24
      >> CORRECT ANSWER: B) 28
 
@@ -63,169 +63,169 @@ Q08. Find the next number in the sequence: 3, 6, 12, 24, 48, ?
      >> CORRECT ANSWER: D) 96
 
 Q09. Find the next number in the sequence: 2, 5, 10, 17, 26, ?
-     A) 37
+     A) 39
      B) 35
-     C) 41
-     D) 39
-     >> CORRECT ANSWER: A) 37
+     C) 37
+     D) 41
+     >> CORRECT ANSWER: C) 37
 
 Q10. If 'LIGHT' is coded as 'MTHIU', how is 'PLANT' coded following the same pattern?
-     A) QMBOU
-     B) QMANS
+     A) QMANS
+     B) QNCPO
      C) QMBNU
-     D) QNCPO
-     >> CORRECT ANSWER: A) QMBOU
+     D) QMBOU
+     >> CORRECT ANSWER: D) QMBOU
 
 Q11. Pointing to a photograph, a man said: 'She is the daughter of my father's only son.' How is the girl related to the man?
-     A) Sister
-     B) Niece
-     C) Mother
-     D) Daughter
-     >> CORRECT ANSWER: D) Daughter
+     A) Mother
+     B) Daughter
+     C) Niece
+     D) Sister
+     >> CORRECT ANSWER: B) Daughter
 
 Q12. A person walks 10 meters North, turns right and walks 10 meters, then turns right and walks 10 meters. In which direction is he from the starting point?
-     A) South
-     B) East
+     A) North
+     B) South
      C) West
-     D) North
-     >> CORRECT ANSWER: B) East
+     D) East
+     >> CORRECT ANSWER: D) East
 
 Q13. Which word does NOT belong with the others?
-     A) Inch
-     B) Ounce
-     C) Centimeter
-     D) Yard
-     >> CORRECT ANSWER: B) Ounce
+     A) Yard
+     B) Centimeter
+     C) Ounce
+     D) Inch
+     >> CORRECT ANSWER: C) Ounce
 
 Q14. Choose the correct synonym for 'CANDID':
-     A) Frank and honest
-     B) Secretive
-     C) Fearful
-     D) Dishonest
-     >> CORRECT ANSWER: A) Frank and honest
+     A) Secretive
+     B) Frank and honest
+     C) Dishonest
+     D) Fearful
+     >> CORRECT ANSWER: B) Frank and honest
 
 Q15. Choose the correctly spelled word:
-     A) Occurrence
-     B) Occurence
-     C) Ocurrence
-     D) Occurrance
-     >> CORRECT ANSWER: A) Occurrence
+     A) Ocurrence
+     B) Occurrance
+     C) Occurrence
+     D) Occurence
+     >> CORRECT ANSWER: C) Occurrence
 
 Q16. What is the primary function of RAM in a computer?
-     A) Cooling the motherboard
+     A) Temporary volatile storage for active processes
      B) Permanent data storage
-     C) Temporary volatile storage for active processes
-     D) Power regulation
-     >> CORRECT ANSWER: C) Temporary volatile storage for active processes
+     C) Power regulation
+     D) Cooling the motherboard
+     >> CORRECT ANSWER: A) Temporary volatile storage for active processes
 
 Q17. Which of the following is an Operating System?
-     A) Adobe Acrobat
-     B) Google Chrome
-     C) Oracle SQL
-     D) Linux
-     >> CORRECT ANSWER: D) Linux
+     A) Oracle SQL
+     B) Linux
+     C) Google Chrome
+     D) Adobe Acrobat
+     >> CORRECT ANSWER: B) Linux
 
 Q18. What does HTTP stand for?
-     A) HyperTransfer Terminal Protocol
-     B) HyperText Transfer Protocol
-     C) HomeText Translation Process
-     D) HighText Transmission Program
-     >> CORRECT ANSWER: B) HyperText Transfer Protocol
+     A) HyperText Transfer Protocol
+     B) HomeText Translation Process
+     C) HighText Transmission Program
+     D) HyperTransfer Terminal Protocol
+     >> CORRECT ANSWER: A) HyperText Transfer Protocol
 
 Q19. How many bits are there in 1 Byte?
      A) 16
-     B) 4
-     C) 8
+     B) 8
+     C) 4
      D) 32
-     >> CORRECT ANSWER: C) 8
+     >> CORRECT ANSWER: B) 8
 
 Q20. In a flowchart, which geometric symbol is used to represent a decision/condition?
-     A) Rectangle
-     B) Diamond
-     C) Oval
-     D) Parallelogram
-     >> CORRECT ANSWER: B) Diamond
+     A) Diamond
+     B) Rectangle
+     C) Parallelogram
+     D) Oval
+     >> CORRECT ANSWER: A) Diamond
 
-================================================================================
-SECTION 2: TECHNICAL SPECIALIZATION (QUESTIONS 21 - 30)
+--------------------------------------------------------------------------------
+SECTION 2: DATA SCIENCE, MACHINE LEARNING & BUSINESS ANALYTICS (QUESTIONS 21 - 30)
 --------------------------------------------------------------------------------
 Q21. Which SQL clause is used to aggregate data and summarize groups of rows?
-     A) GROUP BY
-     B) WHERE
+     A) WHERE
+     B) DISTINCT
      C) ORDER BY
-     D) DISTINCT
-     >> CORRECT ANSWER: A) GROUP BY
+     D) GROUP BY
+     >> CORRECT ANSWER: D) GROUP BY
 
 Q22. Which SQL join returns all rows from the left table, and matched rows from the right table?
-     A) LEFT JOIN
-     B) RIGHT JOIN
-     C) FULL OUTER JOIN
-     D) INNER JOIN
-     >> CORRECT ANSWER: A) LEFT JOIN
+     A) FULL OUTER JOIN
+     B) LEFT JOIN
+     C) INNER JOIN
+     D) RIGHT JOIN
+     >> CORRECT ANSWER: B) LEFT JOIN
 
 Q23. Which Python library is the core standard for tabular data manipulation and DataFrame operations?
-     A) Flask
-     B) Scrapy
-     C) Pandas
-     D) Matplotlib
-     >> CORRECT ANSWER: C) Pandas
+     A) Scrapy
+     B) Flask
+     C) Matplotlib
+     D) Pandas
+     >> CORRECT ANSWER: D) Pandas
 
 Q24. Which Python library provides fundamental support for large, multi-dimensional arrays and mathematical functions?
-     A) PyPDF
-     B) NumPy
-     C) BeautifulSoup
-     D) Django
-     >> CORRECT ANSWER: B) NumPy
+     A) Django
+     B) PyPDF
+     C) NumPy
+     D) BeautifulSoup
+     >> CORRECT ANSWER: C) NumPy
 
 Q25. Which measure of central tendency is least sensitive to extreme outliers in a skewed dataset?
-     A) Mean
+     A) Variance
      B) Median
-     C) Variance
-     D) Standard Deviation
+     C) Standard Deviation
+     D) Mean
      >> CORRECT ANSWER: B) Median
 
 Q26. Which of the following is an example of a Supervised Machine Learning problem?
      A) Customer market basket clustering without labels
      B) Anomaly detection on unlabelled transactions
-     C) Customer churn prediction with labeled historical data
-     D) Dimensionality reduction with PCA
-     >> CORRECT ANSWER: C) Customer churn prediction with labeled historical data
+     C) Dimensionality reduction with PCA
+     D) Customer churn prediction with labeled historical data
+     >> CORRECT ANSWER: D) Customer churn prediction with labeled historical data
 
 Q27. In classification model evaluation, what does a Confusion Matrix display?
      A) The distribution of primary keys
      B) The training execution speed per epoch
-     C) The memory usage of each database query
-     D) True Positives, False Positives, True Negatives, and False Negatives
-     >> CORRECT ANSWER: D) True Positives, False Positives, True Negatives, and False Negatives
+     C) True Positives, False Positives, True Negatives, and False Negatives
+     D) The memory usage of each database query
+     >> CORRECT ANSWER: C) True Positives, False Positives, True Negatives, and False Negatives
 
 Q28. In Business Analytics, what does the term KPI represent?
-     A) Kernel Protocol Index
-     B) Knowledge Programming Interface
-     C) Key Pricing Increment
-     D) Key Performance Indicator
-     >> CORRECT ANSWER: D) Key Performance Indicator
+     A) Key Performance Indicator
+     B) Key Pricing Increment
+     C) Knowledge Programming Interface
+     D) Kernel Protocol Index
+     >> CORRECT ANSWER: A) Key Performance Indicator
 
 Q29. Which chart type is best suited for showing the distribution and spread of continuous numerical data using quartiles?
-     A) Pie chart
-     B) Box plot (Box and Whisker)
-     C) Donut chart
-     D) Radar chart
-     >> CORRECT ANSWER: B) Box plot (Box and Whisker)
+     A) Radar chart
+     B) Pie chart
+     C) Box plot (Box and Whisker)
+     D) Donut chart
+     >> CORRECT ANSWER: C) Box plot (Box and Whisker)
 
 Q30. Which of the following tools is an industry-standard Business Intelligence (BI) tool for interactive dashboards?
      A) Power BI / Tableau
      B) Git Bash
-     C) Postman
-     D) Notepad++
+     C) Notepad++
+     D) Postman
      >> CORRECT ANSWER: A) Power BI / Tableau
 
 ================================================================================
 QUICK ANSWER KEY SUMMARY (01 - 30)
 ================================================================================
-Q01: A | Q02: A | Q03: C | Q04: C | Q05: B
-Q06: C | Q07: B | Q08: D | Q09: A | Q10: A
-Q11: D | Q12: B | Q13: B | Q14: A | Q15: A
-Q16: C | Q17: D | Q18: B | Q19: C | Q20: B
-Q21: A | Q22: A | Q23: C | Q24: B | Q25: B
-Q26: C | Q27: D | Q28: D | Q29: B | Q30: A
+Q01: A | Q02: C | Q03: D | Q04: C | Q05: D
+Q06: A | Q07: B | Q08: D | Q09: C | Q10: D
+Q11: B | Q12: D | Q13: C | Q14: B | Q15: C
+Q16: A | Q17: B | Q18: A | Q19: B | Q20: A
+Q21: D | Q22: B | Q23: D | Q24: C | Q25: B
+Q26: D | Q27: C | Q28: A | Q29: C | Q30: A
 ================================================================================

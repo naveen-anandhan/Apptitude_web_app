@@ -1,82 +1,74 @@
 # ============================================================
-# DA / DS / BA TECHNICAL QUESTIONS (Orders 21 - 30)
+# DA/DS/BA TECHNICAL QUESTIONS (10 Questions: Order 21-30)
 # ============================================================
+
+DEPARTMENT = "DA/DS/BA"
 
 questions = [
     {
         "order": 21,
         "question": "Which SQL clause is used to aggregate data and summarize groups of rows?",
         "options": [
-            "GROUP BY",
             "WHERE",
+            "DISTINCT",
             "ORDER BY",
-            "DISTINCT"
+            "GROUP BY",
         ],
-        "correctIndex": 0,
+        "correctIndex": 3,
         "marks": 1,
-        "departments": [
-            "DA/DS/BA"
-        ]
+        "departments": [DEPARTMENT]
     },
     {
         "order": 22,
         "question": "Which SQL join returns all rows from the left table, and matched rows from the right table?",
         "options": [
-            "LEFT JOIN",
-            "RIGHT JOIN",
             "FULL OUTER JOIN",
-            "INNER JOIN"
+            "LEFT JOIN",
+            "INNER JOIN",
+            "RIGHT JOIN",
         ],
-        "correctIndex": 0,
+        "correctIndex": 1,
         "marks": 1,
-        "departments": [
-            "DA/DS/BA"
-        ]
+        "departments": [DEPARTMENT]
     },
     {
         "order": 23,
         "question": "Which Python library is the core standard for tabular data manipulation and DataFrame operations?",
         "options": [
-            "Flask",
             "Scrapy",
+            "Flask",
+            "Matplotlib",
             "Pandas",
-            "Matplotlib"
         ],
-        "correctIndex": 2,
+        "correctIndex": 3,
         "marks": 1,
-        "departments": [
-            "DA/DS/BA"
-        ]
+        "departments": [DEPARTMENT]
     },
     {
         "order": 24,
         "question": "Which Python library provides fundamental support for large, multi-dimensional arrays and mathematical functions?",
         "options": [
+            "Django",
             "PyPDF",
             "NumPy",
             "BeautifulSoup",
-            "Django"
         ],
-        "correctIndex": 1,
+        "correctIndex": 2,
         "marks": 1,
-        "departments": [
-            "DA/DS/BA"
-        ]
+        "departments": [DEPARTMENT]
     },
     {
         "order": 25,
         "question": "Which measure of central tendency is least sensitive to extreme outliers in a skewed dataset?",
         "options": [
-            "Mean",
-            "Median",
             "Variance",
-            "Standard Deviation"
+            "Median",
+            "Standard Deviation",
+            "Mean",
         ],
         "correctIndex": 1,
         "marks": 1,
-        "departments": [
-            "DA/DS/BA"
-        ]
+        "departments": [DEPARTMENT]
     },
     {
         "order": 26,
@@ -84,14 +76,12 @@ questions = [
         "options": [
             "Customer market basket clustering without labels",
             "Anomaly detection on unlabelled transactions",
+            "Dimensionality reduction with PCA",
             "Customer churn prediction with labeled historical data",
-            "Dimensionality reduction with PCA"
         ],
-        "correctIndex": 2,
+        "correctIndex": 3,
         "marks": 1,
-        "departments": [
-            "DA/DS/BA"
-        ]
+        "departments": [DEPARTMENT]
     },
     {
         "order": 27,
@@ -99,44 +89,38 @@ questions = [
         "options": [
             "The distribution of primary keys",
             "The training execution speed per epoch",
+            "True Positives, False Positives, True Negatives, and False Negatives",
             "The memory usage of each database query",
-            "True Positives, False Positives, True Negatives, and False Negatives"
         ],
-        "correctIndex": 3,
+        "correctIndex": 2,
         "marks": 1,
-        "departments": [
-            "DA/DS/BA"
-        ]
+        "departments": [DEPARTMENT]
     },
     {
         "order": 28,
         "question": "In Business Analytics, what does the term KPI represent?",
         "options": [
-            "Kernel Protocol Index",
-            "Knowledge Programming Interface",
+            "Key Performance Indicator",
             "Key Pricing Increment",
-            "Key Performance Indicator"
+            "Knowledge Programming Interface",
+            "Kernel Protocol Index",
         ],
-        "correctIndex": 3,
+        "correctIndex": 0,
         "marks": 1,
-        "departments": [
-            "DA/DS/BA"
-        ]
+        "departments": [DEPARTMENT]
     },
     {
         "order": 29,
         "question": "Which chart type is best suited for showing the distribution and spread of continuous numerical data using quartiles?",
         "options": [
+            "Radar chart",
             "Pie chart",
             "Box plot (Box and Whisker)",
             "Donut chart",
-            "Radar chart"
         ],
-        "correctIndex": 1,
+        "correctIndex": 2,
         "marks": 1,
-        "departments": [
-            "DA/DS/BA"
-        ]
+        "departments": [DEPARTMENT]
     },
     {
         "order": 30,
@@ -144,17 +128,11 @@ questions = [
         "options": [
             "Power BI / Tableau",
             "Git Bash",
+            "Notepad++",
             "Postman",
-            "Notepad++"
         ],
         "correctIndex": 0,
         "marks": 1,
-        "departments": [
-            "DA/DS/BA"
-        ]
-    }
+        "departments": [DEPARTMENT]
+    },
 ]
-
-if __name__ == "__main__":
-    from upload import upload_questions
-    upload_questions(questions)

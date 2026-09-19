@@ -8,50 +8,50 @@ SECTION 1: GENERAL APTITUDE (QUESTIONS 01 - 20)
 --------------------------------------------------------------------------------
 Q01. What is 15% of 200?
      A) 30
-     B) 20
-     C) 35
+     B) 35
+     C) 20
      D) 25
      >> CORRECT ANSWER: A) 30
 
 Q02. If a train travels at 60 km/h, how far will it travel in 2.5 hours?
-     A) 150 km
-     B) 120 km
-     C) 160 km
-     D) 140 km
-     >> CORRECT ANSWER: A) 150 km
+     A) 140 km
+     B) 160 km
+     C) 150 km
+     D) 120 km
+     >> CORRECT ANSWER: C) 150 km
 
 Q03. If A can complete a work in 10 days and B in 15 days, how many days will they take working together?
-     A) 7.5 days
+     A) 8 days
      B) 5 days
-     C) 6 days
-     D) 8 days
-     >> CORRECT ANSWER: C) 6 days
+     C) 7.5 days
+     D) 6 days
+     >> CORRECT ANSWER: D) 6 days
 
 Q04. A shopkeeper buys an item for ₹400 and sells it for ₹500. What is the profit percentage?
-     A) 20%
-     B) 30%
+     A) 30%
+     B) 15%
      C) 25%
-     D) 15%
+     D) 20%
      >> CORRECT ANSWER: C) 25%
 
 Q05. The ratio of two numbers is 3:5 and their sum is 80. What is the smaller number?
-     A) 36
-     B) 30
-     C) 32
-     D) 24
-     >> CORRECT ANSWER: B) 30
+     A) 32
+     B) 36
+     C) 24
+     D) 30
+     >> CORRECT ANSWER: D) 30
 
 Q06. Find the simple interest on ₹5,000 at 6% per annum for 2 years.
-     A) ₹500
-     B) ₹650
-     C) ₹600
-     D) ₹550
-     >> CORRECT ANSWER: C) ₹600
+     A) ₹600
+     B) ₹550
+     C) ₹500
+     D) ₹650
+     >> CORRECT ANSWER: A) ₹600
 
 Q07. The average of five numbers is 20. If one number is removed, the average becomes 18. What was the removed number?
-     A) 30
+     A) 26
      B) 28
-     C) 26
+     C) 30
      D) 24
      >> CORRECT ANSWER: B) 28
 
@@ -63,119 +63,119 @@ Q08. Find the next number in the sequence: 3, 6, 12, 24, 48, ?
      >> CORRECT ANSWER: D) 96
 
 Q09. Find the next number in the sequence: 2, 5, 10, 17, 26, ?
-     A) 37
+     A) 39
      B) 35
-     C) 41
-     D) 39
-     >> CORRECT ANSWER: A) 37
+     C) 37
+     D) 41
+     >> CORRECT ANSWER: C) 37
 
 Q10. If 'LIGHT' is coded as 'MTHIU', how is 'PLANT' coded following the same pattern?
-     A) QMBOU
-     B) QMANS
+     A) QMANS
+     B) QNCPO
      C) QMBNU
-     D) QNCPO
-     >> CORRECT ANSWER: A) QMBOU
+     D) QMBOU
+     >> CORRECT ANSWER: D) QMBOU
 
 Q11. Pointing to a photograph, a man said: 'She is the daughter of my father's only son.' How is the girl related to the man?
-     A) Sister
-     B) Niece
-     C) Mother
-     D) Daughter
-     >> CORRECT ANSWER: D) Daughter
+     A) Mother
+     B) Daughter
+     C) Niece
+     D) Sister
+     >> CORRECT ANSWER: B) Daughter
 
 Q12. A person walks 10 meters North, turns right and walks 10 meters, then turns right and walks 10 meters. In which direction is he from the starting point?
-     A) South
-     B) East
+     A) North
+     B) South
      C) West
-     D) North
-     >> CORRECT ANSWER: B) East
+     D) East
+     >> CORRECT ANSWER: D) East
 
 Q13. Which word does NOT belong with the others?
-     A) Inch
-     B) Ounce
-     C) Centimeter
-     D) Yard
-     >> CORRECT ANSWER: B) Ounce
+     A) Yard
+     B) Centimeter
+     C) Ounce
+     D) Inch
+     >> CORRECT ANSWER: C) Ounce
 
 Q14. Choose the correct synonym for 'CANDID':
-     A) Frank and honest
-     B) Secretive
-     C) Fearful
-     D) Dishonest
-     >> CORRECT ANSWER: A) Frank and honest
+     A) Secretive
+     B) Frank and honest
+     C) Dishonest
+     D) Fearful
+     >> CORRECT ANSWER: B) Frank and honest
 
 Q15. Choose the correctly spelled word:
-     A) Occurrence
-     B) Occurence
-     C) Ocurrence
-     D) Occurrance
-     >> CORRECT ANSWER: A) Occurrence
+     A) Ocurrence
+     B) Occurrance
+     C) Occurrence
+     D) Occurence
+     >> CORRECT ANSWER: C) Occurrence
 
 Q16. What is the primary function of RAM in a computer?
-     A) Cooling the motherboard
+     A) Temporary volatile storage for active processes
      B) Permanent data storage
-     C) Temporary volatile storage for active processes
-     D) Power regulation
-     >> CORRECT ANSWER: C) Temporary volatile storage for active processes
+     C) Power regulation
+     D) Cooling the motherboard
+     >> CORRECT ANSWER: A) Temporary volatile storage for active processes
 
 Q17. Which of the following is an Operating System?
-     A) Adobe Acrobat
-     B) Google Chrome
-     C) Oracle SQL
-     D) Linux
-     >> CORRECT ANSWER: D) Linux
+     A) Oracle SQL
+     B) Linux
+     C) Google Chrome
+     D) Adobe Acrobat
+     >> CORRECT ANSWER: B) Linux
 
 Q18. What does HTTP stand for?
-     A) HyperTransfer Terminal Protocol
-     B) HyperText Transfer Protocol
-     C) HomeText Translation Process
-     D) HighText Transmission Program
-     >> CORRECT ANSWER: B) HyperText Transfer Protocol
+     A) HyperText Transfer Protocol
+     B) HomeText Translation Process
+     C) HighText Transmission Program
+     D) HyperTransfer Terminal Protocol
+     >> CORRECT ANSWER: A) HyperText Transfer Protocol
 
 Q19. How many bits are there in 1 Byte?
      A) 16
-     B) 4
-     C) 8
+     B) 8
+     C) 4
      D) 32
-     >> CORRECT ANSWER: C) 8
+     >> CORRECT ANSWER: B) 8
 
 Q20. In a flowchart, which geometric symbol is used to represent a decision/condition?
-     A) Rectangle
-     B) Diamond
-     C) Oval
-     D) Parallelogram
-     >> CORRECT ANSWER: B) Diamond
+     A) Diamond
+     B) Rectangle
+     C) Parallelogram
+     D) Oval
+     >> CORRECT ANSWER: A) Diamond
 
-================================================================================
-SECTION 2: TECHNICAL SPECIALIZATION (QUESTIONS 21 - 30)
+--------------------------------------------------------------------------------
+SECTION 2: EMBEDDED SYSTEMS & MICROCONTROLLER ARCHITECTURE (QUESTIONS 21 - 30)
 --------------------------------------------------------------------------------
 Q21. What is the primary architectural difference between a Microcontroller (MCU) and a Microprocessor (MPU)?
-     A) An MCU integrates CPU, RAM, ROM, and I/O peripherals onto a single chip
-     B) An MPU can only execute Python code
-     C) An MPU cannot perform arithmetic calculations
-     D) An MCU does not require clock oscillators
-     >> CORRECT ANSWER: A) An MCU integrates CPU, RAM, ROM, and I/O peripherals onto a single chip
+     A) An MPU can only execute Python code
+     B) An MCU does not require clock oscillators
+     C) An MCU integrates CPU, RAM, ROM, and I/O peripherals onto a single chip
+     D) An MPU cannot perform arithmetic calculations
+     >> CORRECT ANSWER: C) An MCU integrates CPU, RAM, ROM, and I/O peripherals onto a single chip
 
 Q22. Which programming language is predominantly used for low-level firmware and embedded microcontroller development?
      A) Ruby
-     B) C / Embedded C
-     C) JavaScript
-     D) PHP
-     >> CORRECT ANSWER: B) C / Embedded C
+     B) JavaScript
+     C) PHP
+     D) C / Embedded C
+     >> CORRECT ANSWER: D) C / Embedded C
 
 Q23. What is the primary purpose of an ADC (Analog-to-Digital Converter) in an embedded system?
      A) Translates machine code into assembly
      B) Converts DC power into AC power
-     C) Amplifies audio sound output
-     D) Converts continuous sensor signals into digital discrete values
-     >> CORRECT ANSWER: D) Converts continuous sensor signals into digital discrete values
+     C) Converts continuous sensor signals into digital discrete values
+     D) Amplifies audio sound output
+     >> CORRECT ANSWER: C) Converts continuous sensor signals into digital discrete values
 
 Q24. What is the role of a Watchdog Timer (WDT) in a microcontroller?
-     A) Display the current wall clock time on an LCD
+     A) Automatically reset the system if software hangs or enters an infinite loop
      B) Control fan temperature
-     C) Automatically reset the system if software hangs or enters an infinite loop
-     D) Speed up memory reading
-     >> CORRECT ANSWER: C) Automatically reset the system if software hangs or enters an infinite loop
+     C) Speed up memory reading
+     D) Display the current wall clock time on an LCD
+     >> CORRECT ANSWER: A) Automatically reset the system if software hangs or enters an infinite loop
 
 Q25. Which synchronous serial communication protocol uses MOSI, MISO, SCK, and CS/SS lines?
      A) I2C
@@ -185,47 +185,47 @@ Q25. Which synchronous serial communication protocol uses MOSI, MISO, SCK, and C
      >> CORRECT ANSWER: D) SPI
 
 Q26. How many signal lines does the I2C bus protocol fundamentally require for communication?
-     A) 8 (Data byte bus)
+     A) 1 (Single wire only)
      B) 2 (SDA and SCL)
      C) 4 (MOSI, MISO, SCK, CS)
-     D) 1 (Single wire only)
+     D) 8 (Data byte bus)
      >> CORRECT ANSWER: B) 2 (SDA and SCL)
 
 Q27. What does ISR stand for in embedded event handling?
-     A) Instruction Set Reader
+     A) Input Signal Router
      B) Internal System Register
-     C) Interrupt Service Routine
-     D) Input Signal Router
-     >> CORRECT ANSWER: C) Interrupt Service Routine
+     C) Instruction Set Reader
+     D) Interrupt Service Routine
+     >> CORRECT ANSWER: D) Interrupt Service Routine
 
 Q28. What does PWM stand for, and what is its common application in embedded control?
-     A) Program Word Memory; used for flashing bootloaders
-     B) Pulse Width Modulation; used for controlling motor speeds and LED brightness
+     A) Pulse Width Modulation; used for controlling motor speeds and LED brightness
+     B) Program Word Memory; used for flashing bootloaders
      C) Periodic Wave Multiplier; used for clock division
      D) Power Wave Monitor; used to check battery voltage
-     >> CORRECT ANSWER: B) Pulse Width Modulation; used for controlling motor speeds and LED brightness
+     >> CORRECT ANSWER: A) Pulse Width Modulation; used for controlling motor speeds and LED brightness
 
 Q29. What is the key characteristic of a Real-Time Operating System (RTOS)?
-     A) Predictable and deterministic task execution within strict deadlines
-     B) Unlimited background process multitasking without priorities
-     C) Requirement of at least 8 GB of RAM
-     D) A visually appealing graphical desktop interface
-     >> CORRECT ANSWER: A) Predictable and deterministic task execution within strict deadlines
+     A) Requirement of at least 8 GB of RAM
+     B) Predictable and deterministic task execution within strict deadlines
+     C) A visually appealing graphical desktop interface
+     D) Unlimited background process multitasking without priorities
+     >> CORRECT ANSWER: B) Predictable and deterministic task execution within strict deadlines
 
 Q30. What does GPIO stand for on a development board or microcontroller?
      A) General Purpose Input/Output
-     B) Generic Port Interconnect Option
+     B) Global Protocol Input Operation
      C) Graphics Processing Interface Output
-     D) Global Protocol Input Operation
+     D) Generic Port Interconnect Option
      >> CORRECT ANSWER: A) General Purpose Input/Output
 
 ================================================================================
 QUICK ANSWER KEY SUMMARY (01 - 30)
 ================================================================================
-Q01: A | Q02: A | Q03: C | Q04: C | Q05: B
-Q06: C | Q07: B | Q08: D | Q09: A | Q10: A
-Q11: D | Q12: B | Q13: B | Q14: A | Q15: A
-Q16: C | Q17: D | Q18: B | Q19: C | Q20: B
-Q21: A | Q22: B | Q23: D | Q24: C | Q25: D
-Q26: B | Q27: C | Q28: B | Q29: A | Q30: A
+Q01: A | Q02: C | Q03: D | Q04: C | Q05: D
+Q06: A | Q07: B | Q08: D | Q09: C | Q10: D
+Q11: B | Q12: D | Q13: C | Q14: B | Q15: C
+Q16: A | Q17: B | Q18: A | Q19: B | Q20: A
+Q21: C | Q22: D | Q23: C | Q24: A | Q25: D
+Q26: B | Q27: D | Q28: A | Q29: B | Q30: A
 ================================================================================

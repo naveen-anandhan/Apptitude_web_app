@@ -8,50 +8,50 @@ SECTION 1: GENERAL APTITUDE (QUESTIONS 01 - 20)
 --------------------------------------------------------------------------------
 Q01. What is 15% of 200?
      A) 30
-     B) 20
-     C) 35
+     B) 35
+     C) 20
      D) 25
      >> CORRECT ANSWER: A) 30
 
 Q02. If a train travels at 60 km/h, how far will it travel in 2.5 hours?
-     A) 150 km
-     B) 120 km
-     C) 160 km
-     D) 140 km
-     >> CORRECT ANSWER: A) 150 km
+     A) 140 km
+     B) 160 km
+     C) 150 km
+     D) 120 km
+     >> CORRECT ANSWER: C) 150 km
 
 Q03. If A can complete a work in 10 days and B in 15 days, how many days will they take working together?
-     A) 7.5 days
+     A) 8 days
      B) 5 days
-     C) 6 days
-     D) 8 days
-     >> CORRECT ANSWER: C) 6 days
+     C) 7.5 days
+     D) 6 days
+     >> CORRECT ANSWER: D) 6 days
 
 Q04. A shopkeeper buys an item for ₹400 and sells it for ₹500. What is the profit percentage?
-     A) 20%
-     B) 30%
+     A) 30%
+     B) 15%
      C) 25%
-     D) 15%
+     D) 20%
      >> CORRECT ANSWER: C) 25%
 
 Q05. The ratio of two numbers is 3:5 and their sum is 80. What is the smaller number?
-     A) 36
-     B) 30
-     C) 32
-     D) 24
-     >> CORRECT ANSWER: B) 30
+     A) 32
+     B) 36
+     C) 24
+     D) 30
+     >> CORRECT ANSWER: D) 30
 
 Q06. Find the simple interest on ₹5,000 at 6% per annum for 2 years.
-     A) ₹500
-     B) ₹650
-     C) ₹600
-     D) ₹550
-     >> CORRECT ANSWER: C) ₹600
+     A) ₹600
+     B) ₹550
+     C) ₹500
+     D) ₹650
+     >> CORRECT ANSWER: A) ₹600
 
 Q07. The average of five numbers is 20. If one number is removed, the average becomes 18. What was the removed number?
-     A) 30
+     A) 26
      B) 28
-     C) 26
+     C) 30
      D) 24
      >> CORRECT ANSWER: B) 28
 
@@ -63,169 +63,169 @@ Q08. Find the next number in the sequence: 3, 6, 12, 24, 48, ?
      >> CORRECT ANSWER: D) 96
 
 Q09. Find the next number in the sequence: 2, 5, 10, 17, 26, ?
-     A) 37
+     A) 39
      B) 35
-     C) 41
-     D) 39
-     >> CORRECT ANSWER: A) 37
+     C) 37
+     D) 41
+     >> CORRECT ANSWER: C) 37
 
 Q10. If 'LIGHT' is coded as 'MTHIU', how is 'PLANT' coded following the same pattern?
-     A) QMBOU
-     B) QMANS
+     A) QMANS
+     B) QNCPO
      C) QMBNU
-     D) QNCPO
-     >> CORRECT ANSWER: A) QMBOU
+     D) QMBOU
+     >> CORRECT ANSWER: D) QMBOU
 
 Q11. Pointing to a photograph, a man said: 'She is the daughter of my father's only son.' How is the girl related to the man?
-     A) Sister
-     B) Niece
-     C) Mother
-     D) Daughter
-     >> CORRECT ANSWER: D) Daughter
+     A) Mother
+     B) Daughter
+     C) Niece
+     D) Sister
+     >> CORRECT ANSWER: B) Daughter
 
 Q12. A person walks 10 meters North, turns right and walks 10 meters, then turns right and walks 10 meters. In which direction is he from the starting point?
-     A) South
-     B) East
+     A) North
+     B) South
      C) West
-     D) North
-     >> CORRECT ANSWER: B) East
+     D) East
+     >> CORRECT ANSWER: D) East
 
 Q13. Which word does NOT belong with the others?
-     A) Inch
-     B) Ounce
-     C) Centimeter
-     D) Yard
-     >> CORRECT ANSWER: B) Ounce
+     A) Yard
+     B) Centimeter
+     C) Ounce
+     D) Inch
+     >> CORRECT ANSWER: C) Ounce
 
 Q14. Choose the correct synonym for 'CANDID':
-     A) Frank and honest
-     B) Secretive
-     C) Fearful
-     D) Dishonest
-     >> CORRECT ANSWER: A) Frank and honest
+     A) Secretive
+     B) Frank and honest
+     C) Dishonest
+     D) Fearful
+     >> CORRECT ANSWER: B) Frank and honest
 
 Q15. Choose the correctly spelled word:
-     A) Occurrence
-     B) Occurence
-     C) Ocurrence
-     D) Occurrance
-     >> CORRECT ANSWER: A) Occurrence
+     A) Ocurrence
+     B) Occurrance
+     C) Occurrence
+     D) Occurence
+     >> CORRECT ANSWER: C) Occurrence
 
 Q16. What is the primary function of RAM in a computer?
-     A) Cooling the motherboard
+     A) Temporary volatile storage for active processes
      B) Permanent data storage
-     C) Temporary volatile storage for active processes
-     D) Power regulation
-     >> CORRECT ANSWER: C) Temporary volatile storage for active processes
+     C) Power regulation
+     D) Cooling the motherboard
+     >> CORRECT ANSWER: A) Temporary volatile storage for active processes
 
 Q17. Which of the following is an Operating System?
-     A) Adobe Acrobat
-     B) Google Chrome
-     C) Oracle SQL
-     D) Linux
-     >> CORRECT ANSWER: D) Linux
+     A) Oracle SQL
+     B) Linux
+     C) Google Chrome
+     D) Adobe Acrobat
+     >> CORRECT ANSWER: B) Linux
 
 Q18. What does HTTP stand for?
-     A) HyperTransfer Terminal Protocol
-     B) HyperText Transfer Protocol
-     C) HomeText Translation Process
-     D) HighText Transmission Program
-     >> CORRECT ANSWER: B) HyperText Transfer Protocol
+     A) HyperText Transfer Protocol
+     B) HomeText Translation Process
+     C) HighText Transmission Program
+     D) HyperTransfer Terminal Protocol
+     >> CORRECT ANSWER: A) HyperText Transfer Protocol
 
 Q19. How many bits are there in 1 Byte?
      A) 16
-     B) 4
-     C) 8
+     B) 8
+     C) 4
      D) 32
-     >> CORRECT ANSWER: C) 8
+     >> CORRECT ANSWER: B) 8
 
 Q20. In a flowchart, which geometric symbol is used to represent a decision/condition?
-     A) Rectangle
-     B) Diamond
-     C) Oval
-     D) Parallelogram
-     >> CORRECT ANSWER: B) Diamond
+     A) Diamond
+     B) Rectangle
+     C) Parallelogram
+     D) Oval
+     >> CORRECT ANSWER: A) Diamond
 
-================================================================================
-SECTION 2: TECHNICAL SPECIALIZATION (QUESTIONS 21 - 30)
+--------------------------------------------------------------------------------
+SECTION 2: SAP ERP & SYSTEM ARCHITECTURE (QUESTIONS 21 - 30)
 --------------------------------------------------------------------------------
 Q21. What does SAP stand for?
-     A) Systems, Applications and Products in Data Processing
-     B) System Analysis Program
+     A) Software Application Program
+     B) Systems, Applications and Products in Data Processing
      C) System Application and Products
-     D) Software Application Program
-     >> CORRECT ANSWER: A) Systems, Applications and Products in Data Processing
+     D) System Analysis Program
+     >> CORRECT ANSWER: B) Systems, Applications and Products in Data Processing
 
 Q22. Which SAP module is primarily responsible for Financial Accounting?
-     A) FI
-     B) PP
-     C) SD
+     A) PP
+     B) SD
+     C) FI
      D) MM
-     >> CORRECT ANSWER: A) FI
+     >> CORRECT ANSWER: C) FI
 
 Q23. Which SAP module manages purchasing, inventory management, and invoice verification?
-     A) SD
-     B) CO
-     C) QM
-     D) MM
-     >> CORRECT ANSWER: D) MM
+     A) MM
+     B) QM
+     C) SD
+     D) CO
+     >> CORRECT ANSWER: A) MM
 
 Q24. Which SAP module covers customer order processing, shipping, and billing?
      A) PM
-     B) PS
-     C) MM
+     B) MM
+     C) PS
      D) SD
      >> CORRECT ANSWER: D) SD
 
 Q25. What is SAP HANA primarily characterized as?
-     A) An operating system for mainframes
+     A) A web design framework
      B) An in-memory, column-oriented relational database management system
-     C) An email client application
-     D) A web design framework
+     C) An operating system for mainframes
+     D) An email client application
      >> CORRECT ANSWER: B) An in-memory, column-oriented relational database management system
 
 Q26. What is the primary purpose of a Transaction Code (T-Code) in SAP GUI?
-     A) A keyboard shortcut to navigate directly to an application screen or task
-     B) A password reset code for users
-     C) A barcode scanner setting
-     D) An encrypted database license key
-     >> CORRECT ANSWER: A) A keyboard shortcut to navigate directly to an application screen or task
+     A) A password reset code for users
+     B) A barcode scanner setting
+     C) An encrypted database license key
+     D) A keyboard shortcut to navigate directly to an application screen or task
+     >> CORRECT ANSWER: D) A keyboard shortcut to navigate directly to an application screen or task
 
 Q27. What programming language is predominantly used to develop business applications within the SAP environment?
-     A) Python
-     B) C#
+     A) C#
+     B) Swift
      C) ABAP
-     D) Swift
+     D) Python
      >> CORRECT ANSWER: C) ABAP
 
 Q28. In SAP, what does the ERP acronym represent?
-     A) Extensible Reporting Platform
-     B) Enterprise Resource Planning
-     C) Electronic Record Processing
+     A) Enterprise Resource Planning
+     B) Electronic Record Processing
+     C) Extensible Reporting Platform
      D) Entity Relationship Protocol
-     >> CORRECT ANSWER: B) Enterprise Resource Planning
+     >> CORRECT ANSWER: A) Enterprise Resource Planning
 
 Q29. Which SAP module is designed for controlling internal cost and managerial reporting?
-     A) SD
-     B) CO
-     C) FI
-     D) HR
-     >> CORRECT ANSWER: B) CO
+     A) FI
+     B) HR
+     C) CO
+     D) SD
+     >> CORRECT ANSWER: C) CO
 
 Q30. What is the organizational level in SAP representing an independent legal accounting entity?
-     A) Plant
+     A) Company Code
      B) Storage Location
-     C) Company Code
-     D) Sales Organization
-     >> CORRECT ANSWER: C) Company Code
+     C) Sales Organization
+     D) Plant
+     >> CORRECT ANSWER: A) Company Code
 
 ================================================================================
 QUICK ANSWER KEY SUMMARY (01 - 30)
 ================================================================================
-Q01: A | Q02: A | Q03: C | Q04: C | Q05: B
-Q06: C | Q07: B | Q08: D | Q09: A | Q10: A
-Q11: D | Q12: B | Q13: B | Q14: A | Q15: A
-Q16: C | Q17: D | Q18: B | Q19: C | Q20: B
-Q21: A | Q22: A | Q23: D | Q24: D | Q25: B
-Q26: A | Q27: C | Q28: B | Q29: B | Q30: C
+Q01: A | Q02: C | Q03: D | Q04: C | Q05: D
+Q06: A | Q07: B | Q08: D | Q09: C | Q10: D
+Q11: B | Q12: D | Q13: C | Q14: B | Q15: C
+Q16: A | Q17: B | Q18: A | Q19: B | Q20: A
+Q21: B | Q22: C | Q23: A | Q24: D | Q25: B
+Q26: D | Q27: C | Q28: A | Q29: C | Q30: A
 ================================================================================
