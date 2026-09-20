@@ -1,405 +1,414 @@
 # ============================================================
-# GENERAL APTITUDE QUESTIONS (20 Shared + 10 General-only)
+# GENERAL APTITUDE QUESTIONS (30 Multiple-Choice Questions)
+# Levels: Basic (1-10), Intermediate (11-20), Advanced (21-30)
 # ============================================================
 
-ALL_DEPARTMENTS = [
-    "General",
-    "SAP",
-    "Python Full Stack",
-    "Java Full Stack",
-    "DA/DS/BA",
-    "Embedded"
-]
+DEPARTMENT = "General"
 
 questions = [
+    # --------------------------------------------------------
+    # LEVEL 1 – BASIC APTITUDE (Questions 1 - 10)
+    # --------------------------------------------------------
     {
         "order": 1,
-        "question": "What is 15% of 200?",
+        "question": "What is 25% of 200?",
         "options": [
-            "30",
-            "35",
-            "20",
             "25",
+            "40",
+            "50",
+            "75",
         ],
-        "correctIndex": 0,
+        "correctIndex": 2,
         "marks": 1,
-        "departments": ALL_DEPARTMENTS
+        "departments": [DEPARTMENT]
     },
     {
         "order": 2,
-        "question": "If a train travels at 60 km/h, how far will it travel in 2.5 hours?",
+        "question": "A person buys a pen for ₹20 and sells it for ₹25. What is the profit?",
         "options": [
-            "140 km",
-            "160 km",
-            "150 km",
-            "120 km",
+            "₹3",
+            "₹5",
+            "₹7",
+            "₹10",
         ],
-        "correctIndex": 2,
+        "correctIndex": 1,
         "marks": 1,
-        "departments": ALL_DEPARTMENTS
+        "departments": [DEPARTMENT]
     },
     {
         "order": 3,
-        "question": "If A can complete a work in 10 days and B in 15 days, how many days will they take working together?",
+        "question": "Find the next number: 2, 4, 6, 8, ?",
         "options": [
-            "8 days",
-            "5 days",
-            "7.5 days",
-            "6 days",
+            "9",
+            "10",
+            "11",
+            "12",
         ],
-        "correctIndex": 3,
+        "correctIndex": 1,
         "marks": 1,
-        "departments": ALL_DEPARTMENTS
+        "departments": [DEPARTMENT]
     },
     {
         "order": 4,
-        "question": "A shopkeeper buys an item for \u20b9400 and sells it for \u20b9500. What is the profit percentage?",
+        "question": "If 5 books cost ₹250, what is the cost of 1 book?",
         "options": [
-            "30%",
-            "15%",
-            "25%",
-            "20%",
+            "₹40",
+            "₹45",
+            "₹50",
+            "₹55",
         ],
         "correctIndex": 2,
         "marks": 1,
-        "departments": ALL_DEPARTMENTS
+        "departments": [DEPARTMENT]
     },
     {
         "order": 5,
-        "question": "The ratio of two numbers is 3:5 and their sum is 80. What is the smaller number?",
+        "question": "A train travels 60 km in 1 hour. How far will it travel in 3 hours?",
         "options": [
-            "32",
-            "36",
-            "24",
-            "30",
+            "120 km",
+            "150 km",
+            "180 km",
+            "200 km",
         ],
-        "correctIndex": 3,
+        "correctIndex": 2,
         "marks": 1,
-        "departments": ALL_DEPARTMENTS
+        "departments": [DEPARTMENT]
     },
     {
         "order": 6,
-        "question": "Find the simple interest on \u20b95,000 at 6% per annum for 2 years.",
+        "question": "Find the average of 10, 20 and 30.",
         "options": [
-            "\u20b9600",
-            "\u20b9550",
-            "\u20b9500",
-            "\u20b9650",
+            "15",
+            "20",
+            "25",
+            "30",
         ],
-        "correctIndex": 0,
+        "correctIndex": 1,
         "marks": 1,
-        "departments": ALL_DEPARTMENTS
+        "departments": [DEPARTMENT]
     },
     {
         "order": 7,
-        "question": "The average of five numbers is 20. If one number is removed, the average becomes 18. What was the removed number?",
+        "question": "If today is Monday, what day will it be after 3 days?",
         "options": [
-            "26",
-            "28",
-            "30",
-            "24",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
         ],
-        "correctIndex": 1,
+        "correctIndex": 2,
         "marks": 1,
-        "departments": ALL_DEPARTMENTS
+        "departments": [DEPARTMENT]
     },
     {
         "order": 8,
-        "question": "Find the next number in the sequence: 3, 6, 12, 24, 48, ?",
+        "question": "A number is increased from 100 to 120. What is the percentage increase?",
         "options": [
-            "108",
-            "84",
-            "72",
-            "96",
+            "10%",
+            "15%",
+            "20%",
+            "25%",
         ],
-        "correctIndex": 3,
+        "correctIndex": 2,
         "marks": 1,
-        "departments": ALL_DEPARTMENTS
+        "departments": [DEPARTMENT]
     },
     {
         "order": 9,
-        "question": "Find the next number in the sequence: 2, 5, 10, 17, 26, ?",
+        "question": "Find the odd one out:",
         "options": [
-            "39",
-            "35",
-            "37",
-            "41",
+            "Apple",
+            "Mango",
+            "Banana",
+            "Carrot",
         ],
-        "correctIndex": 2,
+        "correctIndex": 3,
         "marks": 1,
-        "departments": ALL_DEPARTMENTS
+        "departments": [DEPARTMENT]
     },
     {
         "order": 10,
-        "question": "If 'LIGHT' is coded as 'MTHIU', how is 'PLANT' coded following the same pattern?",
+        "question": "If 10 workers complete a work in 6 days, which of the following is a reasonable conclusion?",
         "options": [
-            "QMANS",
-            "QNCPO",
-            "QMBNU",
-            "QMBOU",
+            "More workers may complete it faster",
+            "More workers always take more time",
+            "Workers cannot work together",
+            "Number of workers does not matter",
         ],
-        "correctIndex": 3,
+        "correctIndex": 0,
         "marks": 1,
-        "departments": ALL_DEPARTMENTS
+        "departments": [DEPARTMENT]
     },
+
+    # --------------------------------------------------------
+    # LEVEL 2 – INTERMEDIATE APTITUDE (Questions 11 - 20)
+    # --------------------------------------------------------
     {
         "order": 11,
-        "question": "Pointing to a photograph, a man said: 'She is the daughter of my father's only son.' How is the girl related to the man?",
+        "question": "A product costs ₹800. It is sold at a 15% profit. What is the selling price?",
         "options": [
-            "Mother",
-            "Daughter",
-            "Niece",
-            "Sister",
+            "₹880",
+            "₹900",
+            "₹920",
+            "₹950",
         ],
-        "correctIndex": 1,
+        "correctIndex": 2,
         "marks": 1,
-        "departments": ALL_DEPARTMENTS
+        "departments": [DEPARTMENT]
     },
     {
         "order": 12,
-        "question": "A person walks 10 meters North, turns right and walks 10 meters, then turns right and walks 10 meters. In which direction is he from the starting point?",
+        "question": "The average of 5 numbers is 24. What is their total?",
         "options": [
-            "North",
-            "South",
-            "West",
-            "East",
+            "100",
+            "110",
+            "120",
+            "125",
         ],
-        "correctIndex": 3,
+        "correctIndex": 2,
         "marks": 1,
-        "departments": ALL_DEPARTMENTS
+        "departments": [DEPARTMENT]
     },
     {
         "order": 13,
-        "question": "Which word does NOT belong with the others?",
+        "question": "A car travels at 60 km/h. How much time will it take to travel 150 km?",
         "options": [
-            "Yard",
-            "Centimeter",
-            "Ounce",
-            "Inch",
+            "2 hours",
+            "2.5 hours",
+            "3 hours",
+            "3.5 hours",
         ],
-        "correctIndex": 2,
+        "correctIndex": 1,
         "marks": 1,
-        "departments": ALL_DEPARTMENTS
+        "departments": [DEPARTMENT]
     },
     {
         "order": 14,
-        "question": "Choose the correct synonym for 'CANDID':",
+        "question": "Find the next number: 3, 6, 12, 24, ?",
         "options": [
-            "Secretive",
-            "Frank and honest",
-            "Dishonest",
-            "Fearful",
+            "36",
+            "42",
+            "48",
+            "54",
         ],
-        "correctIndex": 1,
+        "correctIndex": 2,
         "marks": 1,
-        "departments": ALL_DEPARTMENTS
+        "departments": [DEPARTMENT]
     },
     {
         "order": 15,
-        "question": "Choose the correctly spelled word:",
+        "question": "A shop gives a 20% discount on an item marked ₹1,500. What is the selling price?",
         "options": [
-            "Ocurrence",
-            "Occurrance",
-            "Occurrence",
-            "Occurence",
+            "₹1,100",
+            "₹1,200",
+            "₹1,250",
+            "₹1,300",
         ],
-        "correctIndex": 2,
+        "correctIndex": 1,
         "marks": 1,
-        "departments": ALL_DEPARTMENTS
+        "departments": [DEPARTMENT]
     },
     {
         "order": 16,
-        "question": "What is the primary function of RAM in a computer?",
+        "question": "The ratio of boys to girls in a class is 3:2. If there are 30 boys, how many girls are there?",
         "options": [
-            "Temporary volatile storage for active processes",
-            "Permanent data storage",
-            "Power regulation",
-            "Cooling the motherboard",
+            "15",
+            "20",
+            "25",
+            "30",
         ],
-        "correctIndex": 0,
+        "correctIndex": 1,
         "marks": 1,
-        "departments": ALL_DEPARTMENTS
+        "departments": [DEPARTMENT]
     },
     {
         "order": 17,
-        "question": "Which of the following is an Operating System?",
+        "question": "A can complete a work in 10 days and B can complete it in 15 days. Working together, approximately how many days will they take?",
         "options": [
-            "Oracle SQL",
-            "Linux",
-            "Google Chrome",
-            "Adobe Acrobat",
+            "5 days",
+            "6 days",
+            "7 days",
+            "8 days",
         ],
         "correctIndex": 1,
         "marks": 1,
-        "departments": ALL_DEPARTMENTS
+        "departments": [DEPARTMENT]
     },
     {
         "order": 18,
-        "question": "What does HTTP stand for?",
+        "question": "If 40% of a number is 80, what is the number?",
         "options": [
-            "HyperText Transfer Protocol",
-            "HomeText Translation Process",
-            "HighText Transmission Program",
-            "HyperTransfer Terminal Protocol",
+            "160",
+            "180",
+            "200",
+            "240",
         ],
-        "correctIndex": 0,
+        "correctIndex": 2,
         "marks": 1,
-        "departments": ALL_DEPARTMENTS
+        "departments": [DEPARTMENT]
     },
     {
         "order": 19,
-        "question": "How many bits are there in 1 Byte?",
+        "question": "Find the missing number: 5, 10, 20, 40, ?",
         "options": [
-            "16",
-            "8",
-            "4",
-            "32",
+            "60",
+            "70",
+            "80",
+            "100",
         ],
-        "correctIndex": 1,
+        "correctIndex": 2,
         "marks": 1,
-        "departments": ALL_DEPARTMENTS
+        "departments": [DEPARTMENT]
     },
     {
         "order": 20,
-        "question": "In a flowchart, which geometric symbol is used to represent a decision/condition?",
+        "question": "A person walks 5 km north and then 3 km east. In which direction is he from his starting point?",
         "options": [
-            "Diamond",
-            "Rectangle",
-            "Parallelogram",
-            "Oval",
-        ],
-        "correctIndex": 0,
-        "marks": 1,
-        "departments": ALL_DEPARTMENTS
-    },
-    {
-        "order": 21,
-        "question": "Which planet is commonly known as the Red Planet?",
-        "options": [
-            "Venus",
-            "Saturn",
-            "Mars",
-            "Jupiter",
+            "North-West",
+            "South-East",
+            "North-East",
+            "South-West",
         ],
         "correctIndex": 2,
         "marks": 1,
-        "departments": ["General"]
+        "departments": [DEPARTMENT]
+    },
+
+    # --------------------------------------------------------
+    # LEVEL 3 – ADVANCED APTITUDE (Questions 21 - 30)
+    # --------------------------------------------------------
+    {
+        "order": 21,
+        "question": "A number is increased by 20% and then decreased by 20%. What is the overall percentage change?",
+        "options": [
+            "No change",
+            "2% decrease",
+            "4% decrease",
+            "4% increase",
+        ],
+        "correctIndex": 2,
+        "marks": 1,
+        "departments": [DEPARTMENT]
     },
     {
         "order": 22,
-        "question": "In how many ways can the letters of the word 'LEAD' be arranged?",
+        "question": "A and B can complete a work in 12 and 18 days respectively. If they work together, how many days will they approximately take?",
         "options": [
-            "24",
-            "48",
-            "16",
-            "12",
+            "6.2 days",
+            "7.2 days",
+            "8.2 days",
+            "9.2 days",
         ],
-        "correctIndex": 0,
+        "correctIndex": 1,
         "marks": 1,
-        "departments": ["General"]
+        "departments": [DEPARTMENT]
     },
     {
         "order": 23,
-        "question": "What is the probability of getting an even number when rolling a standard six-sided die?",
+        "question": "A train 120 metres long crosses a pole in 6 seconds. What is its speed?",
         "options": [
-            "1/3",
-            "1/2",
-            "2/3",
-            "1/6",
+            "15 m/s",
+            "20 m/s",
+            "25 m/s",
+            "30 m/s",
         ],
         "correctIndex": 1,
         "marks": 1,
-        "departments": ["General"]
+        "departments": [DEPARTMENT]
     },
     {
         "order": 24,
-        "question": "A clock shows 3:00. What is the angle between the hour hand and the minute hand?",
+        "question": "The ratio of A:B is 4:5 and B:C is 10:7. What is A:C?",
         "options": [
-            "60 degrees",
-            "75 degrees",
-            "120 degrees",
-            "90 degrees",
+            "4:7",
+            "8:7",
+            "5:7",
+            "8:9",
         ],
-        "correctIndex": 3,
+        "correctIndex": 1,
         "marks": 1,
-        "departments": ["General"]
+        "departments": [DEPARTMENT]
     },
     {
         "order": 25,
-        "question": "Complete the analogy: Doctor : Hospital :: Teacher : ?",
+        "question": "A man spends 70% of his salary. If he saves ₹9,000, what is his salary?",
         "options": [
-            "Pen",
-            "School",
-            "Book",
-            "Student",
+            "₹27,000",
+            "₹30,000",
+            "₹32,000",
+            "₹35,000",
         ],
         "correctIndex": 1,
         "marks": 1,
-        "departments": ["General"]
+        "departments": [DEPARTMENT]
     },
     {
         "order": 26,
-        "question": "Which gas is most abundant in the Earth's atmosphere?",
+        "question": "A box contains 5 red, 3 blue and 2 green balls. What is the probability of picking a blue ball?",
         "options": [
-            "Nitrogen",
-            "Oxygen",
-            "Carbon Dioxide",
-            "Hydrogen",
-        ],
-        "correctIndex": 0,
-        "marks": 1,
-        "departments": ["General"]
-    },
-    {
-        "order": 27,
-        "question": "Select the antonym for 'EXPAND':",
-        "options": [
-            "Enlarge",
-            "Stretch",
-            "Shrink",
-            "Extend",
-        ],
-        "correctIndex": 2,
-        "marks": 1,
-        "departments": ["General"]
-    },
-    {
-        "order": 28,
-        "question": "Which of the following is a cybersecurity practice to prevent unauthorized access?",
-        "options": [
-            "Using simple birthdays as passwords",
-            "Enabling Two-Factor Authentication (2FA)",
-            "Clicking unknown links in emails",
-            "Disabling system firewalls",
+            "1/5",
+            "3/10",
+            "1/3",
+            "2/5",
         ],
         "correctIndex": 1,
         "marks": 1,
-        "departments": ["General"]
+        "departments": [DEPARTMENT]
     },
     {
-        "order": 29,
-        "question": "If 12 pens cost \u20b9180, what is the cost of 7 pens?",
+        "order": 27,
+        "question": "Find the next number: 2, 6, 12, 20, 30, ?",
         "options": [
-            "\u20b9100",
-            "\u20b995",
-            "\u20b9105",
-            "\u20b9110",
+            "36",
+            "40",
+            "42",
+            "44",
         ],
         "correctIndex": 2,
         "marks": 1,
-        "departments": ["General"]
+        "departments": [DEPARTMENT]
+    },
+    {
+        "order": 28,
+        "question": "If the selling price of an item is ₹1,080 after a 10% discount, what was the marked price?",
+        "options": [
+            "₹1,150",
+            "₹1,180",
+            "₹1,200",
+            "₹1,250",
+        ],
+        "correctIndex": 2,
+        "marks": 1,
+        "departments": [DEPARTMENT]
+    },
+    {
+        "order": 29,
+        "question": "A boat travels 30 km downstream in 2 hours and the same distance upstream in 3 hours. What is the speed of the boat in still water?",
+        "options": [
+            "10 km/h",
+            "12.5 km/h",
+            "15 km/h",
+            "20 km/h",
+        ],
+        "correctIndex": 1,
+        "marks": 1,
+        "departments": [DEPARTMENT]
     },
     {
         "order": 30,
-        "question": "What is the primary unit of heredity in living organisms?",
+        "question": "A team has 6 members. If each member shakes hands with every other member exactly once, how many handshakes will occur?",
         "options": [
-            "Tissue",
-            "Protein",
-            "Cell",
-            "Gene",
+            "12",
+            "15",
+            "18",
+            "20",
         ],
-        "correctIndex": 3,
+        "correctIndex": 1,
         "marks": 1,
-        "departments": ["General"]
+        "departments": [DEPARTMENT]
     },
 ]
+
+if __name__ == "__main__":
+    from upload import upload_questions
+    upload_questions(questions)

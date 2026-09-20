@@ -1,231 +1,264 @@
 ================================================================================
 PUMO APTITUDE ASSESSMENT - OFFICIAL ANSWER KEY
-DEPARTMENT: General Aptitude & Reasoning
-TOTAL QUESTIONS: 30 (20 General Aptitude + 10 Logical Reasoning)
+DEPARTMENT: General Aptitude
+TOTAL QUESTIONS: 30 (10 Basic + 10 Intermediate + 10 Advanced)
 ================================================================================
 
-SECTION 1: GENERAL APTITUDE (QUESTIONS 01 - 20)
+SECTION 1: LEVEL 1 – BASIC APTITUDE (QUESTIONS 01 - 10)
 --------------------------------------------------------------------------------
-Q01. What is 15% of 200?
-     A) 30
-     B) 35
-     C) 20
-     D) 25
-     >> CORRECT ANSWER: A) 30
+Q01. What is 25% of 200?
+     A) 25
+     B) 40
+     C) 50
+     D) 75
+     >> CORRECT ANSWER: C) 50
+     Explanation: 25% of 200 = (25 / 100) * 200 = 50
 
-Q02. If a train travels at 60 km/h, how far will it travel in 2.5 hours?
-     A) 140 km
-     B) 160 km
-     C) 150 km
-     D) 120 km
-     >> CORRECT ANSWER: C) 150 km
+Q02. A person buys a pen for ₹20 and sells it for ₹25. What is the profit?
+     A) ₹3
+     B) ₹5
+     C) ₹7
+     D) ₹10
+     >> CORRECT ANSWER: B) ₹5
+     Explanation: Profit = Selling Price - Cost Price = 25 - 20 = ₹5
 
-Q03. If A can complete a work in 10 days and B in 15 days, how many days will they take working together?
-     A) 8 days
-     B) 5 days
-     C) 7.5 days
-     D) 6 days
-     >> CORRECT ANSWER: D) 6 days
-
-Q04. A shopkeeper buys an item for ₹400 and sells it for ₹500. What is the profit percentage?
-     A) 30%
-     B) 15%
-     C) 25%
-     D) 20%
-     >> CORRECT ANSWER: C) 25%
-
-Q05. The ratio of two numbers is 3:5 and their sum is 80. What is the smaller number?
-     A) 32
-     B) 36
-     C) 24
-     D) 30
-     >> CORRECT ANSWER: D) 30
-
-Q06. Find the simple interest on ₹5,000 at 6% per annum for 2 years.
-     A) ₹600
-     B) ₹550
-     C) ₹500
-     D) ₹650
-     >> CORRECT ANSWER: A) ₹600
-
-Q07. The average of five numbers is 20. If one number is removed, the average becomes 18. What was the removed number?
-     A) 26
-     B) 28
-     C) 30
-     D) 24
-     >> CORRECT ANSWER: B) 28
-
-Q08. Find the next number in the sequence: 3, 6, 12, 24, 48, ?
-     A) 108
-     B) 84
-     C) 72
-     D) 96
-     >> CORRECT ANSWER: D) 96
-
-Q09. Find the next number in the sequence: 2, 5, 10, 17, 26, ?
-     A) 39
-     B) 35
-     C) 37
-     D) 41
-     >> CORRECT ANSWER: C) 37
-
-Q10. If 'LIGHT' is coded as 'MTHIU', how is 'PLANT' coded following the same pattern?
-     A) QMANS
-     B) QNCPO
-     C) QMBNU
-     D) QMBOU
-     >> CORRECT ANSWER: D) QMBOU
-
-Q11. Pointing to a photograph, a man said: 'She is the daughter of my father's only son.' How is the girl related to the man?
-     A) Mother
-     B) Daughter
-     C) Niece
-     D) Sister
-     >> CORRECT ANSWER: B) Daughter
-
-Q12. A person walks 10 meters North, turns right and walks 10 meters, then turns right and walks 10 meters. In which direction is he from the starting point?
-     A) North
-     B) South
-     C) West
-     D) East
-     >> CORRECT ANSWER: D) East
-
-Q13. Which word does NOT belong with the others?
-     A) Yard
-     B) Centimeter
-     C) Ounce
-     D) Inch
-     >> CORRECT ANSWER: C) Ounce
-
-Q14. Choose the correct synonym for 'CANDID':
-     A) Secretive
-     B) Frank and honest
-     C) Dishonest
-     D) Fearful
-     >> CORRECT ANSWER: B) Frank and honest
-
-Q15. Choose the correctly spelled word:
-     A) Ocurrence
-     B) Occurrance
-     C) Occurrence
-     D) Occurence
-     >> CORRECT ANSWER: C) Occurrence
-
-Q16. What is the primary function of RAM in a computer?
-     A) Temporary volatile storage for active processes
-     B) Permanent data storage
-     C) Power regulation
-     D) Cooling the motherboard
-     >> CORRECT ANSWER: A) Temporary volatile storage for active processes
-
-Q17. Which of the following is an Operating System?
-     A) Oracle SQL
-     B) Linux
-     C) Google Chrome
-     D) Adobe Acrobat
-     >> CORRECT ANSWER: B) Linux
-
-Q18. What does HTTP stand for?
-     A) HyperText Transfer Protocol
-     B) HomeText Translation Process
-     C) HighText Transmission Program
-     D) HyperTransfer Terminal Protocol
-     >> CORRECT ANSWER: A) HyperText Transfer Protocol
-
-Q19. How many bits are there in 1 Byte?
-     A) 16
-     B) 8
-     C) 4
-     D) 32
-     >> CORRECT ANSWER: B) 8
-
-Q20. In a flowchart, which geometric symbol is used to represent a decision/condition?
-     A) Diamond
-     B) Rectangle
-     C) Parallelogram
-     D) Oval
-     >> CORRECT ANSWER: A) Diamond
-
---------------------------------------------------------------------------------
-SECTION 2: LOGICAL & VERBAL REASONING (QUESTIONS 21 - 30)
---------------------------------------------------------------------------------
-Q21. Which planet is commonly known as the Red Planet?
-     A) Venus
-     B) Saturn
-     C) Mars
-     D) Jupiter
-     >> CORRECT ANSWER: C) Mars
-
-Q22. In how many ways can the letters of the word 'LEAD' be arranged?
-     A) 24
-     B) 48
-     C) 16
+Q03. Find the next number: 2, 4, 6, 8, ?
+     A) 9
+     B) 10
+     C) 11
      D) 12
-     >> CORRECT ANSWER: A) 24
+     >> CORRECT ANSWER: B) 10
+     Explanation: Even numbers sequence (+2 increment each step)
 
-Q23. What is the probability of getting an even number when rolling a standard six-sided die?
-     A) 1/3
-     B) 1/2
-     C) 2/3
-     D) 1/6
-     >> CORRECT ANSWER: B) 1/2
+Q04. If 5 books cost ₹250, what is the cost of 1 book?
+     A) ₹40
+     B) ₹45
+     C) ₹50
+     D) ₹55
+     >> CORRECT ANSWER: C) ₹50
+     Explanation: Cost of 1 book = ₹250 / 5 = ₹50
 
-Q24. A clock shows 3:00. What is the angle between the hour hand and the minute hand?
-     A) 60 degrees
-     B) 75 degrees
-     C) 120 degrees
-     D) 90 degrees
-     >> CORRECT ANSWER: D) 90 degrees
+Q05. A train travels 60 km in 1 hour. How far will it travel in 3 hours?
+     A) 120 km
+     B) 150 km
+     C) 180 km
+     D) 200 km
+     >> CORRECT ANSWER: C) 180 km
+     Explanation: Distance = Speed * Time = 60 km/h * 3 h = 180 km
 
-Q25. Complete the analogy: Doctor : Hospital :: Teacher : ?
-     A) Pen
-     B) School
-     C) Book
-     D) Student
-     >> CORRECT ANSWER: B) School
+Q06. Find the average of 10, 20 and 30.
+     A) 15
+     B) 20
+     C) 25
+     D) 30
+     >> CORRECT ANSWER: B) 20
+     Explanation: Average = (10 + 20 + 30) / 3 = 60 / 3 = 20
 
-Q26. Which gas is most abundant in the Earth's atmosphere?
-     A) Nitrogen
-     B) Oxygen
-     C) Carbon Dioxide
-     D) Hydrogen
-     >> CORRECT ANSWER: A) Nitrogen
+Q07. If today is Monday, what day will it be after 3 days?
+     A) Tuesday
+     B) Wednesday
+     C) Thursday
+     D) Friday
+     >> CORRECT ANSWER: C) Thursday
+     Explanation: Monday + 3 days = Thursday
 
-Q27. Select the antonym for 'EXPAND':
-     A) Enlarge
-     B) Stretch
-     C) Shrink
-     D) Extend
-     >> CORRECT ANSWER: C) Shrink
+Q08. A number is increased from 100 to 120. What is the percentage increase?
+     A) 10%
+     B) 15%
+     C) 20%
+     D) 25%
+     >> CORRECT ANSWER: C) 20%
+     Explanation: Percentage increase = ((120 - 100) / 100) * 100 = 20%
 
-Q28. Which of the following is a cybersecurity practice to prevent unauthorized access?
-     A) Using simple birthdays as passwords
-     B) Enabling Two-Factor Authentication (2FA)
-     C) Clicking unknown links in emails
-     D) Disabling system firewalls
-     >> CORRECT ANSWER: B) Enabling Two-Factor Authentication (2FA)
+Q09. Find the odd one out:
+     A) Apple
+     B) Mango
+     C) Banana
+     D) Carrot
+     >> CORRECT ANSWER: D) Carrot
+     Explanation: Carrot is a root vegetable; Apple, Mango, and Banana are fruits
 
-Q29. If 12 pens cost ₹180, what is the cost of 7 pens?
-     A) ₹100
-     B) ₹95
-     C) ₹105
-     D) ₹110
-     >> CORRECT ANSWER: C) ₹105
+Q10. If 10 workers complete a work in 6 days, which of the following is a reasonable conclusion?
+     A) More workers may complete it faster
+     B) More workers always take more time
+     C) Workers cannot work together
+     D) Number of workers does not matter
+     >> CORRECT ANSWER: A) More workers may complete it faster
+     Explanation: Total work is constant; increasing workforce increases rate of work
 
-Q30. What is the primary unit of heredity in living organisms?
-     A) Tissue
-     B) Protein
-     C) Cell
-     D) Gene
-     >> CORRECT ANSWER: D) Gene
+--------------------------------------------------------------------------------
+SECTION 2: LEVEL 2 – INTERMEDIATE APTITUDE (QUESTIONS 11 - 20)
+--------------------------------------------------------------------------------
+Q11. A product costs ₹800. It is sold at a 15% profit. What is the selling price?
+     A) ₹880
+     B) ₹900
+     C) ₹920
+     D) ₹950
+     >> CORRECT ANSWER: C) ₹920
+     Explanation: Profit = 15% of 800 = 120. SP = 800 + 120 = ₹920
+
+Q12. The average of 5 numbers is 24. What is their total?
+     A) 100
+     B) 110
+     C) 120
+     D) 125
+     >> CORRECT ANSWER: C) 120
+     Explanation: Total = Average * Count = 24 * 5 = 120
+
+Q13. A car travels at 60 km/h. How much time will it take to travel 150 km?
+     A) 2 hours
+     B) 2.5 hours
+     C) 3 hours
+     D) 3.5 hours
+     >> CORRECT ANSWER: B) 2.5 hours
+     Explanation: Time = Distance / Speed = 150 / 60 = 2.5 hours
+
+Q14. Find the next number: 3, 6, 12, 24, ?
+     A) 36
+     B) 42
+     C) 48
+     D) 54
+     >> CORRECT ANSWER: C) 48
+     Explanation: Each term is multiplied by 2 (Geometric progression: 24 * 2 = 48)
+
+Q15. A shop gives a 20% discount on an item marked ₹1,500. What is the selling price?
+     A) ₹1,100
+     B) ₹1,200
+     C) ₹1,250
+     D) ₹1,300
+     >> CORRECT ANSWER: B) ₹1,200
+     Explanation: Discount = 20% of 1,500 = 300. SP = 1,500 - 300 = ₹1,200
+
+Q16. The ratio of boys to girls in a class is 3:2. If there are 30 boys, how many girls are there?
+     A) 15
+     B) 20
+     C) 25
+     D) 30
+     >> CORRECT ANSWER: B) 20
+     Explanation: 1 ratio unit = 30 / 3 = 10. Girls = 2 * 10 = 20
+
+Q17. A can complete a work in 10 days and B can complete it in 15 days. Working together, approximately how many days will they take?
+     A) 5 days
+     B) 6 days
+     C) 7 days
+     D) 8 days
+     >> CORRECT ANSWER: B) 6 days
+     Explanation: (A * B) / (A + B) = (10 * 15) / (10 + 15) = 150 / 25 = 6 days
+
+Q18. If 40% of a number is 80, what is the number?
+     A) 160
+     B) 180
+     C) 200
+     D) 240
+     >> CORRECT ANSWER: C) 200
+     Explanation: Number = 80 / 0.40 = 200
+
+Q19. Find the missing number: 5, 10, 20, 40, ?
+     A) 60
+     B) 70
+     C) 80
+     D) 100
+     >> CORRECT ANSWER: C) 80
+     Explanation: Each term is multiplied by 2 (40 * 2 = 80)
+
+Q20. A person walks 5 km north and then 3 km east. In which direction is he from his starting point?
+     A) North-West
+     B) South-East
+     C) North-East
+     D) South-West
+     >> CORRECT ANSWER: C) North-East
+     Explanation: From origin, moving North (+y) then East (+x) places the person in North-East
+
+--------------------------------------------------------------------------------
+SECTION 3: LEVEL 3 – ADVANCED APTITUDE (QUESTIONS 21 - 30)
+--------------------------------------------------------------------------------
+Q21. A number is increased by 20% and then decreased by 20%. What is the overall percentage change?
+     A) No change
+     B) 2% decrease
+     C) 4% decrease
+     D) 4% increase
+     >> CORRECT ANSWER: C) 4% decrease
+     Explanation: Net change = +20 - 20 - (20 * 20 / 100) = -4% (4% decrease)
+
+Q22. A and B can complete a work in 12 and 18 days respectively. If they work together, how many days will they approximately take?
+     A) 6.2 days
+     B) 7.2 days
+     C) 8.2 days
+     D) 9.2 days
+     >> CORRECT ANSWER: B) 7.2 days
+     Explanation: (12 * 18) / (12 + 18) = 216 / 30 = 7.2 days
+
+Q23. A train 120 metres long crosses a pole in 6 seconds. What is its speed?
+     A) 15 m/s
+     B) 20 m/s
+     C) 25 m/s
+     D) 30 m/s
+     >> CORRECT ANSWER: B) 20 m/s
+     Explanation: Speed = Distance / Time = 120 m / 6 s = 20 m/s
+
+Q24. The ratio of A:B is 4:5 and B:C is 10:7. What is A:C?
+     A) 4:7
+     B) 8:7
+     C) 5:7
+     D) 8:9
+     >> CORRECT ANSWER: B) 8:7
+     Explanation: A/C = (A/B) * (B/C) = (4/5) * (10/7) = 40/35 = 8/7
+
+Q25. A man spends 70% of his salary. If he saves ₹9,000, what is his salary?
+     A) ₹27,000
+     B) ₹30,000
+     C) ₹32,000
+     D) ₹35,000
+     >> CORRECT ANSWER: B) ₹30,000
+     Explanation: Savings = 100% - 70% = 30%. Salary = 9,000 / 0.30 = ₹30,000
+
+Q26. A box contains 5 red, 3 blue and 2 green balls. What is the probability of picking a blue ball?
+     A) 1/5
+     B) 3/10
+     C) 1/3
+     D) 2/5
+     >> CORRECT ANSWER: B) 3/10
+     Explanation: Total balls = 5 + 3 + 2 = 10. Blue balls = 3. P(Blue) = 3/10
+
+Q27. Find the next number: 2, 6, 12, 20, 30, ?
+     A) 36
+     B) 40
+     C) 42
+     D) 44
+     >> CORRECT ANSWER: C) 42
+     Explanation: Pattern: 1*2 = 2, 2*3 = 6, 3*4 = 12, 4*5 = 20, 5*6 = 30, 6*7 = 42
+
+Q28. If the selling price of an item is ₹1,080 after a 10% discount, what was the marked price?
+     A) ₹1,150
+     B) ₹1,180
+     C) ₹1,200
+     D) ₹1,250
+     >> CORRECT ANSWER: C) ₹1,200
+     Explanation: SP = 90% of MP => 1,080 = 0.90 * MP => MP = 1,080 / 0.90 = ₹1,200
+
+Q29. A boat travels 30 km downstream in 2 hours and the same distance upstream in 3 hours. What is the speed of the boat in still water?
+     A) 10 km/h
+     B) 12.5 km/h
+     C) 15 km/h
+     D) 20 km/h
+     >> CORRECT ANSWER: B) 12.5 km/h
+     Explanation: Downstream speed = 30/2 = 15 km/h; Upstream speed = 30/3 = 10 km/h; Still-water speed = (15 + 10) / 2 = 12.5 km/h
+
+Q30. A team has 6 members. If each member shakes hands with every other member exactly once, how many handshakes will occur?
+     A) 12
+     B) 15
+     C) 18
+     D) 20
+     >> CORRECT ANSWER: B) 15
+     Explanation: Formula: n(n - 1) / 2 = 6 * 5 / 2 = 15
 
 ================================================================================
 QUICK ANSWER KEY SUMMARY (01 - 30)
 ================================================================================
-Q01: A | Q02: C | Q03: D | Q04: C | Q05: D
-Q06: A | Q07: B | Q08: D | Q09: C | Q10: D
-Q11: B | Q12: D | Q13: C | Q14: B | Q15: C
-Q16: A | Q17: B | Q18: A | Q19: B | Q20: A
-Q21: C | Q22: A | Q23: B | Q24: D | Q25: B
-Q26: A | Q27: C | Q28: B | Q29: C | Q30: D
+Q01: C | Q02: B | Q03: B | Q04: C | Q05: C
+Q06: B | Q07: C | Q08: C | Q09: D | Q10: A
+Q11: C | Q12: C | Q13: B | Q14: C | Q15: B
+Q16: B | Q17: B | Q18: C | Q19: C | Q20: C
+Q21: C | Q22: B | Q23: B | Q24: B | Q25: B
+Q26: B | Q27: C | Q28: C | Q29: B | Q30: B
 ================================================================================

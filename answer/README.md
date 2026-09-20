@@ -6,7 +6,7 @@ This directory contains the verified, official answer keys for all departments p
 
 | Department / Specialization | Test Configuration | Answer Key File | Answer Key Summary |
 | :--- | :--- | :--- | :--- |
-| **General** | 20 General + 10 Reasoning | [`answer_general.txt`](answer_general.txt) | 30 Questions (Balanced A/B/C/D, 0 adjacent duplicates) |
+| **General** | 30 General (10 Basic + 10 Intermediate + 10 Advanced) | [`answer_general.txt`](answer_general.txt) | 30 Questions (Official Assessment Questions) |
 | **SAP** | 20 General + 10 SAP Technical | [`answer_sap.txt`](answer_sap.txt) | 30 Questions (Balanced A/B/C/D, 0 adjacent duplicates) |
 | **Python Full Stack** | 20 General + 10 Python Technical | [`answer_python_full_stack.txt`](answer_python_full_stack.txt) | 30 Questions (Balanced A/B/C/D, 0 adjacent duplicates) |
 | **Java Full Stack** | 20 General + 10 Java Technical | [`answer_java_full_stack.txt`](answer_java_full_stack.txt) | 30 Questions (Balanced A/B/C/D, 0 adjacent duplicates) |
