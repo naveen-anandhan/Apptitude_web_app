@@ -1,0 +1,228 @@
+================================================================================
+PUMO APTITUDE ASSESSMENT - OFFICIAL ANSWER KEY
+DEPARTMENT: PLC & Industrial Automation
+TOTAL QUESTIONS: 30 (Pure 100% Technical MCQs)
+================================================================================
+
+QUESTIONS 01 - 30: PLC & INDUSTRIAL AUTOMATION TECHNICAL MCQS
+--------------------------------------------------------------------------------
+Q01. The main advantage of PLCs over relay logic is:
+     A) Cheaper wiring only
+     B) Flexibility and easy reprogramming
+     C) No need for electricity
+     D) Higher power rating
+     >> CORRECT ANSWER: B) Flexibility and easy reprogramming
+
+Q02. A PLC is primarily designed to replace:
+     A) Microprocessors in computers
+     B) Digital voltmeters
+     C) Relays and timers in control circuits
+     D) Analog meters
+     >> CORRECT ANSWER: C) Relays and timers in control circuits
+
+Q03. The CPU of a PLC consists of:
+     A) Processor, memory, and power supply
+     B) Input/output cards only
+     C) Memory and I/O modules
+     D) Keyboard and display
+     >> CORRECT ANSWER: A) Processor, memory, and power supply
+
+Q04. Which of the following is NOT an output device for PLCs?
+     A) Alarm buzzer
+     B) Thermocouple
+     C) Solenoid valve
+     D) Motor starter
+     >> CORRECT ANSWER: B) Thermocouple
+
+Q05. A PLC timer instruction is used to:
+     A) Store data in memory
+     B) Count pulses
+     C) Measure temperature
+     D) Delay operations for a set time
+     >> CORRECT ANSWER: D) Delay operations for a set time
+
+Q06. The difference between an on-delay and off-delay timer in PLC is:
+     A) No difference
+     B) On-delay waits before turning OFF
+     C) On-delay waits before turning ON; off-delay waits before turning OFF
+     D) Off-delay resets immediately
+     >> CORRECT ANSWER: C) On-delay waits before turning ON; off-delay waits before turning OFF
+
+Q07. A PLC counter instruction is mainly used for:
+     A) Counting events, pulses, or objects
+     B) Time delay
+     C) Arithmetic operations
+     D) Generating alarms only
+     >> CORRECT ANSWER: A) Counting events, pulses, or objects
+
+Q08. Which PLC instruction is used to hold a coil output active until reset?
+     A) Toggle
+     B) Latch (SET)
+     C) Pulse
+     D) Reset (RST)
+     >> CORRECT ANSWER: B) Latch (SET)
+
+Q09. Which PLC function is used to compare two values?
+     A) Counter
+     B) Timer
+     C) Comparator instruction (e.g., LES, GRT, EQU)
+     D) Scan watchdog
+     >> CORRECT ANSWER: C) Comparator instruction (e.g., LES, GRT, EQU)
+
+Q10. Which PLC instruction is used for mathematical operations?
+     A) MOV
+     B) ADD, SUB, MUL, DIV
+     C) OUT
+     D) CMP
+     >> CORRECT ANSWER: B) ADD, SUB, MUL, DIV
+
+Q11. In ladder logic, a coil instruction represents:
+     A) An output device
+     B) A timer
+     C) A memory register
+     D) An input contact
+     >> CORRECT ANSWER: A) An output device
+
+Q12. Which PLC communication port is most commonly used for programming?
+     A) Ethernet only
+     B) HDMI
+     C) CAN bus
+     D) USB or RS-232/RS-485
+     >> CORRECT ANSWER: D) USB or RS-232/RS-485
+
+Q13. Which PLC instruction is used to move a value from one register to another?
+     A) RET
+     B) CMP
+     C) MOV
+     D) ADD
+     >> CORRECT ANSWER: C) MOV
+
+Q14. Which of the following is NOT a PLC programming language as per IEC 61131-3?
+     A) Ladder Diagram (LD)
+     B) Assembly Language (ASM)
+     C) Function Block Diagram (FBD)
+     D) Structured Text (ST)
+     >> CORRECT ANSWER: B) Assembly Language (ASM)
+
+Q15. The RET instruction in a PLC program is used to:
+     A) Restart CPU scan
+     B) Reset outputs
+     C) Re-enable timers
+     D) Return from subroutine
+     >> CORRECT ANSWER: D) Return from subroutine
+
+Q16. Which PLC instruction allows branching of program execution?
+     A) MOV (move)
+     B) JMP (jump)
+     C) CNT (counter)
+     D) TON (on-delay timer)
+     >> CORRECT ANSWER: B) JMP (jump)
+
+Q17. Which PLC instruction performs bitwise logical operations?
+     A) AND, OR, XOR
+     B) MOV
+     C) ADD, SUB, DIV
+     D) RET
+     >> CORRECT ANSWER: A) AND, OR, XOR
+
+Q18. Which part of the PLC provides electrical power to the CPU and modules?
+     A) Relay contacts
+     B) Power supply module
+     C) Communication port
+     D) Analog input module
+     >> CORRECT ANSWER: B) Power supply module
+
+Q19. In ladder logic, normally closed contacts are represented by:
+     A) Broken line contacts
+     B) Parallel lines
+     C) “Examine OFF” instruction
+     D) Memory registers
+     >> CORRECT ANSWER: C) “Examine OFF” instruction
+
+Q20. Which PLC function is used to shift data bits?
+     A) MOVE
+     B) SHIFT REGISTER (SHL/SHR)
+     C) RET
+     D) XOR
+     >> CORRECT ANSWER: B) SHIFT REGISTER (SHL/SHR)
+
+Q21. What is a standard PLC Scan Cycle sequence composed of?
+     A) Read memory -> Display graphics -> Print ladder diagram -> Idle
+     B) Compile code -> Install firmware -> Power off -> Reset
+     C) Analog conversion -> Digital modulation -> RF transmission -> Reception
+     D) Read Inputs -> Execute Logic Program -> Write/Update Outputs -> Housekeeping
+     >> CORRECT ANSWER: D) Read Inputs -> Execute Logic Program -> Write/Update Outputs -> Housekeeping
+
+Q22. What is the standard industrial analog current signal range used by PLC analog input modules?
+     A) 4 to 20 mA
+     B) 10 to 50 A
+     C) 0 to 5 mA
+     D) 100 to 240 mA
+     >> CORRECT ANSWER: A) 4 to 20 mA
+
+Q23. What is the primary purpose of an optical isolator (optocoupler) in a PLC input module?
+     A) To boost sensor voltage up to 440V
+     B) To convert digital signals directly into hydraulic pressure
+     C) To isolate high-voltage field signals from sensitive low-voltage CPU circuitry
+     D) To illuminate the control panel cabinet
+     >> CORRECT ANSWER: C) To isolate high-voltage field signals from sensitive low-voltage CPU circuitry
+
+Q24. In PLC systems, what is the primary purpose of a 'Watchdog Timer' (WDT)?
+     A) To detect CPU faults or infinite loops and safely shutdown if a scan exceeds its time limit
+     B) To measure ambient cabinet operating temperature
+     C) To prevent unauthorized technician login attempts
+     D) To track total machine running hours for billing
+     >> CORRECT ANSWER: A) To detect CPU faults or infinite loops and safely shutdown if a scan exceeds its time limit
+
+Q25. Which industrial fieldbus communication protocol is widely utilized for connecting PLCs to distributed remote I/O and drives?
+     A) SMTP / IMAP
+     B) Bluetooth Audio
+     C) HTTP / HTML
+     D) Modbus / Profibus / Profinet
+     >> CORRECT ANSWER: D) Modbus / Profibus / Profinet
+
+Q26. What is the main role of an HMI (Human-Machine Interface) connected to a PLC?
+     A) To execute PLC ladder scan routines directly
+     B) To regulate 24V DC auxiliary power distribution
+     C) To provide a graphical visual display for operators to monitor and interact with the process
+     D) To act as the main high-voltage circuit breaker for the facility
+     >> CORRECT ANSWER: C) To provide a graphical visual display for operators to monitor and interact with the process
+
+Q27. In discrete DC I/O wiring, what does a 'Sinking' (NPN) PLC input module indicate?
+     A) The module must be completely submerged in insulating oil
+     B) The sensor connects directly to high-voltage AC utility mains
+     C) The input module only accepts high-temperature thermocouple probes
+     D) The input module provides (sources) positive voltage and the sensor sinks current to 0V ground
+     >> CORRECT ANSWER: D) The input module provides (sources) positive voltage and the sensor sinks current to 0V ground
+
+Q28. In industrial automation architectures, what does the acronym SCADA stand for?
+     A) Supervisory Control and Data Acquisition
+     B) Sequential Control and Distributed Architecture
+     C) Standard Communication and Device Access
+     D) Synchronous Circuit and Digital Automation
+     >> CORRECT ANSWER: A) Supervisory Control and Data Acquisition
+
+Q29. Which type of memory in a PLC retains user program logic and configuration during complete AC power outage?
+     A) Dynamic RAM (DRAM) without battery backup
+     B) Volatile CPU cache memory
+     C) Virtual memory swap paging file
+     D) Non-volatile memory (Flash / EEPROM / Battery-backed RAM)
+     >> CORRECT ANSWER: D) Non-volatile memory (Flash / EEPROM / Battery-backed RAM)
+
+Q30. What is the primary function of an Emergency Stop (E-Stop) circuit in an automated PLC system?
+     A) A hardwired safety circuit that immediately cuts power to field actuators regardless of PLC state
+     B) To place the PLC into online programming upload mode
+     C) To log an advisory event on the HMI screen while maintaining actuator motion
+     D) To reset all internal math registers and timers to zero
+     >> CORRECT ANSWER: A) A hardwired safety circuit that immediately cuts power to field actuators regardless of PLC state
+
+================================================================================
+QUICK ANSWER KEY SUMMARY (01 - 30)
+================================================================================
+Q01: B | Q02: C | Q03: A | Q04: B | Q05: D
+Q06: C | Q07: A | Q08: B | Q09: C | Q10: B
+Q11: A | Q12: D | Q13: C | Q14: B | Q15: D
+Q16: B | Q17: A | Q18: B | Q19: C | Q20: B
+Q21: D | Q22: A | Q23: C | Q24: A | Q25: D
+Q26: C | Q27: D | Q28: A | Q29: D | Q30: A
+================================================================================

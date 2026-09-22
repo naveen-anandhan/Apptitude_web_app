@@ -36,6 +36,10 @@ function doPost(e) {
       "Embedded",
       "MECH",
       "General",
+      "UI/UX",
+      "UIUX",
+      "PLC / Automation",
+      "PLC",
       "Others"
     ];
 

@@ -1,0 +1,228 @@
+================================================================================
+PUMO APTITUDE ASSESSMENT - OFFICIAL ANSWER KEY
+DEPARTMENT: UI/UX (Digital Marketing & Product Design)
+TOTAL QUESTIONS: 30 (Pure 100% Technical MCQs)
+================================================================================
+
+QUESTIONS 01 - 30: UI/UX & DIGITAL MARKETING TECHNICAL MCQS
+--------------------------------------------------------------------------------
+Q01. Which platform tool is described as a one-stop shop for managing marketing and advertising activities on Facebook and Instagram?
+     A) Ads Manager
+     B) Audience Network
+     C) Meta Business Suite
+     D) Meta Pixel
+     >> CORRECT ANSWER: C) Meta Business Suite
+
+Q02. What is Meta Business Manager primarily used to manage?
+     A) Facebook and Instagram assets
+     B) Video file formats
+     C) Email campaigns
+     D) Website source code
+     >> CORRECT ANSWER: A) Facebook and Instagram assets
+
+Q03. Which tool is the starting point for running ads on Facebook, Instagram, Messenger, or Audience Network?
+     A) Meta Business Suite
+     B) Meta Ads Manager
+     C) Business Manager
+     D) Meta Pixel
+     >> CORRECT ANSWER: B) Meta Ads Manager
+
+Q04. What is the Meta Pixel?
+     A) An ad placement
+     B) A payment method
+     C) A campaign objective
+     D) A piece of code placed on a website
+     >> CORRECT ANSWER: D) A piece of code placed on a website
+
+Q05. Which Meta Pixel function helps track conversions from Facebook ads?
+     A) Scheduling Stories
+     B) Creating payment cards
+     C) Collecting data on website actions
+     D) Choosing a font
+     >> CORRECT ANSWER: C) Collecting data on website actions
+
+Q06. Which campaign objective is designed to find people most likely to purchase a product or service?
+     A) Awareness
+     B) Sales
+     C) Engagement
+     D) Traffic
+     >> CORRECT ANSWER: B) Sales
+
+Q07. Which objective is used to gather information from new contacts?
+     A) Awareness
+     B) App promotion
+     C) Sales
+     D) Leads
+     >> CORRECT ANSWER: D) Leads
+
+Q08. Which objective can help get more messages, video views, post engagement, or event responses?
+     A) Awareness
+     B) Sales
+     C) Engagement
+     D) Traffic
+     >> CORRECT ANSWER: C) Engagement
+
+Q09. Which objective is used to send people to a destination such as a website, app, or Facebook event?
+     A) Sales
+     B) Traffic
+     C) App promotion
+     D) Leads
+     >> CORRECT ANSWER: B) Traffic
+
+Q10. Which objective is designed to reach new audiences and stay top of mind?
+     A) Awareness
+     B) Traffic
+     C) Leads
+     D) Sales
+     >> CORRECT ANSWER: A) Awareness
+
+Q11. Which objective is intended to find new people to install and continue using an app?
+     A) Awareness
+     B) Traffic
+     C) Engagement
+     D) App promotion
+     >> CORRECT ANSWER: D) App promotion
+
+Q12. Which of the following is a Meta ad format listed in the document?
+     A) Spreadsheet
+     B) Newsletter
+     C) Carousel
+     D) Blog post
+     >> CORRECT ANSWER: C) Carousel
+
+Q13. How many images or videos can a carousel ad showcase within a single ad according to the document?
+     A) Up to 2
+     B) Up to 10
+     C) Up to 50
+     D) Up to 20
+     >> CORRECT ANSWER: B) Up to 10
+
+Q14. Which level is used to set the campaign objective?
+     A) Placement level
+     B) Ad set level
+     C) Campaign level
+     D) Ad level
+     >> CORRECT ANSWER: C) Campaign level
+
+Q15. At which level are targeting, budget, placement, optimization, and bid defined?
+     A) Ad set level
+     B) Campaign level
+     C) Ad level
+     D) Page level
+     >> CORRECT ANSWER: A) Ad set level
+
+Q16. What is defined at the Ads level in the campaign structure?
+     A) Payment method
+     B) Overall business account
+     C) Campaign objective
+     D) Creative ad format
+     >> CORRECT ANSWER: D) Creative ad format
+
+Q17. What does a campaign budget represent?
+     A) Money spent on showing ads
+     B) Number of ads created
+     C) Video duration
+     D) Number of audience interests
+     >> CORRECT ANSWER: A) Money spent on showing ads
+
+Q18. What does an ad set budget allow an advertiser to control?
+     A) Number of pixels
+     B) Amount spent on each ad set
+     C) Number of Facebook pages
+     D) Image resolution
+     >> CORRECT ANSWER: B) Amount spent on each ad set
+
+Q19. Which type of budget is described as a hard cap over the entire campaign or ad set runtime?
+     A) Lifetime budget
+     B) Daily budget
+     C) Highest volume
+     D) Bid cap
+     >> CORRECT ANSWER: A) Lifetime budget
+
+Q20. Which bidding strategy focuses on spending the full budget and getting the most results or value possible?
+     A) Goal-based bidding
+     B) Ad scheduling
+     C) Manual bidding
+     D) Spend-based bidding
+     >> CORRECT ANSWER: D) Spend-based bidding
+
+Q21. Which bidding option aims to keep return on ad spend around an average amount?
+     A) Highest volume
+     B) Bid cap
+     C) ROAS goal
+     D) Cost per result goal
+     >> CORRECT ANSWER: C) ROAS goal
+
+Q22. Which manual bidding option sets the maximum bid across auctions?
+     A) Bid cap
+     B) Daily budget
+     C) ROAS goal
+     D) Highest value
+     >> CORRECT ANSWER: A) Bid cap
+
+Q23. What is the purpose of budget scheduling?
+     A) Choose image file types
+     B) Change the campaign objective
+     C) Schedule budget increases during higher opportunity periods
+     D) Create customer files
+     >> CORRECT ANSWER: C) Schedule budget increases during higher opportunity periods
+
+Q24. Which type of budget is required for ad scheduling?
+     A) Highest value budget
+     B) Lifetime budget
+     C) Manual bid budget
+     D) Daily budget
+     >> CORRECT ANSWER: B) Lifetime budget
+
+Q25. What does a conversion event tell Meta?
+     A) The audience's device model
+     B) The ad file size
+     C) The image resolution
+     D) The action you want your audience to take
+     >> CORRECT ANSWER: D) The action you want your audience to take
+
+Q26. Which of the following is a Core Audience targeting option?
+     A) Instant Experience
+     B) Demographics
+     C) Carousel cards
+     D) Video duration
+     >> CORRECT ANSWER: B) Demographics
+
+Q27. Which audience type uses customer lists, website visitors, app users, or other existing sources?
+     A) Custom Audience
+     B) Core Audience
+     C) Inventory Filter
+     D) Ad Placement
+     >> CORRECT ANSWER: A) Custom Audience
+
+Q28. What is a Lookalike Audience designed to do?
+     A) Schedule ads by hour
+     B) Change video resolution
+     C) Reach new people similar to an existing audience
+     D) Block sensitive content
+     >> CORRECT ANSWER: C) Reach new people similar to an existing audience
+
+Q29. What is the default placement option described in the document?
+     A) Right Column
+     B) Manual Placements
+     C) Instagram Shop
+     D) Advantage+ Placements
+     >> CORRECT ANSWER: D) Advantage+ Placements
+
+Q30. What is the maximum file size specified for a single image ad?
+     A) 30 MB
+     B) 600 MB
+     C) 10 MB
+     D) 4 GB
+     >> CORRECT ANSWER: A) 30 MB
+
+================================================================================
+QUICK ANSWER KEY SUMMARY (01 - 30)
+================================================================================
+Q01: C | Q02: A | Q03: B | Q04: D | Q05: C
+Q06: B | Q07: D | Q08: C | Q09: B | Q10: A
+Q11: D | Q12: C | Q13: B | Q14: C | Q15: A
+Q16: D | Q17: A | Q18: B | Q19: A | Q20: D
+Q21: C | Q22: A | Q23: C | Q24: B | Q25: D
+Q26: B | Q27: A | Q28: C | Q29: D | Q30: A
+================================================================================
