@@ -34,10 +34,16 @@ if (!student || !result) {
   // Populate Student & Scores
   const sName = student.name || result.studentName || "Candidate";
   const sDept = student.department || result.department || "General";
+  const sSpec = student.specialization || result.specialization || "";
   const sId = student.studentId || result.studentId || "--";
 
+  let displayDept = sDept;
+  if (sSpec && !sDept.includes(sSpec)) {
+    displayDept = `${sDept} (${sSpec})`;
+  }
+
   if (candidateName) candidateName.textContent = sName;
-  if (candidateDept) candidateDept.textContent = sDept;
+  if (candidateDept) candidateDept.textContent = displayDept;
   if (resultHeading) {
     resultHeading.textContent = result.pass === "PASS" ? `Great Job, ${sName}!` : `Thank You, ${sName}!`;
   }
@@ -190,7 +196,7 @@ if (!student || !result) {
   function preparePdfTemplate() {
     document.getElementById("pdfName").textContent = sName;
     document.getElementById("pdfId").textContent = sId;
-    document.getElementById("pdfDept").textContent = sDept;
+    document.getElementById("pdfDept").textContent = displayDept;
     document.getElementById("pdfDate").textContent = new Date().toLocaleString();
     document.getElementById("pdfStatus").textContent = result.pass === "PASS" ? "PASS ✓" : "FAIL ✗";
     document.getElementById("pdfStatus").style.color = result.pass === "PASS" ? "#16a34a" : "#dc2626";

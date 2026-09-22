@@ -433,6 +433,8 @@ async function submitTest(autoSubmitted) {
       student.studentId,
     department:
       student.department,
+    specialization:
+      student.specialization || "",
     studentEmail:
       student.email,
     score,
@@ -465,10 +467,12 @@ async function submitTest(autoSubmitted) {
 
       // Map MECH specializations (Creo / CATIA) to 'MECH' for Google Sheet tab compatibility
       let sheetDept = student.department || "";
-      let specialization = "";
+      let specialization = student.specialization || "";
       if (sheetDept.includes("MECH")) {
         sheetDept = "MECH";
-        specialization = student.department.replace("MECH - ", "").trim();
+        if (!specialization && student.department.includes(" - ")) {
+          specialization = student.department.replace("MECH - ", "").trim();
+        }
       }
 
       const sheetData =

@@ -47,8 +47,12 @@ function render() {
     const statusBadge = isPass
       ? `<span class="badge-pass">PASS</span>`
       : `<span class="badge-fail">FAIL</span>`;
+    let deptText = r.department || "-";
+    if (r.specialization && !deptText.includes(r.specialization)) {
+      deptText = `${deptText} (${r.specialization})`;
+    }
     const deptBadge = r.department
-      ? `<span class="badge-dept">${escapeHtml(r.department)}</span>`
+      ? `<span class="badge-dept">${escapeHtml(deptText)}</span>`
       : "-";
 
     return `
@@ -71,6 +75,7 @@ exportBtn.addEventListener("click", () => {
     "Name",
     "Mobile / Student ID",
     "Department",
+    "Specialization",
     "Email",
     "Score",
     "Total",
@@ -85,6 +90,7 @@ exportBtn.addEventListener("click", () => {
       r.studentName,
       r.studentId,
       r.department || "",
+      r.specialization || "-",
       r.studentEmail,
       r.score,
       r.total,

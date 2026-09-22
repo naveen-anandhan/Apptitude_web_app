@@ -23,17 +23,46 @@ const mechGroup =
 const mechSubSelect =
   document.getElementById("mechSubCategory");
 
+const generalGroup =
+  document.getElementById("generalSpecializationGroup");
 
-// Toggle Mechanical Specialization dropdown
-if (deptSelect && mechGroup && mechSubSelect) {
+const generalSubSelect =
+  document.getElementById("generalSpecialization");
+
+
+// Toggle Specialization dropdowns based on chosen Department
+if (deptSelect) {
   deptSelect.addEventListener("change", () => {
-    if (deptSelect.value === "MECH") {
-      mechGroup.style.display = "block";
-      mechSubSelect.required = true;
+    const val = deptSelect.value;
+    if (val === "MECH") {
+      if (mechGroup) mechGroup.style.display = "block";
+      if (mechSubSelect) mechSubSelect.required = true;
+
+      if (generalGroup) generalGroup.style.display = "none";
+      if (generalSubSelect) {
+        generalSubSelect.required = false;
+        generalSubSelect.value = "";
+      }
+    } else if (val === "General") {
+      if (generalGroup) generalGroup.style.display = "block";
+      if (generalSubSelect) generalSubSelect.required = true;
+
+      if (mechGroup) mechGroup.style.display = "none";
+      if (mechSubSelect) {
+        mechSubSelect.required = false;
+        mechSubSelect.value = "";
+      }
     } else {
-      mechGroup.style.display = "none";
-      mechSubSelect.required = false;
-      mechSubSelect.value = "";
+      if (mechGroup) mechGroup.style.display = "none";
+      if (mechSubSelect) {
+        mechSubSelect.required = false;
+        mechSubSelect.value = "";
+      }
+      if (generalGroup) generalGroup.style.display = "none";
+      if (generalSubSelect) {
+        generalSubSelect.required = false;
+        generalSubSelect.value = "";
+      }
     }
   });
 }
@@ -88,6 +117,7 @@ form.addEventListener(
 
 
     let finalDepartment = department;
+    let specialization = "";
 
     if (department === "MECH") {
       const sub = mechSubSelect ? mechSubSelect.value : "";
@@ -97,6 +127,16 @@ form.addEventListener(
         return;
       }
       finalDepartment = `MECH - ${sub}`;
+      specialization = sub;
+    } else if (department === "General") {
+      const sub = generalSubSelect ? generalSubSelect.value : "";
+      if (!sub) {
+        messageEl.textContent =
+          "Please select your degree stream / department.";
+        return;
+      }
+      finalDepartment = "General";
+      specialization = sub;
     }
 
 
@@ -140,6 +180,9 @@ form.addEventListener(
 
         department:
           finalDepartment,
+
+        specialization:
+          specialization,
 
         email:
           email
