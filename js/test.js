@@ -98,6 +98,26 @@ document.addEventListener("visibilitychange", () => {
 });
 
 
+// Anti-cheat: Block copy, cut, text selection, and long-press / right-click menu
+document.addEventListener("copy", (e) => {
+  e.preventDefault();
+  if (messageEl) {
+    messageEl.textContent = "⚠️ Copying question content is disabled.";
+    messageEl.style.color = "#dc2626";
+    setTimeout(() => {
+      if (messageEl && messageEl.textContent.includes("Copying")) {
+        messageEl.textContent = "";
+      }
+    }, 3000);
+  }
+});
+
+document.addEventListener("cut", (e) => e.preventDefault());
+document.addEventListener("contextmenu", (e) => e.preventDefault());
+document.addEventListener("selectstart", (e) => e.preventDefault());
+
+
+
 async function init() {
 
   try {
