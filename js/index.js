@@ -248,6 +248,10 @@ form.addEventListener(
         "lastResult"
       );
 
+      sessionStorage.removeItem(
+        "tabSwitches"
+      );
+
 
       // Start the assessment.
 

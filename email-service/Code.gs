@@ -61,9 +61,22 @@ function doPost(e) {
         "Specialization",
         "Email",
         "Score",
-        "Pass"
+        "Pass",
+        "Tab Switches"
       ]);
+    } else {
+      // If existing tab doesn't have Column 8 header, automatically add "Tab Switches"
+      const col8Header = sheet.getRange(1, 8).getValue();
+      if (!col8Header) {
+        sheet.getRange(1, 8).setValue("Tab Switches");
+        sheet.getRange(1, 8).setFontWeight("bold");
+      }
     }
+
+    // Tab switch count from website (anti-cheat detection)
+    const tabSwitches = (data.tabSwitches !== undefined && data.tabSwitches !== null)
+      ? Number(data.tabSwitches)
+      : 0;
 
     // Add student result
     sheet.appendRow([
@@ -73,7 +86,8 @@ function doPost(e) {
       specialization || "-",
       data.email,
       data.score,
-      data.pass
+      data.pass,
+      tabSwitches
     ]);
 
     // Send success response
@@ -113,4 +127,19 @@ function doGet(e) {
     .setMimeType(
       ContentService.MimeType.JSON
     );
+}
+
+// Utility: Call this from Apps Script editor once if you want to add "Tab Switches" header to all existing tabs immediately
+function addTabSwitchesHeaderToAllSheets() {
+  const spreadsheet = SpreadsheetApp.getActiveSpreadsheet();
+  const sheets = spreadsheet.getSheets();
+  sheets.forEach(function(sheet) {
+    if (sheet.getLastRow() > 0) {
+      const header = sheet.getRange(1, 8).getValue();
+      if (!header) {
+        sheet.getRange(1, 8).setValue("Tab Switches");
+        sheet.getRange(1, 8).setFontWeight("bold");
+      }
+    }
+  });
 }

@@ -33,6 +33,11 @@ let timerInterval = null;
 
 let submitting = false;
 
+let tabSwitches =
+  Number(
+    sessionStorage.getItem("tabSwitches") || 0
+  );
+
 
 const titleEl =
   document.getElementById("testTitle");
@@ -69,6 +74,28 @@ const timerEl =
 
 const messageEl =
   document.getElementById("testMessage");
+
+
+// Anti-cheat: Track tab switches / minimizing
+document.addEventListener("visibilitychange", () => {
+  if (submitting) return;
+
+  if (document.hidden) {
+    tabSwitches++;
+    sessionStorage.setItem("tabSwitches", String(tabSwitches));
+  } else {
+    // When returning to the test tab, alert the student
+    if (tabSwitches > 0 && messageEl) {
+      messageEl.textContent = `⚠️ Warning: Tab switch detected (${tabSwitches}). Tab switching is monitored.`;
+      messageEl.style.color = "#d97706";
+      setTimeout(() => {
+        if (messageEl && messageEl.textContent.includes("Tab switch")) {
+          messageEl.textContent = "";
+        }
+      }, 4500);
+    }
+  }
+});
 
 
 async function init() {
@@ -451,6 +478,7 @@ async function submitTest(autoSubmitted) {
     total,
     percentage,
     pass,
+    tabSwitches,
     correctCount,
     wrongCount,
     questionsReview,
@@ -512,7 +540,10 @@ async function submitTest(autoSubmitted) {
             `${score}/${total}`,
 
           pass:
-            pass
+            pass,
+
+          tabSwitches:
+            tabSwitches
 
         });
 
@@ -562,6 +593,11 @@ async function submitTest(autoSubmitted) {
 
     sessionStorage.removeItem(
       "testStart"
+    );
+
+
+    sessionStorage.removeItem(
+      "tabSwitches"
     );
 
 
