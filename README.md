@@ -65,8 +65,10 @@ The aptitude test currently supports:
 3. Java Full Stack
 4. DA/DS/BA
 5. Embedded
-6. MECH
-7. General
+6. MECH (Specializations: Creo, CATIA)
+7. UI/UX / Digital Marketing (Specializations: Digital Marketing, UI/UX Design, Product Design)
+8. PLC / Automation
+9. General (Degree Streams: MECH, DA/DS/BA, SAP, Python Full Stack, Java Full Stack, Embedded, PLC / Automation, UI/UX / Digital Marketing, ECE / EEE, CSE / IT, Civil, Others)
 
 A question can belong to one or multiple departments.
 

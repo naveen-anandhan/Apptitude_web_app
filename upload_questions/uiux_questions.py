@@ -3,7 +3,7 @@
 # 30 Dedicated Technical MCQs
 # ============================================================
 
-DEPARTMENTS = ["UI/UX", "UIUX"]
+DEPARTMENTS = ["UI/UX", "UIUX", "UI/UX / Digital Marketing", "UI/UX - Digital Marketing", "Digital Marketing"]
 
 questions = [
     {

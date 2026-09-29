@@ -18,13 +18,18 @@ function doPost(e) {
       throw new Error("Department is missing.");
     }
 
-    // Handle MECH sub-categories (Creo / CATIA) -> map to MECH tab
+    // Handle MECH & UI/UX sub-categories -> map to main sheet tab
     let specialization = data.specialization || "";
     if (department.startsWith("MECH")) {
       if (department.includes(" - ")) {
         specialization = department.split(" - ")[1];
       }
       department = "MECH";
+    } else if (department.startsWith("UI/UX") || department.startsWith("UIUX")) {
+      if (department.includes(" - ")) {
+        specialization = department.split(" - ")[1];
+      }
+      department = "UI/UX";
     }
 
     // Allowed departments matching the website
@@ -38,6 +43,7 @@ function doPost(e) {
       "General",
       "UI/UX",
       "UIUX",
+      "UI/UX / Digital Marketing",
       "PLC / Automation",
       "PLC",
       "Others"

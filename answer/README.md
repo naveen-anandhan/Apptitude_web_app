@@ -6,7 +6,7 @@ This directory contains the verified, official answer keys for all departments p
 
 | Department / Specialization | Test Configuration | Answer Key File | Answer Key Summary |
 | :--- | :--- | :--- | :--- |
-| **General** | 30 General (10 Basic + 10 Intermediate + 10 Advanced) | [`answer_general.txt`](answer_general.txt) | 30 Questions (Official Assessment Questions) |
+| **General** | 30 General (10 Basic + 10 Intermediate + 10 Advanced - Set 3) | [`answer_general.txt`](answer_general.txt) | 30 Questions (Quantitative, Logical, Verbal & DI) |
 | **SAP** | 20 General + 10 SAP Technical | [`answer_sap.txt`](answer_sap.txt) | 30 Questions (Balanced A/B/C/D, 0 adjacent duplicates) |
 | **Python Full Stack** | 20 General + 10 Python Technical | [`answer_python_full_stack.txt`](answer_python_full_stack.txt) | 30 Questions (Balanced A/B/C/D, 0 adjacent duplicates) |
 | **Java Full Stack** | 20 General + 10 Java Technical | [`answer_java_full_stack.txt`](answer_java_full_stack.txt) | 30 Questions (Balanced A/B/C/D, 0 adjacent duplicates) |
@@ -14,7 +14,7 @@ This directory contains the verified, official answer keys for all departments p
 | **Embedded Systems** | 20 General + 10 Embedded Technical | [`answer_embedded.txt`](answer_embedded.txt) | 30 Questions (Balanced A/B/C/D, 0 adjacent duplicates) |
 | **Mechanical - Creo** | 30 Pure PTC Creo CAD | [`answer_mech_creo.txt`](answer_mech_creo.txt) | 30 Questions (Balanced A/B/C/D, 0 adjacent duplicates) |
 | **Mechanical - CATIA** | 30 Pure CATIA V5 CAD | [`answer_mech_catia.txt`](answer_mech_catia.txt) | 30 Questions (Balanced A/B/C/D, 0 adjacent duplicates) |
-| **UI/UX** | 30 Pure UI/UX & Digital Marketing Technical MCQs | [`answer_uiux.txt`](answer_uiux.txt) | 30 Questions (Balanced A/B/C/D, 0 adjacent duplicates) |
+| **UI/UX / Digital Marketing** | 30 Pure UI/UX & Digital Marketing Technical MCQs (Specializations: Digital Marketing, UI/UX Design, Product Design) | [`answer_uiux.txt`](answer_uiux.txt) | 30 Questions (Balanced A/B/C/D, 0 adjacent duplicates) |
 | **PLC / Automation** | 30 Pure PLC & Industrial Automation Technical MCQs | [`answer_plc.txt`](answer_plc.txt) | 30 Questions (Balanced A/B/C/D, 0 adjacent duplicates) |
 
 ## Quality & Anti-Cheat Guarantees

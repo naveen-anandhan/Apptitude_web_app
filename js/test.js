@@ -83,10 +83,15 @@ async function init() {
       );
 
 
+    let deptForQuestions = student.department;
+    if (deptForQuestions && (deptForQuestions.startsWith("UI/UX") || deptForQuestions.startsWith("UIUX"))) {
+      deptForQuestions = "UI/UX";
+    }
+
     questions =
       await getQuestions(
         APP_CONFIG.TEST_ID,
-        student.department
+        deptForQuestions
       );
 
 
@@ -103,8 +108,13 @@ async function init() {
       test.title || "Aptitude Test";
 
 
+    const specDisplay =
+      (student.specialization && !student.department.includes(student.specialization))
+        ? ` (${student.specialization})`
+        : "";
+
     studentInfo.textContent =
-      `${student.name} • ${student.studentId} • ${student.department}`;
+      `${student.name} • ${student.studentId} • ${student.department}${specDisplay}`;
 
 
     answers =
@@ -465,13 +475,18 @@ async function submitTest(autoSubmitted) {
     // Send result to Google Sheets
     if (APP_CONFIG.EMAIL_SERVICE_URL) {
 
-      // Map MECH specializations (Creo / CATIA) to 'MECH' for Google Sheet tab compatibility
+      // Map MECH and UI/UX specializations for Google Sheet tab compatibility
       let sheetDept = student.department || "";
       let specialization = student.specialization || "";
       if (sheetDept.includes("MECH")) {
         sheetDept = "MECH";
         if (!specialization && student.department.includes(" - ")) {
           specialization = student.department.replace("MECH - ", "").trim();
+        }
+      } else if (sheetDept.includes("UI/UX") || sheetDept.includes("UIUX")) {
+        sheetDept = "UI/UX";
+        if (!specialization && student.department.includes(" - ")) {
+          specialization = student.department.replace("UI/UX - ", "").trim();
         }
       }
 

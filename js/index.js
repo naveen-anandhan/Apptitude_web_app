@@ -23,6 +23,12 @@ const mechGroup =
 const mechSubSelect =
   document.getElementById("mechSubCategory");
 
+const uiuxGroup =
+  document.getElementById("uiuxSubCategoryGroup");
+
+const uiuxSubSelect =
+  document.getElementById("uiuxSubCategory");
+
 const generalGroup =
   document.getElementById("generalSpecializationGroup");
 
@@ -38,6 +44,25 @@ if (deptSelect) {
       if (mechGroup) mechGroup.style.display = "block";
       if (mechSubSelect) mechSubSelect.required = true;
 
+      if (uiuxGroup) uiuxGroup.style.display = "none";
+      if (uiuxSubSelect) {
+        uiuxSubSelect.required = false;
+        uiuxSubSelect.value = "";
+      }
+      if (generalGroup) generalGroup.style.display = "none";
+      if (generalSubSelect) {
+        generalSubSelect.required = false;
+        generalSubSelect.value = "";
+      }
+    } else if (val === "UI/UX" || val === "UI/UX / Digital Marketing") {
+      if (uiuxGroup) uiuxGroup.style.display = "block";
+      if (uiuxSubSelect) uiuxSubSelect.required = true;
+
+      if (mechGroup) mechGroup.style.display = "none";
+      if (mechSubSelect) {
+        mechSubSelect.required = false;
+        mechSubSelect.value = "";
+      }
       if (generalGroup) generalGroup.style.display = "none";
       if (generalSubSelect) {
         generalSubSelect.required = false;
@@ -52,11 +77,21 @@ if (deptSelect) {
         mechSubSelect.required = false;
         mechSubSelect.value = "";
       }
+      if (uiuxGroup) uiuxGroup.style.display = "none";
+      if (uiuxSubSelect) {
+        uiuxSubSelect.required = false;
+        uiuxSubSelect.value = "";
+      }
     } else {
       if (mechGroup) mechGroup.style.display = "none";
       if (mechSubSelect) {
         mechSubSelect.required = false;
         mechSubSelect.value = "";
+      }
+      if (uiuxGroup) uiuxGroup.style.display = "none";
+      if (uiuxSubSelect) {
+        uiuxSubSelect.required = false;
+        uiuxSubSelect.value = "";
       }
       if (generalGroup) generalGroup.style.display = "none";
       if (generalSubSelect) {
@@ -127,6 +162,15 @@ form.addEventListener(
         return;
       }
       finalDepartment = `MECH - ${sub}`;
+      specialization = sub;
+    } else if (department === "UI/UX" || department === "UI/UX / Digital Marketing") {
+      const sub = uiuxSubSelect ? uiuxSubSelect.value : "";
+      if (!sub) {
+        messageEl.textContent =
+          "Please select your UI/UX / Digital Marketing Specialization (Digital Marketing, UI/UX Design, or Product Design).";
+        return;
+      }
+      finalDepartment = "UI/UX / Digital Marketing";
       specialization = sub;
     } else if (department === "General") {
       const sub = generalSubSelect ? generalSubSelect.value : "";
