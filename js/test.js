@@ -484,7 +484,7 @@ async function submitTest(autoSubmitted) {
           specialization = student.department.replace("MECH - ", "").trim();
         }
       } else if (sheetDept.includes("UI/UX") || sheetDept.includes("UIUX")) {
-        sheetDept = "UI/UX";
+        sheetDept = "UI/UX / Digital Marketing";
         if (!specialization && student.department.includes(" - ")) {
           specialization = student.department.replace("UI/UX - ", "").trim();
         }

@@ -1,72 +1,59 @@
+/**
+ * Google Apps Script - Result Handler for Aptitude Test
+ *
+ * Automatically finds or creates department sheet tabs:
+ * - If department tab exists (e.g., Java Full Stack, MECH, General), records result there.
+ * - If department tab is NOT present (e.g., UI/UX / Digital Marketing, PLC / Automation),
+ *   automatically creates the tab, adds standard headings, and appends the student's result.
+ *
+ * Deploy instructions:
+ * 1. Open Google Sheet: Extensions -> Apps Script
+ * 2. Paste this entire code into Code.gs
+ * 3. Click Deploy -> Manage deployments
+ * 4. Click Edit (pencil icon) -> New version -> Click Deploy
+ */
+
 function doPost(e) {
   try {
+    const spreadsheet = SpreadsheetApp.getActiveSpreadsheet();
 
-    // Get the spreadsheet
-    const spreadsheet =
-      SpreadsheetApp.getActiveSpreadsheet();
+    // Parse incoming JSON payload from test submission
+    const data = JSON.parse(e.postData.contents);
 
-    // Get data from website
-    const data =
-      JSON.parse(e.postData.contents);
+    let department = (data.department || "General").trim();
+    let specialization = (data.specialization || "").trim();
 
-    // Get department
-    let department =
-      data.department;
-
-    // Make sure department was provided
-    if (!department) {
-      throw new Error("Department is missing.");
-    }
-
-    // Handle MECH & UI/UX sub-categories -> map to main sheet tab
-    let specialization = data.specialization || "";
+    // Handle MECH sub-categories (Creo / CATIA) -> map to MECH tab
     if (department.startsWith("MECH")) {
       if (department.includes(" - ")) {
-        specialization = department.split(" - ")[1];
+        specialization = specialization || department.split(" - ")[1].trim();
       }
       department = "MECH";
-    } else if (department.startsWith("UI/UX") || department.startsWith("UIUX")) {
-      if (department.includes(" - ")) {
-        specialization = department.split(" - ")[1];
-      }
-      department = "UI/UX";
     }
 
-    // Allowed departments matching the website
-    const allowedDepartments = [
-      "SAP",
-      "Python Full Stack",
-      "Java Full Stack",
-      "DA/DS/BA",
-      "Embedded",
-      "MECH",
-      "General",
-      "UI/UX",
-      "UIUX",
-      "UI/UX / Digital Marketing",
-      "PLC / Automation",
-      "PLC",
-      "Others"
-    ];
+    // Look for existing tab matching the department
+    let sheet = spreadsheet.getSheetByName(department);
 
-    // Check department
-    if (!allowedDepartments.includes(department)) {
-      throw new Error(
-        "Invalid department: " + department
-      );
-    }
-
-    // Get the department sheet tab
-    let sheet =
-      spreadsheet.getSheetByName(department);
-
-    // If sheet doesn't exist, create it automatically
+    // If not found directly, check common name variations before creating
     if (!sheet) {
-      sheet =
-        spreadsheet.insertSheet(department);
+      if (department.includes("UI/UX") || department.includes("Digital Marketing")) {
+        sheet = spreadsheet.getSheetByName("UI/UX / Digital Marketing") ||
+                spreadsheet.getSheetByName("UI/UX") ||
+                spreadsheet.getSheetByName("Digital Marketing");
+      } else if (department.includes("PLC") || department.includes("Automation")) {
+        sheet = spreadsheet.getSheetByName("PLC / Automation") ||
+                spreadsheet.getSheetByName("PLC");
+      }
     }
 
-    // Add headings if sheet is empty
+    // If tab STILL does not exist, create it automatically!
+    if (!sheet) {
+      // Clean tab name to ensure Google Sheet compatibility
+      const safeTabName = department.replace(/[:\\?*\[\]]/g, "-").substring(0, 100).trim();
+      sheet = spreadsheet.insertSheet(safeTabName);
+    }
+
+    // Add standard headings if this is a newly created or empty tab
     if (sheet.getLastRow() === 0) {
       sheet.appendRow([
         "Date & Time",
@@ -77,41 +64,45 @@ function doPost(e) {
         "Score",
         "Pass"
       ]);
+
+      // Format header row (bold & freeze header)
+      try {
+        const headerRange = sheet.getRange(1, 1, 1, 7);
+        headerRange.setFontWeight("bold");
+        headerRange.setBackground("#f1f5f9");
+        sheet.setFrozenRows(1);
+      } catch (styleErr) {
+        // Continue even if styling fails
+      }
     }
 
-    // Add student result
+    // Append the student's assessment result
     sheet.appendRow([
       new Date(),
-      data.studentName,
-      data.phoneNumber,
+      data.studentName || "-",
+      data.phoneNumber || "-",
       specialization || "-",
-      data.email,
-      data.score,
-      data.pass
+      data.email || "-",
+      data.score || "-",
+      data.pass || "-"
     ]);
 
-    // Send success response
     return ContentService
-      .createTextOutput(
-        JSON.stringify({
-          success: true
-        })
-      )
-      .setMimeType(
-        ContentService.MimeType.JSON
-      );
+      .createTextOutput(JSON.stringify({ success: true, department: sheet.getName() }))
+      .setMimeType(ContentService.MimeType.JSON);
 
   } catch (error) {
-
     return ContentService
-      .createTextOutput(
-        JSON.stringify({
-          success: false,
-          error: error.toString()
-        })
-      )
-      .setMimeType(
-        ContentService.MimeType.JSON
-      );
+      .createTextOutput(JSON.stringify({ success: false, error: error.toString() }))
+      .setMimeType(ContentService.MimeType.JSON);
   }
+}
+
+function doGet(e) {
+  return ContentService
+    .createTextOutput(JSON.stringify({
+      status: "active",
+      message: "PUMO Aptitude Assessment Google Sheet Webhook is active and running."
+    }))
+    .setMimeType(ContentService.MimeType.JSON);
 }
