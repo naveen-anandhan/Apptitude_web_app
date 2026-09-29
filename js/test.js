@@ -176,12 +176,18 @@ async function init() {
       );
 
 
+    const durationMinutes =
+      Number(APP_CONFIG.DURATION_MINUTES) ||
+      Number(test.durationMinutes) ||
+      30;
+
+
     if (startedAt) {
 
       remainingSeconds =
         Math.max(
           0,
-          (test.durationMinutes * 60) -
+          (durationMinutes * 60) -
           Math.floor(
             (Date.now() - startedAt) / 1000
           )
@@ -196,7 +202,7 @@ async function init() {
 
 
       remainingSeconds =
-        test.durationMinutes * 60;
+        durationMinutes * 60;
 
     }
 
