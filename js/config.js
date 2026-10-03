@@ -6,6 +6,9 @@ export const APP_CONFIG = {
   // Test duration in minutes (change this number anytime to change the test time)
   DURATION_MINUTES: 30,
 
+  // Test duration for Mechanical Engineering (40 questions)
+  MECH_DURATION_MINUTES: 40,
+
   // Simple admin UI password. Change it before use.
   // NOTE: This is NOT secure authentication.
   ADMIN_PASSWORD: "CHANGE_THIS_ADMIN_PASSWORD",

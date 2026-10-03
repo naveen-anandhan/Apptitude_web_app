@@ -251,6 +251,8 @@ python upload_questions/da_ds_ba_questions.py
 python upload_questions/sap_questions.py
 python upload_questions/embedded_questions.py
 python upload_questions/mech_questions.py
+python upload_questions/mech_catia_questions.py
+python upload_questions/mech_autocad_questions.py
 python upload_questions/general_questions.py
 ```
 

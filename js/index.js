@@ -158,7 +158,7 @@ form.addEventListener(
       const sub = mechSubSelect ? mechSubSelect.value : "";
       if (!sub) {
         messageEl.textContent =
-          "Please select your Mechanical Specialization (Creo or CATIA).";
+          "Please select your Mechanical Specialization (Creo, CATIA, or AutoCAD).";
         return;
       }
       finalDepartment = `MECH - ${sub}`;

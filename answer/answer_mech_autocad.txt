@@ -1,0 +1,285 @@
+================================================================================
+PUMO APTITUDE ASSESSMENT - OFFICIAL ANSWER KEY
+DEPARTMENT: Mechanical Engineering - AutoCAD (Autodesk CAD)
+TOTAL QUESTIONS: 40 (Pure Software & CAD Mechanical Aptitude)
+================================================================================
+
+QUESTIONS 01 - 40: MECHANICAL ENGINEERING - AUTOCAD (AUTODESK CAD)
+--------------------------------------------------------------------------------
+Q01. In CAD, the LIMITS command allows you to determine the:
+     A) Size of the drawing space
+     B) Size of the text
+     C) Amount of time that is needed to draw
+     D) None of the above
+     >> CORRECT ANSWER: A) Size of the drawing space
+
+Q02. A Uniform pattern of dots/lines on the CAD screen is called as ____________
+     A) All of above
+     B) Grid
+     C) Reference dot pattern
+     D) Snap pattern
+     >> CORRECT ANSWER: B) Grid
+
+Q03. What do you mean by AutoCAD?
+     A) Automatic Candidate Address Detection
+     B) Automatic Card Address Direction
+     C) Automatic Computer Active Décor
+     D) Automatic Computer-Aided Design/Drafting
+     >> CORRECT ANSWER: D) Automatic Computer-Aided Design/Drafting
+
+Q04. What does CAD in AutoCAD stand for?
+     A) Computer Aided Design
+     B) Computer Advance Detail
+     C) Computer Assignment Description
+     D) All of above
+     >> CORRECT ANSWER: A) Computer Aided Design
+
+Q05. Which key can be used to quickly cancel a command?
+     A) backspace
+     B) esc
+     C) tab
+     D) enter
+     >> CORRECT ANSWER: B) esc
+
+Q06. What does UCS means?(In the context of CAD)
+     A) User Coordinate System
+     B) United CAD Software
+     C) United Coordinate System
+     D) User CAD Software
+     >> CORRECT ANSWER: A) User Coordinate System
+
+Q07. What are the characteristics of a Triangle?
+     A) 2 sides, 4 angles
+     B) 4 sides, 4 angles
+     C) 4 sides, 3 angles
+     D) 3 sides, 3 angles
+     >> CORRECT ANSWER: D) 3 sides, 3 angles
+
+Q08. The command for opening 'drawing units' window is
+     A) U
+     B) UN
+     C) UNI
+     D) UNIT
+     >> CORRECT ANSWER: B) UN
+
+Q09. A command used to check a distance _____________
+     A) fillet
+     B) offset
+     C) pan
+     D) dist
+     >> CORRECT ANSWER: D) dist
+
+Q10. What does the Offset command do?
+     A) Moves to specified distance
+     B) Moves above specified distance
+     C) Moves away from specified distance
+     D) None of the above
+     >> CORRECT ANSWER: A) Moves to specified distance
+
+Q11. Where would AutoCAD ask you for something?
+     A) Tool Icons
+     B) Command Line
+     C) Properties Palette
+     D) Toolbar
+     >> CORRECT ANSWER: B) Command Line
+
+Q12. The shortcut for using Zoom command is
+     A) Z Command
+     B) Rotate mouse wheel
+     C) ZOOM Command
+     D) All of the above
+     >> CORRECT ANSWER: D) All of the above
+
+Q13. In Cartesian coordinate system, the axis is vertical.
+     A) X
+     B) Y
+     C) Z
+     D) W
+     >> CORRECT ANSWER: B) Y
+
+Q14. If AutoCAD is displaying length of a line as 24.952 then what is the precision selected?
+     A) (0.0)
+     B) (0.00)
+     C) (0.000)
+     D) Display of length has nothing to do with precision
+     >> CORRECT ANSWER: C) (0.000)
+
+Q15. When saving your drawings in AutoCAD the default file type is...?
+     A) pdf
+     B) dwg
+     C) bak
+     D) doc
+     >> CORRECT ANSWER: B) dwg
+
+Q16. What does the command Fillet do?
+     A) Straightens an angle
+     B) Curves an angle
+     C) Deletes an angle
+     D) All of above
+     >> CORRECT ANSWER: B) Curves an angle
+
+Q17. The shortcut command key for UNDO
+     A) CTRL+C
+     B) CTRL+Z
+     C) CTRL+CU
+     D) CTRL+CHA
+     >> CORRECT ANSWER: B) CTRL+Z
+
+Q18. The shortcut command key for TABLE
+     A) TL
+     B) TE
+     C) TN
+     D) TB
+     >> CORRECT ANSWER: D) TB
+
+Q19. Which option will you use to make a circle which is tangent to a line and circle and has certain radius value
+     A) 2 Point circle
+     B) 3 Point circle
+     C) Tangent, tangent, radius circle
+     D) Tangent, tangent, tangent circle
+     >> CORRECT ANSWER: C) Tangent, tangent, radius circle
+
+Q20. The ____________ command is used to lengthen a line to meet an edge.
+     A) Array
+     B) Chamfer
+     C) Extend
+     D) Rotate
+     >> CORRECT ANSWER: C) Extend
+
+Q21. Is it possible to make a rectangle with fillets on all four vertices?
+     A) Yes
+     B) No
+     >> CORRECT ANSWER: A) Yes
+
+Q22. Can you use Polygon tool to make a polygon with a known edge length without using inscribed or circumscribed circle as a reference?
+     A) Yes
+     B) No
+     >> CORRECT ANSWER: A) Yes
+
+Q23. State true or false: It is not possible to make a linear array with copy command
+     A) True
+     B) False
+     >> CORRECT ANSWER: B) False
+
+Q24. Which CAD command enlarges or reduces selected objects proportionally in the X, Y, and Z directions from a base point?
+     A) Stretch
+     B) Divide
+     C) Array
+     D) Scale
+     >> CORRECT ANSWER: D) Scale
+
+Q25. Which CAD command creates multiple copies of objects in a circular or rectangular pattern?
+     A) Array
+     B) Extend
+     C) Chamfer
+     D) Rotate
+     >> CORRECT ANSWER: A) Array
+
+Q26. The ___________ command provides the length of an object but does not place a dimension line on the drawing?
+     A) Annotate
+     B) Leader
+     C) Baseline
+     D) Distance
+     >> CORRECT ANSWER: D) Distance
+
+Q27. CAD commands such as LINE, CIRCLE, and ARC and other basic CAD figures are examples of ____________
+     A) Modify commands
+     B) Edit commands
+     C) Draw commands
+     D) None of the above
+     >> CORRECT ANSWER: C) Draw commands
+
+Q28. How many AutoCAD OBJECTS are in a rectangle?
+     A) One
+     B) Two
+     C) Four
+     D) None of above
+     >> CORRECT ANSWER: A) One
+
+Q29. To reduce the size of an object to half of its initial value using SCALE command the scale factor would be?
+     A) 2
+     B) 0.25
+     C) 0.5
+     D) 4
+     >> CORRECT ANSWER: C) 0.5
+
+Q30. Which function key enables object snap in AutoCAD?
+     A) F2
+     B) F3
+     C) F5
+     D) F8
+     >> CORRECT ANSWER: B) F3
+
+Q31. Which factor of hatch command you will change to correct the spacing between hatch lines or pattern
+     A) Pattern
+     B) Angle
+     C) Scale
+     D) Layer
+     >> CORRECT ANSWER: C) Scale
+
+Q32. The __________ tool is used to fill in an object with color/pattern design.
+     A) Arc
+     B) Hatch
+     C) Line
+     D) Pattern
+     >> CORRECT ANSWER: B) Hatch
+
+Q33. What a break line used for?
+     A) To show an alternate position
+     B) To represent an edge not visible
+     C) To represent a line of symmetry
+     D) To eliminate a section of drawing not needed because of size
+     >> CORRECT ANSWER: D) To eliminate a section of drawing not needed because of size
+
+Q34. The origin of a drawing is ALWAYS at _____________
+     A) 0,0
+     B) The first point you select
+     C) A random point In space
+     D) UCS ICON
+     >> CORRECT ANSWER: A) 0,0
+
+Q35. Polar coordinates are used mostly for drawing __________
+     A) Arcs
+     B) Circles
+     C) Angled lines
+     D) Vertical and Horizontal Straight Lines
+     >> CORRECT ANSWER: C) Angled lines
+
+Q36. The ___________ command will adjust the display so that all objects in the drawing are displayed to be as large as possible.
+     A) Pan
+     B) Circle
+     C) Zoom All
+     D) Orbit
+     >> CORRECT ANSWER: C) Zoom All
+
+Q37. What is the difference between command Plot and Print?
+     A) Print command can print up to A3 size paper
+     B) Plot command prints only big plans
+     C) The plot command for CNC(CAM)
+     D) No difference
+     >> CORRECT ANSWER: D) No difference
+
+Q38. From which direction does AutoCAD start measuring angles?
+     A) 6 o'clock
+     B) 9 o'clock
+     C) 3 o'clock
+     D) 12 o'clock
+     >> CORRECT ANSWER: C) 3 o'clock
+
+Q39. To break a Poly line into lines and arcs which command can be used
+     A) BREAК
+     B) TRIM
+     C) EXPLODE
+     D) OVERKILL
+     >> CORRECT ANSWER: C) EXPLODE
+
+Q40. How many points do you need to define for the rectangle command?
+     A) Two
+     B) Four
+     C) One
+     D) None
+     >> CORRECT ANSWER: A) Two
+
+================================================================================
+END OF ANSWER KEY: MECHANICAL - AUTOCAD (AUTODESK CAD)
+================================================================================

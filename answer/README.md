@@ -12,8 +12,9 @@ This directory contains the verified, official answer keys for all departments p
 | **Java Full Stack** | 20 General + 10 Java Technical | [`answer_java_full_stack.txt`](answer_java_full_stack.txt) | 30 Questions (Balanced A/B/C/D, 0 adjacent duplicates) |
 | **DA/DS/BA** | 20 General + 10 Data Technical | [`answer_da_ds_ba.txt`](answer_da_ds_ba.txt) | 30 Questions (Balanced A/B/C/D, 0 adjacent duplicates) |
 | **Embedded Systems** | 20 General + 10 Embedded Technical | [`answer_embedded.txt`](answer_embedded.txt) | 30 Questions (Balanced A/B/C/D, 0 adjacent duplicates) |
-| **Mechanical - Creo** | 30 Pure PTC Creo CAD | [`answer_mech_creo.txt`](answer_mech_creo.txt) | 30 Questions (Balanced A/B/C/D, 0 adjacent duplicates) |
-| **Mechanical - CATIA** | 30 Pure CATIA V5 CAD | [`answer_mech_catia.txt`](answer_mech_catia.txt) | 30 Questions (Balanced A/B/C/D, 0 adjacent duplicates) |
+| **Mechanical - Creo** | 40 Pure PTC Creo CAD | [`answer_mech_creo.txt`](answer_mech_creo.txt) | 40 Questions (Dedicated PTC Creo Mechanical CAD) |
+| **Mechanical - CATIA** | 40 Pure CATIA V5 CAD | [`answer_mech_catia.txt`](answer_mech_catia.txt) | 40 Questions (Dedicated CATIA V5 Part/Assembly/Drafting) |
+| **Mechanical - AutoCAD** | 40 Pure AutoCAD CAD | [`answer_mech_autocad.txt`](answer_mech_autocad.txt) | 40 Questions (Dedicated 2D/3D Drafting & Commands) |
 | **UI/UX / Digital Marketing** | 30 Pure UI/UX & Digital Marketing Technical MCQs (Specializations: Digital Marketing, UI/UX Design, Product Design) | [`answer_uiux.txt`](answer_uiux.txt) | 30 Questions (Balanced A/B/C/D, 0 adjacent duplicates) |
 | **PLC / Automation** | 30 Pure PLC & Industrial Automation Technical MCQs | [`answer_plc.txt`](answer_plc.txt) | 30 Questions (Balanced A/B/C/D, 0 adjacent duplicates) |
 

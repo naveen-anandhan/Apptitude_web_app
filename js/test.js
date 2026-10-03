@@ -176,10 +176,16 @@ async function init() {
       );
 
 
+    const isMech =
+      Boolean(
+        student.department &&
+        (student.department === "MECH" || student.department.startsWith("MECH"))
+      );
+
     const durationMinutes =
-      Number(APP_CONFIG.DURATION_MINUTES) ||
-      Number(test.durationMinutes) ||
-      30;
+      isMech
+        ? (Number(APP_CONFIG.MECH_DURATION_MINUTES) || 40)
+        : (Number(APP_CONFIG.DURATION_MINUTES) || Number(test.durationMinutes) || 30);
 
 
     if (startedAt) {
