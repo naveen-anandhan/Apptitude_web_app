@@ -535,7 +535,7 @@ async function submitTest(autoSubmitted) {
     // Send result to Google Sheets
     if (APP_CONFIG.EMAIL_SERVICE_URL) {
 
-      // Map MECH and UI/UX specializations for Google Sheet tab compatibility
+      // Map MECH, UI/UX, and SAP specializations for Google Sheet tab compatibility
       let sheetDept = student.department || "";
       let specialization = student.specialization || "";
       if (sheetDept.includes("MECH")) {
@@ -548,6 +548,23 @@ async function submitTest(autoSubmitted) {
         if (!specialization && student.department.includes(" - ")) {
           specialization = student.department.replace("UI/UX - ", "").trim();
         }
+      } else if (sheetDept.includes("SAP")) {
+        sheetDept = "SAP";
+        if (!specialization && student.department.includes(" - ")) {
+          specialization = student.department.replace("SAP - ", "").trim();
+        }
+      } else if (sheetDept.includes("Python Full Stack")) {
+        sheetDept = "Python Full Stack";
+        if (!specialization && student.department.includes(" - ")) {
+          specialization = student.department.replace("Python Full Stack - ", "").trim();
+        }
+      } else if (sheetDept.includes("Java Full Stack")) {
+        sheetDept = "Java Full Stack";
+        if (!specialization && student.department.includes(" - ")) {
+          specialization = student.department.replace("Java Full Stack - ", "").trim();
+        }
+      } else if (sheetDept.includes("HTML") || sheetDept.includes("JavaScript")) {
+        sheetDept = "HTML / CSS / JavaScript";
       }
 
       const sheetData =

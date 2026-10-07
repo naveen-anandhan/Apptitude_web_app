@@ -1,0 +1,225 @@
+================================================================================
+PUMO APTITUDE ASSESSMENT - OFFICIAL ANSWER KEY
+DEPARTMENT: SAP ERP
+SPECIALIZATION: SAP FICO (Financial Accounting & Controlling)
+TOTAL QUESTIONS: 30 (Pure 100% Technical MCQs – 1 Mark Each)
+================================================================================
+
+QUESTIONS 01 - 30: SAP FICO TECHNICAL MCQS
+--------------------------------------------------------------------------------
+Q01. What does FI stand for in SAP?
+     A) Financial Integration
+     B) Financial Accounting
+     C) Finance Information
+     D) Financial Interface
+     >> CORRECT ANSWER: B) Financial Accounting
+
+Q02. What does CO stand for in SAP?
+     A) Cost Operations
+     B) Controlling
+     C) Company Operations
+     D) Corporate Accounting
+     >> CORRECT ANSWER: B) Controlling
+
+Q03. Which organizational unit is used for external accounting in SAP?
+     A) Plant
+     B) Company Code
+     C) Purchasing Organization
+     D) Sales Organization
+     >> CORRECT ANSWER: B) Company Code
+
+Q04. Which T-code is commonly used to create a G/L account centrally?
+     A) FS00
+     B) FB50
+     C) F-02
+     D) FBL3N
+     >> CORRECT ANSWER: A) FS00
+
+Q05. Which T-code is used to post a G/L document?
+     A) FB60
+     B) FB70
+     C) F-02
+     D) F-53
+     >> CORRECT ANSWER: C) F-02
+
+Q06. Which T-code is used to post a vendor invoice?
+     A) FB60
+     B) FB70
+     C) F-28
+     D) F-53
+     >> CORRECT ANSWER: A) FB60
+
+Q07. Which T-code is used to post a customer invoice?
+     A) FB60
+     B) FB70
+     C) F-53
+     D) F-44
+     >> CORRECT ANSWER: B) FB70
+
+Q08. Which T-code is used for outgoing vendor payment?
+     A) F-28
+     B) F-53
+     C) FB70
+     D) F-32
+     >> CORRECT ANSWER: B) F-53
+
+Q09. Which T-code is used for incoming customer payment?
+     A) F-28
+     B) F-53
+     C) FB60
+     D) F-44
+     >> CORRECT ANSWER: A) F-28
+
+Q10. Which T-code is used to display a G/L account line-item list in classic SAP?
+     A) FBL1N
+     B) FBL3N
+     C) FBL5N
+     D) FS00
+     >> CORRECT ANSWER: B) FBL3N
+
+Q11. Which T-code is used to display vendor line items?
+     A) FBL1N
+     B) FBL3N
+     C) FBL5N
+     D) FB60
+     >> CORRECT ANSWER: A) FBL1N
+
+Q12. Which T-code is used to display customer line items?
+     A) FBL1N
+     B) FBL3N
+     C) FBL5N
+     D) FB70
+     >> CORRECT ANSWER: C) FBL5N
+
+Q13. What is Accounts Payable (AP)?
+     A) Accounting for customers
+     B) Accounting for vendors
+     C) Accounting for assets only
+     D) Accounting for banks only
+     >> CORRECT ANSWER: B) Accounting for vendors
+
+Q14. What is Accounts Receivable (AR)?
+     A) Accounting for vendors
+     B) Accounting for customers
+     C) Accounting for employees
+     D) Accounting for assets
+     >> CORRECT ANSWER: B) Accounting for customers
+
+Q15. What is a Chart of Accounts?
+     A) List of vendors
+     B) List of customers
+     C) Structure containing G/L accounts
+     D) List of company codes
+     >> CORRECT ANSWER: C) Structure containing G/L accounts
+
+Q16. What is a Fiscal Year Variant?
+     A) Defines fiscal year and posting periods
+     B) Defines vendor groups
+     C) Defines payment methods only
+     D) Defines material types
+     >> CORRECT ANSWER: A) Defines fiscal year and posting periods
+
+Q17. What is a Posting Period Variant?
+     A) Controls which periods are open for posting
+     B) Creates company codes
+     C) Creates vendors
+     D) Maintains exchange rates
+     >> CORRECT ANSWER: A) Controls which periods are open for posting
+
+Q18. What is a Document Type in SAP FI?
+     A) Identifies the nature/type of accounting document
+     B) Identifies a material
+     C) Identifies a vendor address
+     D) Identifies a plant
+     >> CORRECT ANSWER: A) Identifies the nature/type of accounting document
+
+Q19. What is a Business Partner in SAP S/4HANA?
+     A) Only a material
+     B) A central master object for customers and vendors
+     C) Only a G/L account
+     D) A company code
+     >> CORRECT ANSWER: B) A central master object for customers and vendors
+
+Q20. What is Cost Center Accounting used for?
+     A) Tracking costs by organizational area
+     B) Creating customer invoices
+     C) Managing purchase orders
+     D) Managing stock quantities
+     >> CORRECT ANSWER: A) Tracking costs by organizational area
+
+Q21. Which T-code is commonly used to create a cost center?
+     A) KS01
+     B) KO01
+     C) FB01
+     D) FS00
+     >> CORRECT ANSWER: A) KS01
+
+Q22. Which T-code is commonly used to create an internal order?
+     A) KS01
+     B) KO01
+     C) KSB1
+     D) FB50
+     >> CORRECT ANSWER: B) KO01
+
+Q23. What is a Profit Center?
+     A) Organizational unit used to analyze profitability
+     B) Vendor account
+     C) Customer account
+     D) Material type
+     >> CORRECT ANSWER: A) Organizational unit used to analyze profitability
+
+Q24. What is an Asset in SAP FI-AA?
+     A) A long-term company resource
+     B) A vendor invoice
+     C) A customer payment
+     D) A purchase requisition
+     >> CORRECT ANSWER: A) A long-term company resource
+
+Q25. What is depreciation?
+     A) Increase in asset value
+     B) Allocation of an asset's depreciable value over its useful life
+     C) Vendor payment
+     D) Customer receipt
+     >> CORRECT ANSWER: B) Allocation of an asset's depreciable value over its useful life
+
+Q26. What is a Bank Reconciliation process?
+     A) Comparing bank records with company accounting records
+     B) Creating a purchase order
+     C) Creating a material
+     D) Creating a cost center
+     >> CORRECT ANSWER: A) Comparing bank records with company accounting records
+
+Q27. What is a Financial Statement?
+     A) Report showing financial position/performance
+     B) Vendor master record
+     C) Purchase order
+     D) Material document
+     >> CORRECT ANSWER: A) Report showing financial position/performance
+
+Q28. What is the purpose of a payment term?
+     A) Defines conditions and due dates for payment
+     B) Creates a G/L account
+     C) Creates a plant
+     D) Determines material price
+     >> CORRECT ANSWER: A) Defines conditions and due dates for payment
+
+Q29. What is a Clearing Document?
+     A) Document created when open items are cleared
+     B) Material master document
+     C) Purchase order document
+     D) Sales order document
+     >> CORRECT ANSWER: A) Document created when open items are cleared
+
+Q30. Which two major areas are covered by SAP FICO?
+     A) MM and SD
+     B) FI and CO
+     C) PP and PM
+     D) WM and EWM
+     >> CORRECT ANSWER: B) FI and CO
+
+================================================================================
+QUICK ANSWER KEY GRID:
+Q01: B | Q02: B | Q03: B | Q04: A | Q05: C | Q06: A | Q07: B | Q08: B | Q09: A | Q10: B
+Q11: A | Q12: C | Q13: B | Q14: B | Q15: C | Q16: A | Q17: A | Q18: A | Q19: B | Q20: A
+Q21: A | Q22: B | Q23: A | Q24: A | Q25: B | Q26: A | Q27: A | Q28: A | Q29: A | Q30: B
+================================================================================

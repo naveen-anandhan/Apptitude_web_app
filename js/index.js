@@ -17,6 +17,24 @@ const messageEl =
 const deptSelect =
   document.getElementById("department");
 
+const sapGroup =
+  document.getElementById("sapSubCategoryGroup");
+
+const sapSubSelect =
+  document.getElementById("sapSubCategory");
+
+const pythonGroup =
+  document.getElementById("pythonSubCategoryGroup");
+
+const pythonSubSelect =
+  document.getElementById("pythonSubCategory");
+
+const javaGroup =
+  document.getElementById("javaSubCategoryGroup");
+
+const javaSubSelect =
+  document.getElementById("javaSubCategory");
+
 const mechGroup =
   document.getElementById("mechSubCategoryGroup");
 
@@ -36,68 +54,74 @@ const generalSubSelect =
   document.getElementById("generalSpecialization");
 
 
+// Helper function to hide and reset a subcategory group
+function resetGroup(group, select) {
+  if (group) group.style.display = "none";
+  if (select) {
+    select.required = false;
+    select.value = "";
+  }
+}
+
 // Toggle Specialization dropdowns based on chosen Department
 if (deptSelect) {
   deptSelect.addEventListener("change", () => {
     const val = deptSelect.value;
-    if (val === "MECH") {
+    if (val === "SAP") {
+      if (sapGroup) sapGroup.style.display = "block";
+      if (sapSubSelect) sapSubSelect.required = true;
+      resetGroup(pythonGroup, pythonSubSelect);
+      resetGroup(javaGroup, javaSubSelect);
+      resetGroup(mechGroup, mechSubSelect);
+      resetGroup(uiuxGroup, uiuxSubSelect);
+      resetGroup(generalGroup, generalSubSelect);
+    } else if (val === "Python Full Stack") {
+      if (pythonGroup) pythonGroup.style.display = "block";
+      if (pythonSubSelect) pythonSubSelect.required = true;
+      resetGroup(sapGroup, sapSubSelect);
+      resetGroup(javaGroup, javaSubSelect);
+      resetGroup(mechGroup, mechSubSelect);
+      resetGroup(uiuxGroup, uiuxSubSelect);
+      resetGroup(generalGroup, generalSubSelect);
+    } else if (val === "Java Full Stack") {
+      if (javaGroup) javaGroup.style.display = "block";
+      if (javaSubSelect) javaSubSelect.required = true;
+      resetGroup(sapGroup, sapSubSelect);
+      resetGroup(pythonGroup, pythonSubSelect);
+      resetGroup(mechGroup, mechSubSelect);
+      resetGroup(uiuxGroup, uiuxSubSelect);
+      resetGroup(generalGroup, generalSubSelect);
+    } else if (val === "MECH") {
       if (mechGroup) mechGroup.style.display = "block";
       if (mechSubSelect) mechSubSelect.required = true;
-
-      if (uiuxGroup) uiuxGroup.style.display = "none";
-      if (uiuxSubSelect) {
-        uiuxSubSelect.required = false;
-        uiuxSubSelect.value = "";
-      }
-      if (generalGroup) generalGroup.style.display = "none";
-      if (generalSubSelect) {
-        generalSubSelect.required = false;
-        generalSubSelect.value = "";
-      }
+      resetGroup(sapGroup, sapSubSelect);
+      resetGroup(pythonGroup, pythonSubSelect);
+      resetGroup(javaGroup, javaSubSelect);
+      resetGroup(uiuxGroup, uiuxSubSelect);
+      resetGroup(generalGroup, generalSubSelect);
     } else if (val === "UI/UX" || val === "UI/UX / Digital Marketing") {
       if (uiuxGroup) uiuxGroup.style.display = "block";
       if (uiuxSubSelect) uiuxSubSelect.required = true;
-
-      if (mechGroup) mechGroup.style.display = "none";
-      if (mechSubSelect) {
-        mechSubSelect.required = false;
-        mechSubSelect.value = "";
-      }
-      if (generalGroup) generalGroup.style.display = "none";
-      if (generalSubSelect) {
-        generalSubSelect.required = false;
-        generalSubSelect.value = "";
-      }
+      resetGroup(sapGroup, sapSubSelect);
+      resetGroup(pythonGroup, pythonSubSelect);
+      resetGroup(javaGroup, javaSubSelect);
+      resetGroup(mechGroup, mechSubSelect);
+      resetGroup(generalGroup, generalSubSelect);
     } else if (val === "General") {
       if (generalGroup) generalGroup.style.display = "block";
       if (generalSubSelect) generalSubSelect.required = true;
-
-      if (mechGroup) mechGroup.style.display = "none";
-      if (mechSubSelect) {
-        mechSubSelect.required = false;
-        mechSubSelect.value = "";
-      }
-      if (uiuxGroup) uiuxGroup.style.display = "none";
-      if (uiuxSubSelect) {
-        uiuxSubSelect.required = false;
-        uiuxSubSelect.value = "";
-      }
+      resetGroup(sapGroup, sapSubSelect);
+      resetGroup(pythonGroup, pythonSubSelect);
+      resetGroup(javaGroup, javaSubSelect);
+      resetGroup(mechGroup, mechSubSelect);
+      resetGroup(uiuxGroup, uiuxSubSelect);
     } else {
-      if (mechGroup) mechGroup.style.display = "none";
-      if (mechSubSelect) {
-        mechSubSelect.required = false;
-        mechSubSelect.value = "";
-      }
-      if (uiuxGroup) uiuxGroup.style.display = "none";
-      if (uiuxSubSelect) {
-        uiuxSubSelect.required = false;
-        uiuxSubSelect.value = "";
-      }
-      if (generalGroup) generalGroup.style.display = "none";
-      if (generalSubSelect) {
-        generalSubSelect.required = false;
-        generalSubSelect.value = "";
-      }
+      resetGroup(sapGroup, sapSubSelect);
+      resetGroup(pythonGroup, pythonSubSelect);
+      resetGroup(javaGroup, javaSubSelect);
+      resetGroup(mechGroup, mechSubSelect);
+      resetGroup(uiuxGroup, uiuxSubSelect);
+      resetGroup(generalGroup, generalSubSelect);
     }
   });
 }
@@ -154,7 +178,34 @@ form.addEventListener(
     let finalDepartment = department;
     let specialization = "";
 
-    if (department === "MECH") {
+    if (department === "SAP") {
+      const sub = sapSubSelect ? sapSubSelect.value : "";
+      if (!sub) {
+        messageEl.textContent =
+          "Please select your SAP Specialization (SAP FICO or SAP P2P).";
+        return;
+      }
+      finalDepartment = `SAP - ${sub}`;
+      specialization = sub;
+    } else if (department === "Python Full Stack") {
+      const sub = pythonSubSelect ? pythonSubSelect.value : "";
+      if (!sub) {
+        messageEl.textContent =
+          "Please select your Python Full Stack Specialization (Front End, Back End, or Full Stack).";
+        return;
+      }
+      finalDepartment = `Python Full Stack - ${sub}`;
+      specialization = sub;
+    } else if (department === "Java Full Stack") {
+      const sub = javaSubSelect ? javaSubSelect.value : "";
+      if (!sub) {
+        messageEl.textContent =
+          "Please select your Java Full Stack Specialization (Front End, Back End, or Full Stack).";
+        return;
+      }
+      finalDepartment = `Java Full Stack - ${sub}`;
+      specialization = sub;
+    } else if (department === "MECH") {
       const sub = mechSubSelect ? mechSubSelect.value : "";
       if (!sub) {
         messageEl.textContent =

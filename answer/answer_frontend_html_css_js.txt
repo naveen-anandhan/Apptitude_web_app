@@ -1,0 +1,271 @@
+================================================================================
+PUMO APTITUDE ASSESSMENT - OFFICIAL ANSWER KEY
+TRACK: FRONT END (HTML | CSS | JAVASCRIPT)
+DEPARTMENTS: Python Full Stack (Front End), Java Full Stack (Front End), HTML / CSS / JavaScript
+TOTAL QUESTIONS: 30 (Pure 100% Technical MCQs – 1 Mark Each)
+================================================================================
+
+SECTION 1: BASIC (Q01 - Q10)
+--------------------------------------------------------------------------------
+Q01. What does 'HTML' stand for?
+     A) Hyper Tool Multi Language
+     B) Hyper Text Markup Language
+     C) High Text Markup Language
+     D) Hyper Transfer Markup Link
+     >> CORRECT ANSWER: B) Hyper Text Markup Language
+     Explanation: HTML stands for Hyper Text Markup Language.
+
+Q02. Which tag creates the largest heading on a webpage?
+     A) <h6>
+     B) <head>
+     C) <h1>
+     D) <heading>
+     >> CORRECT ANSWER: C) <h1>
+     Explanation: <h1> is the largest heading; <h6> is the smallest.
+
+Q03. Which CSS property changes the color of text?
+     A) font-color
+     B) color
+     C) text-color
+     D) background-text
+     >> CORRECT ANSWER: B) color
+     Explanation: The 'color' property sets the text color.
+
+Q04. Which symbol is used for an ID selector in CSS?
+     A) . (dot)
+     B) * (asterisk)
+     C) & (ampersand)
+     D) # (hash)
+     >> CORRECT ANSWER: D) # (hash)
+     Explanation: #myId is an ID selector; .myClass is a class selector.
+
+Q05. Which JavaScript keyword declares a variable that cannot be reassigned?
+     A) var
+     B) let
+     C) const
+     D) static
+     >> CORRECT ANSWER: C) const
+     Explanation: A variable declared with const cannot be reassigned.
+
+Q06. Which HTML tag is used to create a hyperlink?
+     A) <a>
+     B) <link>
+     C) <href>
+     D) <url>
+     >> CORRECT ANSWER: A) <a>
+     Explanation: <a href="..."> creates a hyperlink.
+
+Q07. Which method prints output to the browser console?
+     A) print()
+     B) console.log()
+     C) echo()
+     D) document.print()
+     >> CORRECT ANSWER: B) console.log()
+     Explanation: console.log() prints output to the console.
+
+Q08. Which attribute of the <img> tag specifies the image path?
+     A) href
+     B) link
+     C) src
+     D) path
+     >> CORRECT ANSWER: C) src
+     Explanation: <img src="photo.jpg" alt="..."> specifies source path.
+
+Q09. Which CSS property changes the size of text?
+     A) text-size
+     B) font-style
+     C) font-size
+     D) size
+     >> CORRECT ANSWER: C) font-size
+     Explanation: The font-size property controls text size.
+
+Q10. Which JavaScript operator checks both value and data type?
+     A) =
+     B) ==
+     C) ===
+     D) !=
+     >> CORRECT ANSWER: C) ===
+     Explanation: === is strict equality and performs no type conversion.
+
+SECTION 2: INTERMEDIATE (Q11 - Q20)
+--------------------------------------------------------------------------------
+Q11. Which CSS declaration turns an element into a flex container?
+     A) display: flex;
+     B) flex: container;
+     C) position: flex;
+     D) layout: flexbox;
+     >> CORRECT ANSWER: A) display: flex;
+     Explanation: display: flex makes the element a flex container.
+
+Q12. What does 'box-sizing: border-box' do?
+     A) Adds margin to the width
+     B) Includes padding and border in the element's width
+     C) Removes the border
+     D) Ignores the padding
+     >> CORRECT ANSWER: B) Includes padding and border in the element's width
+     Explanation: With border-box, width/height include padding and border.
+
+Q13. What is the output? console.log(typeof null);
+     A) "null"
+     B) "undefined"
+     C) "object"
+     D) "number"
+     >> CORRECT ANSWER: C) "object"
+     Explanation: typeof null returns "object" (a well-known JavaScript quirk).
+
+Q14. Which HTML5 semantic tag is used for navigation links?
+     A) <navigate>
+     B) <menu-bar>
+     C) <links>
+     D) <nav>
+     >> CORRECT ANSWER: D) <nav>
+     Explanation: <nav> is the semantic tag for major navigation links.
+
+Q15. Which array method returns a new array containing only the elements that pass a test?
+     A) filter()
+     B) map()
+     C) forEach()
+     D) find()
+     >> CORRECT ANSWER: A) filter()
+     Explanation: filter() returns a new array of elements that pass the test.
+
+Q16. An element with 'position: absolute' is positioned relative to what?
+     A) Always the <body>
+     B) The nearest positioned ancestor
+     C) Its parent (always)
+     D) The browser window only
+     >> CORRECT ANSWER: B) The nearest positioned ancestor
+     Explanation: Uses nearest positioned (non-static) ancestor; else initial containing block.
+
+Q17. What does document.querySelector('.box') return?
+     A) An array of all '.box' elements
+     B) The first matching element
+     C) The last '.box' element
+     D) A Boolean value
+     >> CORRECT ANSWER: B) The first matching element
+     Explanation: querySelector returns only the first match; use querySelectorAll for all matches.
+
+Q18. Which event name fires when a user clicks a button (used with addEventListener)?
+     A) press
+     B) tap
+     C) click
+     D) select
+     >> CORRECT ANSWER: C) click
+     Explanation: addEventListener('click', fn).
+
+Q19. What is the output? console.log(2 + "3");
+     A) 5
+     B) "23"
+     C) NaN
+     D) Error
+     >> CORRECT ANSWER: B) "23"
+     Explanation: Number + String results in string concatenation, giving "23".
+
+Q20. Which has the highest priority in CSS specificity (without !important)?
+     A) Element selector (p)
+     B) Class selector (.box)
+     C) ID selector (#box)
+     D) Inline style (style="...")
+     >> CORRECT ANSWER: D) Inline style (style="...")
+     Explanation: Inline style > ID > Class > Element.
+
+SECTION 3: ADVANCED (Q21 - Q30)
+--------------------------------------------------------------------------------
+Q21. What is the output?
+     function outer() {  let c = 0;  return function () { return ++c; }; }
+     const f = outer(); f(); console.log(f());
+     A) 1
+     B) 2
+     C) 0
+     D) undefined
+     >> CORRECT ANSWER: B) 2
+     Explanation: The closure remembers 'c'. The first call returns 1 and the second returns 2.
+
+Q22. What is the order of the output?
+     console.log('A');
+     setTimeout(() => console.log('B'), 0);
+     Promise.resolve().then(() => console.log('C'));
+     console.log('D');
+     A) A B C D
+     B) A D B C
+     C) A C D B
+     D) A D C B
+     >> CORRECT ANSWER: D) A D C B
+     Explanation: Synchronous runs first (A, D), then microtasks (C), then macrotasks (B).
+
+Q23. Which method creates a new function with 'this' permanently bound to a given object?
+     A) call()
+     B) apply()
+     C) bind()
+     D) assign()
+     >> CORRECT ANSWER: C) bind()
+     Explanation: bind() returns a new function; call() and apply() invoke immediately.
+
+Q24. What is the output?
+     console.log(x);
+     var x = 5;
+     A) 5
+     B) undefined
+     C) ReferenceError
+     D) null
+     >> CORRECT ANSWER: B) undefined
+     Explanation: var declarations are hoisted (without the value), so x is undefined.
+
+Q25. What does 'grid-template-columns: repeat(3, 1fr);' do?
+     A) Creates 3 rows of equal height
+     B) Creates 3 equal-width columns
+     C) Creates 3 columns of 1px each
+     D) Repeats the grid 3 times
+     >> CORRECT ANSWER: B) Creates 3 equal-width columns
+     Explanation: It divides available space into 3 equal fractional columns.
+
+Q26. Event delegation is based on which concept?
+     A) Event capturing only
+     B) Event bubbling
+     C) Event cancelling
+     D) Event emitting
+     >> CORRECT ANSWER: B) Event bubbling
+     Explanation: Events bubble up from child to parent, so one listener on the parent suffices.
+
+Q27. What is the output?
+     console.log([1, 2, 3].reduce((a, b) => a + b, 10));
+     A) 6
+     B) 16
+     C) 10
+     D) 123
+     >> CORRECT ANSWER: B) 16
+     Explanation: Initial value is 10, so 10 + 1 + 2 + 3 = 16.
+
+Q28. What is the difference between 'defer' and 'async' on a <script> tag?
+     A) They are exactly the same
+     B) defer runs in order after HTML parsing; async runs as soon as the file is downloaded
+     C) async runs in order after HTML parsing; defer runs as soon as the file is downloaded
+     D) defer works only for inline scripts
+     >> CORRECT ANSWER: B) defer runs in order after HTML parsing; async runs as soon as the file is downloaded
+     Explanation: defer waits for parsing and preserves order; async runs as soon as downloaded.
+
+Q29. What is the output?
+     for (var i = 0; i < 3; i++) {
+       setTimeout(() => console.log(i), 0);
+     }
+     A) 0 1 2
+     B) 3 3 3
+     C) 2 2 2
+     D) undefined x3
+     >> CORRECT ANSWER: B) 3 3 3
+     Explanation: var is function-scoped, so i is 3 when the setTimeout callbacks execute.
+
+Q30. In Promise.all([p1, p2, p3]), what happens if one promise rejects?
+     A) It waits for all promises to finish
+     B) It ignores the rejected promise
+     C) It rejects immediately with the first rejection reason
+     D) It returns only the resolved values
+     >> CORRECT ANSWER: C) It rejects immediately with the first rejection reason
+     Explanation: Promise.all rejects immediately upon the first rejection.
+
+================================================================================
+QUICK ANSWER KEY GRID:
+Q01: B | Q02: C | Q03: B | Q04: D | Q05: C | Q06: A | Q07: B | Q08: C | Q09: C | Q10: C
+Q11: A | Q12: B | Q13: C | Q14: D | Q15: A | Q16: B | Q17: B | Q18: C | Q19: B | Q20: D
+Q21: B | Q22: D | Q23: C | Q24: B | Q25: B | Q26: B | Q27: B | Q28: B | Q29: B | Q30: C
+================================================================================

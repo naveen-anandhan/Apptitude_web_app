@@ -18,20 +18,35 @@ function doPost(e) {
       throw new Error("Department is missing.");
     }
 
-    // Handle MECH sub-categories (Creo / CATIA) -> map to MECH tab
+    // Handle sub-categories (MECH, SAP, Python Full Stack, Java Full Stack) -> map to base tab
     let specialization = data.specialization || "";
     if (department.startsWith("MECH")) {
       if (department.includes(" - ")) {
         specialization = department.split(" - ")[1];
       }
       department = "MECH";
+    } else if (department.startsWith("SAP")) {
+      if (department.includes(" - ")) {
+        specialization = department.split(" - ").slice(1).join(" - ");
+      }
+      department = "SAP";
+    } else if (department.startsWith("Python Full Stack")) {
+      if (department.includes(" - ")) {
+        specialization = department.split(" - ").slice(1).join(" - ");
+      }
+      department = "Python Full Stack";
+    } else if (department.startsWith("Java Full Stack")) {
+      if (department.includes(" - ")) {
+        specialization = department.split(" - ").slice(1).join(" - ");
+      }
+      department = "Java Full Stack";
     }
 
     // Look for existing department sheet tab
     let sheet =
       spreadsheet.getSheetByName(department);
 
-    // If not found directly, check alternative names for UI/UX and PLC
+    // If not found directly, check alternative names for UI/UX, PLC, and HTML/CSS/JS
     if (!sheet) {
       if (department.includes("UI/UX") || department.includes("Digital Marketing")) {
         sheet =
@@ -41,13 +56,17 @@ function doPost(e) {
         sheet =
           spreadsheet.getSheetByName("PLC / Automation") ||
           spreadsheet.getSheetByName("PLC");
+      } else if (department.includes("HTML") || department.includes("JavaScript")) {
+        sheet =
+          spreadsheet.getSheetByName("HTML - CSS - JavaScript") ||
+          spreadsheet.getSheetByName("HTML / CSS / JavaScript");
       }
     }
 
     // If sheet still does not exist, create it automatically
     if (!sheet) {
-      // Clean department name to ensure valid Google Sheet tab name
-      const safeTabName = department.replace(/[:\\?*\[\]]/g, "-").substring(0, 100).trim();
+      // Clean department name to ensure valid Google Sheet tab name (forbids : \ ? * [ ] /)
+      const safeTabName = department.replace(/[:\\?*\[\]\/]/g, "-").substring(0, 100).trim();
       sheet =
         spreadsheet.insertSheet(safeTabName);
     }

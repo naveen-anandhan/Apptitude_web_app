@@ -2,7 +2,11 @@
 # PYTHON FULL STACK TECHNICAL QUESTIONS (10 Questions: Order 21-30)
 # ============================================================
 
-DEPARTMENT = "Python Full Stack"
+DEPARTMENTS = [
+    "Python Full Stack",
+    "Python Full Stack - Back End",
+    "Python Full Stack - Full Stack",
+]
 
 questions = [
     {
@@ -16,7 +20,7 @@ questions = [
         ],
         "correctIndex": 2,
         "marks": 1,
-        "departments": [DEPARTMENT]
+        "departments": DEPARTMENTS
     },
     {
         "order": 22,
@@ -29,7 +33,7 @@ questions = [
         ],
         "correctIndex": 1,
         "marks": 1,
-        "departments": [DEPARTMENT]
+        "departments": DEPARTMENTS
     },
     {
         "order": 23,
@@ -42,7 +46,7 @@ questions = [
         ],
         "correctIndex": 0,
         "marks": 1,
-        "departments": [DEPARTMENT]
+        "departments": DEPARTMENTS
     },
     {
         "order": 24,
@@ -55,7 +59,7 @@ questions = [
         ],
         "correctIndex": 2,
         "marks": 1,
-        "departments": [DEPARTMENT]
+        "departments": DEPARTMENTS
     },
     {
         "order": 25,
@@ -68,7 +72,7 @@ questions = [
         ],
         "correctIndex": 3,
         "marks": 1,
-        "departments": [DEPARTMENT]
+        "departments": DEPARTMENTS
     },
     {
         "order": 26,
@@ -81,7 +85,7 @@ questions = [
         ],
         "correctIndex": 1,
         "marks": 1,
-        "departments": [DEPARTMENT]
+        "departments": DEPARTMENTS
     },
     {
         "order": 27,
@@ -94,7 +98,7 @@ questions = [
         ],
         "correctIndex": 0,
         "marks": 1,
-        "departments": [DEPARTMENT]
+        "departments": DEPARTMENTS
     },
     {
         "order": 28,
@@ -107,7 +111,7 @@ questions = [
         ],
         "correctIndex": 3,
         "marks": 1,
-        "departments": [DEPARTMENT]
+        "departments": DEPARTMENTS
     },
     {
         "order": 29,
@@ -120,7 +124,7 @@ questions = [
         ],
         "correctIndex": 1,
         "marks": 1,
-        "departments": [DEPARTMENT]
+        "departments": DEPARTMENTS
     },
     {
         "order": 30,

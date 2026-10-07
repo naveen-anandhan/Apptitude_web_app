@@ -60,15 +60,16 @@ https://github.com/naveen-anandhan/Apptitude_web_app
 
 The aptitude test currently supports:
 
-1. General (Degree Streams: MECH, DA/DS/BA, SAP, Python Full Stack, Java Full Stack, Embedded, PLC / Automation, UI/UX / Digital Marketing, ECE / EEE, CSE / IT, Civil, Others)
-2. SAP
-3. Python Full Stack
-4. Java Full Stack
+1. General (Degree Streams: MECH, DA/DS/BA, SAP, Python Full Stack, Java Full Stack, Embedded, PLC / Automation, UI/UX / Digital Marketing, HTML / CSS / JavaScript, ECE / EEE, CSE / IT, Civil, Others)
+2. SAP (Specializations: SAP FICO, SAP P2P)
+3. Python Full Stack (Specializations: Front End, Back End, Full Stack)
+4. Java Full Stack (Specializations: Front End, Back End, Full Stack)
 5. DA/DS/BA
 6. Embedded
-7. MECH (Specializations: Creo, CATIA)
+7. MECH (Specializations: Creo, CATIA, AutoCAD)
 8. UI/UX / Digital Marketing (Specializations: Digital Marketing, UI/UX Design, Product Design)
 9. PLC / Automation
+10. HTML / CSS / JavaScript (Web Development)
 
 A question can belong to one or multiple departments.
 

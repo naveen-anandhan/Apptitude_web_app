@@ -4,9 +4,12 @@
 # ============================================================
 
 SHARED_DEPARTMENTS = [
-    "SAP",
     "Python Full Stack",
+    "Python Full Stack - Back End",
+    "Python Full Stack - Full Stack",
     "Java Full Stack",
+    "Java Full Stack - Back End",
+    "Java Full Stack - Full Stack",
     "DA/DS/BA",
     "Embedded"
 ]
