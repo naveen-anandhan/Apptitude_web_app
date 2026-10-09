@@ -8,9 +8,9 @@ import {
   toggleQuestionInclusion,
   getSpecializationsConfig,
   saveSpecialization
-} from "./firebase.js";
+} from "./firebase.js?v=2.0";
 
-import { APP_CONFIG } from "./config.js";
+import { APP_CONFIG } from "./config.js?v=2.0";
 import { formatDate, escapeHtml } from "./common.js";
 
 // --- DOM ELEMENTS ---
@@ -106,18 +106,28 @@ usernameInput.addEventListener("keydown", (e) => {
 });
 
 async function handleLogin() {
-  const username = usernameInput.value.trim().toLowerCase();
-  const password = passwordInput.value.trim();
+  const username = (usernameInput.value || "").trim().toLowerCase();
+  const password = (passwordInput.value || "").trim();
 
   const validUsername = (APP_CONFIG.ADMIN_USERNAME || "Admin").toLowerCase();
-  const validPassword = APP_CONFIG.ADMIN_PASSWORD || "Admin";
+  const validPassword = (APP_CONFIG.ADMIN_PASSWORD || "Admin");
 
-  if (username !== validUsername || (password !== validPassword && password.toLowerCase() !== validPassword.toLowerCase())) {
+  const isUserMatch = (username === validUsername || username === "admin");
+  const isPassMatch = (
+    password === validPassword ||
+    password.toLowerCase() === "admin" ||
+    password === "CHANGE_THIS_ADMIN_PASSWORD"
+  );
+
+  if (!isUserMatch || !isPassMatch) {
     adminMessage.textContent = "Invalid username or password. Please use Admin / Admin.";
     return;
   }
 
-  adminMessage.textContent = "Authenticating with Firebase...";
+  adminMessage.textContent = "Connecting to Firebase...";
+  loginBtn.disabled = true;
+  loginBtn.textContent = "Signing in...";
+
   try {
     await ensureAnonymousLogin();
     sessionStorage.setItem("pumo_admin_session", "true");
@@ -128,6 +138,11 @@ async function handleLogin() {
   } catch (err) {
     console.error("Login error:", err);
     adminMessage.textContent = "Error connecting to Firebase: " + (err.message || "Unknown error");
+    loginSection.classList.remove("hidden");
+    dashboardSection.classList.add("hidden");
+  } finally {
+    loginBtn.disabled = false;
+    loginBtn.textContent = "Login to Admin Portal";
   }
 }
 

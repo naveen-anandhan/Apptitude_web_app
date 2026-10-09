@@ -11,6 +11,9 @@ import {
   getDocs,
   doc,
   getDoc,
+  setDoc,
+  updateDoc,
+  deleteDoc,
   addDoc,
   query,
   orderBy,
@@ -27,7 +30,6 @@ export const db = getFirestore(app);
 
 
 export async function ensureAnonymousLogin() {
-
   if (auth.currentUser) {
     return auth.currentUser;
   }
@@ -40,7 +42,6 @@ export async function ensureAnonymousLogin() {
 
 
 export async function getTest(testId) {
-
   const snap =
     await getDoc(
       doc(db, "tests", testId)
@@ -61,7 +62,6 @@ export async function getQuestions(
   testId,
   department
 ) {
-
   const questionsRef =
     collection(
       db,
@@ -96,7 +96,6 @@ export async function saveResult(
   testId,
   result
 ) {
-
   const ref =
     await addDoc(
       collection(
@@ -113,7 +112,6 @@ export async function saveResult(
 
 
 export async function getResults(testId) {
-
   const q =
     query(
       collection(
@@ -137,4 +135,90 @@ export async function getResults(testId) {
       ...d.data()
     })
   );
+}
+
+
+// --- ADMIN QUESTION MANAGEMENT & CONFIG HELPERS ---
+
+export async function addQuestion(testId, questionData) {
+  const ref = await addDoc(
+    collection(db, "tests", testId, "questions"),
+    questionData
+  );
+  return ref.id;
+}
+
+export async function updateQuestion(testId, questionId, questionData) {
+  await updateDoc(
+    doc(db, "tests", testId, "questions", questionId),
+    questionData
+  );
+}
+
+export async function deleteQuestion(testId, questionId) {
+  await deleteDoc(
+    doc(db, "tests", testId, "questions", questionId)
+  );
+}
+
+export async function toggleQuestionInclusion(testId, questionId, included) {
+  await updateDoc(
+    doc(db, "tests", testId, "questions", questionId),
+    { included: Boolean(included) }
+  );
+}
+
+export async function getAllDepartmentQuestions(testId, department) {
+  const questionsRef = collection(db, "tests", testId, "questions");
+  try {
+    const q = query(
+      questionsRef,
+      where("departments", "array-contains", department),
+      orderBy("order")
+    );
+    const snap = await getDocs(q);
+    return snap.docs.map(d => ({
+      id: d.id,
+      ...d.data()
+    }));
+  } catch (err) {
+    console.warn("Index query notice, using array-contains and client sort:", err);
+    const fallbackQ = query(
+      questionsRef,
+      where("departments", "array-contains", department)
+    );
+    const snap = await getDocs(fallbackQ);
+    const docs = snap.docs.map(d => ({
+      id: d.id,
+      ...d.data()
+    }));
+    return docs.sort((a, b) => (Number(a.order) || 0) - (Number(b.order) || 0));
+  }
+}
+
+export async function getSpecializationsConfig(testId) {
+  try {
+    const snap = await getDoc(
+      doc(db, "tests", testId, "config", "specializations")
+    );
+    if (snap.exists()) {
+      return snap.data();
+    }
+  } catch (err) {
+    console.warn("Could not load specializations config:", err);
+  }
+  return {};
+}
+
+export async function saveSpecialization(testId, department, newSpecName) {
+  const specDocRef = doc(db, "tests", testId, "config", "specializations");
+  const snap = await getDoc(specDocRef);
+  let currentData = snap.exists() ? snap.data() : {};
+  let list = Array.isArray(currentData[department]) ? currentData[department] : [];
+  if (!list.includes(newSpecName)) {
+    list.push(newSpecName);
+  }
+  currentData[department] = list;
+  await setDoc(specDocRef, currentData, { merge: true });
+  return currentData;
 }
