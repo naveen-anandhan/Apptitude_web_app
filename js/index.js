@@ -2,11 +2,11 @@ import {
   ensureAnonymousLogin,
   getTest,
   getSpecializationsConfig
-} from "./firebase.js";
+} from "./firebase.js?v=2.1";
 
-import { APP_CONFIG } from "./config.js";
+import { APP_CONFIG } from "./config.js?v=2.1";
 
-import { saveStudent } from "./common.js";
+import { saveStudent } from "./common.js?v=2.1";
 
 
 const form =
@@ -70,6 +70,35 @@ function resetGroup(group, select) {
   }
 }
 
+// Function to toggle specialization visibility according to currently selected department
+function updateSpecializationVisibility() {
+  if (!deptSelect) return;
+  const val = deptSelect.value;
+
+  const mapping = [
+    { key: "SAP", group: sapGroup, select: sapSubSelect },
+    { key: "DA/DS/BA", group: daDsBaGroup, select: daDsBaSubSelect },
+    { key: "Python Full Stack", group: pythonGroup, select: pythonSubSelect },
+    { key: "Java Full Stack", group: javaGroup, select: javaSubSelect },
+    { key: "MECH", group: mechGroup, select: mechSubSelect },
+    { key: "UI/UX / Digital Marketing", group: uiuxGroup, select: uiuxSubSelect, altKey: "UI/UX" },
+    { key: "General", group: generalGroup, select: generalSubSelect }
+  ];
+
+  mapping.forEach(item => {
+    const isMatch = (val === item.key || (item.altKey && val === item.altKey));
+    if (isMatch) {
+      if (item.group) item.group.style.display = "block";
+      if (item.select) item.select.required = true;
+    } else {
+      if (item.group) item.group.style.display = "none";
+      if (item.select) {
+        item.select.required = false;
+      }
+    }
+  });
+}
+
 // Load custom specializations created dynamically by Admin in Firestore
 async function loadCustomSpecializations() {
   try {
@@ -101,88 +130,19 @@ async function loadCustomSpecializations() {
     });
   } catch (err) {
     console.warn("Could not load custom specializations:", err);
+  } finally {
+    updateSpecializationVisibility();
   }
 }
-loadCustomSpecializations();
 
-// Toggle Specialization dropdowns based on chosen Department
+// Attach listener and trigger immediately to handle pre-selected/restored form values
 if (deptSelect) {
-  deptSelect.addEventListener("change", () => {
-    const val = deptSelect.value;
-    if (val === "SAP") {
-      if (sapGroup) sapGroup.style.display = "block";
-      if (sapSubSelect) sapSubSelect.required = true;
-      resetGroup(pythonGroup, pythonSubSelect);
-      resetGroup(javaGroup, javaSubSelect);
-      resetGroup(mechGroup, mechSubSelect);
-      resetGroup(uiuxGroup, uiuxSubSelect);
-      resetGroup(daDsBaGroup, daDsBaSubSelect);
-      resetGroup(generalGroup, generalSubSelect);
-    } else if (val === "DA/DS/BA") {
-      if (daDsBaGroup) daDsBaGroup.style.display = "block";
-      if (daDsBaSubSelect) daDsBaSubSelect.required = true;
-      resetGroup(sapGroup, sapSubSelect);
-      resetGroup(pythonGroup, pythonSubSelect);
-      resetGroup(javaGroup, javaSubSelect);
-      resetGroup(mechGroup, mechSubSelect);
-      resetGroup(uiuxGroup, uiuxSubSelect);
-      resetGroup(generalGroup, generalSubSelect);
-    } else if (val === "Python Full Stack") {
-      if (pythonGroup) pythonGroup.style.display = "block";
-      if (pythonSubSelect) pythonSubSelect.required = true;
-      resetGroup(sapGroup, sapSubSelect);
-      resetGroup(javaGroup, javaSubSelect);
-      resetGroup(mechGroup, mechSubSelect);
-      resetGroup(uiuxGroup, uiuxSubSelect);
-      resetGroup(daDsBaGroup, daDsBaSubSelect);
-      resetGroup(generalGroup, generalSubSelect);
-    } else if (val === "Java Full Stack") {
-      if (javaGroup) javaGroup.style.display = "block";
-      if (javaSubSelect) javaSubSelect.required = true;
-      resetGroup(sapGroup, sapSubSelect);
-      resetGroup(pythonGroup, pythonSubSelect);
-      resetGroup(mechGroup, mechSubSelect);
-      resetGroup(uiuxGroup, uiuxSubSelect);
-      resetGroup(daDsBaGroup, daDsBaSubSelect);
-      resetGroup(generalGroup, generalSubSelect);
-    } else if (val === "MECH") {
-      if (mechGroup) mechGroup.style.display = "block";
-      if (mechSubSelect) mechSubSelect.required = true;
-      resetGroup(sapGroup, sapSubSelect);
-      resetGroup(pythonGroup, pythonSubSelect);
-      resetGroup(javaGroup, javaSubSelect);
-      resetGroup(uiuxGroup, uiuxSubSelect);
-      resetGroup(daDsBaGroup, daDsBaSubSelect);
-      resetGroup(generalGroup, generalSubSelect);
-    } else if (val === "UI/UX" || val === "UI/UX / Digital Marketing") {
-      if (uiuxGroup) uiuxGroup.style.display = "block";
-      if (uiuxSubSelect) uiuxSubSelect.required = true;
-      resetGroup(sapGroup, sapSubSelect);
-      resetGroup(pythonGroup, pythonSubSelect);
-      resetGroup(javaGroup, javaSubSelect);
-      resetGroup(mechGroup, mechSubSelect);
-      resetGroup(daDsBaGroup, daDsBaSubSelect);
-      resetGroup(generalGroup, generalSubSelect);
-    } else if (val === "General") {
-      if (generalGroup) generalGroup.style.display = "block";
-      if (generalSubSelect) generalSubSelect.required = true;
-      resetGroup(sapGroup, sapSubSelect);
-      resetGroup(pythonGroup, pythonSubSelect);
-      resetGroup(javaGroup, javaSubSelect);
-      resetGroup(mechGroup, mechSubSelect);
-      resetGroup(uiuxGroup, uiuxSubSelect);
-      resetGroup(daDsBaGroup, daDsBaSubSelect);
-    } else {
-      resetGroup(sapGroup, sapSubSelect);
-      resetGroup(pythonGroup, pythonSubSelect);
-      resetGroup(javaGroup, javaSubSelect);
-      resetGroup(mechGroup, mechSubSelect);
-      resetGroup(uiuxGroup, uiuxSubSelect);
-      resetGroup(daDsBaGroup, daDsBaSubSelect);
-      resetGroup(generalGroup, generalSubSelect);
-    }
-  });
+  deptSelect.addEventListener("change", updateSpecializationVisibility);
+  updateSpecializationVisibility();
 }
+
+loadCustomSpecializations();
+window.addEventListener("DOMContentLoaded", updateSpecializationVisibility);
 
 
 form.addEventListener(
