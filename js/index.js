@@ -1,6 +1,7 @@
 import {
   ensureAnonymousLogin,
-  getTest
+  getTest,
+  getSpecializationsConfig
 } from "./firebase.js";
 
 import { APP_CONFIG } from "./config.js";
@@ -68,6 +69,41 @@ function resetGroup(group, select) {
     select.value = "";
   }
 }
+
+// Load custom specializations created dynamically by Admin in Firestore
+async function loadCustomSpecializations() {
+  try {
+    const config = await getSpecializationsConfig(APP_CONFIG.TEST_ID);
+    if (!config || typeof config !== "object") return;
+
+    const deptSelectMap = {
+      "DA/DS/BA": daDsBaSubSelect,
+      "SAP": sapSubSelect,
+      "Python Full Stack": pythonSubSelect,
+      "Java Full Stack": javaSubSelect,
+      "MECH": mechSubSelect,
+      "UI/UX / Digital Marketing": uiuxSubSelect,
+    };
+
+    Object.entries(config).forEach(([dept, specs]) => {
+      const select = deptSelectMap[dept];
+      if (select && Array.isArray(specs)) {
+        const existingValues = Array.from(select.options).map(o => o.value);
+        specs.forEach(spec => {
+          if (!existingValues.includes(spec)) {
+            const opt = document.createElement("option");
+            opt.value = spec;
+            opt.textContent = spec;
+            select.appendChild(opt);
+          }
+        });
+      }
+    });
+  } catch (err) {
+    console.warn("Could not load custom specializations:", err);
+  }
+}
+loadCustomSpecializations();
 
 // Toggle Specialization dropdowns based on chosen Department
 if (deptSelect) {

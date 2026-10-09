@@ -3,15 +3,749 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Admin Dashboard</title>
+  <title>Admin Portal - PUMO Assessment</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <style>
+    :root {
+      --primary: #8338ec;
+      --primary-hover: #7026db;
+      --primary-light: #f5f0ff;
+      --success: #16a34a;
+      --success-light: #dcfce7;
+      --danger: #dc2626;
+      --danger-light: #fee2e2;
+      --warning: #d97706;
+      --warning-light: #fef3c7;
+      --surface: #ffffff;
+      --bg: #f8fafc;
+      --border: #e2e8f0;
+      --text: #0f172a;
+      --text-muted: #64748b;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       min-height: 100vh;
       margin: 0;
-      background: radial-gradient(circle at 10% 10%, rgba(131, 56, 236, 0.08), transparent 30%), #f7f7fb;
-      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at 10% 10%, rgba(131, 56, 236, 0.06), transparent 35%), #f8fafc;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
     }
+
+    .admin-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 24px 20px 60px;
+    }
+
+    /* TOP BAR */
+    .admin-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 24px;
+      padding: 16px 22px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.03);
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .nav-logo-icon {
+      width: 38px;
+      height: 38px;
+      background: linear-gradient(135deg, #8338ec, #3a86ff);
+      color: white;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      font-weight: 800;
+    }
+
+    .nav-brand h2 {
+      margin: 0;
+      font-family: 'Outfit', sans-serif;
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .nav-brand p {
+      margin: 2px 0 0;
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .btn-outline {
+      padding: 8px 16px;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      color: var(--text);
+      font-weight: 600;
+      font-size: 13px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s ease;
+    }
+
+    .btn-outline:hover {
+      background: #f1f5f9;
+      border-color: #cbd5e1;
+    }
+
+    .btn-logout {
+      background: #fee2e2;
+      border-color: #fca5a5;
+      color: #991b1b;
+    }
+
+    .btn-logout:hover {
+      background: #fecaca;
+    }
+
+    /* TABS */
+    .admin-tabs {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 24px;
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 4px;
+    }
+
+    .tab-btn {
+      padding: 12px 22px;
+      border: none;
+      background: transparent;
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--text-muted);
+      cursor: pointer;
+      position: relative;
+      border-radius: 8px 8px 0 0;
+      transition: all 0.2s ease;
+    }
+
+    .tab-btn:hover {
+      color: var(--primary);
+    }
+
+    .tab-btn.active {
+      color: var(--primary);
+      font-weight: 700;
+    }
+
+    .tab-btn.active::after {
+      content: '';
+      position: absolute;
+      bottom: -6px;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: var(--primary);
+      border-radius: 3px;
+    }
+
+    /* LOGIN CARD */
+    .login-wrapper {
+      max-width: 420px;
+      margin: 80px auto;
+    }
+
+    .login-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 36px 32px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    }
+
+    .login-card h1 {
+      margin: 0 0 8px;
+      font-family: 'Outfit', sans-serif;
+      font-size: 26px;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .login-card p.subtitle {
+      margin: 0 0 24px;
+      color: var(--text-muted);
+      font-size: 14px;
+    }
+
+    .form-group {
+      margin-bottom: 18px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 600;
+      font-size: 13px;
+      color: #334155;
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      font-family: inherit;
+      font-size: 14px;
+      color: var(--text);
+      background: #fdfdfd;
+      transition: border-color 0.2s;
+    }
+
+    .form-control:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(131, 56, 236, 0.12);
+    }
+
+    .btn-primary {
+      width: 100%;
+      padding: 13px;
+      border: none;
+      border-radius: 10px;
+      background: var(--primary);
+      color: white;
+      font-weight: 700;
+      font-size: 15px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-hover);
+      box-shadow: 0 4px 14px rgba(131, 56, 236, 0.3);
+    }
+
+    /* CONTROL BAR (DEPARTMENT & SPEC SELECTOR) */
+    .filter-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 20px 24px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.02);
+    }
+
+    .filter-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr auto;
+      gap: 16px;
+      align-items: flex-end;
+    }
+
+    .btn-add-spec {
+      padding: 12px 18px;
+      background: var(--primary-light);
+      border: 1px solid rgba(131, 56, 236, 0.3);
+      color: var(--primary);
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: 14px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      white-space: nowrap;
+      transition: all 0.2s ease;
+    }
+
+    .btn-add-spec:hover {
+      background: #ede4ff;
+    }
+
+    /* SUMMARY BANNER */
+    .metrics-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 18px 24px;
+      margin-bottom: 24px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+    }
+
+    .metrics-stats {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .metric-item {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .metric-val {
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--text);
+    }
+
+    .metric-label {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .status-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .status-ready {
+      background: var(--success-light);
+      color: var(--success);
+    }
+
+    .status-warning {
+      background: var(--warning-light);
+      color: var(--warning);
+    }
+
+    .btn-add-q {
+      padding: 12px 22px;
+      background: linear-gradient(135deg, #8338ec, #6b21a8);
+      border: none;
+      color: white;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: 14px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 4px 14px rgba(131, 56, 236, 0.25);
+      transition: all 0.2s ease;
+    }
+
+    .btn-add-q:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(131, 56, 236, 0.35);
+    }
+
+    /* QUESTION CARDS */
+    .questions-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .q-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 22px 24px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+      transition: all 0.2s ease;
+      position: relative;
+    }
+
+    .q-card:hover {
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+      border-color: #cbd5e1;
+    }
+
+    .q-card.is-inactive {
+      opacity: 0.65;
+      background: #fafafa;
+      border-style: dashed;
+    }
+
+    .q-card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 14px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid #f1f5f9;
+    }
+
+    .q-card-left-meta {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .q-order-badge {
+      display: inline-block;
+      padding: 4px 10px;
+      background: #f1f5f9;
+      color: #334155;
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: 13px;
+    }
+
+    /* TICK BOX / TOGGLE */
+    .include-toggle-wrap {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+      user-select: none;
+      padding: 4px 10px;
+      border-radius: 8px;
+      background: #f8fafc;
+      border: 1px solid var(--border);
+      transition: all 0.2s;
+    }
+
+    .include-toggle-wrap:hover {
+      border-color: var(--primary);
+    }
+
+    .include-checkbox {
+      width: 18px;
+      height: 18px;
+      cursor: pointer;
+      accent-color: var(--primary);
+    }
+
+    .toggle-text {
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .toggle-active {
+      color: var(--success);
+    }
+
+    .toggle-inactive {
+      color: #94a3b8;
+    }
+
+    .q-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-icon {
+      padding: 6px 12px;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      transition: all 0.2s ease;
+    }
+
+    .btn-icon:hover {
+      background: #f8fafc;
+      border-color: #cbd5e1;
+    }
+
+    .btn-delete:hover {
+      background: var(--danger-light);
+      border-color: #fca5a5;
+      color: var(--danger);
+    }
+
+    .q-text-body {
+      font-size: 16px;
+      font-weight: 600;
+      color: #0f172a;
+      line-height: 1.5;
+      margin-bottom: 18px;
+      white-space: pre-wrap;
+      font-family: inherit;
+    }
+
+    /* 4 OPTION BOXES IN CARD */
+    .q-options-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .q-opt-box {
+      padding: 12px 16px;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      background: #f8fafc;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 14px;
+      color: #334155;
+      line-height: 1.4;
+    }
+
+    .q-opt-letter {
+      width: 24px;
+      height: 24px;
+      border-radius: 6px;
+      background: #e2e8f0;
+      color: #475569;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 12px;
+      flex-shrink: 0;
+    }
+
+    .q-opt-box.is-correct {
+      background: #f0fdf4;
+      border-color: #86efac;
+      color: #166534;
+      font-weight: 600;
+    }
+
+    .q-opt-box.is-correct .q-opt-letter {
+      background: #22c55e;
+      color: white;
+    }
+
+    .correct-tag {
+      margin-left: auto;
+      font-size: 11px;
+      padding: 2px 6px;
+      background: #dcfce7;
+      color: #15803d;
+      border-radius: 4px;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    /* MODAL */
+    .modal-backdrop {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(15, 23, 42, 0.6);
+      backdrop-filter: blur(4px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 2000;
+      padding: 20px;
+    }
+
+    .modal-backdrop.hidden {
+      display: none;
+    }
+
+    .modal-box {
+      background: white;
+      border-radius: 20px;
+      max-width: 650px;
+      width: 100%;
+      max-height: 90vh;
+      overflow-y: auto;
+      padding: 30px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+      animation: modalFadeIn 0.2s ease;
+    }
+
+    @keyframes modalFadeIn {
+      from { opacity: 0; transform: scale(0.96); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .modal-header h3 {
+      margin: 0;
+      font-family: 'Outfit', sans-serif;
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    .modal-close {
+      background: none;
+      border: none;
+      font-size: 20px;
+      cursor: pointer;
+      color: var(--text-muted);
+    }
+
+    .options-input-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .opt-input-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .opt-letter-label {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      background: #f1f5f9;
+      color: #334155;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .correct-selector-group {
+      margin-bottom: 20px;
+    }
+
+    .correct-chips {
+      display: flex;
+      gap: 10px;
+      margin-top: 8px;
+    }
+
+    .chip-btn {
+      flex: 1;
+      padding: 10px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: white;
+      font-weight: 700;
+      font-size: 14px;
+      color: var(--text);
+      cursor: pointer;
+      text-align: center;
+      transition: all 0.2s;
+    }
+
+    .chip-btn.selected {
+      background: #22c55e;
+      color: white;
+      border-color: #16a34a;
+      box-shadow: 0 4px 12px rgba(34, 197, 94, 0.25);
+    }
+
+    .modal-footer {
+      display: flex;
+      justify-content: flex-end;
+      gap: 12px;
+      margin-top: 24px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
+    }
+
+    /* TOAST */
+    .toast {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      padding: 12px 22px;
+      background: #0f172a;
+      color: white;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 14px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      z-index: 3000;
+      transition: all 0.3s ease;
+    }
+
+    .toast.hidden {
+      opacity: 0;
+      transform: translateY(20px);
+      pointer-events: none;
+    }
+
+    /* EMPTY STATE */
+    .empty-state {
+      text-align: center;
+      padding: 60px 20px;
+      background: white;
+      border-radius: 16px;
+      border: 1px dashed var(--border);
+    }
+
+    .empty-state-icon {
+      font-size: 40px;
+      margin-bottom: 12px;
+    }
+
+    /* RESULTS TABLE */
+    .table-wrap {
+      overflow-x: auto;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.02);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 14px;
+    }
+
+    th, td {
+      padding: 14px 18px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    th {
+      background: #f8fafc;
+      font-weight: 700;
+      color: #475569;
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
     .badge-pass {
       display: inline-block;
       padding: 3px 8px;
@@ -21,6 +755,7 @@
       font-weight: 700;
       font-size: 12px;
     }
+
     .badge-fail {
       display: inline-block;
       padding: 3px 8px;
@@ -30,6 +765,7 @@
       font-weight: 700;
       font-size: 12px;
     }
+
     .badge-dept {
       display: inline-block;
       padding: 3px 8px;
@@ -39,27 +775,150 @@
       font-weight: 600;
       font-size: 12px;
     }
+
+    .hidden {
+      display: none !important;
+    }
+
+    @media (max-width: 768px) {
+      .filter-grid {
+        grid-template-columns: 1fr;
+      }
+      .q-options-container {
+        grid-template-columns: 1fr;
+      }
+      .metrics-bar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+      }
+    }
   </style>
 </head>
 <body>
-  <main class="container">
-    <section id="loginCard" class="card small-card">
-      <h1>Admin Login</h1>
-      <input id="adminPassword" type="password" placeholder="Admin password">
-      <button id="loginBtn" class="btn primary">Login</button>
-      <p id="adminMessage" class="message"></p>
-    </section>
 
-    <section id="dashboard" class="hidden">
-      <div class="test-header">
-        <div>
-          <h1>Results Dashboard</h1>
-          <p class="muted" id="resultsCount">Loading submissions...</p>
-        </div>
-        <button id="exportBtn" class="btn secondary">Export CSV</button>
+  <!-- LOGIN SECTION -->
+  <main id="loginSection" class="login-wrapper">
+    <div class="login-card">
+      <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 16px;">
+        <div class="nav-logo-icon">✓</div>
+        <span style="font-family: 'Outfit', sans-serif; font-size: 18px; font-weight: 700; color: #8338ec;">PUMO Assessment</span>
+      </div>
+      <h1>Admin Login</h1>
+      <p class="subtitle">Enter administrative credentials to manage tests and questions.</p>
+
+      <div class="form-group">
+        <label for="adminUsername">Username</label>
+        <input id="adminUsername" class="form-control" type="text" placeholder="Admin" autocomplete="username">
       </div>
 
-      <section class="card table-wrap">
+      <div class="form-group">
+        <label for="adminPassword">Password</label>
+        <input id="adminPassword" class="form-control" type="password" placeholder="Admin" autocomplete="current-password">
+      </div>
+
+      <button id="loginBtn" class="btn-primary" style="margin-top: 10px;">Login to Admin Portal</button>
+      <p id="adminMessage" class="message" style="color: #dc2626; margin-top: 12px; font-size: 13px; font-weight: 600;"></p>
+      
+      <div style="text-align: center; margin-top: 20px;">
+        <a href="index.html" style="font-size: 13px; color: #64748b; text-decoration: none;">← Back to Student Test Page</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- DASHBOARD SECTION -->
+  <main id="dashboardSection" class="admin-container hidden">
+    <!-- TOP NAVIGATION -->
+    <header class="admin-nav">
+      <div class="nav-brand">
+        <div class="nav-logo-icon">✓</div>
+        <div>
+          <h2>PUMO Admin Portal</h2>
+          <p>Question Bank &amp; Assessment Control Dashboard</p>
+        </div>
+      </div>
+      <div class="nav-actions">
+        <a href="index.html" class="btn-outline">🌐 View Student Site</a>
+        <button id="logoutBtn" class="btn-outline btn-logout">🚪 Logout</button>
+      </div>
+    </header>
+
+    <!-- TABS -->
+    <nav class="admin-tabs">
+      <button id="tabQuestionsBtn" class="tab-btn active">📝 Question Bank &amp; Test Builder</button>
+      <button id="tabResultsBtn" class="tab-btn">📊 Student Submissions &amp; Export</button>
+    </nav>
+
+    <!-- TAB 1: QUESTION BANK -->
+    <section id="tabQuestions">
+      <!-- DEPARTMENT & SPECIALIZATION FILTER -->
+      <div class="filter-card">
+        <div class="filter-grid">
+          <div class="form-group" style="margin-bottom: 0;">
+            <label for="adminDeptSelect">Department</label>
+            <select id="adminDeptSelect" class="form-control">
+              <option value="DA/DS/BA">DA/DS/BA (Data Science / Data Analytics)</option>
+              <option value="SAP">SAP ERP</option>
+              <option value="Python Full Stack">Python Full Stack</option>
+              <option value="Java Full Stack">Java Full Stack</option>
+              <option value="MECH">Mechanical Engineering (MECH)</option>
+              <option value="UI/UX / Digital Marketing">UI/UX / Digital Marketing</option>
+              <option value="Embedded">Embedded Systems</option>
+              <option value="PLC / Automation">PLC / Automation</option>
+              <option value="HTML / CSS / JavaScript">HTML / CSS / JavaScript</option>
+              <option value="General">General Aptitude</option>
+            </select>
+          </div>
+
+          <div class="form-group" style="margin-bottom: 0;">
+            <label for="adminSpecSelect">Specialization</label>
+            <select id="adminSpecSelect" class="form-control">
+              <!-- Dynamically populated based on chosen department -->
+            </select>
+          </div>
+
+          <div>
+            <button id="openAddSpecModalBtn" class="btn-add-spec">➕ Add New Specialization</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- METRICS & ADD QUESTION BAR -->
+      <div class="metrics-bar">
+        <div class="metrics-stats">
+          <div class="metric-item">
+            <span id="metricTotalQ" class="metric-val">0</span>
+            <span class="metric-label">Total in Bank</span>
+          </div>
+          <div class="metric-item">
+            <span id="metricIncludedQ" class="metric-val" style="color: #8338ec;">0</span>
+            <span class="metric-label">Active in Test</span>
+          </div>
+          <div class="metric-item">
+            <span id="metricStatusBadge" class="status-pill status-ready">Loading...</span>
+            <span class="metric-label">Test Readiness</span>
+          </div>
+        </div>
+        <button id="openAddQModalBtn" class="btn-add-q">➕ Add Question</button>
+      </div>
+
+      <!-- QUESTIONS LIST CONTAINER -->
+      <div id="questionsContainer" class="questions-grid">
+        <!-- Rendered dynamically -->
+      </div>
+    </section>
+
+    <!-- TAB 2: RESULTS & SUBMISSIONS -->
+    <section id="tabResults" class="hidden">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+        <div>
+          <h2 style="margin: 0; font-size: 20px;">Candidate Submissions</h2>
+          <p id="resultsCount" style="margin: 4px 0 0; color: #64748b; font-size: 13px;">Loading...</p>
+        </div>
+        <button id="exportBtn" class="btn-outline" style="background: #8338ec; color: white; border-color: #8338ec;">📥 Export CSV</button>
+      </div>
+
+      <div class="table-wrap">
         <table>
           <thead>
             <tr>
@@ -75,9 +934,98 @@
           </thead>
           <tbody id="resultsBody"></tbody>
         </table>
-      </section>
+      </div>
     </section>
   </main>
+
+  <!-- ADD / EDIT QUESTION MODAL -->
+  <div id="questionModal" class="modal-backdrop hidden">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h3 id="modalTitle">Add New Question</h3>
+        <button id="closeQModalBtn" class="modal-close">&times;</button>
+      </div>
+
+      <input type="hidden" id="editingQuestionId" value="">
+
+      <div class="form-group">
+        <label for="modalQuestionText">Question Text</label>
+        <textarea id="modalQuestionText" class="form-control" rows="4" placeholder="Enter question or code snippet..." style="font-family: inherit; font-size: 14px; line-height: 1.5;"></textarea>
+      </div>
+
+      <label style="display: block; margin-bottom: 8px; font-weight: 600; font-size: 13px; color: #334155;">
+        4 Options (A, B, C, D)
+      </label>
+      <div class="options-input-grid">
+        <div class="opt-input-row">
+          <span class="opt-letter-label">A</span>
+          <input id="modalOptA" type="text" class="form-control" placeholder="Option A text">
+        </div>
+        <div class="opt-input-row">
+          <span class="opt-letter-label">B</span>
+          <input id="modalOptB" type="text" class="form-control" placeholder="Option B text">
+        </div>
+        <div class="opt-input-row">
+          <span class="opt-letter-label">C</span>
+          <input id="modalOptC" type="text" class="form-control" placeholder="Option C text">
+        </div>
+        <div class="opt-input-row">
+          <span class="opt-letter-label">D</span>
+          <input id="modalOptD" type="text" class="form-control" placeholder="Option D text">
+        </div>
+      </div>
+
+      <div class="correct-selector-group">
+        <label style="font-weight: 600; font-size: 13px; color: #334155;">Select Correct Answer</label>
+        <div class="correct-chips">
+          <button type="button" class="chip-btn selected" data-index="0">A is Correct</button>
+          <button type="button" class="chip-btn" data-index="1">B is Correct</button>
+          <button type="button" class="chip-btn" data-index="2">C is Correct</button>
+          <button type="button" class="chip-btn" data-index="3">D is Correct</button>
+        </div>
+      </div>
+
+      <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px; padding: 12px 16px; margin-top: 16px;">
+        <label style="display: flex; align-items: center; gap: 10px; cursor: pointer; margin: 0; font-weight: 600; font-size: 14px;">
+          <input type="checkbox" id="modalIncludedCheckbox" checked style="width: 18px; height: 18px; accent-color: #8338ec;">
+          <span>Include this question in student aptitude test immediately</span>
+        </label>
+      </div>
+
+      <div class="modal-footer">
+        <button id="cancelQModalBtn" class="btn-outline">Cancel</button>
+        <button id="saveQuestionBtn" class="btn-primary" style="width: auto; padding: 10px 24px;">Save Question</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ADD SPECIALIZATION MODAL -->
+  <div id="specModal" class="modal-backdrop hidden">
+    <div class="modal-box" style="max-width: 460px;">
+      <div class="modal-header">
+        <h3>Add New Specialization</h3>
+        <button id="closeSpecModalBtn" class="modal-close">&times;</button>
+      </div>
+
+      <p style="margin: 0 0 16px; font-size: 14px; color: #64748b;">
+        Adding specialization under department: <strong id="specModalDeptLabel" style="color: #8338ec;"></strong>
+      </p>
+
+      <div class="form-group">
+        <label for="newSpecInput">Specialization Name</label>
+        <input id="newSpecInput" type="text" class="form-control" placeholder="e.g. Power BI, Cloud, Tableau...">
+      </div>
+
+      <div class="modal-footer">
+        <button id="cancelSpecModalBtn" class="btn-outline">Cancel</button>
+        <button id="saveSpecBtn" class="btn-primary" style="width: auto; padding: 10px 24px;">Create Specialization</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION -->
+  <div id="toast" class="toast hidden"></div>
+
   <script type="module" src="js/admin.js"></script>
 </body>
 </html>

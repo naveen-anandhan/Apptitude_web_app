@@ -485,8 +485,8 @@ async function submitTest(autoSubmitted) {
   const percentage =
     total
       ? Math.round(
-          (score / total) * 10000
-        ) / 100
+        (score / total) * 10000
+      ) / 100
       : 0;
 
   // 50% or above = PASS

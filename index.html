@@ -504,12 +504,49 @@
 
     }
 
+    .admin-portal-link {
+      position: fixed;
+      top: 20px;
+      right: 24px;
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 9px 18px;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(131, 56, 236, 0.25);
+      border-radius: 999px;
+      color: #374151;
+      font-size: 13px;
+      font-weight: 700;
+      text-decoration: none;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+      z-index: 1000;
+    }
+
+    .admin-portal-link:hover {
+      background: #8338ec;
+      color: #ffffff;
+      border-color: #8338ec;
+      box-shadow: 0 6px 20px rgba(131, 56, 236, 0.35);
+      transform: translateY(-2px);
+    }
+
+    .admin-portal-link .admin-portal-icon {
+      font-size: 15px;
+    }
   </style>
 
 </head>
 
 
 <body>
+
+  <a href="admin.html" id="adminPortalBtn" class="admin-portal-link" title="Open Admin Dashboard">
+    <span class="admin-portal-icon">🔐</span>
+    <span>Admin</span>
+  </a>
 
   <main class="assessment-page">
 
@@ -855,6 +892,8 @@
                 </option>
 
               </select>
+
+            </label>
 
           </div>
 
