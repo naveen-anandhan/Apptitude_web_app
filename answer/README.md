@@ -8,7 +8,7 @@ This directory contains the verified, official answer keys for all departments p
 | :--- | :--- | :--- | :--- |
 | **General** | 30 General (10 Basic + 10 Intermediate + 10 Advanced - Set 3) | [`answer_general.txt`](answer_general.txt) | 30 Questions (Quantitative, Logical, Verbal & DI) |
 | **SAP - SAP FICO** | 30 Dedicated SAP FICO Technical MCQs | [`answer_sap_fico.txt`](answer_sap_fico.txt) | 30 Questions (Financial Accounting & Controlling) |
-| **SAP - SAP MM** | 30 Dedicated SAP MM Technical MCQs | [`answer_sap_mm.txt`](answer_sap_mm.txt) | 30 Questions (Materials Management & Procure to Pay Cycle) |
+| **SAP - SAP MM** | 30 Dedicated SAP MM Technical MCQs | [`answer_sap_mm.txt`](answer_sap_mm.txt) | 30 Questions (Materials Management) |
 | **Python Full Stack (Front End)** | 30 HTML, CSS & JavaScript Technical MCQs | [`answer_frontend_html_css_js.txt`](answer_frontend_html_css_js.txt) | 30 Questions (Basic, Intermediate & Advanced) |
 | **Python Full Stack (Back End)** | 20 General + 10 Python Technical | [`answer_python_full_stack.txt`](answer_python_full_stack.txt) | 30 Questions (Balanced A/B/C/D, 0 adjacent duplicates) |
 | **Python Full Stack (Full Stack)** | 20 General + 10 Python Technical | [`answer_python_full_stack.txt`](answer_python_full_stack.txt) | 30 Questions (Balanced A/B/C/D, 0 adjacent duplicates) |

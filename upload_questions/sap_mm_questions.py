@@ -1,10 +1,11 @@
 # ============================================================
-# SAP MM (MATERIALS MANAGEMENT) / P2P CYCLE
+# SAP MM (MATERIALS MANAGEMENT)
 # 30 Dedicated Technical Multiple Choice Questions (Order 1-30)
 # ============================================================
 
 DEPARTMENT = "SAP - SAP MM"
-DEPARTMENTS = ["SAP - SAP MM", "SAP - MM", "SAP MM", "MM", "SAP - SAP P2P", "SAP - P2P", "SAP P2P", "P2P", "SAP MM - P2P", "MM - P2P"]
+DEPARTMENTS = ["SAP - SAP MM", "SAP - MM", "SAP MM", "MM"]
+
 
 
 questions = [

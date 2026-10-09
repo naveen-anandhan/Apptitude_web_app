@@ -1,11 +1,11 @@
 ================================================================================
 PUMO APTITUDE ASSESSMENT - OFFICIAL ANSWER KEY
 DEPARTMENT: SAP ERP
-SPECIALIZATION: SAP MM (Materials Management / Procure to Pay Cycle)
+SPECIALIZATION: SAP MM (Materials Management)
 TOTAL QUESTIONS: 30 (Pure 100% Technical MCQs – 1 Mark Each)
 ================================================================================
 
-QUESTIONS 01 - 30: SAP MM – P2P CYCLE TECHNICAL MCQS
+QUESTIONS 01 - 30: SAP MM TECHNICAL MCQS
 --------------------------------------------------------------------------------
 Q01. What does P2P stand for?
      A) Plan to Product
