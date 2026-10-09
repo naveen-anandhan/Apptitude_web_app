@@ -1,0 +1,225 @@
+================================================================================
+PUMO APTITUDE ASSESSMENT - OFFICIAL ANSWER KEY
+DEPARTMENT: DS / DA / BA (Data Science, Data Analytics & Business Analytics)
+SPECIALIZATION: MySQL Database (Relational Database Management System)
+TOTAL QUESTIONS: 30 (Pure 100% Technical MCQs – 1 Mark Each)
+================================================================================
+
+QUESTIONS 01 - 30: MYSQL TECHNICAL MCQS
+--------------------------------------------------------------------------------
+Q01. Which query retrieves employees whose salary is greater than 50,000?
+     A) SELECT * FROM employees WHERE salary > 50000;
+     B) SELECT * FROM employees HAVING salary > 50000;
+     C) SELECT * FROM employees GROUP BY salary > 50000;
+     D) SELECT * FROM employees ORDER BY salary > 50000;
+     >> CORRECT ANSWER: A) SELECT * FROM employees WHERE salary > 50000;
+
+Q02. Which function counts all rows in a table, including rows containing NULL values?
+     A) SUM(*)
+     B) COUNT(*)
+     C) COUNT(column_name)
+     D) TOTAL(*)
+     >> CORRECT ANSWER: B) COUNT(*)
+
+Q03. Which clause filters grouped results based on an aggregate condition?
+     A) WHERE
+     B) ORDER BY
+     C) HAVING
+     D) GROUP BY
+     >> CORRECT ANSWER: C) HAVING
+
+Q04. If a salary column contains 10 rows, of which 3 are NULL, what does COUNT(salary) return?
+     A) 10
+     B) 7
+     C) 3
+     D) 0
+     >> CORRECT ANSWER: B) 7
+
+Q05. Which query sorts employees by salary from highest to lowest?
+     A) SELECT * FROM employees ORDER BY salary ASC;
+     B) SELECT * FROM employees GROUP BY salary DESC;
+     C) SELECT * FROM employees ORDER BY salary DESC;
+     D) SELECT * FROM employees SORT BY salary DESC;
+     >> CORRECT ANSWER: C) SELECT * FROM employees ORDER BY salary DESC;
+
+Q06. Which constraint uniquely identifies each row and does not permit NULL values?
+     A) UNIQUE
+     B) NOT NULL
+     C) FOREIGN KEY
+     D) PRIMARY KEY
+     >> CORRECT ANSWER: D) PRIMARY KEY
+
+Q07. Which command removes a table along with its structure?
+     A) DELETE TABLE students;
+     B) DROP TABLE students;
+     C) TRUNCATE DATABASE students;
+     D) REMOVE TABLE students;
+     >> CORRECT ANSWER: B) DROP TABLE students;
+
+Q08. Which command removes all rows but preserves the table structure?
+     A) DROP TABLE employees;
+     B) DELETE DATABASE employees;
+     C) TRUNCATE TABLE employees;
+     D) REMOVE FROM employees;
+     >> CORRECT ANSWER: C) TRUNCATE TABLE employees;
+
+Q09. Which operator checks whether a value matches any value in a specified list?
+     A) BETWEEN
+     B) IN
+     C) LIKE
+     D) EXISTS
+     >> CORRECT ANSWER: B) IN
+
+Q10. Which condition selects names beginning with the letter A?
+     A) WHERE name LIKE '%A';
+     B) WHERE name LIKE '_A%';
+     C) WHERE name LIKE 'A%';
+     D) WHERE name LIKE '%A%';
+     >> CORRECT ANSWER: C) WHERE name LIKE 'A%';
+
+Q11. Which join returns only rows with matching values in both tables?
+     A) LEFT JOIN
+     B) CROSS JOIN
+     C) INNER JOIN
+     D) RIGHT JOIN
+     >> CORRECT ANSWER: C) INNER JOIN
+
+Q12. Which join returns every row from the left table, even when there is no match in the right table?
+     A) RIGHT JOIN
+     B) LEFT JOIN
+     C) INNER JOIN
+     D) CROSS JOIN
+     >> CORRECT ANSWER: B) LEFT JOIN
+
+Q13. Which keyword removes duplicate rows from query results?
+     A) UNIQUE
+     B) DISTINCT
+     C) DIFFERENT
+     D) SINGLE
+     >> CORRECT ANSWER: B) DISTINCT
+
+Q14. Which expression returns 0 when salary is NULL?
+     A) IFNULL(salary, 0)
+     B) NULLIF(salary, 0)
+     C) IFNULL(0, salary)
+     D) COUNT(salary, 0)
+     >> CORRECT ANSWER: A) IFNULL(salary, 0)
+
+Q15. Which command modifies the structure of an existing table?
+     A) UPDATE TABLE
+     B) CHANGE TABLE
+     C) ALTER TABLE
+     D) MODIFY DATABASE
+     >> CORRECT ANSWER: C) ALTER TABLE
+
+Q16. Which command changes existing values in table rows?
+     A) ALTER
+     B) UPDATE
+     C) MODIFY
+     D) REPLACE TABLE
+     >> CORRECT ANSWER: B) UPDATE
+
+Q17. Which clause groups employees who belong to the same department?
+     A) ORDER BY department
+     B) HAVING department
+     C) GROUP BY department
+     D) DISTINCT department
+     >> CORRECT ANSWER: C) GROUP BY department
+
+Q18. Which aggregate function returns the highest salary?
+     A) TOP(salary)
+     B) UPPER(salary)
+     C) MAX(salary)
+     D) HIGH(salary)
+     >> CORRECT ANSWER: C) MAX(salary)
+
+Q19. Which function calculates the average of non-NULL salary values?
+     A) MEAN(salary)
+     B) AVG(salary)
+     C) AVERAGE(salary)
+     D) MID(salary)
+     >> CORRECT ANSWER: B) AVG(salary)
+
+Q20. Which condition correctly checks for NULL department values?
+     A) WHERE department = NULL
+     B) WHERE department == NULL
+     C) WHERE department IS NULL
+     D) WHERE department EQUALS NULL
+     >> CORRECT ANSWER: C) WHERE department IS NULL
+
+Q21. What is the primary purpose of a foreign key?
+     A) To ensure unique values in every column
+     B) To enforce referential integrity between tables
+     C) To sort records automatically
+     D) To prevent all duplicate rows in a table
+     >> CORRECT ANSWER: B) To enforce referential integrity between tables
+
+Q22. Which statement adds an email column to the students table?
+     A) UPDATE TABLE students ADD email VARCHAR(100);
+     B) ALTER TABLE students ADD COLUMN email VARCHAR(100);
+     C) MODIFY TABLE students CREATE email VARCHAR(100);
+     D) INSERT INTO students COLUMN email VARCHAR(100);
+     >> CORRECT ANSWER: B) ALTER TABLE students ADD COLUMN email VARCHAR(100);
+
+Q23. Which query retrieves the first five rows from a table in MySQL?
+     A) SELECT * FROM employees LIMIT 5;
+     B) SELECT TOP 5 * FROM employees;
+     C) SELECT * FROM employees FETCH 5;
+     D) SELECT * FROM employees FIRST 5;
+     >> CORRECT ANSWER: A) SELECT * FROM employees LIMIT 5;
+
+Q24. Which statement correctly inserts a row into students(name, age)?
+     A) ADD INTO students VALUES ('Ravi', 21);
+     B) INSERT students(name, age) VALUES ('Ravi', 21);
+     C) INSERT INTO students (name, age) VALUES ('Ravi', 21);
+     D) UPDATE students SET name='Ravi', age=21;
+     >> CORRECT ANSWER: C) INSERT INTO students (name, age) VALUES ('Ravi', 21);
+
+Q25. Which condition selects salaries between 30,000 and 60,000, including both endpoints?
+     A) salary BETWEEN 30000 AND 60000
+     B) salary BETWEEN 30000 TO 60000
+     C) salary IN 30000 AND 60000
+     D) salary >= 30000 OR salary <= 60000
+     >> CORRECT ANSWER: A) salary BETWEEN 30000 AND 60000
+
+Q26. What does COUNT(DISTINCT department) count?
+     A) All employee rows
+     B) Unique non-NULL department values
+     C) All department values, including duplicates
+     D) Only NULL department values
+     >> CORRECT ANSWER: B) Unique non-NULL department values
+
+Q27. Which operator combines results from two compatible SELECT queries and removes duplicates?
+     A) JOIN
+     B) UNION ALL
+     C) UNION
+     D) MERGE
+     >> CORRECT ANSWER: C) UNION
+
+Q28. Which query retrieves employees whose salary equals the maximum salary in the table?
+     A) SELECT * FROM employees WHERE salary = MAX(salary);
+     B) SELECT * FROM employees WHERE salary = (SELECT MAX(salary) FROM employees);
+     C) SELECT * FROM employees HAVING salary = MAX(salary);
+     D) SELECT MAX(salary) FROM employees WHERE salary = salary;
+     >> CORRECT ANSWER: B) SELECT * FROM employees WHERE salary = (SELECT MAX(salary) FROM employees);
+
+Q29. Which command permanently saves changes made in a transaction?
+     A) SAVEPOINT
+     B) ROLLBACK
+     C) COMMIT
+     D) BEGIN
+     >> CORRECT ANSWER: C) COMMIT
+
+Q30. Which query retrieves employees whose salary is greater than the overall average salary?
+     A) SELECT * FROM employees WHERE salary > AVG(salary);
+     B) SELECT * FROM employees WHERE salary > (SELECT AVG(salary) FROM employees);
+     C) SELECT * FROM employees HAVING salary > AVG(salary);
+     D) SELECT * FROM employees GROUP BY salary > AVG(salary);
+     >> CORRECT ANSWER: B) SELECT * FROM employees WHERE salary > (SELECT AVG(salary) FROM employees);
+
+================================================================================
+ANSWER KEY SUMMARY:
+Total Questions: 30
+Distribution: A: 4, B: 13, C: 12, D: 1
+All questions 100% matched with live Firestore test data.
+================================================================================

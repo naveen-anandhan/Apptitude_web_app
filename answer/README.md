@@ -8,7 +8,7 @@ This directory contains the verified, official answer keys for all departments p
 | :--- | :--- | :--- | :--- |
 | **General** | 30 General (10 Basic + 10 Intermediate + 10 Advanced - Set 3) | [`answer_general.txt`](answer_general.txt) | 30 Questions (Quantitative, Logical, Verbal & DI) |
 | **SAP - SAP FICO** | 30 Dedicated SAP FICO Technical MCQs | [`answer_sap_fico.txt`](answer_sap_fico.txt) | 30 Questions (Financial Accounting & Controlling) |
-| **SAP - SAP P2P** | 30 Dedicated SAP MM - P2P Cycle Technical MCQs | [`answer_sap_p2p.txt`](answer_sap_p2p.txt) | 30 Questions (Procure to Pay Cycle & Purchasing) |
+| **SAP - SAP MM** | 30 Dedicated SAP MM Technical MCQs | [`answer_sap_mm.txt`](answer_sap_mm.txt) | 30 Questions (Materials Management & Procure to Pay Cycle) |
 | **Python Full Stack (Front End)** | 30 HTML, CSS & JavaScript Technical MCQs | [`answer_frontend_html_css_js.txt`](answer_frontend_html_css_js.txt) | 30 Questions (Basic, Intermediate & Advanced) |
 | **Python Full Stack (Back End)** | 20 General + 10 Python Technical | [`answer_python_full_stack.txt`](answer_python_full_stack.txt) | 30 Questions (Balanced A/B/C/D, 0 adjacent duplicates) |
 | **Python Full Stack (Full Stack)** | 20 General + 10 Python Technical | [`answer_python_full_stack.txt`](answer_python_full_stack.txt) | 30 Questions (Balanced A/B/C/D, 0 adjacent duplicates) |
@@ -16,7 +16,9 @@ This directory contains the verified, official answer keys for all departments p
 | **Java Full Stack (Back End)** | 20 General + 10 Java Technical | [`answer_java_full_stack.txt`](answer_java_full_stack.txt) | 30 Questions (Balanced A/B/C/D, 0 adjacent duplicates) |
 | **Java Full Stack (Full Stack)** | 20 General + 10 Java Technical | [`answer_java_full_stack.txt`](answer_java_full_stack.txt) | 30 Questions (Balanced A/B/C/D, 0 adjacent duplicates) |
 | **HTML / CSS / JavaScript** | 30 HTML, CSS & JavaScript Technical MCQs | [`answer_frontend_html_css_js.txt`](answer_frontend_html_css_js.txt) | 30 Questions (Web Development Assessment) |
-| **DA/DS/BA** | 20 General + 10 Data Technical | [`answer_da_ds_ba.txt`](answer_da_ds_ba.txt) | 30 Questions (Balanced A/B/C/D, 0 adjacent duplicates) |
+| **DA/DS/BA (MySQL)** | 30 Dedicated MySQL Database Technical MCQs | [`answer_da_ds_ba_mysql.txt`](answer_da_ds_ba_mysql.txt) | 30 Questions (Queries, Aggregates, Joins, Keys & Schema) |
+| **DA/DS/BA (Python)** | 30 Dedicated Python Technical MCQs | [`answer_da_ds_ba_python.txt`](answer_da_ds_ba_python.txt) | 30 Questions (Basics, Loops, Functions, Collections & Exceptions) |
+| **DA/DS/BA (Legacy General)** | 20 General + 10 Data Technical | [`answer_da_ds_ba.txt`](answer_da_ds_ba.txt) | 30 Questions (Balanced A/B/C/D, 0 adjacent duplicates) |
 | **Embedded Systems** | 20 General + 10 Embedded Technical | [`answer_embedded.txt`](answer_embedded.txt) | 30 Questions (Balanced A/B/C/D, 0 adjacent duplicates) |
 | **Mechanical - Creo** | 40 Pure PTC Creo CAD | [`answer_mech_creo.txt`](answer_mech_creo.txt) | 40 Questions (Dedicated PTC Creo Mechanical CAD) |
 | **Mechanical - CATIA** | 40 Pure CATIA V5 CAD | [`answer_mech_catia.txt`](answer_mech_catia.txt) | 40 Questions (Dedicated CATIA V5 Part/Assembly/Drafting) |

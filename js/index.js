@@ -47,6 +47,12 @@ const uiuxGroup =
 const uiuxSubSelect =
   document.getElementById("uiuxSubCategory");
 
+const daDsBaGroup =
+  document.getElementById("daDsBaSubCategoryGroup");
+
+const daDsBaSubSelect =
+  document.getElementById("daDsBaSubCategory");
+
 const generalGroup =
   document.getElementById("generalSpecializationGroup");
 
@@ -74,6 +80,16 @@ if (deptSelect) {
       resetGroup(javaGroup, javaSubSelect);
       resetGroup(mechGroup, mechSubSelect);
       resetGroup(uiuxGroup, uiuxSubSelect);
+      resetGroup(daDsBaGroup, daDsBaSubSelect);
+      resetGroup(generalGroup, generalSubSelect);
+    } else if (val === "DA/DS/BA") {
+      if (daDsBaGroup) daDsBaGroup.style.display = "block";
+      if (daDsBaSubSelect) daDsBaSubSelect.required = true;
+      resetGroup(sapGroup, sapSubSelect);
+      resetGroup(pythonGroup, pythonSubSelect);
+      resetGroup(javaGroup, javaSubSelect);
+      resetGroup(mechGroup, mechSubSelect);
+      resetGroup(uiuxGroup, uiuxSubSelect);
       resetGroup(generalGroup, generalSubSelect);
     } else if (val === "Python Full Stack") {
       if (pythonGroup) pythonGroup.style.display = "block";
@@ -82,6 +98,7 @@ if (deptSelect) {
       resetGroup(javaGroup, javaSubSelect);
       resetGroup(mechGroup, mechSubSelect);
       resetGroup(uiuxGroup, uiuxSubSelect);
+      resetGroup(daDsBaGroup, daDsBaSubSelect);
       resetGroup(generalGroup, generalSubSelect);
     } else if (val === "Java Full Stack") {
       if (javaGroup) javaGroup.style.display = "block";
@@ -90,6 +107,7 @@ if (deptSelect) {
       resetGroup(pythonGroup, pythonSubSelect);
       resetGroup(mechGroup, mechSubSelect);
       resetGroup(uiuxGroup, uiuxSubSelect);
+      resetGroup(daDsBaGroup, daDsBaSubSelect);
       resetGroup(generalGroup, generalSubSelect);
     } else if (val === "MECH") {
       if (mechGroup) mechGroup.style.display = "block";
@@ -98,6 +116,7 @@ if (deptSelect) {
       resetGroup(pythonGroup, pythonSubSelect);
       resetGroup(javaGroup, javaSubSelect);
       resetGroup(uiuxGroup, uiuxSubSelect);
+      resetGroup(daDsBaGroup, daDsBaSubSelect);
       resetGroup(generalGroup, generalSubSelect);
     } else if (val === "UI/UX" || val === "UI/UX / Digital Marketing") {
       if (uiuxGroup) uiuxGroup.style.display = "block";
@@ -106,6 +125,7 @@ if (deptSelect) {
       resetGroup(pythonGroup, pythonSubSelect);
       resetGroup(javaGroup, javaSubSelect);
       resetGroup(mechGroup, mechSubSelect);
+      resetGroup(daDsBaGroup, daDsBaSubSelect);
       resetGroup(generalGroup, generalSubSelect);
     } else if (val === "General") {
       if (generalGroup) generalGroup.style.display = "block";
@@ -115,12 +135,14 @@ if (deptSelect) {
       resetGroup(javaGroup, javaSubSelect);
       resetGroup(mechGroup, mechSubSelect);
       resetGroup(uiuxGroup, uiuxSubSelect);
+      resetGroup(daDsBaGroup, daDsBaSubSelect);
     } else {
       resetGroup(sapGroup, sapSubSelect);
       resetGroup(pythonGroup, pythonSubSelect);
       resetGroup(javaGroup, javaSubSelect);
       resetGroup(mechGroup, mechSubSelect);
       resetGroup(uiuxGroup, uiuxSubSelect);
+      resetGroup(daDsBaGroup, daDsBaSubSelect);
       resetGroup(generalGroup, generalSubSelect);
     }
   });
@@ -182,10 +204,19 @@ form.addEventListener(
       const sub = sapSubSelect ? sapSubSelect.value : "";
       if (!sub) {
         messageEl.textContent =
-          "Please select your SAP Specialization (SAP FICO or SAP P2P).";
+          "Please select your SAP Specialization (SAP FICO or SAP MM).";
         return;
       }
       finalDepartment = `SAP - ${sub}`;
+      specialization = sub;
+    } else if (department === "DA/DS/BA") {
+      const sub = daDsBaSubSelect ? daDsBaSubSelect.value : "";
+      if (!sub) {
+        messageEl.textContent =
+          "Please select your DA/DS/BA Specialization (MySQL or Python).";
+        return;
+      }
+      finalDepartment = `DA/DS/BA - ${sub}`;
       specialization = sub;
     } else if (department === "Python Full Stack") {
       const sub = pythonSubSelect ? pythonSubSelect.value : "";

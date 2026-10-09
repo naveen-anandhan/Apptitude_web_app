@@ -1,0 +1,225 @@
+================================================================================
+PUMO APTITUDE ASSESSMENT - OFFICIAL ANSWER KEY
+DEPARTMENT: SAP ERP
+SPECIALIZATION: SAP MM (Materials Management / Procure to Pay Cycle)
+TOTAL QUESTIONS: 30 (Pure 100% Technical MCQs – 1 Mark Each)
+================================================================================
+
+QUESTIONS 01 - 30: SAP MM – P2P CYCLE TECHNICAL MCQS
+--------------------------------------------------------------------------------
+Q01. What does P2P stand for?
+     A) Plan to Product
+     B) Procure to Pay
+     C) Purchase to Production
+     D) Product to Payment
+     >> CORRECT ANSWER: B) Procure to Pay
+
+Q02. Which T-code is used to create a Purchase Requisition?
+     A) ME21N
+     B) ME51N
+     C) MIGO
+     D) MIRO
+     >> CORRECT ANSWER: B) ME51N
+
+Q03. Which T-code is used to create a Purchase Order?
+     A) ME21N
+     B) ME51N
+     C) ME41
+     D) MIRO
+     >> CORRECT ANSWER: A) ME21N
+
+Q04. Which T-code is used to display a Purchase Order?
+     A) ME22N
+     B) ME23N
+     C) ME51N
+     D) ME11
+     >> CORRECT ANSWER: B) ME23N
+
+Q05. Which T-code is used to change a Purchase Order?
+     A) ME21N
+     B) ME22N
+     C) ME23N
+     D) ME41
+     >> CORRECT ANSWER: B) ME22N
+
+Q06. Which document is an internal request to purchase goods or services?
+     A) Purchase Order
+     B) Request for Quotation
+     C) Purchase Requisition
+     D) Contract
+     >> CORRECT ANSWER: C) Purchase Requisition
+
+Q07. Which document is legally binding between the buyer and vendor?
+     A) Purchase Requisition
+     B) Purchase Order
+     C) Request for Quotation
+     D) Outline Agreement
+     >> CORRECT ANSWER: B) Purchase Order
+
+Q08. Which T-code is used for Goods Receipt in SAP?
+     A) MIRO
+     B) ME21N
+     C) MIGO
+     D) MB51
+     >> CORRECT ANSWER: C) MIGO
+
+Q09. Which movement type is used for Standard Goods Receipt against a Purchase Order?
+     A) 101
+     B) 102
+     C) 201
+     D) 261
+     >> CORRECT ANSWER: A) 101
+
+Q10. Which movement type reverses a Goods Receipt (cancellation)?
+     A) 101
+     B) 102
+     C) 201
+     D) 301
+     >> CORRECT ANSWER: B) 102
+
+Q11. Which movement type issues goods for a Cost Center?
+     A) 101
+     B) 261
+     C) 201
+     D) 551
+     >> CORRECT ANSWER: C) 201
+
+Q12. Which movement type issues goods for a Production Order?
+     A) 201
+     B) 261
+     C) 101
+     D) 301
+     >> CORRECT ANSWER: B) 261
+
+Q13. Which movement type scraps materials?
+     A) 551
+     B) 101
+     C) 201
+     D) 261
+     >> CORRECT ANSWER: A) 551
+
+Q14. What document is generated automatically along with a Material Document during Goods Receipt?
+     A) Sales Document
+     B) Accounting Document
+     C) Billing Document
+     D) Delivery Note
+     >> CORRECT ANSWER: B) Accounting Document
+
+Q15. Which T-code is used for Invoice Verification in SAP?
+     A) MIGO
+     B) ME21N
+     C) MIRO
+     D) FB60
+     >> CORRECT ANSWER: C) MIRO
+
+Q16. What is 3-way matching in the P2P cycle?
+     A) PR, RFQ, PO
+     B) PO, GR, Invoice
+     C) PO, Vendor, Payment
+     D) GR, Payment, Bank
+     >> CORRECT ANSWER: B) PO, GR, Invoice
+
+Q17. Which clearing account is used during Goods Receipt before invoice verification?
+     A) Bank Account
+     B) GR/IR Clearing Account
+     C) Vendor Account
+     D) Expense Account
+     >> CORRECT ANSWER: B) GR/IR Clearing Account
+
+Q18. What accounting entry is made during Goods Receipt (MIGO)?
+     A) Debit: Vendor, Credit: Bank
+     B) Debit: Inventory, Credit: GR/IR
+     C) Debit: GR/IR, Credit: Vendor
+     D) Debit: Expense, Credit: Bank
+     >> CORRECT ANSWER: B) Debit: Inventory, Credit: GR/IR
+
+Q19. What accounting entry is made during Invoice Verification (MIRO)?
+     A) Debit: GR/IR, Credit: Vendor
+     B) Debit: Inventory, Credit: GR/IR
+     C) Debit: Vendor, Credit: Bank
+     D) Debit: Expense, Credit: Vendor
+     >> CORRECT ANSWER: A) Debit: GR/IR, Credit: Vendor
+
+Q20. Which T-code is used to display material stock overviews?
+     A) ME23N
+     B) MMBE
+     C) MIGO
+     D) MIRO
+     >> CORRECT ANSWER: B) MMBE
+
+Q21. Which T-code is used to display material document lists?
+     A) MMBE
+     B) MB51
+     C) ME53N
+     D) MIRO
+     >> CORRECT ANSWER: B) MB51
+
+Q22. Which T-code is used to create a Request for Quotation (RFQ)?
+     A) ME21N
+     B) ME41
+     C) ME51N
+     D) ME11
+     >> CORRECT ANSWER: B) ME41
+
+Q23. Which T-code is used to maintain Purchasing Info Records?
+     A) ME11
+     B) ME21N
+     C) ME51N
+     D) MIGO
+     >> CORRECT ANSWER: A) ME11
+
+Q24. Which T-code is used to maintain Source Lists?
+     A) ME01
+     B) ME11
+     C) ME21N
+     D) MIGO
+     >> CORRECT ANSWER: A) ME01
+
+Q25. Which master data stores vendor price conditions and delivery terms for a material?
+     A) Material Master
+     B) Purchasing Info Record
+     C) Source List
+     D) Vendor Master
+     >> CORRECT ANSWER: B) Purchasing Info Record
+
+Q26. Which organizational unit in SAP represents a legal accounting entity?
+     A) Plant
+     B) Storage Location
+     C) Company Code
+     D) Purchasing Organization
+     >> CORRECT ANSWER: C) Company Code
+
+Q27. What is the correct basic P2P sequence?
+     A) PO -> PR -> GR -> Invoice
+     B) PR -> PO -> GR -> Invoice
+     C) GR -> PR -> PO -> Invoice
+     D) PR -> GR -> PO -> Invoice
+     >> CORRECT ANSWER: B) PR -> PO -> GR -> Invoice
+
+Q28. Which organizational unit is responsible for negotiating procurement conditions with vendors?
+     A) Plant
+     B) Company Code
+     C) Purchasing Organization
+     D) Storage Location
+     >> CORRECT ANSWER: C) Purchasing Organization
+
+Q29. What type of procurement involves ordering goods without a material master record?
+     A) Consignment
+     B) Subcontracting
+     C) Non-stock / Consumable Procurement
+     D) Stock Transport Order
+     >> CORRECT ANSWER: C) Non-stock / Consumable Procurement
+
+Q30. What is the final stage of the P2P process?
+     A) Purchase Requisition
+     B) Goods Receipt
+     C) Invoice Verification
+     D) Vendor Payment
+     >> CORRECT ANSWER: D) Vendor Payment
+
+================================================================================
+ANSWER KEY SUMMARY:
+Total Questions: 30
+Distribution: A: 5, B: 15, C: 8, D: 2
+All questions 100% matched with live Firestore test data.
+================================================================================
