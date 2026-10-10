@@ -495,6 +495,11 @@ async function submitTest(autoSubmitted) {
       ? "PASS"
       : "FAIL";
 
+  let resolvedSpecialization = student.specialization || "";
+  if (!resolvedSpecialization && student.department && student.department.includes(" - ")) {
+    resolvedSpecialization = student.department.split(" - ").slice(1).join(" - ").trim();
+  }
+
   const result = {
     studentName:
       student.name,
@@ -503,7 +508,7 @@ async function submitTest(autoSubmitted) {
     department:
       student.department,
     specialization:
-      student.specialization || "",
+      resolvedSpecialization || "-",
     studentEmail:
       student.email,
     score,
@@ -535,13 +540,23 @@ async function submitTest(autoSubmitted) {
     // Send result to Google Sheets
     if (APP_CONFIG.EMAIL_SERVICE_URL) {
 
-      // Map MECH, UI/UX, and SAP specializations for Google Sheet tab compatibility
+      // Map MECH, DA/DS/BA, UI/UX, and SAP specializations for Google Sheet tab compatibility
       let sheetDept = student.department || "";
       let specialization = student.specialization || "";
       if (sheetDept.includes("MECH")) {
         sheetDept = "MECH";
         if (!specialization && student.department.includes(" - ")) {
           specialization = student.department.replace("MECH - ", "").trim();
+        }
+      } else if (
+        sheetDept.includes("DA/DS/BA") ||
+        sheetDept.includes("DS/DA/BA") ||
+        sheetDept.startsWith("DA") ||
+        sheetDept.startsWith("DS")
+      ) {
+        sheetDept = "DA/DS/BA";
+        if (!specialization && student.department && student.department.includes(" - ")) {
+          specialization = student.department.split(" - ").slice(1).join(" - ").trim();
         }
       } else if (sheetDept.includes("UI/UX") || sheetDept.includes("UIUX")) {
         sheetDept = "UI/UX / Digital Marketing";
@@ -580,7 +595,7 @@ async function submitTest(autoSubmitted) {
             sheetDept,
 
           specialization:
-            specialization,
+            specialization || "-",
 
           email:
             student.email,

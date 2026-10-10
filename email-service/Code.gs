@@ -18,13 +18,23 @@ function doPost(e) {
       throw new Error("Department is missing.");
     }
 
-    // Handle sub-categories (MECH, SAP, Python Full Stack, Java Full Stack) -> map to base tab
+    // Handle sub-categories (MECH, DA/DS/BA, SAP, Python Full Stack, Java Full Stack) -> map to base tab
     let specialization = data.specialization || "";
     if (department.startsWith("MECH")) {
       if (department.includes(" - ")) {
         specialization = department.split(" - ")[1];
       }
       department = "MECH";
+    } else if (
+      department.startsWith("DA/DS/BA") ||
+      department.startsWith("DS/DA/BA") ||
+      department.includes("DA/DS/BA") ||
+      department.includes("DS/DA/BA")
+    ) {
+      if (!specialization && department.includes(" - ")) {
+        specialization = department.split(" - ").slice(1).join(" - ").trim();
+      }
+      department = "DA/DS/BA";
     } else if (department.startsWith("SAP")) {
       if (department.includes(" - ")) {
         specialization = department.split(" - ").slice(1).join(" - ");
@@ -46,7 +56,7 @@ function doPost(e) {
     let sheet =
       spreadsheet.getSheetByName(department);
 
-    // If not found directly, check alternative names for UI/UX, PLC, and HTML/CSS/JS
+    // If not found directly, check alternative names for UI/UX, PLC, HTML/CSS/JS, and DA/DS/BA
     if (!sheet) {
       if (department.includes("UI/UX") || department.includes("Digital Marketing")) {
         sheet =
@@ -60,6 +70,17 @@ function doPost(e) {
         sheet =
           spreadsheet.getSheetByName("HTML - CSS - JavaScript") ||
           spreadsheet.getSheetByName("HTML / CSS / JavaScript");
+      } else if (
+        department === "DA/DS/BA" ||
+        department === "DS/DA/BA" ||
+        department.includes("DA") ||
+        department.includes("DS")
+      ) {
+        sheet =
+          spreadsheet.getSheetByName("DA/DS/BA") ||
+          spreadsheet.getSheetByName("DS/DA/BA") ||
+          spreadsheet.getSheetByName("DA-DS-BA") ||
+          spreadsheet.getSheetByName("DA / DS / BA");
       }
     }
 
@@ -161,4 +182,62 @@ function addTabSwitchesHeaderToAllSheets() {
       }
     }
   });
+}
+
+// Utility: Call this from Apps Script editor once to merge separate DA/DS/BA tabs (like "DA/DS/BA - Python", "DA/DS/BA - MySQL", "DA/DS/BA - Pandas") into the single "DA/DS/BA" tab
+function mergeDaDsBaTabs() {
+  const spreadsheet = SpreadsheetApp.getActiveSpreadsheet();
+  let mainSheet =
+    spreadsheet.getSheetByName("DA/DS/BA") ||
+    spreadsheet.getSheetByName("DS/DA/BA") ||
+    spreadsheet.getSheetByName("DA-DS-BA") ||
+    spreadsheet.getSheetByName("DA / DS / BA");
+
+  if (!mainSheet) {
+    mainSheet = spreadsheet.insertSheet("DA/DS/BA");
+    mainSheet.appendRow([
+      "Date & Time",
+      "Student Name",
+      "Mobile Number",
+      "Specialization",
+      "Email",
+      "Score",
+      "Pass",
+      "Tab Switches"
+    ]);
+  }
+
+  const allSheets = spreadsheet.getSheets();
+  let mergedCount = 0;
+
+  allSheets.forEach(function(subSheet) {
+    const name = subSheet.getName();
+    const isSubTab = (
+      name.startsWith("DA/DS/BA - ") ||
+      name.startsWith("DS/DA/BA - ") ||
+      name.startsWith("DA-DS-BA - ")
+    );
+
+    if (isSubTab && name !== mainSheet.getName()) {
+      const inferredSpec = name.split(" - ").slice(1).join(" - ").trim();
+      const lastRow = subSheet.getLastRow();
+      const lastCol = subSheet.getLastColumn();
+
+      if (lastRow > 1) {
+        const data = subSheet.getRange(2, 1, lastRow - 1, lastCol).getValues();
+        data.forEach(function(row) {
+          // If Specialization column (index 3) is empty or "-", set inferred specialization
+          if (!row[3] || row[3] === "-") {
+            row[3] = inferredSpec;
+          }
+          mainSheet.appendRow(row);
+          mergedCount++;
+        });
+      }
+
+      spreadsheet.deleteSheet(subSheet);
+    }
+  });
+
+  Logger.log("Merged " + mergedCount + " entries into " + mainSheet.getName());
 }
