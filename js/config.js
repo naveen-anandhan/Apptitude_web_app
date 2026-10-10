@@ -3,6 +3,11 @@
 export const APP_CONFIG = {
   TEST_ID: "aptitude-test-01",
 
+  // Admin button visibility on home page  to deploy firebase deploy --only hosting :
+  // Put "enable" to SHOW the Admin button.
+  // Put "disable" to HIDE the Admin button.
+  ADMIN_BUTTON: "disable",
+
   // Test duration in minutes (change this number anytime to change the test time)
   DURATION_MINUTES: 30,
 

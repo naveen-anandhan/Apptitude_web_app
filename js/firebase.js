@@ -219,6 +219,36 @@ export async function saveSpecialization(testId, department, newSpecName) {
     list.push(newSpecName);
   }
   currentData[department] = list;
+
+  // If this specialization was previously in _deleted, remove it
+  if (currentData._deleted && Array.isArray(currentData._deleted[department])) {
+    currentData._deleted[department] = currentData._deleted[department].filter(item => item !== newSpecName);
+  }
+
+  await setDoc(specDocRef, currentData, { merge: true });
+  return currentData;
+}
+
+export async function deleteSpecialization(testId, department, specNameToDelete) {
+  const specDocRef = doc(db, "tests", testId, "config", "specializations");
+  const snap = await getDoc(specDocRef);
+  let currentData = snap.exists() ? snap.data() : {};
+
+  // Remove from custom list if present
+  let list = Array.isArray(currentData[department]) ? currentData[department] : [];
+  currentData[department] = list.filter(item => item !== specNameToDelete);
+
+  // Add to _deleted list so default specializations can also be excluded
+  if (!currentData._deleted) {
+    currentData._deleted = {};
+  }
+  if (!Array.isArray(currentData._deleted[department])) {
+    currentData._deleted[department] = [];
+  }
+  if (!currentData._deleted[department].includes(specNameToDelete)) {
+    currentData._deleted[department].push(specNameToDelete);
+  }
+
   await setDoc(specDocRef, currentData, { merge: true });
   return currentData;
 }

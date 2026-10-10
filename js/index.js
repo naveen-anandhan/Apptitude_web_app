@@ -2,11 +2,11 @@ import {
   ensureAnonymousLogin,
   getTest,
   getSpecializationsConfig
-} from "./firebase.js?v=2.1";
+} from "./firebase.js?v=2.3";
 
-import { APP_CONFIG } from "./config.js?v=2.1";
+import { APP_CONFIG } from "./config.js?v=2.3";
 
-import { saveStudent } from "./common.js?v=2.1";
+import { saveStudent } from "./common.js?v=2.3";
 
 
 const form =
@@ -14,6 +14,16 @@ const form =
 
 const messageEl =
   document.getElementById("message");
+
+const adminPortalBtn =
+  document.getElementById("adminPortalBtn");
+
+// Show or hide the Admin button based on APP_CONFIG.ADMIN_BUTTON ("enable" / "disable")
+if (adminPortalBtn) {
+  const adminState = String(APP_CONFIG.ADMIN_BUTTON || "").trim().toLowerCase();
+  const isEnabled = adminState === "enable" || adminState === "enabled" || adminState === "true" || APP_CONFIG.ADMIN_BUTTON === true;
+  adminPortalBtn.style.display = isEnabled ? "inline-flex" : "none";
+}
 
 const deptSelect =
   document.getElementById("department");
@@ -115,6 +125,7 @@ async function loadCustomSpecializations() {
     };
 
     Object.entries(config).forEach(([dept, specs]) => {
+      if (dept === "_deleted") return;
       const select = deptSelectMap[dept];
       if (select && Array.isArray(specs)) {
         const existingValues = Array.from(select.options).map(o => o.value);
@@ -128,6 +139,21 @@ async function loadCustomSpecializations() {
         });
       }
     });
+
+    // Remove any specializations deleted by the admin
+    if (config._deleted && typeof config._deleted === "object") {
+      Object.entries(config._deleted).forEach(([dept, deletedList]) => {
+        const select = deptSelectMap[dept];
+        if (select && Array.isArray(deletedList)) {
+          deletedList.forEach(deletedSpec => {
+            const optToRemove = Array.from(select.options).find(o => o.value === deletedSpec);
+            if (optToRemove) {
+              optToRemove.remove();
+            }
+          });
+        }
+      });
+    }
   } catch (err) {
     console.warn("Could not load custom specializations:", err);
   } finally {

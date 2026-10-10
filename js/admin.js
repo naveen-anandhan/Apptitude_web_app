@@ -7,10 +7,11 @@ import {
   deleteQuestion,
   toggleQuestionInclusion,
   getSpecializationsConfig,
-  saveSpecialization
-} from "./firebase.js?v=2.0";
+  saveSpecialization,
+  deleteSpecialization
+} from "./firebase.js?v=2.2";
 
-import { APP_CONFIG } from "./config.js?v=2.0";
+import { APP_CONFIG } from "./config.js?v=2.2";
 import { formatDate, escapeHtml } from "./common.js";
 
 // --- DOM ELEMENTS ---
@@ -30,6 +31,7 @@ const tabResults = document.getElementById("tabResults");
 const adminDeptSelect = document.getElementById("adminDeptSelect");
 const adminSpecSelect = document.getElementById("adminSpecSelect");
 const openAddSpecModalBtn = document.getElementById("openAddSpecModalBtn");
+const deleteSpecBtn = document.getElementById("deleteSpecBtn");
 const openAddQModalBtn = document.getElementById("openAddQModalBtn");
 
 const metricTotalQ = document.getElementById("metricTotalQ");
@@ -204,23 +206,33 @@ async function loadSpecializations() {
 function getSpecializationsForDept(dept) {
   const defaults = DEFAULT_SPECS[dept] || [dept];
   const custom = (customSpecs && Array.isArray(customSpecs[dept])) ? customSpecs[dept] : [];
+  const deleted = (customSpecs && customSpecs._deleted && Array.isArray(customSpecs._deleted[dept])) ? customSpecs._deleted[dept] : [];
   const merged = [...defaults];
   custom.forEach(c => {
     if (!merged.includes(c)) merged.push(c);
   });
-  return merged;
+  return merged.filter(s => !deleted.includes(s));
 }
 
 function populateSpecializationDropdown() {
   const dept = adminDeptSelect.value;
   const specs = getSpecializationsForDept(dept);
   adminSpecSelect.innerHTML = "";
-  specs.forEach(s => {
+  if (specs.length === 0) {
     const opt = document.createElement("option");
-    opt.value = s;
-    opt.textContent = s;
+    opt.value = "";
+    opt.textContent = "-- No specializations --";
     adminSpecSelect.appendChild(opt);
-  });
+    if (deleteSpecBtn) deleteSpecBtn.disabled = true;
+  } else {
+    specs.forEach(s => {
+      const opt = document.createElement("option");
+      opt.value = s;
+      opt.textContent = s;
+      adminSpecSelect.appendChild(opt);
+    });
+    if (deleteSpecBtn) deleteSpecBtn.disabled = false;
+  }
 }
 
 adminDeptSelect.addEventListener("change", async () => {
@@ -236,6 +248,8 @@ adminSpecSelect.addEventListener("change", async () => {
 function getCurrentTargetDeptTag() {
   const dept = adminDeptSelect.value;
   const spec = adminSpecSelect.value;
+
+  if (!spec) return dept;
 
   if (dept === "DA/DS/BA") {
     return `DA/DS/BA - ${spec}`;
@@ -597,6 +611,44 @@ saveSpecBtn.addEventListener("click", async () => {
     saveSpecBtn.textContent = "Create Specialization";
   }
 });
+
+// --- DELETE SPECIALIZATION ---
+if (deleteSpecBtn) {
+  deleteSpecBtn.addEventListener("click", async () => {
+    const dept = adminDeptSelect.value;
+    const spec = adminSpecSelect.value;
+
+    if (!spec) {
+      alert("Please select a specialization to delete.");
+      return;
+    }
+
+    let confirmMsg = `Are you sure you want to delete the specialization "${spec}" under "${dept}"?\n\nThis will remove it from candidate registration dropdowns.`;
+    if (currentQuestions && currentQuestions.length > 0) {
+      confirmMsg += `\n\n⚠️ Note: There are currently ${currentQuestions.length} questions associated with this specialization in the question bank.`;
+    }
+
+    const confirmed = confirm(confirmMsg);
+    if (!confirmed) return;
+
+    deleteSpecBtn.disabled = true;
+    deleteSpecBtn.textContent = "Deleting...";
+
+    try {
+      await deleteSpecialization(APP_CONFIG.TEST_ID, dept, spec);
+      await loadSpecializations();
+      populateSpecializationDropdown();
+      showToast(`Deleted specialization: "${spec}"`);
+      await loadCurrentQuestions();
+    } catch (err) {
+      console.error("Delete specialization error:", err);
+      alert("Failed to delete specialization: " + err.message);
+    } finally {
+      deleteSpecBtn.disabled = false;
+      deleteSpecBtn.textContent = "🗑️ Delete Specialization";
+    }
+  });
+}
 
 // --- LOAD RESULTS (TAB 2) ---
 async function loadResults() {

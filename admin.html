@@ -283,6 +283,32 @@
       background: #ede4ff;
     }
 
+    .btn-delete-spec {
+      padding: 12px 18px;
+      background: #fef2f2;
+      border: 1px solid #fecaca;
+      color: #dc2626;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: 14px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      white-space: nowrap;
+      transition: all 0.2s ease;
+    }
+
+    .btn-delete-spec:hover {
+      background: #fee2e2;
+      border-color: #fca5a5;
+    }
+
+    .btn-delete-spec:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
     /* SUMMARY BANNER */
     .metrics-bar {
       display: flex;
@@ -877,8 +903,9 @@
             </select>
           </div>
 
-          <div>
-            <button id="openAddSpecModalBtn" class="btn-add-spec">➕ Add New Specialization</button>
+          <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+            <button id="openAddSpecModalBtn" class="btn-add-spec">➕ Add Specialization</button>
+            <button id="deleteSpecBtn" class="btn-delete-spec" title="Delete currently selected specialization">🗑️ Delete Specialization</button>
           </div>
         </div>
       </div>
@@ -1026,6 +1053,6 @@
   <!-- TOAST NOTIFICATION -->
   <div id="toast" class="toast hidden"></div>
 
-  <script type="module" src="js/admin.js?v=2.0"></script>
+  <script type="module" src="js/admin.js?v=2.2"></script>
 </body>
 </html>
