@@ -1,254 +1,254 @@
 ================================================================================
 PUMO APTITUDE ASSESSMENT - OFFICIAL ANSWER KEY
-DEPARTMENT: General Aptitude (Set 3)
+DEPARTMENT: General Aptitude (Set 4)
 TOTAL QUESTIONS: 30 (10 Basic + 10 Intermediate + 10 Advanced)
 ================================================================================
 
 SECTION 1: LEVEL 1 – BASIC APTITUDE (QUESTIONS 01 - 10)
 --------------------------------------------------------------------------------
-Q01. If CAT is coded as DBU (each letter moved one step forward), how is DOG coded?
-     A) EOH
-     B) DPH
-     C) EPH
-     D) EPG
-     >> CORRECT ANSWER: C) EPH
-     Explanation: D→E, O→P, G→H, so DOG = EPH
+Q01. If PEN is coded as QFO (each letter moved one step forward), how is INK coded?
+     A) JOL
+     B) JNL
+     C) IOL
+     D) JOK
+     >> CORRECT ANSWER: A) JOL
+     Explanation: I→J, N→O, K→L, so INK = JOL.
 
-Q02. Pointing to a man, Meena says, "He is the son of my mother's only brother." How is the man related to Meena?
-     A) Brother
-     B) Cousin
-     C) Uncle
-     D) Nephew
-     >> CORRECT ANSWER: B) Cousin
-     Explanation: Mother's brother = maternal uncle; his son = cousin
+Q02. Pointing to a girl, Ravi says, "She is the daughter of my father's only son." How is the girl related to Ravi?
+     A) Sister
+     B) Daughter
+     C) Niece
+     D) Cousin
+     >> CORRECT ANSWER: B) Daughter
+     Explanation: Ravi's father's only son is Ravi himself. Therefore, the girl is Ravi's daughter.
 
-Q03. Choose the word closest in meaning to RAPID:
-     A) Slow
-     B) Weak
-     C) Late
-     D) Fast
-     >> CORRECT ANSWER: D) Fast
-     Explanation: RAPID means very fast, swift, or quick.
+Q03. Choose the word closest in meaning to ANCIENT:
+     A) Modern
+     B) Recent
+     C) Fresh
+     D) Old
+     >> CORRECT ANSWER: D) Old
+     Explanation: ANCIENT means belonging to times long past; old.
 
-Q04. Choose the word opposite in meaning to EXPAND:
-     A) Contract
-     B) Increase
-     C) Grow
-     D) Stretch
-     >> CORRECT ANSWER: A) Contract
-     Explanation: Expand means to enlarge; its exact opposite is contract.
+Q04. Choose the word opposite in meaning to VICTORY:
+     A) Win
+     B) Success
+     C) Defeat
+     D) Triumph
+     >> CORRECT ANSWER: C) Defeat
+     Explanation: The antonym of victory is defeat.
 
-Q05. Find the next letter: A, C, E, G, ?
-     A) H
-     B) I
-     C) J
-     D) K
-     >> CORRECT ANSWER: B) I
-     Explanation: Pattern: Alternate letters with +2 step: A(+2)→C(+2)→E(+2)→G(+2)→I
+Q05. Find the next letter: B, E, H, K, ?
+     A) J
+     B) L
+     C) M
+     D) N
+     >> CORRECT ANSWER: D) N
+     Explanation: Pattern: Each letter advances by 3 positions in the alphabet: B(+3) → E(+3) → H(+3) → K(+3) → N.
 
-Q06. What is the simple interest on ₹1,000 at 10% per annum for 2 years?
-     A) ₹100
-     B) ₹150
-     C) ₹200
-     D) ₹250
-     >> CORRECT ANSWER: C) ₹200
-     Explanation: Formula: SI = (P × R × T) / 100 = (1000 × 10 × 2) / 100 = ₹200
+Q06. ₹900 is divided between A and B in the ratio 2:1. How much does A get?
+     A) ₹300
+     B) ₹450
+     C) ₹600
+     D) ₹700
+     >> CORRECT ANSWER: C) ₹600
+     Explanation: Total parts = 2 + 1 = 3. A's share = 900 × (2/3) = ₹600.
 
-Q07. By how many degrees does the minute hand of a clock move in 10 minutes?
-     A) 60°
-     B) 30°
-     C) 45°
-     D) 90°
-     >> CORRECT ANSWER: A) 60°
-     Explanation: The minute hand covers 360° in 60 min (6°/min). For 10 min: 10 × 6° = 60°
+Q07. A rectangular garden is 12 m long and 5 m wide. What is its perimeter?
+     A) 17 m
+     B) 34 m
+     C) 60 m
+     D) 120 m
+     >> CORRECT ANSWER: B) 34 m
+     Explanation: Formula: Perimeter = 2 × (length + width) = 2 × (12 + 5) = 2 × 17 = 34 m.
 
-Q08. In a non-leap year, if 1st January is a Monday, what day is 1st February?
-     A) Thursday
-     B) Tuesday
-     C) Wednesday
-     D) Friday
-     >> CORRECT ANSWER: A) Thursday
-     Explanation: January has 31 days = 4 weeks + 3 odd days. Monday + 3 days = Thursday
+Q08. A student's marks: Maths 70, Science 80, English 60, Social 90. What is the average mark?
+     A) 75
+     B) 80
+     C) 85
+     D) 90
+     >> CORRECT ANSWER: A) 75
+     Explanation: Total marks = 70 + 80 + 60 + 90 = 300. Average = 300 / 4 = 75.
 
-Q09. Units sold in a week: Mon – 40, Tue – 55, Wed – 35, Thu – 60, Fri – 50. On which day were the most units sold?
-     A) Monday
-     B) Tuesday
-     C) Wednesday
-     D) Thursday
-     >> CORRECT ANSWER: D) Thursday
-     Explanation: Comparing sales figures: Mon(40), Tue(55), Wed(35), Thu(60), Fri(50). Thu is highest with 60.
+Q09. In a class of 50 students, Priya's rank from the top is 18. What is her rank from the bottom?
+     A) 31
+     B) 32
+     C) 33
+     D) 34
+     >> CORRECT ANSWER: C) 33
+     Explanation: Formula: Rank from bottom = Total students − Rank from top + 1 = 50 − 18 + 1 = 33.
 
-Q10. Arun is taller than Bala. Bala is taller than Charan. Who is the shortest?
-     A) Arun
-     B) Charan
-     C) Bala
-     D) Cannot be determined
-     >> CORRECT ANSWER: B) Charan
-     Explanation: Height hierarchy: Arun > Bala > Charan. Therefore, Charan is the shortest.
+Q10. Find the odd one out:
+     A) Dog
+     B) Eagle
+     C) Cat
+     D) Cow
+     >> CORRECT ANSWER: B) Eagle
+     Explanation: Dog, cat, and cow are mammals, whereas eagle is a bird.
 
 
 SECTION 2: LEVEL 2 – INTERMEDIATE APTITUDE (QUESTIONS 11 - 20)
 --------------------------------------------------------------------------------
-Q11. A father is 3 times as old as his son. After 10 years, the father will be twice as old as the son. What is the son's present age?
-     A) 8 years
-     B) 10 years
-     C) 12 years
-     D) 15 years
-     >> CORRECT ANSWER: B) 10 years
-     Explanation: Let son = S, father = 3S. 3S + 10 = 2(S + 10) => 3S + 10 = 2S + 20 => S = 10 years.
+Q11. 6 men can complete a work in 10 days. How many days will 12 men take to complete the same work?
+     A) 4 days
+     B) 5 days
+     C) 6 days
+     D) 8 days
+     >> CORRECT ANSWER: B) 5 days
+     Explanation: Total work = 6 × 10 = 60 man-days. Days required by 12 men = 60 / 12 = 5 days.
 
-Q12. Statements: All pens are books. Some books are bags.
-     Conclusions: I. Some pens are bags. II. Some bags are books.
+Q12. In an exam, 60% of the 250 students passed. How many students failed?
+     A) 80
+     B) 90
+     C) 100
+     D) 120
+     >> CORRECT ANSWER: C) 100
+     Explanation: Failed percentage = 100% − 60% = 40%. Failed students = 40% of 250 = (40 / 100) × 250 = 100.
+
+Q13. A car goes from A to B at 40 km/h and returns at 60 km/h along the same route. What is its average speed for the whole trip?
+     A) 48 km/h
+     B) 50 km/h
+     C) 52 km/h
+     D) 54 km/h
+     >> CORRECT ANSWER: A) 48 km/h
+     Explanation: Harmonic mean formula: Average speed = 2xy / (x + y) = (2 × 40 × 60) / (40 + 60) = 4800 / 100 = 48 km/h.
+
+Q14. Find the next number: 2, 5, 10, 17, 26, ?
+     A) 33
+     B) 35
+     C) 36
+     D) 37
+     >> CORRECT ANSWER: D) 37
+     Explanation: Differences between successive terms: +3, +5, +7, +9, +11. Thus, 26 + 11 = 37 (or n² + 1 pattern for n = 1 to 6).
+
+Q15. Statements: All cats are animals. All animals are living beings.
+     Conclusions: I. All cats are living beings. II. All living beings are cats.
      A) Only I follows
      B) Only II follows
      C) Both I and II follow
      D) Neither follows
-     >> CORRECT ANSWER: B) Only II follows
-     Explanation: Conclusion II is the direct converse of "Some books are bags", so it definitely follows. Conclusion I does not necessarily follow.
+     >> CORRECT ANSWER: A) Only I follows
+     Explanation: All cats are animals and all animals are living beings implies all cats are living beings (Conclusion I follows). Conclusion II is the converse and does not follow.
 
-Q13. What is the compound interest on ₹10,000 at 10% per annum for 2 years?
+Q16. A sum of ₹5,000 earns ₹600 as simple interest in 2 years. What is the rate of interest per annum?
+     A) 5%
+     B) 6%
+     C) 8%
+     D) 10%
+     >> CORRECT ANSWER: B) 6%
+     Explanation: Formula: R = (SI × 100) / (P × T) = (600 × 100) / (5000 × 2) = 60,000 / 10,000 = 6%.
+
+Q17. Meena walks 10 m east, turns left and walks 5 m, then turns left again and walks 10 m. How far is she from her starting point?
+     A) 0 m
+     B) 5 m
+     C) 10 m
+     D) 15 m
+     >> CORRECT ANSWER: B) 5 m
+     Explanation: Moving 10 m East, 5 m North, and then 10 m West cancels the horizontal movement, leaving her 5 m North of her starting point.
+
+Q18. A and B invest ₹6,000 and ₹4,000 in a business. If the profit is ₹5,000, what is A's share?
      A) ₹2,000
-     B) ₹2,200
-     C) ₹2,100
-     D) ₹2,400
-     >> CORRECT ANSWER: C) ₹2,100
-     Explanation: Amount = 10,000 × (1 + 10/100)² = 10,000 × 1.21 = ₹12,100. CI = ₹12,100 - ₹10,000 = ₹2,100.
+     B) ₹2,500
+     C) ₹3,000
+     D) ₹3,500
+     >> CORRECT ANSWER: C) ₹3,000
+     Explanation: Profit ratio = 6000 : 4000 = 3 : 2. A's share = 5000 × (3 / 5) = ₹3,000.
 
-Q14. A 20-litre mixture contains milk and water in the ratio 3:1. How much water must be added to make the ratio 1:1?
-     A) 10 litres
-     B) 5 litres
-     C) 8 litres
-     D) 15 litres
-     >> CORRECT ANSWER: A) 10 litres
-     Explanation: Milk = 20 × (3/4) = 15 L, Water = 5 L. For ratio 1:1, water must equal 15 L. Added water = 15 - 5 = 10 L.
+Q19. One card is drawn at random from a standard pack of 52 cards. What is the probability that it is a king?
+     A) 1/4
+     B) 1/26
+     C) 1/52
+     D) 1/13
+     >> CORRECT ANSWER: D) 1/13
+     Explanation: There are 4 kings in a deck of 52 cards. Probability = 4 / 52 = 1/13.
 
-Q15. Ravi is facing North. He turns right and then turns right again. Which direction is he facing now?
-     A) East
-     B) West
-     C) North
-     D) South
-     >> CORRECT ANSWER: D) South
-     Explanation: Facing North → 1st right turn: East → 2nd right turn: South.
-
-Q16. Find the next number: 2, 3, 5, 8, 13, ?
-     A) 18
-     B) 20
-     C) 21
-     D) 24
-     >> CORRECT ANSWER: C) 21
-     Explanation: Fibonacci series (each number is sum of preceding two): 2+3=5, 3+5=8, 5+8=13, 8+13=21.
-
-Q17. Doctor : Hospital :: Teacher : ?
-     A) School
-     B) Student
-     C) Book
-     D) Class
-     >> CORRECT ANSWER: A) School
-     Explanation: A doctor works in a hospital; similarly, a teacher works in a school.
-
-Q18. A family's monthly expenses: Food 40%, Rent 25%, Education 15%, Others 20%. If the monthly income is ₹40,000, how much is spent on rent?
-     A) ₹8,000
-     B) ₹10,000
-     C) ₹12,000
-     D) ₹15,000
-     >> CORRECT ANSWER: B) ₹10,000
-     Explanation: Rent = 25% of ₹40,000 = (25 / 100) × 40,000 = ₹10,000.
-
-Q19. In how many different ways can 4 different books be arranged on a shelf?
-     A) 12
-     B) 16
-     C) 48
-     D) 24
-     >> CORRECT ANSWER: D) 24
-     Explanation: Permutation of 4 distinct items = 4! = 4 × 3 × 2 × 1 = 24 ways.
-
-Q20. Find the odd one out: 3, 5, 9, 11
-     A) 9
-     B) 3
-     C) 5
-     D) 11
-     >> CORRECT ANSWER: A) 9
-     Explanation: 3, 5, and 11 are prime numbers; 9 is a composite number (divisible by 3).
+Q20. Pen : Write :: Knife : ?
+     A) Sharp
+     B) Kitchen
+     C) Cut
+     D) Steel
+     >> CORRECT ANSWER: C) Cut
+     Explanation: A pen is used to write; analogously, a knife is used to cut.
 
 
 SECTION 3: LEVEL 3 – ADVANCED APTITUDE (QUESTIONS 21 - 30)
 --------------------------------------------------------------------------------
-Q21. What is the angle between the hour hand and the minute hand at 4:30?
-     A) 30°
-     B) 45°
-     C) 60°
-     D) 75°
-     >> CORRECT ANSWER: B) 45°
-     Explanation: Hour hand position at 4:30 = 4 × 30° + 30 × 0.5° = 135°. Minute hand = 30 × 6° = 180°. Angle = |180° - 135°| = 45°.
+Q21. Two successive discounts of 20% and 10% are equal to a single discount of:
+     A) 25%
+     B) 28%
+     C) 30%
+     D) 32%
+     >> CORRECT ANSWER: B) 28%
+     Explanation: Equivalent discount = d1 + d2 − (d1 × d2)/100 = 20 + 10 − (20 × 10)/100 = 30 − 2 = 28%.
 
-Q22. Five friends P, Q, R, S and T sit in a row. P is at the left end, Q sits next to P, T is at the right end, and R sits between Q and S. Who sits in the middle?
-     A) Q
-     B) S
-     C) R
-     D) T
-     >> CORRECT ANSWER: C) R
-     Explanation: Order from left to right: P, Q, R, S, T. The 3rd (middle) person is R.
+Q22. A can complete a work in 12 days and B in 24 days. They work together for 4 days and then A leaves. How many more days will B take to finish the remaining work?
+     A) 8 days
+     B) 10 days
+     C) 12 days
+     D) 16 days
+     >> CORRECT ANSWER: C) 12 days
+     Explanation: (A + B)'s 1-day work = 1/12 + 1/24 = 3/24 = 1/8. In 4 days, work completed = 4 × (1/8) = 1/2. Remaining work = 1/2. Days for B = (1/2) / (1/24) = 12 days.
 
-Q23. A sells an article to B at a 20% profit. B sells it to C at a 10% loss. If C pays ₹1,080, what did A pay for it?
-     A) ₹1,100
-     B) ₹900
-     C) ₹1,200
-     D) ₹1,000
-     >> CORRECT ANSWER: D) ₹1,000
-     Explanation: B's CP = 1,080 / 0.9 = ₹1,200. A's CP = 1,200 / 1.2 = ₹1,000.
+Q23. Four friends A, B, C and D sit around a square table facing the centre. A sits opposite C, and B sits to the right of A. Who sits to the left of A?
+     A) Person D
+     B) Person B
+     C) Person C
+     D) Cannot be determined
+     >> CORRECT ANSWER: A) Person D
+     Explanation: Facing centre, A is opposite C. Since B is to A's right, the seat to A's left must be occupied by Person D.
 
-Q24. Two trains of lengths 100 m and 150 m run on parallel tracks in opposite directions at 30 m/s and 20 m/s. How long will they take to cross each other?
-     A) 5 seconds
-     B) 4 seconds
-     C) 6 seconds
-     D) 10 seconds
-     >> CORRECT ANSWER: A) 5 seconds
-     Explanation: Relative speed = 30 + 20 = 50 m/s. Total distance = 100 + 150 = 250 m. Time = 250 / 50 = 5 seconds.
+Q24. A pipe can fill a tank in 6 hours. Because of a leak, it takes 8 hours. How long will the leak alone take to empty the full tank?
+     A) 12 hours
+     B) 24 hours
+     C) 36 hours
+     D) 48 hours
+     >> CORRECT ANSWER: B) 24 hours
+     Explanation: Leak rate = 1/6 − 1/8 = (4 − 3)/24 = 1/24 per hour. Hence, the leak alone will take 24 hours to empty the tank.
 
-Q25. Statements: No engineer is lazy. Some students are engineers. Which conclusion definitely follows?
-     A) No student is an engineer
-     B) All engineers are students
-     C) All students are lazy
-     D) Some students are not lazy
-     >> CORRECT ANSWER: D) Some students are not lazy
-     Explanation: The students who are engineers cannot be lazy (as no engineer is lazy). Hence, some students are not lazy.
+Q25. In what ratio must rice at ₹30/kg be mixed with rice at ₹45/kg to get a mixture worth ₹35/kg?
+     A) 1:2
+     B) 1:1
+     C) 3:2
+     D) 2:1
+     >> CORRECT ANSWER: D) 2:1
+     Explanation: By rule of alligation: (Cost of dearer − Mean price) : (Mean price − Cost of cheaper) = (45 − 35) : (35 − 30) = 10 : 5 = 2 : 1.
 
-Q26. Two dice are rolled together. What is the probability that the sum of the numbers is 7?
-     A) 1/12
-     B) 1/9
-     C) 1/6
-     D) 5/36
-     >> CORRECT ANSWER: C) 1/6
-     Explanation: Favourable outcomes = (1,6), (2,5), (3,4), (4,3), (5,2), (6,1) = 6 pairs out of 36. Probability = 6/36 = 1/6.
+Q26. In how many different ways can the letters of the word LEVEL be arranged?
+     A) 20
+     B) 25
+     C) 30
+     D) 60
+     >> CORRECT ANSWER: C) 30
+     Explanation: The word LEVEL has 5 letters with L appearing 2 times and E appearing 2 times: 5! / (2! × 2!) = 120 / (2 × 2) = 30 ways.
 
-Q27. Two bells ring at intervals of 12 and 18 minutes. If they ring together at 9:00 AM, when will they next ring together?
-     A) 9:24 AM
-     B) 9:36 AM
-     C) 9:30 AM
-     D) 9:48 AM
-     >> CORRECT ANSWER: B) 9:36 AM
-     Explanation: LCM(12, 18) = 36 minutes. Next simultaneous ring = 9:00 AM + 36 min = 9:36 AM.
+Q27. In a pie chart of a family's budget, Salary is shown by 120°, Rent by 90° and Others by 150°. If the total expense is ₹36,000, how much is spent on Rent?
+     A) ₹9,000
+     B) ₹10,000
+     C) ₹12,000
+     D) ₹15,000
+     >> CORRECT ANSWER: A) ₹9,000
+     Explanation: Rent angle = 90°. Total angle = 360°. Rent expenditure = (90 / 360) × 36,000 = (1/4) × 36,000 = ₹9,000.
 
-Q28. A company's yearly profit: 2021 – ₹50 lakh, 2022 – ₹60 lakh, 2023 – ₹72 lakh. What is the percentage growth in profit from 2022 to 2023?
-     A) 20%
-     B) 12%
-     C) 15%
-     D) 24%
-     >> CORRECT ANSWER: A) 20%
-     Explanation: Growth % = ((72 - 60) / 60) × 100 = (12 / 60) × 100 = 20%.
+Q28. If 5 + 3 = 28, 9 + 1 = 810 and 8 + 6 = 214, then 7 + 4 = ?
+     A) 113
+     B) 411
+     C) 314
+     D) 311
+     >> CORRECT ANSWER: D) 311
+     Explanation: Pattern: (first − second) concatenated with (first + second). 5 − 3 = 2, 5 + 3 = 8 → 28. 9 − 1 = 8, 9 + 1 = 10 → 810. For 7 + 4: 7 − 4 = 3, 7 + 4 = 11 → 311.
 
-Q29. A is B's sister. C is B's mother. D is C's father. E is D's mother. How is A related to D?
-     A) Grandmother
-     B) Daughter
-     C) Sister
-     D) Granddaughter
-     >> CORRECT ANSWER: D) Granddaughter
-     Explanation: C is mother of A and B. D is father of C. Therefore, D is grandfather to A, and A is D's granddaughter.
+Q29. If 5th March 2024 was a Tuesday, what day of the week was 5th March 2025?
+     A) Tuesday
+     B) Wednesday
+     C) Thursday
+     D) Friday
+     >> CORRECT ANSWER: B) Wednesday
+     Explanation: Total days from 5 March 2024 to 5 March 2025 is 365 days (February 2025 has 28 days). 365 mod 7 = 1 odd day. Tuesday + 1 = Wednesday.
 
-Q30. Choose the grammatically correct sentence:
-     A) Each of the students have submitted the form.
-     B) Each of the students has submitted the form.
-     C) Each of the student have submitted the form.
-     D) Each of the student has submitted the form.
-     >> CORRECT ANSWER: B) Each of the students has submitted the form.
-     Explanation: "Each" takes a singular verb ("has"), while the prepositional phrase "of the" requires the plural noun "students".
+Q30. Choose the correct word to fill the blank: She has been working in this company ______ 2019.
+     A) for
+     B) from
+     C) by
+     D) since
+     >> CORRECT ANSWER: D) since
+     Explanation: "Since" is used to refer to a fixed starting point in time (2019), whereas "for" is used with a duration.
