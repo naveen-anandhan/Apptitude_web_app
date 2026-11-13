@@ -22,6 +22,7 @@ if (adminPortalBtn) {
   adminPortalBtn.style.display = isEnabled ? "inline-flex" : "none";
 }
 
+// Department and Subcategory Dropdown Elements
 const deptSelect = document.getElementById("department");
 const sapGroup = document.getElementById("sapSubCategoryGroup");
 const sapSubSelect = document.getElementById("sapSubCategory");
@@ -35,6 +36,12 @@ const uiuxGroup = document.getElementById("uiuxSubCategoryGroup");
 const uiuxSubSelect = document.getElementById("uiuxSubCategory");
 const daDsBaGroup = document.getElementById("daDsBaSubCategoryGroup");
 const daDsBaSubSelect = document.getElementById("daDsBaSubCategory");
+const embeddedGroup = document.getElementById("embeddedSubCategoryGroup");
+const embeddedSubSelect = document.getElementById("embeddedSubCategory");
+const plcGroup = document.getElementById("plcSubCategoryGroup");
+const plcSubSelect = document.getElementById("plcSubCategory");
+const htmlCssJsGroup = document.getElementById("htmlCssJsSubCategoryGroup");
+const htmlCssJsSubSelect = document.getElementById("htmlCssJsSubCategory");
 const generalGroup = document.getElementById("generalSpecializationGroup");
 const generalSubSelect = document.getElementById("generalSpecialization");
 
@@ -80,6 +87,9 @@ function updateSpecializationVisibility() {
     { key: "Java Full Stack", group: javaGroup, select: javaSubSelect },
     { key: "MECH", group: mechGroup, select: mechSubSelect },
     { key: "UI/UX / Digital Marketing", group: uiuxGroup, select: uiuxSubSelect, altKey: "UI/UX" },
+    { key: "Embedded", group: embeddedGroup, select: embeddedSubSelect },
+    { key: "PLC / Automation", group: plcGroup, select: plcSubSelect },
+    { key: "HTML / CSS / JavaScript", group: htmlCssJsGroup, select: htmlCssJsSubSelect },
     { key: "General", group: generalGroup, select: generalSubSelect }
   ];
 
@@ -145,6 +155,9 @@ function applyVisibilityConfig(config) {
     { key: "Java Full Stack", group: javaGroup, select: javaSubSelect, placeholder: "Select specialization" },
     { key: "MECH", group: mechGroup, select: mechSubSelect, placeholder: "Select specialization" },
     { key: "UI/UX / Digital Marketing", group: uiuxGroup, select: uiuxSubSelect, placeholder: "Select specialization" },
+    { key: "Embedded", group: embeddedGroup, select: embeddedSubSelect, placeholder: "Select specialization" },
+    { key: "PLC / Automation", group: plcGroup, select: plcSubSelect, placeholder: "Select specialization" },
+    { key: "HTML / CSS / JavaScript", group: htmlCssJsGroup, select: htmlCssJsSubSelect, placeholder: "Select specialization" },
     { key: "General", group: generalGroup, select: generalSubSelect, placeholder: "Select your background department" }
   ];
 
@@ -155,7 +168,15 @@ function applyVisibilityConfig(config) {
 
     // Get all specializations: defaults + custom - deleted
     const defaults = DEFAULT_SPECS[dept] || [];
-    const custom = Array.isArray(config[dept]) ? config[dept] : [];
+    let custom = Array.isArray(config[dept]) ? config[dept] : [];
+    // Also check possible department name aliases
+    if (dept === "UI/UX / Digital Marketing" && Array.isArray(config["UI/UX"])) {
+      config["UI/UX"].forEach(s => { if (!custom.includes(s)) custom.push(s); });
+    }
+    if (dept === "DA/DS/BA" && Array.isArray(config["DA-DS-BA"])) {
+      config["DA-DS-BA"].forEach(s => { if (!custom.includes(s)) custom.push(s); });
+    }
+
     const deleted = (config._deleted && Array.isArray(config._deleted[dept])) ? config._deleted[dept] : [];
 
     const merged = [...defaults];
@@ -192,12 +213,25 @@ function applyVisibilityConfig(config) {
   updateSpecializationVisibility();
 }
 
-// Load custom specializations and visibility config from Firestore
+// Check local storage cache immediately for 0ms instant display of custom specializations
+try {
+  const cachedConfig = localStorage.getItem("pumo_specializations_config");
+  if (cachedConfig) {
+    applyVisibilityConfig(JSON.parse(cachedConfig));
+  }
+} catch (e) {
+  console.warn("Local storage cache read notice:", e);
+}
+
+// Load custom specializations and visibility config directly from Firestore
 async function loadCustomSpecializations() {
   try {
-    // Authenticate immediately so reading Firestore config never fails
-    await ensureAnonymousLogin();
     const config = await getSpecializationsConfig(APP_CONFIG.TEST_ID);
+    if (config && typeof config === "object") {
+      try {
+        localStorage.setItem("pumo_specializations_config", JSON.stringify(config));
+      } catch (e) {}
+    }
     applyVisibilityConfig(config);
   } catch (err) {
     console.warn("Could not load custom specializations config, using defaults:", err);
@@ -207,7 +241,12 @@ async function loadCustomSpecializations() {
   }
 }
 
-// Attach listeners
+// Start anonymous login in parallel for form submission readiness (non-blocking)
+ensureAnonymousLogin().catch(err => {
+  console.warn("Background anonymous sign-in notice:", err);
+});
+
+// Attach department change listener
 if (deptSelect) {
   deptSelect.addEventListener("change", updateSpecializationVisibility);
 }
@@ -220,6 +259,11 @@ window.addEventListener("DOMContentLoaded", updateSpecializationVisibility);
 // made by admin are immediately reflected without requiring a reload
 try {
   listenToSpecializationsConfig(APP_CONFIG.TEST_ID, (config) => {
+    if (config && typeof config === "object") {
+      try {
+        localStorage.setItem("pumo_specializations_config", JSON.stringify(config));
+      } catch (e) {}
+    }
     applyVisibilityConfig(config);
   });
 } catch (e) {
@@ -284,6 +328,12 @@ if (form) {
         finalDepartment = "UI/UX / Digital Marketing";
         specialization = "-";
       }
+    } else if (department === "Embedded") {
+      if (!checkSubCategory(embeddedSubSelect, embeddedGroup, "Embedded")) return;
+    } else if (department === "PLC / Automation") {
+      if (!checkSubCategory(plcSubSelect, plcGroup, "PLC / Automation")) return;
+    } else if (department === "HTML / CSS / JavaScript") {
+      if (!checkSubCategory(htmlCssJsSubSelect, htmlCssJsGroup, "HTML / CSS / JavaScript")) return;
     } else if (department === "General") {
       if (generalGroup && generalGroup.style.display !== "none") {
         const sub = (generalSubSelect?.value || "").trim();

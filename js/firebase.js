@@ -72,6 +72,8 @@ export async function getQuestions(
       "questions"
     );
 
+  let list = [];
+
   try {
     const q = query(
       questionsRef,
@@ -86,7 +88,7 @@ export async function getQuestions(
     const snap =
       await getDocs(q);
 
-    return snap.docs
+    list = snap.docs
       .map(d => ({
         id: d.id,
         ...d.data()
@@ -94,23 +96,52 @@ export async function getQuestions(
       .filter(q => q.included !== false && q.active !== false);
   } catch (err) {
     console.warn("getQuestions index notice, using fallback query:", err);
-    const fallbackQ = query(
-      questionsRef,
-      where(
-        "departments",
-        "array-contains",
-        department
-      )
-    );
-    const snap = await getDocs(fallbackQ);
-    const docs = snap.docs
-      .map(d => ({
-        id: d.id,
-        ...d.data()
-      }))
-      .filter(q => q.included !== false && q.active !== false);
-    return docs.sort((a, b) => (Number(a.order) || 0) - (Number(b.order) || 0));
+    try {
+      const fallbackQ = query(
+        questionsRef,
+        where(
+          "departments",
+          "array-contains",
+          department
+        )
+      );
+      const snap = await getDocs(fallbackQ);
+      list = snap.docs
+        .map(d => ({
+          id: d.id,
+          ...d.data()
+        }))
+        .filter(q => q.included !== false && q.active !== false);
+    } catch (e2) {
+      console.warn("getQuestions fallback error:", e2);
+    }
   }
+
+  // If a specialization has 0 questions in bank yet, gracefully fallback to the base department questions
+  if (list.length === 0 && department.includes(" - ")) {
+    const baseDept = department.split(" - ")[0].trim();
+    try {
+      const baseQ = query(
+        questionsRef,
+        where(
+          "departments",
+          "array-contains",
+          baseDept
+        )
+      );
+      const snap = await getDocs(baseQ);
+      list = snap.docs
+        .map(d => ({
+          id: d.id,
+          ...d.data()
+        }))
+        .filter(q => q.included !== false && q.active !== false);
+    } catch (baseErr) {
+      console.warn("Base department fallback query error:", baseErr);
+    }
+  }
+
+  return list.sort((a, b) => (Number(a.order) || 0) - (Number(b.order) || 0));
 }
 
 
