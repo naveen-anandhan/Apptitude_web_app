@@ -3,6 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
   <title>Admin Portal - PUMO Assessment</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -802,6 +805,189 @@
       font-size: 12px;
     }
 
+    /* VISIBILITY BADGES & TOGGLE */
+    .vis-toggle-wrap {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      cursor: pointer;
+      user-select: none;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 6px;
+      background: #f1f5f9;
+      border: 1px solid var(--border);
+      transition: all 0.2s ease;
+    }
+    .vis-toggle-wrap:hover {
+      border-color: var(--primary);
+    }
+    .vis-toggle-checkbox {
+      width: 16px;
+      height: 16px;
+      cursor: pointer;
+      accent-color: var(--primary);
+    }
+    .vis-status-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 2px 7px;
+      border-radius: 5px;
+      font-size: 11px;
+      font-weight: 700;
+    }
+    .vis-status-shown {
+      background: var(--success-light);
+      color: var(--success);
+    }
+    .vis-status-hidden {
+      background: #fee2e2;
+      color: #b91c1c;
+    }
+
+    /* DEPT VISIBILITY GRID */
+    .dept-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+      gap: 20px;
+    }
+    .dept-vis-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 20px;
+      box-shadow: 0 3px 12px rgba(0, 0, 0, 0.02);
+      transition: all 0.2s ease;
+      display: flex;
+      flex-direction: column;
+    }
+    .dept-vis-card.is-dept-hidden {
+      opacity: 0.65;
+      background: #fafafa;
+      border-style: dashed;
+    }
+    .dept-vis-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 12px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 14px;
+    }
+    .dept-vis-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--text);
+      margin: 0 0 4px;
+    }
+    .dept-vis-meta {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+    .spec-list-container {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      flex: 1;
+      margin-bottom: 14px;
+    }
+    .spec-item-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px 12px;
+      background: #f8fafc;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      transition: all 0.2s;
+    }
+    .spec-item-row.is-spec-hidden {
+      opacity: 0.6;
+      background: #f1f5f9;
+      text-decoration: line-through;
+    }
+    .spec-name-label {
+      font-size: 13px;
+      font-weight: 600;
+      color: #1e293b;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+    }
+    .btn-delete-small {
+      background: none;
+      border: none;
+      color: #94a3b8;
+      cursor: pointer;
+      font-size: 14px;
+      padding: 2px 6px;
+      border-radius: 4px;
+      transition: all 0.2s;
+    }
+    .btn-delete-small:hover {
+      background: #fee2e2;
+      color: #dc2626;
+    }
+
+    /* QR CODE TAB */
+    .qr-card-wrap {
+      display: grid;
+      grid-template-columns: 340px 1fr;
+      gap: 28px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 32px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+    }
+    .qr-display-box {
+      background: #ffffff;
+      border: 2px dashed #cbd5e1;
+      border-radius: 16px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.04);
+    }
+    #qrcodeContainer canvas, #qrcodeContainer img {
+      margin: 0 auto;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+    }
+
+    /* PRINT STYLES */
+    @media print {
+      body * {
+        visibility: hidden !important;
+      }
+      #printableQrArea, #printableQrArea * {
+        visibility: visible !important;
+      }
+      #printableQrArea {
+        position: fixed !important;
+        left: 0 !important;
+        top: 0 !important;
+        width: 100vw !important;
+        height: 100vh !important;
+        margin: 0 !important;
+        padding: 40px !important;
+        background: white !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        z-index: 999999 !important;
+      }
+    }
+
     .hidden {
       display: none !important;
     }
@@ -817,6 +1003,9 @@
         flex-direction: column;
         align-items: flex-start;
         gap: 16px;
+      }
+      .qr-card-wrap {
+        grid-template-columns: 1fr;
       }
     }
   </style>
@@ -872,6 +1061,8 @@
     <!-- TABS -->
     <nav class="admin-tabs">
       <button id="tabQuestionsBtn" class="tab-btn active">📝 Question Bank &amp; Test Builder</button>
+      <button id="tabVisibilityBtn" class="tab-btn">🎛️ Department &amp; Specialization Visibility</button>
+      <button id="tabQrBtn" class="tab-btn">📱 Student Test QR Code</button>
       <button id="tabResultsBtn" class="tab-btn">📊 Student Submissions &amp; Export</button>
     </nav>
 
@@ -881,7 +1072,13 @@
       <div class="filter-card">
         <div class="filter-grid">
           <div class="form-group" style="margin-bottom: 0;">
-            <label for="adminDeptSelect">Department</label>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+              <label for="adminDeptSelect" style="margin-bottom: 0;">Department</label>
+              <label class="vis-toggle-wrap" title="Toggle visibility of this department on student registration form">
+                <input type="checkbox" id="currentDeptVisibilityCheckbox" class="vis-toggle-checkbox" checked>
+                <span id="currentDeptVisibilityText" class="vis-status-pill vis-status-shown">✓ Shown to User</span>
+              </label>
+            </div>
             <select id="adminDeptSelect" class="form-control">
               <option value="DA/DS/BA">DA/DS/BA (Data Science / Data Analytics)</option>
               <option value="SAP">SAP ERP</option>
@@ -897,7 +1094,13 @@
           </div>
 
           <div class="form-group" style="margin-bottom: 0;">
-            <label for="adminSpecSelect">Specialization</label>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+              <label for="adminSpecSelect" style="margin-bottom: 0;">Specialization</label>
+              <label class="vis-toggle-wrap" title="Toggle visibility of this specialization on student registration form">
+                <input type="checkbox" id="currentSpecVisibilityCheckbox" class="vis-toggle-checkbox" checked>
+                <span id="currentSpecVisibilityText" class="vis-status-pill vis-status-shown">✓ Shown to User</span>
+              </label>
+            </div>
             <select id="adminSpecSelect" class="form-control">
               <!-- Dynamically populated based on chosen department -->
             </select>
@@ -932,6 +1135,85 @@
       <!-- QUESTIONS LIST CONTAINER -->
       <div id="questionsContainer" class="questions-grid">
         <!-- Rendered dynamically -->
+      </div>
+    </section>
+
+    <!-- TAB 2: DEPARTMENT & SPECIALIZATION VISIBILITY CONTROLS -->
+    <section id="tabVisibility" class="hidden">
+      <!-- SUMMARY & QUICK ACTIONS BANNER -->
+      <div class="metrics-bar">
+        <div class="metrics-stats">
+          <div class="metric-item">
+            <span id="visMetricActiveDepts" class="metric-val" style="color: #16a34a;">0 / 10</span>
+            <span class="metric-label">Active Departments</span>
+          </div>
+          <div class="metric-item">
+            <span id="visMetricActiveSpecs" class="metric-val" style="color: #8338ec;">0</span>
+            <span class="metric-label">Active Specializations</span>
+          </div>
+          <div class="metric-item">
+            <span id="visMetricTotalSpecs" class="metric-val">0</span>
+            <span class="metric-label">Total Specializations</span>
+          </div>
+        </div>
+        <div style="display: flex; gap: 10px;">
+          <button id="enableAllVisBtn" class="btn-outline" style="font-weight: 700; color: #16a34a; border-color: #86efac;">✓ Enable All for Students</button>
+        </div>
+      </div>
+
+      <!-- INSTRUCTION NOTICE -->
+      <div style="background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 12px; padding: 14px 18px; margin-bottom: 20px; font-size: 13px; color: #1e40af; line-height: 1.5;">
+        💡 <strong>Live Registration Control:</strong> Use the tick boxes below to select which departments and specializations will be displayed to students when they scan the QR code or visit the registration portal. Unchecked items are instantly hidden from the student's view.
+      </div>
+
+      <!-- DEPARTMENTS CARDS GRID -->
+      <div id="deptCardsGrid" class="dept-cards-grid">
+        <!-- Rendered dynamically -->
+      </div>
+    </section>
+
+    <!-- TAB 3: STUDENT TEST QR CODE -->
+    <section id="tabQr" class="hidden">
+      <div class="qr-card-wrap">
+        <!-- LEFT: QR CODE DISPLAY BOX -->
+        <div class="qr-display-box">
+          <div id="qrcodeContainer" style="display: flex; justify-content: center; margin-bottom: 14px; min-height: 200px; min-width: 200px;"></div>
+          <p style="margin: 0; font-weight: 700; font-size: 14px; color: #1e293b;">PUMO Student Assessment QR</p>
+          <span style="font-size: 12px; color: #64748b; margin-top: 4px;">Scan with mobile camera to start</span>
+        </div>
+
+        <!-- RIGHT: DETAILS & ACTIONS -->
+        <div style="display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <h2 style="margin: 0 0 8px; font-family: 'Outfit', sans-serif; font-size: 22px;">Student Test Access &amp; QR Code</h2>
+            <p style="margin: 0 0 20px; color: #64748b; font-size: 14px; line-height: 1.5;">
+              Share this QR code with candidates. When scanned on mobile, students will instantly access the aptitude assessment registration form with all active departments and specializations loaded.
+            </p>
+
+            <div class="form-group" style="margin-bottom: 16px;">
+              <label for="qrUrlInput">Student Portal URL</label>
+              <div style="display: flex; gap: 10px;">
+                <input id="qrUrlInput" type="text" class="form-control" value="https://pumo-aptitude-test.web.app" style="font-family: monospace; font-size: 13px;">
+                <button id="copyQrUrlBtn" class="btn-outline" style="white-space: nowrap;">📋 Copy Link</button>
+              </div>
+            </div>
+
+            <div style="background: #f8fafc; border: 1px solid var(--border); border-radius: 12px; padding: 14px 16px; margin-bottom: 24px;">
+              <h4 style="margin: 0 0 6px; font-size: 13px; color: #334155;">✨ Candidate Scanning Instructions:</h4>
+              <ol style="margin: 0; padding-left: 18px; font-size: 13px; color: #64748b; line-height: 1.6;">
+                <li>Open mobile camera or Google Lens.</li>
+                <li>Point camera at the QR code to open the test website.</li>
+                <li>Fill in name, mobile, department, specialization and begin test.</li>
+              </ol>
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+            <button id="downloadQrBtn" class="btn-primary" style="width: auto; padding: 12px 22px;">📥 Download QR Code (PNG)</button>
+            <button id="printPosterBtn" class="btn-outline" style="font-weight: 700; padding: 12px 22px;">🖨️ Print Student Test Poster</button>
+            <a href="index.html" target="_blank" class="btn-outline" style="padding: 12px 22px;">🌐 Open Student Site</a>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -1050,9 +1332,36 @@
     </div>
   </div>
 
+  <!-- PRINTABLE TEST POSTER (Used for printing) -->
+  <div id="printableQrArea" style="display: none;">
+    <div style="text-align: center; max-width: 480px; margin: 0 auto; padding: 36px 32px; border: 3px solid #8338ec; border-radius: 24px; font-family: 'Inter', sans-serif;">
+      <div style="display: inline-flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #8338ec; color: white; border-radius: 14px; font-size: 26px; font-weight: 800; margin-bottom: 12px;">✓</div>
+      <div style="font-size: 28px; font-weight: 800; color: #8338ec; font-family: 'Outfit', sans-serif; letter-spacing: -0.5px; margin-bottom: 4px;">PUMO ASSESSMENT</div>
+      <div style="font-size: 14px; font-weight: 600; color: #475569; margin-bottom: 24px;">Professional Skills Aptitude Examination</div>
+      
+      <div style="display: flex; justify-content: center; margin-bottom: 20px;">
+        <div id="printQrImgContainer" style="padding: 14px; background: white; border: 2px solid #e2e8f0; border-radius: 16px; box-shadow: 0 4px 14px rgba(0,0,0,0.06);">
+          <img id="printQrImg" src="images/pumo-qr-code.png" style="width: 240px; height: 240px; display: block;" alt="Scan to Start Test">
+        </div>
+      </div>
+
+      <div style="font-size: 18px; font-weight: 800; color: #0f172a; margin-bottom: 6px;">SCAN WITH PHONE CAMERA TO START</div>
+      <div style="font-size: 13px; font-family: monospace; color: #64748b; margin-bottom: 22px;" id="printQrUrlText">https://pumo-aptitude-test.web.app</div>
+
+      <div style="display: flex; justify-content: space-around; border-top: 1px solid #e2e8f0; padding-top: 16px; font-size: 12px; color: #334155; font-weight: 700;">
+        <div>📱 1. Scan QR</div>
+        <div>✍️ 2. Enter Details</div>
+        <div>🚀 3. Start Test</div>
+      </div>
+    </div>
+  </div>
+
   <!-- TOAST NOTIFICATION -->
   <div id="toast" class="toast hidden"></div>
 
-  <script type="module" src="js/admin.js?v=2.2"></script>
+  <!-- OFFLINE QR CODE ENGINE -->
+  <script src="js/qrcode.min.js"></script>
+  <!-- ADMIN SCRIPT -->
+  <script type="module" src="js/admin.js?v=3.0"></script>
 </body>
 </html>

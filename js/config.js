@@ -6,7 +6,7 @@ export const APP_CONFIG = {
   // Admin button visibility on home page  to deploy firebase deploy --only hosting :
   // Put "enable" to SHOW the Admin button.
   // Put "disable" to HIDE the Admin button.
-  ADMIN_BUTTON: "disable",
+  ADMIN_BUTTON: "enable",
 
   // Test duration in minutes (change this number anytime to change the test time)
   DURATION_MINUTES: 30,
@@ -21,3 +21,6 @@ export const APP_CONFIG = {
   // Google Apps Script Web App URL for saving results to Google Sheets.
   EMAIL_SERVICE_URL: "https://script.google.com/macros/s/AKfycbzY4cOyUtOPhrcTg3Rqc4kfQjqL7CorqeOfMymVlUhLZ_kyrNP9LlyWFu5zk2macHADlw/exec"
 };
+
+
+

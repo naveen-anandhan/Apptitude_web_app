@@ -3,11 +3,11 @@ import {
   getTest,
   getQuestions,
   saveResult
-} from "./firebase.js?v=2.1";
+} from "./firebase.js?v=3.0";
 
-import { APP_CONFIG } from "./config.js?v=2.1";
+import { APP_CONFIG } from "./config.js?v=3.0";
 
-import { getStudent } from "./common.js?v=2.1";
+import { getStudent } from "./common.js?v=3.0";
 
 
 const student = getStudent();

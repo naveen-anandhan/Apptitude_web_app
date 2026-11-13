@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Assessment QR Code - PUMO Assessment</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #f8fafc;
+      color: #0f172a;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 30px 20px;
+    }
+    .poster-card {
+      background: #ffffff;
+      border: 3px solid #8338ec;
+      border-radius: 28px;
+      max-width: 520px;
+      width: 100%;
+      padding: 44px 36px;
+      text-align: center;
+      box-shadow: 0 20px 60px rgba(131, 56, 236, 0.12);
+      position: relative;
+    }
+    .logo-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, #8338ec, #3a86ff);
+      color: white;
+      font-size: 28px;
+      font-weight: 800;
+      margin-bottom: 14px;
+      box-shadow: 0 8px 20px rgba(131, 56, 236, 0.3);
+    }
+    h1 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 30px;
+      font-weight: 800;
+      color: #8338ec;
+      letter-spacing: -0.5px;
+      margin-bottom: 6px;
+    }
+    .subtitle {
+      font-size: 15px;
+      font-weight: 600;
+      color: #475569;
+      margin-bottom: 28px;
+    }
+    .qr-container {
+      background: #ffffff;
+      padding: 16px;
+      border-radius: 20px;
+      border: 2px solid #e2e8f0;
+      display: inline-block;
+      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.05);
+      margin-bottom: 22px;
+    }
+    .qr-img {
+      width: 240px;
+      height: 240px;
+      display: block;
+    }
+    .callout-title {
+      font-size: 18px;
+      font-weight: 800;
+      color: #0f172a;
+      letter-spacing: 0.2px;
+      margin-bottom: 6px;
+    }
+    .url-badge {
+      display: inline-block;
+      font-family: monospace;
+      font-size: 13px;
+      font-weight: 600;
+      color: #64748b;
+      background: #f1f5f9;
+      padding: 6px 14px;
+      border-radius: 8px;
+      margin-bottom: 26px;
+      border: 1px solid #e2e8f0;
+    }
+    .steps-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 12px;
+      padding-top: 22px;
+      border-top: 1px solid #e2e8f0;
+    }
+    .step-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+    }
+    .step-num {
+      font-size: 20px;
+    }
+    .step-text {
+      font-size: 12px;
+      font-weight: 700;
+      color: #334155;
+      line-height: 1.3;
+    }
+    .action-bar {
+      margin-top: 24px;
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+    }
+    .btn {
+      padding: 12px 24px;
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s ease;
+    }
+    .btn-primary {
+      background: #8338ec;
+      color: white;
+      border: none;
+      box-shadow: 0 4px 14px rgba(131, 56, 236, 0.3);
+    }
+    .btn-primary:hover {
+      background: #7026db;
+      transform: translateY(-1px);
+    }
+    .btn-outline {
+      background: white;
+      color: #334155;
+      border: 1px solid #cbd5e1;
+    }
+    .btn-outline:hover {
+      background: #f1f5f9;
+    }
+    @media print {
+      body {
+        background: white !important;
+        padding: 0 !important;
+      }
+      .action-bar {
+        display: none !important;
+      }
+      .poster-card {
+        border-color: #8338ec !important;
+        box-shadow: none !important;
+        max-width: 100% !important;
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 40px !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="poster-card">
+    <div class="logo-badge">✓</div>
+    <h1>PUMO ASSESSMENT</h1>
+    <p class="subtitle">Professional Skills Aptitude Examination</p>
+
+    <div class="qr-container">
+      <img src="images/pumo-qr-code.png" class="qr-img" alt="PUMO Test QR Code">
+    </div>
+
+    <div class="callout-title">SCAN WITH PHONE CAMERA TO START</div>
+    <div class="url-badge">https://pumo-aptitude-test.web.app</div>
+
+    <div class="steps-row">
+      <div class="step-item">
+        <span class="step-num">📱</span>
+        <span class="step-text">1. Scan QR with Camera</span>
+      </div>
+      <div class="step-item">
+        <span class="step-num">✍️</span>
+        <span class="step-text">2. Enter Candidate Info</span>
+      </div>
+      <div class="step-item">
+        <span class="step-num">🚀</span>
+        <span class="step-text">3. Complete Test</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="action-bar">
+    <button class="btn btn-primary" onclick="window.print()">🖨️ Print Poster</button>
+    <a href="index.html" class="btn btn-outline" target="_blank">🌐 Open Student Test Page</a>
+    <a href="admin.html" class="btn btn-outline">⚙️ Admin Portal</a>
+  </div>
+
+</body>
+</html>
+

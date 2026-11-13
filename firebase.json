@@ -20,7 +20,7 @@
     ],
     "headers": [
       {
-        "source": "**/*.@(html|htm|js|css)",
+        "source": "**/*.@(html|htm|js|css|png|jpg|svg)",
         "headers": [
           {
             "key": "Cache-Control",
